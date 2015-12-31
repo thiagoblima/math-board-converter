@@ -89,6 +89,19 @@ var TestMath = function (exponential, fixed, precision, string, value){
   };
 
 
+  this.getValue = function(){
+
+    return this.value.valueOf();
+
+  };
+
+  this.setValue = function(value){
+
+    this.value = value;
+
+  };
+
+
 };
 
 //Testing instances and its methods through test Object
@@ -103,11 +116,15 @@ test.setExponential(10);
 test.setFixed(10);
 test.setPrecision(10.6635);
 test.setString(10);
+test.setValue(10);
+
 
 mathCollection.push(test.getExponential());
 mathCollection.push(test.getFixed());
 mathCollection.push(test.getPrecision());
 mathCollection.push(test.getString());
+mathCollection.push(test.getValue());
+
 
 mathCollection.forEach(function(element, index){
   console.log(index + ": " + element);
