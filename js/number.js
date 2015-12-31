@@ -43,11 +43,22 @@ var TestMath = function (exponential, fixed, precision, string, value){
 
   };
 
-  this.setExponential = function(exponentialSet){
+  this.setExponential = function(exponential){
+
+    this.exponential = exponential;
+
+  };
 
 
-    this.exponential = exponentialSet;
+  this.getFixed = function(){
 
+    return this.fixed.toFixed(2);
+
+  };
+
+  this.setFixed = function(fixed){
+
+    this.fixed = fixed;
   };
 
 };
@@ -57,5 +68,6 @@ var TestMath = function (exponential, fixed, precision, string, value){
 var test = new TestMath("toExponential", "ToFixed", "toPrecisiom", "toString", "valueOf");
 
 test.setExponential(10);
+test.setFixed(10);
 console.log(test.valueOf() + ": " + JSON.stringify(test));
-console.log(test.getExponential());
+console.log(test.getExponential() + " " + "\n" + test.getFixed());
