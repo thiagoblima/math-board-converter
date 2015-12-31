@@ -6,10 +6,10 @@
  *     ClassName: Numnber.js
  *          Date: 12/31/2015 (Year's Eve)
  *   Math's list: number.toExponential(2);
- *               number.toFixed(2);
- *               number.toPrecision(2);
- *               number.toString();
- *               number.valueOf();
+ *                number.toFixed(2);
+ *                number.toPrecision(2);
+ *                number.toString();
+ *                number.valueOf();
  *
 */
 
