@@ -1,18 +1,17 @@
-/****************************************************************
-                                                                *
-      Author: Thiago Lima                                       *
- Description: Math Test Class Objected Oriented                 *
-      Target: Provide a class of Java Script Math's library.    *
-   ClassName: Numnber.js                                        *
-        Date: 12/31/2015 (Year's Eve)                           *
- Math's list: number.toExponential(2);                          *
-              number.toFixed(2);                                *
-              number.toPrecision(2);                            *
-              number.toString();                                *
-              number.valueOf();                                 *
-                                                                *
-                                                                *
-****************************************************************/
+/*
+ *
+ *        Author: Thiago Lima
+ *   Description: Math Test Class Objected Oriented
+ *        Target: Provide a class of Java Script Math's library.
+ *     ClassName: Numnber.js
+ *          Date: 12/31/2015 (Year's Eve)
+ *   Math's list: number.toExponential(2);
+ *               number.toFixed(2);
+ *               number.toPrecision(2);
+ *               number.toString();
+ *               number.valueOf();
+ *
+*/
 
 
 
@@ -24,6 +23,7 @@ according to the Object Orinted Pattern.                        *
 
 
 var TestMath = function (exponential, fixed, precision, string, value){
+
   this.exponential = exponential;
   this.fixed = fixed;
   this.precision = precision;
