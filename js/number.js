@@ -5,25 +5,20 @@
       Target: Provide a class of Java Script Math's library.    *
    ClassName: Numnber.js                                        *
         Date: 12/31/2015 (Year's Eve)                           *
+ Math's list: number.toExponential(2);                          *
+              number.toFixed(2);                                *
+              number.toPrecision(2);                            *
+              number.toString();                                *
+              number.valueOf();                                 *
                                                                 *
-*****************************************************************/
+                                                                *
+****************************************************************/
 
 
 
-/**** Math's list Methods ****
-                             *
-number.toExponential(2);     *
-number.toFixed(2);           *
-number.toPrecision(2);       *
-number.toString();           *
-number.valueOf();            *
-                             *
-******************************
-
-
-/***************************************************************
-MainClass and it's instances: Getters and Setters sctructure   *
-according to the Object Orinted Pattern.                       *
+/****************************************************************
+MainClass and it's instances: Getters and Setters sctructure    *
+according to the Object Orinted Pattern.                        *
 ****************************************************************/
 
 
