@@ -76,23 +76,38 @@ var TestMath = function (exponential, fixed, precision, string, value){
   };
 
 
+  this.getString = function(){
+
+    return this.string.toString();
+
+  };
+
+  this.setString = function(string){
+
+    this.string = string;
+
+  };
+
+
 };
 
 //Testing instances and its methods through test Object
 //which are being store inside the mathCollection's arrary
 
 var test = new TestMath("toExponential", "ToFixed", "toPrecisiom", "toString", "valueOf");
-var prefixes = ["Results"];
+var prefixes = ["Result"];
 var mathCollection = [];
 
 
 test.setExponential(10);
 test.setFixed(10);
 test.setPrecision(10.6635);
+test.setString(10);
 
 mathCollection.push(test.getExponential());
 mathCollection.push(test.getFixed());
 mathCollection.push(test.getPrecision());
+mathCollection.push(test.getString());
 
 mathCollection.forEach(function(element, index){
   console.log(index + ": " + element);
