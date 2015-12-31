@@ -11,13 +11,7 @@
 
 
 
-/***********************
-                       *
- Math's list Methods   *
-                       *
-************************/
-
-
+//Math's list Methods
 
 var number = 10;
 
@@ -45,13 +39,14 @@ var TestMath = function (exponential, fixed, precision, string, value){
 
   this.getExponential = function(){
 
-    return this.exponential;
+    return this.exponential.toExponential();
 
   };
 
   this.setExponential = function(exponentialSet){
 
-      this.exponential = exponentialSet;
+
+    this.exponential = exponentialSet;
 
   };
 
@@ -59,8 +54,8 @@ var TestMath = function (exponential, fixed, precision, string, value){
 
 
 
-var test = new TestMath();
+var test = new TestMath("toExponential", "ToFixed", "toPrecisiom", "toString", "valueOf");
 
 test.setExponential(10);
-alert(test.getExponential());
-console.log("thiago");
+console.log(test.valueOf() + ": " + JSON.stringify(test));
+console.log(test.getExponential());
