@@ -99,3 +99,7 @@ mathCollection.forEach(function(element, index){
 for(var i = 0; i < mathCollection.length; i++){
   console.log(i + ": " + mathCollection[i]);
 }
+
+for (var w in mathCollection){
+  console.log(w + ": " + mathCollection[w]);  
+}
