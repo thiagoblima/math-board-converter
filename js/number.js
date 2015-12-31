@@ -82,7 +82,9 @@ var TestMath = function (exponential, fixed, precision, string, value){
 //which are being store inside the mathCollection's arrary
 
 var test = new TestMath("toExponential", "ToFixed", "toPrecisiom", "toString", "valueOf");
+var prefixes = ["Results"];
 var mathCollection = [];
+
 
 test.setExponential(10);
 test.setFixed(10);
@@ -97,9 +99,11 @@ mathCollection.forEach(function(element, index){
 });
 
 for(var i = 0; i < mathCollection.length; i++){
-  console.log(i + ": " + mathCollection[i]);
+  for(var x = 0; x < prefixes.length; x++ ){
+     console.log(prefixes[x] + " " + i + ": " + mathCollection[i]);
+ }
 }
 
 for (var w in mathCollection){
-  console.log(w + ": " + mathCollection[w]);  
+  console.log(w + ": " + mathCollection[w]);
 }
