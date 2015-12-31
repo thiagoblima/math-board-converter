@@ -1,7 +1,7 @@
 /****************************************************************
                                                                 *
          Author: Thiago Lima                                    *
-    Descriptiom: Math Test Class Objected Oriented              *
+    Description: Math Test Class Objected Oriented              *
         Target: Provide a class of Java Script Math's library.  *
      ClassName: Numnber.js                                      *
           Date: 12/31/2015 (Year's Eve)                         *
