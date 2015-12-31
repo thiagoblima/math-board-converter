@@ -95,3 +95,7 @@ mathCollection.push(test.getPrecision());
 mathCollection.forEach(function(element, index){
   console.log(index + ": " + element);
 });
+
+for(var i = 0; i < mathCollection.length; i++){
+  console.log(i + ": " + mathCollection[i]);
+}
