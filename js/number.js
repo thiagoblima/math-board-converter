@@ -10,17 +10,15 @@
 
 
 
-
-//Math's list Methods
-
-var number = 10;
-
-
-number.toExponential(2);
-number.toFixed(2);
-number.toPrecision(1);
-number.toString();
-number.valueOf();
+/**** Math's list Methods ****
+                             *
+number.toExponential(2);     *
+number.toFixed(2);           *
+number.toPrecision(2);       *
+number.toString();           *
+number.valueOf();            *
+                             *
+******************************
 
 
 /***************************************************************
@@ -133,7 +131,7 @@ mathCollection.forEach(function(element, index){
 for(var i = 0; i < mathCollection.length; i++){
   for(var x = 0; x < prefixes.length; x++ ){
      console.log(prefixes[x] + " " + i + ": " + mathCollection[i]);
- }
+  }
 }
 
 for (var w in mathCollection){
