@@ -1,0 +1,23 @@
+{
+  "name": "Java Script Data Types",
+  "description": "Math's Java Script library methods being builts and available for usage.",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Java",
+    "Script",
+    "HTML",
+    "CSS",
+    "Math",
+    "Programming",
+    "Angularjs",
+    "Bootstrap",
+    "Object",
+    "Oriented."
+  ],
+  "authors": [
+    "Thiago Lima"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types"
+}
