@@ -99,7 +99,20 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
       this.ceil = Math.ceil(ceil);
 
-   }
+   };
+
+
+   this.getFloor = function(){
+
+     return this.floor;
+
+   };
+
+   this.setFloor = function(floor){
+
+      this.floor = Math.floor(floor);
+
+   };
 
 
 };
@@ -122,6 +135,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   test.setString(10);
   test.setValue(10);
   test.setCeil(11.6);
+  test.setFloor(11.6);
 
   mathCollection.push(JSON.stringify([{
 
@@ -130,7 +144,8 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
         'Precision': test.getPrecision(),
            'String': test.getString(),
             'Value': test.getValue(),
-             'Ceil': test.getCeil()
+             'Ceil': test.getCeil(),
+            'floor': test.getFloor()
       }]
      )
    );
