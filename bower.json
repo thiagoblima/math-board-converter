@@ -23,5 +23,8 @@
   "dependencies": {
     "jquery": "2.1.4",
     "angular": "1.4.8"
+  },
+  "devDependencies": {
+    "jquery-ui": "jquery.ui#1.11.4"
   }
 }
