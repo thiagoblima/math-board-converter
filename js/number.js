@@ -1,27 +1,22 @@
 /*
- *        @number.js
+ * @number.js
  *
- *        Author: Thiago Lima
- *   Description: Math Test Class Objected Oriented
- *        Target: Provide a class of Java Script Math's library.
- *     ClassName: Numnber.js
- *          Date: 12/31/2015 (Year's Eve)
- *   Math's list: number.toExponential(2);
- *                number.toFixed(2);
- *                number.toPrecision(2);
- *                number.toString();
- *                number.valueOf();
+ *
+ * Math main class which has been built to provide
+ * a quicker and refined use of Math's Java Script library.
+ *
+ *
+ * Object Oriented class providing getters and setters for
+ * all the instances of objects access and parsing data via JSON.
+ *
  *
 */
 
 
 
-/****************************************************************
-MainClass and it's instances: Getters and Setters sctructure    *
-according to the Object Orinted Pattern.                        *
-****************************************************************/
-
-
+/**
+*  @author: thiagolimasp@live.com (Thiago Lima)
+*/
 
 var TestMath = function (exponential, fixed, precision, string, value){
 
@@ -113,7 +108,7 @@ test.setString(10);
 test.setValue(10);
 
 
-mathCollection.push(test.getExponential());
+mathCollection.push(JSON.stringify(test.getExponential()));
 mathCollection.push(test.getFixed());
 mathCollection.push(test.getPrecision());
 mathCollection.push(test.getString());
