@@ -19,5 +19,8 @@
     "Thiago Lima"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types"
+  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types",
+  "dependencies": {
+    "jquery": "2.1.4"
+  }
 }
