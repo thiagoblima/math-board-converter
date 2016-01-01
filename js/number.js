@@ -96,30 +96,28 @@ var TestMath = function (exponential, fixed, precision, string, value){
  *JSON stringify data and iterators runs the collection out.
  */
 
-   var test = new TestMath(),
-       prefixes = ["Result"],
-       mathCollection = [];
+ var test = new TestMath(),
+     prefixes = ["Result"],
+     mathCollection = [];
 
 
-       test.setExponential(10);
-       test.setFixed(10);
-       test.setPrecision(10.6635);
-       test.setString(10);
-       test.setValue(10);
+  test.setExponential(10);
+  test.setFixed(10);
+  test.setPrecision(10.6635);
+  test.setString(10);
+  test.setValue(10);
 
 
-        mathCollection.push(
-        JSON.stringify(
-          [{
+  mathCollection.push(JSON.stringify([{
 
-            'Exponential': test.getExponential(),
-               'Floating': test.getFixed(),
-              'Precision': test.getPrecision(),
-                 'String': test.getString(),
-                  'Value': test.getValue()
-           }]
-          )
-         );
+      'Exponential': test.getExponential(),
+         'Floating': test.getFixed(),
+        'Precision': test.getPrecision(),
+           'String': test.getString(),
+            'Value': test.getValue()
+      }]
+     )
+   );
 
 /**
  *@notice: single push to mathCollection
