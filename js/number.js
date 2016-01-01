@@ -14,13 +14,15 @@
  * @author: thiagolimasp@live.com (Thiago Lima)
  */
 
-var TestMath = function (exponential, fixed, precision, string, value){
+var TestMath = function (exponential, fixed, precision, string, value, ceil, floor){
 
   this.exponential = exponential;
   this.fixed = fixed;
   this.precision = precision;
   this.string = string;
   this.value = value;
+  this.ceil = ceil;
+  this.floor = floor;
 
   this.getExponential = function(){
 
@@ -87,6 +89,19 @@ var TestMath = function (exponential, fixed, precision, string, value){
   };
 
 
+   this.getCeil = function(){
+
+     return this.ceil;
+
+   };
+
+   this.setCeil = function(ceil){
+
+      this.ceil = Math.ceil(ceil);
+
+   }
+
+
 };
 
 /**
@@ -106,7 +121,7 @@ var TestMath = function (exponential, fixed, precision, string, value){
   test.setPrecision(10.6635);
   test.setString(10);
   test.setValue(10);
-
+  test.setCeil(11.6);
 
   mathCollection.push(JSON.stringify([{
 
@@ -114,7 +129,8 @@ var TestMath = function (exponential, fixed, precision, string, value){
          'Floating': test.getFixed(),
         'Precision': test.getPrecision(),
            'String': test.getString(),
-            'Value': test.getValue()
+            'Value': test.getValue(),
+             'Ceil': test.getCeil()
       }]
      )
    );
