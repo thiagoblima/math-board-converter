@@ -1,22 +1,18 @@
 /*
  * @number.js
  *
- *
  * Math main class which has been built to provide
  * a quicker and refined use of Math's Java Script library.
  *
- *
  * Object Oriented class providing getters and setters for
  * all the instances of objects access and parsing data via JSON.
- *
- *
-*/
+ */
 
 
 
 /**
-*  @author: thiagolimasp@live.com (Thiago Lima)
-*/
+ * @author: thiagolimasp@live.com (Thiago Lima)
+ */
 
 var TestMath = function (exponential, fixed, precision, string, value){
 
@@ -93,12 +89,16 @@ var TestMath = function (exponential, fixed, precision, string, value){
 
 };
 
-//Testing instances and its methods through test Object
-//which are being store inside the mathCollection's arrary
+/**
+ * @description: fetching data iteration
+ *
+ *Setting values and pushing the getInstances into the array,
+ *JSON stringify data and iterators runs the collection out.
+ */
 
-var test = new TestMath("toExponential", "ToFixed", "toPrecisiom", "toString", "valueOf");
-var prefixes = ["Result"];
-var mathCollection = [];
+var test = new TestMath(),
+    prefixes = ["Result"],
+    mathCollection = [];
 
 
 test.setExponential(10);
@@ -108,7 +108,20 @@ test.setString(10);
 test.setValue(10);
 
 
-mathCollection.push(JSON.stringify(test.getExponential()));
+mathCollection.push(
+JSON.stringify(
+[{
+
+  'Exponential': test.getExponential(),
+     'Floating': test.getFixed(),
+    'Precision': test.getPrecision(),
+       'String': test.getString(),
+        'Value': test.getValue()
+  }]
+ )
+);
+
+mathCollection.push(test.getExponential());
 mathCollection.push(test.getFixed());
 mathCollection.push(test.getPrecision());
 mathCollection.push(test.getString());
