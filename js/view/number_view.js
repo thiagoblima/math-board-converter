@@ -21,15 +21,26 @@
 
       math:{
           user: new TestMath(),
-          instances:{
+          results:{
 
-            exponential: document.getElementsByClassName("exponential-result")[0],
-                  fixed: document.getElementsByClassName("fixed-result")[0],
-              precision: document.getElementsByClassName("precision-result")[0],
-                 string: document.getElementsByClassName("string-result")[0],
-                  value: document.getElementsByClassName("value-result")[0],
-                   ceil: document.getElementsByClassName("ceil-result")[0],
-                  floor: document.getElementsByClassName("floor-result")[0]
+            exponential: document.getElementsByClassName("exponential")[0],
+                  fixed: document.getElementsByClassName("fixed")[0],
+              precision: document.getElementsByClassName("precision")[0],
+                 string: document.getElementsByClassName("string")[0],
+                  value: document.getElementsByClassName("value")[0],
+                   ceil: document.getElementsByClassName("ceil")[0],
+                  floor: document.getElementsByClassName("floor")[0]
+
+          },
+          setResults:{
+
+            exponential: document.getElementsByTagName("exponential")[0],
+                  fixed: document.getElementsByTagName("fixed")[0],
+              precision: document.getElementsByTagName("precision")[0],
+                 string: document.getElementsByTagName("string")[0],
+                  value: document.getElementsByTagName("value")[0],
+                   ceil: document.getElementsByTagName("ceil")[0],
+                  floor: document.getElementsByTagName("floor")[0]
 
           }
         }
@@ -45,13 +56,13 @@
     View.math.user.setFloor(10.400);
 
 
-    View.math.instances['exponential'].innerHTML = View.math.user.getExponential();
-    View.math.instances['fixed']. innerHTML = View.math.user.getFixed();
-    View.math.instances['precision'].innerHTML = View.math.user.getPrecision();
-    View.math.instances['string'].innerHTML = View.math.user.getString();
-    View.math.instances['value'].innerHTML = View.math.user.getValue();
-    View.math.instances['ceil'].innerHTML = View.math.user.getCeil();
-    View.math.instances['floor'].innerHTML = View.math.user.getFloor();
+    View.math.results['exponential'].innerHTML = View.math.user.getExponential();
+    View.math.results['fixed'].innerHTML = View.math.user.getFixed();
+    View.math.results['precision'].innerHTML = View.math.user.getPrecision();
+    View.math.results['string'].innerHTML = View.math.user.getString();
+    View.math.results['value'].innerHTML = View.math.user.getValue();
+    View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+    View.math.results['floor'].innerHTML = View.math.user.getFloor();
 
 
     console.log(View.math.user.getExponential());
