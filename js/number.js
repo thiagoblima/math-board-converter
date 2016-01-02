@@ -150,13 +150,10 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
    );
 
 /**
- *@notice: single push to mathCollection
+ *@description: iteration on mathCollection
  *
- *mathCollection.push(test.getExponential());
- *mathCollection.push(test.getFixed());
- *mathCollection.push(test.getPrecision());
- *mathCollection.push(test.getString());
- *mathCollection.push(test.getValue());
+ *Just give you three options by default,
+ *Select on the view page an iterator.
  */
 
 
