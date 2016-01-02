@@ -1,6 +1,8 @@
 /*
  * @number.js
  *
+ * @description: Model Class
+ *
  * Math main class which has been built to provide
  * a quicker and refined use of Math's Java Script library.
  *
