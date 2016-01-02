@@ -34,13 +34,13 @@
           },
           setResults:{
 
-            exponential: document.getElementsByTagName("exponential")[0],
-                  fixed: document.getElementsByTagName("fixed")[0],
-              precision: document.getElementsByTagName("precision")[0],
-                 string: document.getElementsByTagName("string")[0],
-                  value: document.getElementsByTagName("value")[0],
-                   ceil: document.getElementsByTagName("ceil")[0],
-                  floor: document.getElementsByTagName("floor")[0]
+            exponential: document.getElementsByName("exponential")[0],
+                  fixed: document.getElementsByName("fixed")[0],
+              precision: document.getElementsByName("precision")[0],
+                 string: document.getElementsByName("string")[0],
+                  value: document.getElementsByName("value")[0],
+                   ceil: document.getElementsByName("ceil")[0],
+                  floor: document.getElementsByName("floor")[0]
 
           }
         }
