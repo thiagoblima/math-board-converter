@@ -37,6 +37,21 @@
 
 
     View.math.user.setExponential(10);
+    View.math.user.setFixed(10);
+    View.math.user.setPrecision(10.635);
+    View.math.user.setString(10);
+    View.math.user.setValue(10);
+    View.math.user.setCeil(10.899);
+    View.math.user.setFloor(10.400);
+
+
     View.math.instances['exponential'].innerHTML = View.math.user.getExponential();
+    View.math.instances['fixed']. innerHTML = View.math.user.getFixed();
+    View.math.instances['precision'].innerHTML = View.math.user.getPrecision();
+    View.math.instances['string'].innerHTML = View.math.user.getString();
+    View.math.instances['value'].innerHTML = View.math.user.getValue();
+    View.math.instances['ceil'].innerHTML = View.math.user.getCeil();
+    View.math.instances['floor'].innerHTML = View.math.user.getFloor();
+
 
     console.log(View.math.user.getExponential());
