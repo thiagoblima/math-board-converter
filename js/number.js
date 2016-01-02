@@ -128,7 +128,6 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
      prefixes = ["Result"],
      mathCollection = [];
 
-
   test.setExponential(10);
   test.setFixed(10);
   test.setPrecision(10.6635);
