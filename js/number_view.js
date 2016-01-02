@@ -22,11 +22,18 @@
       math:{
           user: new TestMath(),
           instances:{
-            exponential: document.getElementsByClassName("exponential-result")[0]
+
+            exponential: document.getElementsByClassName("exponential-result")[0],
+                  fixed: document.getElementsByClassName("fixed-result")[0],
+              precision: document.getElementsByClassName("precision-result")[0],
+                 string: document.getElementsByClassName("string-result")[0],
+                  value: document.getElementsByClassName("value-result")[0],
+                   ceil: document.getElementsByClassName("ceil-result")[0],
+                  floor: document.getElementsByClassName("floor-result")[0]
 
           }
-       }
-    };
+        }
+      };
 
 
     Model.math.user.setExponential(10);
