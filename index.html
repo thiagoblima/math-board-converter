@@ -29,13 +29,23 @@
        </tr>
      </thead>
      <tbody>
+       <tr>
+         <td class="ceil-result"></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+     </tbody>
    </table>
  </section>
 </main>
 <script src="js/number.js" type="text/javascript"></script>
 <script>
     var mathUser = new TestMath(),
-        target = document.getElementById("ceil-result");
+        target = document.getElementsByClassName("ceil-result")[0];
 
         mathUser.setCeil(55.9);
         target.innerHTML = mathUser.getCeil();
