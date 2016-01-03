@@ -19,43 +19,43 @@
    <table id="math-table">
      <thead>
        <tr>
+         <th>Exponential</th>
+         <th>Fixed</th>
+         <th>String</th>
          <th>Ceil</th>
          <th>Floor</th>
          <th>Round</th>
          <th>Absolute</th>
-         <th>Exponential</th>
-         <th>String</th>
-         <th>Value</th>
        </tr>
      </thead>
      <tbody>
        <tr>
+         <td class="exponential"></td>
+         <td class="fixed"></td>
+         <td class="string"></td>
          <td class="ceil"></td>
          <td class="floor"></td>
          <td class="round"></td>
          <td class="absolute"></td>
-         <td class="exponential"></td>
-         <td class="string"></td>
-         <td class="value"></td>
        </tr>
        <tr>
+         <td><input type="number" name="exponential"></td>
+         <td><input type="number" name="fixed"></td>
+         <td><input type="number" name="string"></td>
          <td><input type="number" name="ceil"></td>
          <td><input type="number" name="floor"></td>
          <td><input type="number" name="round"></td>
          <td><input type="number" name="absolute"></td>
-         <td><input type="number" name="exponential"></td>
-         <td><input type="number" name="string"></td>
-         <td><input type="number" name="value"></td>
        </tr>
        <tr>
+         <td><button type="button" onclick="View.events.exponential(this.exponential);"id="exponential">Convert</button></td>
+         <td><button type="button" onclick="View.events.fixed(this.fixed);" id="string">Convert</button></td>
+         <td><button type="button" onclick="View.events.string(this.string);" id="value">Convert</button></td>
          <td><button type="button" onclick="View.events.ceil(this.ceil);" id="ceil">Convert</button></td>
          <td><button type="button" onclick="View.events.floor(this.floor);" id="floor">Convert</button></td>
          <td><button type="button" onclick="View.events.round(this.round);" id="round">Convert</button></td>
          <td><button type="button" onclick="View.events.absolute(this.absolute);" id="absolute">Convert</button></td>
-         <td><button type="button" onclick="View.events.exponential(this.exponential);"id="exponential">Convert</button></td>
-         <td><button type="button" id="string">Convert</button></td>
-         <td><button type="button" id="value">Convert</button></td>
-       </tr>
+        </tr>
      </tbody>
    </table>
  </section>
