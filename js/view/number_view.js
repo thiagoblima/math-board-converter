@@ -67,19 +67,31 @@
 
             View.math.user.setExponential(View.math.setResults['exponential'].value);
             exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
-            return exponential;
+            if(isNaN(View.math.user.getExponential())){
+               return View.math.results['exponential'].innerHTML = '0';
+            }else{
+              return exponential;
+            }
           },
           fixed:function(fixed){
 
             View.math.user.setFixed(View.math.setResults['fixed'].value);
             fixed = View.math.results['fixed'].innerHTML = View.math.user.getFixed().toFixed(2);
-            return fixed;
+            if(isNaN(View.math.user.getFixed())){
+               return View.math.results['fixed'].innerHTML = '0';
+            }else{
+               return fixed;
+            }
           },
           string:function(string){
 
             View.math.user.setString(View.math.setResults['string'].value);
             string = View.math.results['string'].innerHTML = View.math.user.getString().toString();
-            return string;
+            if(View.math.user.getString().toString() === ''){
+               return View.math.results['string'].innerHTML = 'Enter a number.';
+            }else{
+               return string;
+            }
           },
           ceil:function(ceil){
 
