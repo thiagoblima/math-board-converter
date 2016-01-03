@@ -42,12 +42,30 @@
                    ceil: document.getElementsByName("ceil")[0],
                   floor: document.getElementsByName("floor")[0]
 
+          },
+          pushResults:{
+
+            exponential: document.getElementById("exponential"),
+                  fixed: document.getElementById("fixed"),
+              precision: document.getElementById("precision"),
+                 string: document.getElementById("string"),
+                  value: document.getElementById("value"),
+                   ceil: document.getElementById("ceil"),
+                  floor: document.getElementById("floor")
+
+
           }
-        }
-      };
+        },
+        events:{
+          exponential:function(exponential){
+             expomential = View.math.results['exponential'].innerHTML = View.math.user.getExponential();
+             return exponential;
+          }
+       }
+    };
 
 
-    View.math.user.setExponential(10);
+    View.math.user.setExponential(55);
     View.math.user.setFixed(10);
     View.math.user.setPrecision(10.635);
     View.math.user.setString(10);
@@ -56,7 +74,7 @@
     View.math.user.setFloor(10.400);
 
 
-    View.math.results['exponential'].innerHTML = View.math.user.getExponential();
+
     View.math.results['fixed'].innerHTML = View.math.user.getFixed();
     View.math.results['precision'].innerHTML = View.math.user.getPrecision();
     View.math.results['string'].innerHTML = View.math.user.getString();
