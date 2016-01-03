@@ -86,6 +86,13 @@
             View.math.user.setAbs(View.math.setResults['absolute'].value);
             absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
             return absolute;
-          }
+          },
+          exponential:function(exponential){
+
+            View.math.user.setExponential(View.math.setResults['exponential'].value);
+            exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
+            return exponential;
+
        }
+     }
     };
