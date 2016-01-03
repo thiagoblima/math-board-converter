@@ -59,10 +59,15 @@
         events:{
           ceil:function(ceil){
 
-             View.math.user.setCeil(View.math.setResults["ceil"].value);
-             exponential = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+             View.math.user.setCeil(View.math.setResults['ceil'].value);
+             ceil = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
              return ceil;
+          },
+          floor:function(floor){
 
+            View.math.user.setFloor(View.math.setResults['floor'].value);
+            floor = View.math.results['floor'].innerHTML = View.math.user.getFloor();
+            return floor;
           }
        }
     };
@@ -74,7 +79,7 @@
     View.math.user.setString(10);
     View.math.user.setValue(10);
   //  View.math.user.setCeil(10.899);
-    View.math.user.setFloor(10.400);
+  //  View.math.user.setFloor(10.400);
 
 
 
@@ -83,7 +88,7 @@
     View.math.results['string'].innerHTML = View.math.user.getString();
     View.math.results['value'].innerHTML = View.math.user.getValue();
 //    View.math.results['ceil'].innerHTML = View.math.user.getCeil();
-    View.math.results['floor'].innerHTML = View.math.user.getFloor();
+//    View.math.results['floor'].innerHTML = View.math.user.getFloor();
 
 
     console.log(View.math.user.getExponential());
