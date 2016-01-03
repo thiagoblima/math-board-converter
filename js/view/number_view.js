@@ -63,6 +63,24 @@
           }
         },
         events:{
+          exponential:function(exponential){
+
+            View.math.user.setExponential(View.math.setResults['exponential'].value);
+            exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
+            return exponential;
+          },
+          fixed:function(fixed){
+
+            View.math.user.setFixed(View.math.setResults['fixed'].value);
+            fixed = View.math.results['fixed'].innerHTML = View.math.user.getFixed().toFixed(2);
+            return fixed;
+          },
+          string:function(string){
+
+            View.math.user.setString(View.math.setResults['string'].value);
+            string = View.math.results['string'].innerHTML = View.math.user.getString().toString();
+            return string;
+          },
           ceil:function(ceil){
 
              View.math.user.setCeil(View.math.setResults['ceil'].value);
@@ -87,11 +105,5 @@
             absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
             return absolute;
           },
-          exponential:function(exponential){
-
-            View.math.user.setExponential(View.math.setResults['exponential'].value);
-            exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
-            return exponential;
-         }
-       }
+        }
      };
