@@ -30,7 +30,8 @@
                   value: document.getElementsByClassName("value")[0],
                    ceil: document.getElementsByClassName("ceil")[0],
                   floor: document.getElementsByClassName("floor")[0],
-                  round: document.getElementsByClassName("round")[0]
+                  round: document.getElementsByClassName("round")[0],
+               absolute: document.getElementsByClassName("absolute")[0]
 
           },
           setResults:{
@@ -42,7 +43,8 @@
                   value: document.getElementsByName("value")[0],
                    ceil: document.getElementsByName("ceil")[0],
                   floor: document.getElementsByName("floor")[0],
-                  round: document.getElementsByName("round")[0]
+                  round: document.getElementsByName("round")[0],
+               absolute: document.getElementsByName("absolute")[0]
 
           },
           pushResults:{
@@ -54,7 +56,8 @@
                   value: document.getElementById("value"),
                    ceil: document.getElementById("ceil"),
                   floor: document.getElementById("floor"),
-                  round: document.getElementById("round")
+                  round: document.getElementById("round"),
+               absolute: document.getElementById("absolute")
 
 
           }
@@ -77,6 +80,12 @@
             View.math.user.setRound(View.math.setResults['round'].value);
             round = View.math.results['round'].innerHTML = View.math.user.getRound();
             return round;
-          }
+          },
+          absolute:function(absone, abstwo){
+
+            View.math.user.setAbs(View.math.setResults['absolute'].value);
+            absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
+            return absolute;
        }
+      }
     };
