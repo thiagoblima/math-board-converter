@@ -95,13 +95,13 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.getCeil = function(){
 
-     return this.ceil;
+    return this.ceil;
 
   };
 
   this.setCeil = function(ceil){
 
-      this.ceil = Math.ceil(ceil);
+    this.ceil = Math.ceil(ceil);
 
   };
 
@@ -114,7 +114,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.setFloor = function(floor){
 
-      this.floor = Math.floor(floor);
+    this.floor = Math.floor(floor);
 
   };
 
@@ -127,7 +127,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.setRound = function(round){
 
-     this.round = Math.round(round);
+    this.round = Math.round(round);
 
   };
 
@@ -137,13 +137,13 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
     return this.abs;
 
- };
+  };
 
   this.setAbs = function(abs){
 
-   this.abs = Math.abs(abs);
+    this.abs = Math.abs(abs);
 
- };
+  };
 
 
 };
