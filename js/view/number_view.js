@@ -81,7 +81,7 @@
             round = View.math.results['round'].innerHTML = View.math.user.getRound();
             return round;
           },
-          absolute:function(absone, abstwo){
+          absolute:function(absolute){
 
             View.math.user.setAbs(View.math.setResults['absolute'].value);
             absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
