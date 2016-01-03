@@ -30,7 +30,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.getExponential = function(){
 
-    return this.exponential.toExponential();
+    return this.exponential.toExponential(2);
 
   };
 
