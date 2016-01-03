@@ -92,7 +92,6 @@
             View.math.user.setExponential(View.math.setResults['exponential'].value);
             exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
             return exponential;
-
          }
        }
      };
