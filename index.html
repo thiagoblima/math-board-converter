@@ -23,7 +23,7 @@
          <th>Floor</th>
          <th>Round</th>
          <th>Absolute</th>
-         <th>Precision</th>
+         <th>Exponential</th>
          <th>String</th>
          <th>Value</th>
        </tr>
@@ -34,7 +34,7 @@
          <td class="floor"></td>
          <td class="round"></td>
          <td class="absolute"></td>
-         <td class="precision"></td>
+         <td class="exponential"></td>
          <td class="string"></td>
          <td class="value"></td>
        </tr>
@@ -43,7 +43,7 @@
          <td><input type="number" name="floor"></td>
          <td><input type="number" name="round"></td>
          <td><input type="number" name="absolute"></td>
-         <td><input type="number" name="precision"></td>
+         <td><input type="number" name="exponential"></td>
          <td><input type="number" name="string"></td>
          <td><input type="number" name="value"></td>
        </tr>
@@ -52,7 +52,7 @@
          <td><button type="button" onclick="View.events.floor(this.floor);" id="floor">Convert</button></td>
          <td><button type="button" onclick="View.events.round(this.round);" id="round">Convert</button></td>
          <td><button type="button" onclick="View.events.absolute(this.absolute);" id="absolute">Convert</button></td>
-         <td><button type="button" id="precision">Convert</button></td>
+         <td><button type="button" onclick="View.events.exponential(this.exponential);"id="exponential">Convert</button></td>
          <td><button type="button" id="string">Convert</button></td>
          <td><button type="button" id="value">Convert</button></td>
        </tr>
