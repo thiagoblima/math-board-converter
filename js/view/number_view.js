@@ -57,20 +57,23 @@
           }
         },
         events:{
-          exponential:function(exponential){
-             expomential = View.math.results['exponential'].innerHTML = View.math.user.getExponential();
-             return exponential;
+          ceil:function(ceil){
+
+             View.math.user.setCeil(View.math.setResults["ceil"].value);
+             exponential = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+             return ceil;
+
           }
        }
     };
 
 
-    View.math.user.setExponential(55);
+
     View.math.user.setFixed(10);
     View.math.user.setPrecision(10.635);
     View.math.user.setString(10);
     View.math.user.setValue(10);
-    View.math.user.setCeil(10.899);
+  //  View.math.user.setCeil(10.899);
     View.math.user.setFloor(10.400);
 
 
@@ -79,7 +82,7 @@
     View.math.results['precision'].innerHTML = View.math.user.getPrecision();
     View.math.results['string'].innerHTML = View.math.user.getString();
     View.math.results['value'].innerHTML = View.math.user.getValue();
-    View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+//    View.math.results['ceil'].innerHTML = View.math.user.getCeil();
     View.math.results['floor'].innerHTML = View.math.user.getFloor();
 
 
