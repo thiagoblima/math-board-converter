@@ -86,6 +86,6 @@
             View.math.user.setAbs(View.math.setResults['absolute'].value);
             absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
             return absolute;
+          }
        }
-      }
     };
