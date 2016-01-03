@@ -83,6 +83,16 @@
                return fixed;
             }
           },
+          precision:function(precision){
+
+            View.math.user.setPrecision(View.math.setResults['precision'].value);
+            precision = View.math.results['precision'].innerHTML = View.math.user.getPrecision().toPrecision();
+            if(isNaN(View.math.user.getPrecision())){
+               return View.math.results['precision'].innerHTML = '0';
+            }else{
+               return precision;
+            }
+          },
           string:function(string){
 
             View.math.user.setString(View.math.setResults['string'].value);
