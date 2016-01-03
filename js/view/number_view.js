@@ -29,7 +29,8 @@
                  string: document.getElementsByClassName("string")[0],
                   value: document.getElementsByClassName("value")[0],
                    ceil: document.getElementsByClassName("ceil")[0],
-                  floor: document.getElementsByClassName("floor")[0]
+                  floor: document.getElementsByClassName("floor")[0],
+                  round: document.getElementsByClassName("round")[0]
 
           },
           setResults:{
@@ -40,7 +41,8 @@
                  string: document.getElementsByName("string")[0],
                   value: document.getElementsByName("value")[0],
                    ceil: document.getElementsByName("ceil")[0],
-                  floor: document.getElementsByName("floor")[0]
+                  floor: document.getElementsByName("floor")[0],
+                  round: document.getElementsByName("round")[0]
 
           },
           pushResults:{
@@ -51,7 +53,8 @@
                  string: document.getElementById("string"),
                   value: document.getElementById("value"),
                    ceil: document.getElementById("ceil"),
-                  floor: document.getElementById("floor")
+                  floor: document.getElementById("floor"),
+                  round: document.getElementById("round")
 
 
           }
@@ -68,6 +71,12 @@
             View.math.user.setFloor(View.math.setResults['floor'].value);
             floor = View.math.results['floor'].innerHTML = View.math.user.getFloor();
             return floor;
+          },
+          round:function(round){
+
+            View.math.user.setRound(View.math.setResults['round'].value);
+            round = View.math.results['round'].innerHTML = View.math.user.getRound();
+            return round;
           }
        }
     };
@@ -91,4 +100,4 @@
 //    View.math.results['floor'].innerHTML = View.math.user.getFloor();
 
 
-    console.log(View.math.user.getExponential());
+//    console.log(View.math.user.getExponential());
