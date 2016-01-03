@@ -43,13 +43,13 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.getFixed = function(){
 
-    return this.fixed.toFixed(2);
+    return this.fixed;
 
   };
 
   this.setFixed = function(fixed){
 
-    this.fixed = fixed;
+    this.fixed = parseInt(fixed);
 
   };
 
@@ -69,7 +69,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.getString = function(){
 
-    return this.string.toString();
+    return this.string;
 
   };
 
@@ -161,6 +161,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
      test.setExponential(10);
      test.setPrecision(10.6635);
+     test.setString(10);
      test.setValue(10);
      test.setCeil(11.6);
      test.setFloor(11.6);
