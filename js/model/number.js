@@ -28,6 +28,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   this.round = round;
   this.abs = abs;
 
+
   this.getExponential = function(){
 
     return this.exponential;
