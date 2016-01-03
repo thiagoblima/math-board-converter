@@ -80,24 +80,3 @@
           }
        }
     };
-
-
-
-    View.math.user.setFixed(10);
-    View.math.user.setPrecision(10.635);
-    View.math.user.setString(10);
-    View.math.user.setValue(10);
-  //  View.math.user.setCeil(10.899);
-  //  View.math.user.setFloor(10.400);
-
-
-
-    View.math.results['fixed'].innerHTML = View.math.user.getFixed();
-    View.math.results['precision'].innerHTML = View.math.user.getPrecision();
-    View.math.results['string'].innerHTML = View.math.user.getString();
-    View.math.results['value'].innerHTML = View.math.user.getValue();
-//    View.math.results['ceil'].innerHTML = View.math.user.getCeil();
-//    View.math.results['floor'].innerHTML = View.math.user.getFloor();
-
-
-//    console.log(View.math.user.getExponential());
