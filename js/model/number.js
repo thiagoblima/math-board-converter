@@ -16,7 +16,7 @@
  * @author: thiagolimasp@live.com (Thiago Lima)
  */
 
-var TestMath = function (exponential, fixed, precision, string, value, ceil, floor, round){
+var TestMath = function (exponential, fixed, precision, string, value, ceil, floor, round, abs){
 
   this.exponential = exponential;
   this.fixed = fixed;
@@ -26,6 +26,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   this.ceil = ceil;
   this.floor = floor;
   this.round = round;
+  this.abs = abs;
 
   this.getExponential = function(){
 
@@ -131,6 +132,20 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   };
 
 
+
+  this.getAbs = function(){
+
+    return this.abs;
+
+ };
+
+  this.setAbs = function(abs){
+
+   this.abs = Math.abs(abs);
+
+ };
+
+
 };
 
 /**
@@ -152,6 +167,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   test.setCeil(11.6);
   test.setFloor(11.6);
   test.setRound(15.8);
+  test.setAbs(47);
 
   mathCollection.push(JSON.stringify([{
 
@@ -162,7 +178,8 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
             'Value': test.getValue(),
              'Ceil': test.getCeil(),
             'floor': test.getFloor(),
-            'Round': test.getRound()
+            'Round': test.getRound(),
+         'Absolute': test.getAbs()
       }]
      )
    );
