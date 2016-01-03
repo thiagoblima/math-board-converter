@@ -57,13 +57,13 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
   this.getPrecision = function() {
 
-    return this.precision.toPrecision(2);
+    return this.precision;
 
   };
 
   this.setPrecision = function(precision){
 
-    this.precision = precision;
+    this.precision = parseInt(precision);
 
   };
 
