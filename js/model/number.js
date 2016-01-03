@@ -96,26 +96,26 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
 
      return this.ceil;
 
-   };
+  };
 
   this.setCeil = function(ceil){
 
       this.ceil = Math.ceil(ceil);
 
-   };
+  };
 
 
   this.getFloor = function(){
 
      return this.floor;
 
-   };
+  };
 
   this.setFloor = function(floor){
 
       this.floor = Math.floor(floor);
 
-   };
+  };
 
 
   this.getRound = function(){
