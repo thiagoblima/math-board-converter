@@ -59,7 +59,6 @@
                   round: document.getElementById("round"),
                absolute: document.getElementById("absolute")
 
-
           }
         },
         events:{
@@ -105,9 +104,9 @@
           },
           ceil:function(ceil){
 
-             View.math.user.setCeil(View.math.setResults['ceil'].value);
-             ceil = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
-             return ceil;
+            View.math.user.setCeil(View.math.setResults['ceil'].value);
+            ceil = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+            return ceil;
           },
           floor:function(floor){
 
