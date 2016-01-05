@@ -27,7 +27,7 @@
                   fixed: document.getElementsByClassName("fixed")[0],
               precision: document.getElementsByClassName("precision")[0],
                  string: document.getElementsByClassName("string")[0],
-                  value: document.getElementsByClassName("value")[0],
+                  value: document.getElementsByClassName("valueint")[0],
                    ceil: document.getElementsByClassName("ceil")[0],
                   floor: document.getElementsByClassName("floor")[0],
                   round: document.getElementsByClassName("round")[0],
@@ -40,7 +40,7 @@
                   fixed: document.getElementsByName("fixed")[0],
               precision: document.getElementsByName("precision")[0],
                  string: document.getElementsByName("string")[0],
-                  value: document.getElementsByName("value")[0],
+                  value: document.getElementsByName("valueint")[0],
                    ceil: document.getElementsByName("ceil")[0],
                   floor: document.getElementsByName("floor")[0],
                   round: document.getElementsByName("round")[0],
@@ -53,7 +53,7 @@
                   fixed: document.getElementById("fixed"),
               precision: document.getElementById("precision"),
                  string: document.getElementById("string"),
-                  value: document.getElementById("value"),
+                  value: document.getElementById("valueint"),
                    ceil: document.getElementById("ceil"),
                   floor: document.getElementById("floor"),
                   round: document.getElementById("round"),
@@ -65,7 +65,7 @@
           exponential:function(exponential){
 
             View.math.user.setExponential(View.math.setResults['exponential'].value);
-            exponential = View.math.results['exponential'].innerHTML = View.math.user.getExponential().toExponential();
+            exponential = View.math.results['exponential'].innerHTML = JSON.stringify([View.math.user.getExponential().toExponential()]);
             if(isNaN(View.math.user.getExponential())){
                return View.math.results['exponential'].innerHTML = '0';
             }else{
@@ -75,7 +75,7 @@
           fixed:function(fixed){
 
             View.math.user.setFixed(View.math.setResults['fixed'].value);
-            fixed = View.math.results['fixed'].innerHTML = View.math.user.getFixed().toFixed(2);
+            fixed = View.math.results['fixed'].innerHTML = JSON.stringify([View.math.user.getFixed().toFixed(2)]);
             if(isNaN(View.math.user.getFixed())){
                return View.math.results['fixed'].innerHTML = '0';
             }else{
@@ -85,7 +85,7 @@
           precision:function(precision){
 
             View.math.user.setPrecision(View.math.setResults['precision'].value);
-            precision = View.math.results['precision'].innerHTML = View.math.user.getPrecision().toPrecision();
+            precision = View.math.results['precision'].innerHTML = JSON.stringify([View.math.user.getPrecision().toPrecision()]);
             if(isNaN(View.math.user.getPrecision())){
                return View.math.results['precision'].innerHTML = '0';
             }else{
@@ -95,7 +95,7 @@
           string:function(string){
 
             View.math.user.setString(View.math.setResults['string'].value);
-            string = View.math.results['string'].innerHTML = View.math.user.getString().toString();
+            string = View.math.results['string'].innerHTML = JSON.stringify([View.math.user.getString().toString()]);
             if(View.math.user.getString().toString() === ''){
                return View.math.results['string'].innerHTML = 'Enter a number.';
             }else{
@@ -105,25 +105,25 @@
           ceil:function(ceil){
 
             View.math.user.setCeil(View.math.setResults['ceil'].value);
-            ceil = View.math.results['ceil'].innerHTML = View.math.user.getCeil();
+            ceil = View.math.results['ceil'].innerHTML = JSON.stringify([View.math.user.getCeil()]);
             return ceil;
           },
           floor:function(floor){
 
             View.math.user.setFloor(View.math.setResults['floor'].value);
-            floor = View.math.results['floor'].innerHTML = View.math.user.getFloor();
+            floor = View.math.results['floor'].innerHTML = JSON.stringify([View.math.user.getFloor()]);
             return floor;
           },
           round:function(round){
 
             View.math.user.setRound(View.math.setResults['round'].value);
-            round = View.math.results['round'].innerHTML = View.math.user.getRound();
+            round = View.math.results['round'].innerHTML = JSON.stringify([View.math.user.getRound()]);
             return round;
           },
           absolute:function(absolute){
 
             View.math.user.setAbs(View.math.setResults['absolute'].value);
-            absolute = View.math.results['absolute'].innerHTML = View.math.user.getAbs();
+            absolute = View.math.results['absolute'].innerHTML = JSON.stringify([View.math.user.getAbs()]);
             return absolute;
           },
         }
