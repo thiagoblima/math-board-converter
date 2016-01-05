@@ -16,13 +16,13 @@
  * @author: thiagolimasp@live.com (Thiago Lima)
  */
 
-var TestMath = function (exponential, fixed, precision, string, value, ceil, floor, round, abs){
+var TestMath = function (exponential, fixed, precision, string, valueint, ceil, floor, round, abs){
 
   this.exponential = exponential;
   this.fixed = fixed;
   this.precision = precision;
   this.string = string;
-  this.value = value;
+  this.valueint = value;
   this.ceil = ceil;
   this.floor = floor;
   this.round = round;
@@ -81,15 +81,15 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
   };
 
 
-  this.getValue = function(){
+  this.getValueInt = function(){
 
-    return this.value.valueOf();
+    return this.valueint.valueOf();
 
   };
 
-  this.setValue = function(value){
+  this.setValueInt = function(valueint){
 
-    this.value = value;
+    this.valueint = valueint;
 
   };
 
@@ -163,7 +163,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
      test.setExponential(10);
      test.setPrecision(10.6635);
      test.setString(10);
-     test.setValue(10);
+     test.setValueInt(10);
      test.setCeil(11.6);
      test.setFloor(11.6);
      test.setRound(15.8);
@@ -175,7 +175,7 @@ var TestMath = function (exponential, fixed, precision, string, value, ceil, flo
          'Floating': test.getFixed(),
         'Precision': test.getPrecision(),
            'String': test.getString(),
-            'Value': test.getValue(),
+            'Value': test.getValueInt(),
              'Ceil': test.getCeil(),
             'floor': test.getFloor(),
             'Round': test.getRound(),
