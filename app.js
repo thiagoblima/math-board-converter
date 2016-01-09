@@ -1,10 +1,30 @@
-var http = require('http');
+var express = require('express'),
+    cons    = require("consolidate"),
+    app     = express(),
+    port    = process.env.PORT || 3412;
 
-var server = http.createServer(function(request, response){
-             response.writeHead(200, {"Content-Type" : "text/plain"});
-	     response.end("Math Server");
+ app.engine('html', cons.swig);
+ app.set('view engine', 'html');
+ app.set("views", __dirname + '/public');
+ app.use(express.static( __dirname + '/public'));
+ app.use(app.router);
 
-});
 
-server.listen(3000);
-console.log("Math Server Started");
+
+ function errorHandler(err, req, res, next){
+     console.error(err.message);
+     console.error(err.stack);
+     res.status(500);
+     res.render('error_template', { error: err });
+
+ }
+ app.get('/', function(req, res, next){
+   var name = req.params.name;
+   res.render("index", { name : 'Math Board Converter' });
+ });
+
+
+app.use(errorHandler);
+
+app.listen(port);
+ console.log("Math Server Started");
