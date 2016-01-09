@@ -25,7 +25,8 @@
     "angular": "1.4.8",
     "bootstrap": "3.3.6",
     "express": "4.13.3",
-    "consolidate-scripts": "*"
+    "consolidate-scripts": "*",
+    "swig": "1.4.2"
   },
   "devDependencies": {
     "jquery-ui": "jquery.ui#1.11.4"
