@@ -10,17 +10,17 @@ var express = require('express'),
  app.use(app.router);
 
 
-
  function errorHandler(err, req, res, next){
      console.error(err.message);
      console.error(err.stack);
      res.status(500);
      res.render('error_template', { error: err });
 
- }
- app.get('/', function(req, res, next){
-   var name = req.params.name;
-   res.render("index", { name : 'Math Board Converter' });
+ };
+
+ app.get('/:index', function(req, res, next){
+   var index = req.params.index;
+   res.render("index", {index : index});
  });
 
 
