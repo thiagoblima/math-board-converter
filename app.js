@@ -18,12 +18,14 @@ var express = require('express'),
     app     = express(),
     port    = process.env.PORT || 3412;
 
+
 /**
  *@description: genenral set up for express
  *
  *Setting views and the static path for renderimg
  *swig templates on the build.
  */
+
 
  app.engine('html', cons.swig);
  app.set('view engine', 'html');
