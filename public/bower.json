@@ -1,0 +1,21 @@
+{
+  "name": "math_app",
+  "description": "Math web conveter from a Java Script labrary",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "Math",
+    "Converter",
+    "Java",
+    "Script",
+    "Nodejs",
+    "Angularjs",
+    "Bootstrap",
+    "libraries"
+  ],
+  "authors": [
+    "Thiago Lima"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types"
+}
