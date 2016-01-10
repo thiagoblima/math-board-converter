@@ -27,7 +27,7 @@ var express = require('express'),
  */
 
 
- app.engine('html', cons.swig);
+ app.engine('html', cons.nunjucks);
  app.set('view engine', 'html');
  app.set("views", __dirname + '/public');
  app.use(express.static( __dirname + '/public'));
