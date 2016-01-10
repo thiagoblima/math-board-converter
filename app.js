@@ -26,12 +26,10 @@ var express = require('express'),
  *swig templates on the build.
  */
 
-
- app.engine('html', cons.nunjucks);
+ app.engine('html', cons.swig);
  app.set('view engine', 'html');
  app.set("views", __dirname + '/public');
  app.use(express.static( __dirname + '/public'));
- app.use(app.router);
 
  app.listen(port);
  console.log("Math Server Started");
