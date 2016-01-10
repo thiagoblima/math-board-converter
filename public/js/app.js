@@ -1,1 +1,1 @@
-var app = angular.module("MathController", []);
+var app = angular.module("MathApp", []);
