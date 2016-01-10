@@ -1,21 +1,24 @@
 {
   "name": "math_app",
-  "description": "Math web conveter from a Java Script labrary",
+  "description": "Math web converter, from client to be transform into math methods",
   "main": "app.js",
   "moduleType": [],
   "keywords": [
     "Math",
-    "Converter",
     "Java",
     "Script",
+    "Converter",
     "Nodejs",
-    "Angularjs",
-    "Bootstrap",
-    "libraries"
+    "MongoDB"
   ],
   "authors": [
     "Thiago Lima"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types"
+  "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types",
+  "dependencies": {
+    "angular": "1.4.8",
+    "bootstrap": "3.3.6",
+    "jquery": "2.2.0"
+  }
 }
