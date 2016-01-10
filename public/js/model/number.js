@@ -162,6 +162,7 @@ var TestMath = function (exponential, fixed, precision, string, valueint, ceil, 
 
      test.setExponential(10);
      test.setPrecision(10.6635);
+     test.setFixed(10);
      test.setString(10);
      test.setValueInt(10);
      test.setCeil(11.6);
@@ -171,11 +172,11 @@ var TestMath = function (exponential, fixed, precision, string, valueint, ceil, 
 
   mathCollection.push(JSON.stringify([{
 
-      'Exponential': test.getExponential(),
-         'Floating': test.getFixed(),
-        'Precision': test.getPrecision(),
-           'String': test.getString(),
-            'Value': test.getValueInt(),
+      'Exponential': test.getExponential().toExponential(),
+         'Floating': test.getFixed().toFixed(2),
+        'Precision': test.getPrecision().toPrecision(),
+           'String': test.getString().toString(),
+            'Value': test.getValueInt().valueOf(),
              'Ceil': test.getCeil(),
             'floor': test.getFloor(),
             'Round': test.getRound(),
