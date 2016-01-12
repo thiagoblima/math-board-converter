@@ -71,8 +71,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background-color: #333333 !important;
 }
-/* line 11, ../sass/screen.scss */
-body header {
+
+/* line 15, ../sass/screen.scss */
+main header {
   background-color: #e05151 !important;
   color: #fff !important;
+}
+/* line 21, ../sass/screen.scss */
+main article p {
+  color: #fff !important;
+}
+
+/* line 27, ../sass/screen.scss */
+button {
+  background-color: #75a3d1 !important;
 }
