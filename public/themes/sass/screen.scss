@@ -7,9 +7,23 @@
 @import "modules/colors";
 
 body{
-  background-color:$layer;
+  background-color:$layer-color;
+}
+
+main{
+
   header{
-  background-color:$header;
-  color: $color;
+  background-color:$header-color;
+  color: $text-color;
   }
+
+  article{
+    p{
+      color: $text-color;
+    }
+  }
+}
+
+button{
+  background-color: $btn-color;
 }
