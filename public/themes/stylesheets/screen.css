@@ -86,3 +86,8 @@ main article p {
 button {
   background-color: #75a3d1 !important;
 }
+
+/* line 30, ../sass/screen.scss */
+thead {
+  background-color: #ffd452 !important;
+}
