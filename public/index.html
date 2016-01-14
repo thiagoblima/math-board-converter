@@ -26,19 +26,25 @@
        <h2 ng-bind="header.subtitle"></h2>
      </hgroup>
    </header>
-   <section class="row">
-     <article class="col-md-12">
-       <p class="col-md-4">
-         Here's your quick and smooth math converter, anytime <span>you</span> want!
-       </p>
-       <p class="col-md-4">
-         Get registered and receive the latest math news, anytime <span>you</span> want!
-       </p>
-       <p class="col-md-4">
-        Share get a lot of discounts on our latest services made for <span>you</span>!
-       </p>
-     </article>
-   </section>
+   <section id="intro-section" class="row">
+     <div class="col-md-12">
+       <article class="col-md-4">
+         <p class="paragraph-three-collumn">
+           Here's your quick and smooth math converter, anytime <span>you</span> want!
+         </p>
+       </article>
+       <article class="col-md-4">
+         <p class="paragraph-three-collumn">
+           Get registered and receive the latest math news, anytime <span>you</span> want!
+         </p>
+       </article>
+       <article class="col-md-4">
+          <p class="paragraph-three-column">
+           Share get a lot of discounts on our latest services made for <span>you</span>!
+          </p>
+        </article>
+      </div>
+    </section>
    <section class="table-responsive">
    <table class="table table-striped" id="math-table">
      <thead>
@@ -74,7 +80,7 @@
          <td><input class="form-control" type="number" name="round"></td>
          <td><input class="form-control" type="number" name="absolute"></td>
        </tr>
-    </tbody>   
+    </tbody>
     <tfooter>
        <tr>
          <td><button class="btn btn-primary" type="button" onclick="View.events.exponential(this.exponential);" id="exponential">Convert</button></td>
@@ -89,7 +95,7 @@
     </tfooter>
    </table>
  </section>
- </section>
+</section>
 </main>
 <script src="/js/app.js" type="text/javascript"></script>
 <!-- Controller Class -->
