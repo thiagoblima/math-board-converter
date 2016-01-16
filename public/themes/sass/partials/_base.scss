@@ -16,36 +16,33 @@ body{
 
 main{
 #container-wrapper{
-  width:100%;
-  padding:0;
-  overflow:hidden;
+   width:100%;
+   padding:0;
+   overflow:hidden;
     header{
      background-color:$header-color;
      color: $text-color;
-  }
+    }
+    section#intro-section{
+      margin:0 auto;
+      margin-bottom:30px;
+      width:1170px;
+    div{
     article{
-      p{
-        color: $text-color;
-       }
-     }
-   }
- }
-
+     @include intro-splash(400px, $table-color);
+        p{
+           color: $text-color;
+           width:350px;
+           padding:13em 3em 12.7em 3em;
+          }
+        }
+      }
+    }
+  }
+}
 button{
   background-color: $btn-color;
 }
 thead{
   background-color: $table-color;
-}
-
-
-section#intro-section{
-  margin:0 auto;
-  margin-bottom:30px;
-  width:1170px;
-  div{
-    article{
-      @include intro-splash(400px, $table-color);
-    }
-  }
 }
