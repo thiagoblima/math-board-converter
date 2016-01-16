@@ -45,58 +45,56 @@
       </article>
     </div>
    </section>
-
-   <section class="row">
-   <table class="table table-striped" id="math-table">
-     <thead>
-       <tr>
-         <th>Exponential</th>
-         <th>Fixed</th>
-         <th>Precision</th>
-         <th>String</th>
-         <th>Ceil</th>
-         <th>Floor</th>
-         <th>Round</th>
-         <th>Absolute</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td class="exponential"></td>
-         <td class="fixed"></td>
-         <td class="precision"></td>
-         <td class="string"></td>
-         <td class="ceil"></td>
-         <td class="floor"></td>
-         <td class="round"></td>
-         <td class="absolute"></td>
-       </tr>
-       <tr>
-         <td><input class="form-control" type="number" name="exponential"></td>
-         <td><input class="form-control" type="number" name="fixed"></td>
-         <td><input class="form-control" type="number" name="precision"></td>
-         <td><input class="form-control" type="number" name="string"></td>
-         <td><input class="form-control" type="number" name="ceil"></td>
-         <td><input class="form-control" type="number" name="floor"></td>
-         <td><input class="form-control" type="number" name="round"></td>
-         <td><input class="form-control" type="number" name="absolute"></td>
-       </tr>
-    </tbody>
-    <tfooter>
-       <tr>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.exponential(this.exponential);" id="exponential">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.fixed(this.fixed);" id="string">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.precision(this.precision)" id="precision">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.string(this.string);" id="value">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.ceil(this.ceil);" id="ceil">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.floor(this.floor);" id="floor">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.round(this.round);" id="round">Convert</button></td>
-         <td><button class="btn btn-primary" type="button" onclick="View.events.absolute(this.absolute);" id="absolute">Convert</button></td>
-        </tr>
-    </tfooter>
-   </table>
- </section>
-</section>
+   <div class="row">
+     <section class="table-responsive col-md-12">
+       <table class="table table-striped" id="math-table">
+         <thead>
+          <tr>
+            <th>Exponential</th>
+            <th>Fixed</th>
+            <th>Precision</th>
+            <th>String</th>
+            <th>Ceil</th>
+            <th>Floor</th>
+            <th>Round</th>
+            <th>Absolute</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="exponential"></td>
+            <td class="fixed"></td>
+            <td class="precision"></td>
+            <td class="string"></td>
+            <td class="ceil"></td>
+            <td class="floor"></td>
+            <td class="round"></td>
+            <td class="absolute"></td>
+          </tr>
+          <tr>
+            <td><input class="form-control" type="number" name="exponential"></td>
+            <td><input class="form-control" type="number" name="fixed"></td>
+            <td><input class="form-control" type="number" name="precision"></td>
+            <td><input class="form-control" type="number" name="string"></td>
+            <td><input class="form-control" type="number" name="ceil"></td>
+            <td><input class="form-control" type="number" name="floor"></td>
+            <td><input class="form-control" type="number" name="round"></td>
+            <td><input class="form-control" type="number" name="absolute"></td>
+          </tr>
+          <tr>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.exponential(this.exponential);" id="exponential">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.fixed(this.fixed);" id="string">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.precision(this.precision)" id="precision">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.string(this.string);" id="value">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.ceil(this.ceil);" id="ceil">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.floor(this.floor);" id="floor">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.round(this.round);" id="round">Convert</button></td>
+            <td><button class="btn btn-primary" type="button" onclick="View.events.absolute(this.absolute);" id="absolute">Convert</button></td>
+           </tr>
+       </tbody>
+     </table>
+    </div>
+  </section>
 </main>
 <script src="/js/app.js" type="text/javascript"></script>
 <!-- Controller Class -->
