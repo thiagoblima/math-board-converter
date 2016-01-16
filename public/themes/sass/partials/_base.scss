@@ -38,9 +38,10 @@ thead{
 
 
 section#intro-section{
+  margin-bottom:30px;
   div{
-  article{
-      @include intro-splash(100%, purple);
+    article{
+      @include intro-splash(400px, purple);
     }
   }
 }
