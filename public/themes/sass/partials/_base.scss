@@ -4,10 +4,7 @@
  *such as: buttons, transitions, colors or somehing like this...
  */
 
-@mixin intro-splash($height, $color){
-  height: $height;
-  background-color:$color;
-}
+@import "modules/functions";
 
 
 body{
@@ -20,16 +17,15 @@ main{
    padding:0;
    overflow:hidden;
     header{
-     background-color:$header-color;
-     color: $text-color;
+     @include head-splash($header-color, $text-color);
     }
     section#intro-section{
       margin:0 auto;
       margin-bottom:30px;
       width:1170px;
     div{
-    article{
-     @include intro-splash(400px, $table-color);
+     article{
+      @include intro-splash(400px, $table-color);
         p{
            color: $text-color;
            width:350px;
