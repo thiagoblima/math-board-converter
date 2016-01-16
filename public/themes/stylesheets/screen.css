@@ -67,27 +67,63 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 9, ../sass/screen.scss */
+/*@_base.scss
+ *HTML structure will be organized here as layout and general settings
+ *Small pieces takes makes a section will you find organized in other file
+ *such as: buttons, transitions, colors or somehing like this...
+ */
+/* line 14, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 20, ../sass/partials/_base.scss */
 main header {
   background-color: #e05151 !important;
   color: #fff !important;
 }
-/* line 21, ../sass/screen.scss */
+/* line 26, ../sass/partials/_base.scss */
 main article p {
   color: #fff !important;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 32, ../sass/partials/_base.scss */
 button {
   background-color: #75a3d1 !important;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 35, ../sass/partials/_base.scss */
+thead {
+  background-color: #ffd452 !important;
+}
+
+/* line 42, ../sass/partials/_base.scss */
+section#intro-section div article {
+  height: 100%;
+  background-color: purple;
+}
+
+/* line 10, ../sass/screen.scss */
+body {
+  background-color: #333333 !important;
+}
+
+/* line 16, ../sass/screen.scss */
+main header {
+  background-color: #e05151 !important;
+  color: #fff !important;
+}
+/* line 22, ../sass/screen.scss */
+main article p {
+  color: #fff !important;
+}
+
+/* line 28, ../sass/screen.scss */
+button {
+  background-color: #75a3d1 !important;
+}
+
+/* line 31, ../sass/screen.scss */
 thead {
   background-color: #ffd452 !important;
 }
