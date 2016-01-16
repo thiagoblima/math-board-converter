@@ -10,24 +10,26 @@
 }
 
 
-
 body{
   background-color:$layer-color;
 }
 
 main{
-
-  header{
-  background-color:$header-color;
-  color: $text-color;
+#container-wrapper{
+  width:100%;
+  padding:0;
+  overflow:hidden;
+    header{
+     background-color:$header-color;
+     color: $text-color;
   }
-
-  article{
-    p{
-      color: $text-color;
-    }
-  }
-}
+    article{
+      p{
+        color: $text-color;
+       }
+     }
+   }
+ }
 
 button{
   background-color: $btn-color;
@@ -38,10 +40,12 @@ thead{
 
 
 section#intro-section{
+  margin:0 auto;
   margin-bottom:30px;
+  width:1170px;
   div{
     article{
-      @include intro-splash(400px, purple);
+      @include intro-splash(400px, $table-color);
     }
   }
 }
