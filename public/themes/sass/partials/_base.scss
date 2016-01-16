@@ -27,9 +27,10 @@ main{
      article{
       @include intro-splash(400px, $table-color);
         p{
-           color: $text-color;
+           color: $layer-color;
            width:350px;
-           padding:13em 3em 12.7em 3em;
+           padding:7em 2em 7.8em 2em;
+           font-size: 1.5em;
           }
         }
       }
