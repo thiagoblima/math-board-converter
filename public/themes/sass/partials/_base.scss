@@ -3,3 +3,8 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
+
+@mixin intro-splash($height, $color){
+  height: $height;
+  color: $color; 
+}
