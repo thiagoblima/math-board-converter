@@ -2,10 +2,20 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@_colors.scss
+ *A class color to have the variables ready to be called
+ *Any color of the structure has be here, following the rule
+ *Just import the class and it can be called anytime
+ */
 /*@_base.scss
  *HTML structure will be organized here as layout and general settings
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
+ */
+/*@_functions.scss
+ *All the @mixins are on this file to prevent messy codes
+ *Just need to get it imported into the partials documents
+ *such as: _base.scss
  */
 /* line 10, ../sass/partials/_base.scss */
 body {
