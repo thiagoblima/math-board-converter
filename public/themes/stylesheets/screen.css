@@ -23,29 +23,30 @@ main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
 }
-/* line 27, ../sass/partials/_base.scss */
-main #container-wrapper article p {
-  color: #fff !important;
-}
-
-/* line 34, ../sass/partials/_base.scss */
-button {
-  background-color: #75a3d1 !important;
-}
-
-/* line 37, ../sass/partials/_base.scss */
-thead {
-  background-color: #ffd452 !important;
-}
-
-/* line 42, ../sass/partials/_base.scss */
-section#intro-section {
+/* line 26, ../sass/partials/_base.scss */
+main #container-wrapper section#intro-section {
   margin: 0 auto;
   margin-bottom: 30px;
   width: 1170px;
 }
-/* line 47, ../sass/partials/_base.scss */
-section#intro-section div article {
+/* line 31, ../sass/partials/_base.scss */
+main #container-wrapper section#intro-section div article {
   height: 400px;
+  background-color: #ffd452 !important;
+}
+/* line 33, ../sass/partials/_base.scss */
+main #container-wrapper section#intro-section div article p {
+  color: #fff !important;
+  width: 350px;
+  padding: 13em 3em 12.7em 3em;
+}
+
+/* line 43, ../sass/partials/_base.scss */
+button {
+  background-color: #75a3d1 !important;
+}
+
+/* line 46, ../sass/partials/_base.scss */
+thead {
   background-color: #ffd452 !important;
 }
