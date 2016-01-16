@@ -7,33 +7,45 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
-/* line 14, ../sass/partials/_base.scss */
+/* line 13, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
 
-/* line 20, ../sass/partials/_base.scss */
-main header {
+/* line 18, ../sass/partials/_base.scss */
+main #container-wrapper {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 22, ../sass/partials/_base.scss */
+main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
 }
-/* line 26, ../sass/partials/_base.scss */
-main article p {
+/* line 27, ../sass/partials/_base.scss */
+main #container-wrapper article p {
   color: #fff !important;
 }
 
-/* line 32, ../sass/partials/_base.scss */
+/* line 34, ../sass/partials/_base.scss */
 button {
   background-color: #75a3d1 !important;
 }
 
-/* line 35, ../sass/partials/_base.scss */
+/* line 37, ../sass/partials/_base.scss */
 thead {
   background-color: #ffd452 !important;
 }
 
 /* line 42, ../sass/partials/_base.scss */
+section#intro-section {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 1170px;
+}
+/* line 47, ../sass/partials/_base.scss */
 section#intro-section div article {
-  height: 100%;
-  background-color: purple;
+  height: 400px;
+  background-color: #ffd452 !important;
 }
