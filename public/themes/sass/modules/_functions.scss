@@ -1,0 +1,16 @@
+/*@_functions.scss
+ *All the @mixins are on this file to prevent messy codes
+ *Just need to get it imported into the partials documents
+ *such as: _base.scss
+ */
+
+
+@mixin head-splash($bgcolor, $color){
+  background-color:$bgcolor;
+  color:$color;
+}
+
+@mixin intro-splash($height, $color){
+  height:$height;
+  background-color:$color;
+}
