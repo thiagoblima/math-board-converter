@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /*@_colors.scss
  *A class color to have the variables ready to be called
- *Any color of the structure has be here, following the rule
+ *Any color of the structure has be here, following the rule;
  *Just import the class and it can be called anytime
  */
 /*@_base.scss
@@ -46,17 +46,18 @@ main #container-wrapper section#intro-section div article {
 }
 /* line 29, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
-  color: #fff !important;
+  color: #333333 !important;
   width: 350px;
-  padding: 13em 3em 12.7em 3em;
+  padding: 7em 2em 7.8em 2em;
+  font-size: 1.5em;
 }
 
-/* line 39, ../sass/partials/_base.scss */
+/* line 40, ../sass/partials/_base.scss */
 button {
   background-color: #75a3d1 !important;
 }
 
-/* line 42, ../sass/partials/_base.scss */
+/* line 43, ../sass/partials/_base.scss */
 thead {
   background-color: #ffd452 !important;
 }
