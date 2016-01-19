@@ -21,9 +21,8 @@ header{
    @include head-splash($header-color, $text-color);
 }
 section#intro-section{
-   margin:0 auto;
    margin-bottom:30px;
-   width:1170px;
+   padding:50px;
 div{
   article{
    @include intro-splash(400px, $table-color);
