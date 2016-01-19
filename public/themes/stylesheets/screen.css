@@ -28,16 +28,15 @@ main #container-wrapper {
   padding: 0;
   overflow: hidden;
 }
-/* line 19, ../sass/partials/_base.scss */
+/* line 20, ../sass/partials/_base.scss */
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
 }
-/* line 22, ../sass/partials/_base.scss */
+/* line 23, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
-  margin: 0 auto;
   margin-bottom: 30px;
-  width: 1170px;
+  padding: 50px;
 }
 /* line 27, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
