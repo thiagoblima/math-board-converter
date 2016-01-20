@@ -14,3 +14,7 @@
   height:$height;
   background-color:$color;
 }
+
+@mixin text-splash($offset-x, $offset-y, $blur-radius, $color){
+  text-shadow: $offsey-x, $offset-y, $blur-radius, $color;
+}
