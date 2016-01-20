@@ -17,6 +17,11 @@
  *Just need to get it imported into the partials documents
  *such as: _base.scss
  */
+/*@_shadows.scss
+ *All the text-shadows settings are on this file in order it aopears
+ *Just need to get it imported into the partials documents
+ *such as: _base.scss, _functions.scss
+ */
 /* line 10, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
@@ -32,18 +37,19 @@ main #container-wrapper {
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
+  text-shadow: 4px 4px 1px black;
 }
-/* line 23, ../sass/partials/_base.scss */
+/* line 24, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
 }
-/* line 27, ../sass/partials/_base.scss */
+/* line 28, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 29, ../sass/partials/_base.scss */
+/* line 30, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   color: #333333 !important;
   width: 350px;
@@ -51,12 +57,12 @@ main #container-wrapper section#intro-section div article p {
   font-size: 1.5em;
 }
 
-/* line 40, ../sass/partials/_base.scss */
+/* line 41, ../sass/partials/_base.scss */
 button {
   background-color: #75a3d1 !important;
 }
 
-/* line 43, ../sass/partials/_base.scss */
+/* line 44, ../sass/partials/_base.scss */
 thead {
   background-color: #ffd452 !important;
 }
