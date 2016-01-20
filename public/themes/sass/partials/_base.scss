@@ -19,6 +19,7 @@ main{
 
 header{
    @include head-splash($header-color, $text-color);
+   @include text-splash($head-text-shadow);
 }
 section#intro-section{
    margin-bottom:30px;
