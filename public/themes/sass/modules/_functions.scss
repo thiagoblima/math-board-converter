@@ -4,6 +4,8 @@
  *such as: _base.scss
  */
 
+@import "shadows";
+@import "colors";
 
 @mixin head-splash($bgcolor, $color){
   background-color:$bgcolor;
@@ -15,6 +17,6 @@
   background-color:$color;
 }
 
-@mixin text-splash($offset-x, $offset-y, $blur-radius, $color){
-  text-shadow: $offsey-x, $offset-y, $blur-radius, $color;
+@mixin text-splash($head-text-shadow){
+  text-shadow: $head-text-shadow;
 }
