@@ -28,6 +28,7 @@ div{
   article{
    @include intro-splash(400px, $table-color);
 p{
+   @include text-splash($head-text-shadow);
    color: $layer-color;
    width:350px;
    padding:7em 2em 7.8em 2em;
