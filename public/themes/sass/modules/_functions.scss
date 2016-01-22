@@ -20,3 +20,8 @@
 @mixin text-splash($head-text-shadow){
   text-shadow: $head-text-shadow;
 }
+
+@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color){
+  text-shadow:$paragraph-text-shadow;
+  color:$paragraph-color;
+}
