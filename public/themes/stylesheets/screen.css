@@ -51,18 +51,18 @@ main #container-wrapper section#intro-section div article {
 }
 /* line 30, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
-  color: #333333 !important;
-  width: 350px;
+  text-shadow: 3px 2px 1px #d9411e;
+  color: #ffffff !important;
   padding: 7em 2em 7.8em 2em;
   font-size: 1.5em;
 }
 
-/* line 41, ../sass/partials/_base.scss */
+/* line 40, ../sass/partials/_base.scss */
 button {
   background-color: #75a3d1 !important;
 }
 
-/* line 44, ../sass/partials/_base.scss */
+/* line 43, ../sass/partials/_base.scss */
 thead {
   background-color: #ffd452 !important;
 }
