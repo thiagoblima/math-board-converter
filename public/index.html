@@ -29,18 +29,18 @@
    <section id="intro-section" class="row">
      <div class="col-md-12">
        <article class="col-md-4">
-         <p class="paragraph-three-collumn">
-           Here's your quick and smooth math converter, anytime <span>you</span> want!
+         <p ng-bind-html="{{threeCollumn.paragraphs.collumnOne}}" class="paragraph-three-collumn">
+
          </p>
        </article>
        <article class="col-md-4">
          <p class="paragraph-three-collumn">
-           Get registered and receive the latest math news, anytime <span>you</span> want!
+           {{threeCollumn.paragraphs.collumnTwo}}
          </p>
        </article>
        <article class="col-md-4">
         <p class="paragraph-three-column">
-          Share get a lot of discounts on our latest services made for <span>you</span>!
+          {{threeCollumn.paragraphs.collumnThree}}
         </p>
       </article>
     </div>
