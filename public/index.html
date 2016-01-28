@@ -15,6 +15,7 @@
  <![endif]-->
   <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
   <script src="libs/angular/angular.js" type="text/javascript"></script>
+  <script src="libs/angular-sanitize/angular-sanitize.js" type="text/javascript"></script>
   <script src="libs/jquery/dist/jquery.min.js" type="text/javascript"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
@@ -29,19 +30,13 @@
    <section id="intro-section" class="row">
      <div class="col-md-12">
        <article class="col-md-4">
-         <p ng-bind-html="{{threeCollumn.paragraphs.collumnOne}}" class="paragraph-three-collumn">
-
-         </p>
+         <p ng-bind-html="threeCollumn.paragraphs.collumnOne" class="paragraph-three-collumn"></p>
        </article>
        <article class="col-md-4">
-         <p class="paragraph-three-collumn">
-           {{threeCollumn.paragraphs.collumnTwo}}
-         </p>
+         <p ng-bind-html="threeCollumn.paragraphs.collumnTwo" class="paragraph-three-collumn"></p>
        </article>
        <article class="col-md-4">
-        <p class="paragraph-three-column">
-          {{threeCollumn.paragraphs.collumnThree}}
-        </p>
+        <p ng-bind-html="threeCollumn.paragraphs.collumnThree" class="paragraph-three-column"></p>
       </article>
     </div>
    </section>
