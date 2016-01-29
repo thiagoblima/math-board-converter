@@ -23,19 +23,14 @@
  <section class="container" id="container-wrapper">
    <head-section data="header"></head-section>
    <intro-section data="intro"></intro-section>
-   <div class="row">
+   <div class="row" id="table">
      <section class="table-responsive col-md-12">
        <table class="table table-striped" id="math-table">
          <thead>
           <tr>
-            <th>Exponential</th>
-            <th>Fixed</th>
-            <th>Precision</th>
-            <th>String</th>
-            <th>Ceil</th>
-            <th>Floor</th>
-            <th>Round</th>
-            <th>Absolute</th>
+            <th ng-repeat="names in table">
+              {{names}}
+            </th>
           </tr>
         </thead>
         <tbody>
