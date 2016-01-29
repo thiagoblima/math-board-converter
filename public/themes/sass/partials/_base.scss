@@ -37,9 +37,13 @@ p{
   }
  }
 }
-button{
-  background-color: $btn-color;
-}
-thead{
-  background-color: $table-color;
+
+#table{
+  @include math-table(50px, 50px);
+  thead{
+    background-color: $table-color;
+  }
+  button{
+    background-color: $btn-color;
+  }
 }
