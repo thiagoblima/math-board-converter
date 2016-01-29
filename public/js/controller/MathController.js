@@ -12,4 +12,6 @@ app.controller("MathController", [ '$scope', function($scope){
       collumnThree: 'Share get a lot of discounts on our latest services made for <span>you</span>!'
     }
   };
+
+  $scope.table = [ 'Esponential', 'Fixed', 'Precision', 'String', 'Ceil', 'Floor', 'Round', 'Absolute' ]
 }]);
