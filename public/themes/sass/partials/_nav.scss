@@ -3,3 +3,139 @@
  *Colors and shades will ever be outside here, probably found on colors class.
  *Mixins also will be written outside this file.
  */
+
+ @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+ @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+.panel{
+  background-color:transparent !important;
+  padding:0;
+}
+ nav ul {
+   min-width: 600px;
+   position: relative;
+   display: table;
+   margin: 50px auto;
+   clear: both;
+ }
+
+ nav ul li {
+   list-style: none;
+   float: left;
+ }
+
+ nav ul li a {
+     width: 100px;
+     height: 100px;
+     float: left;
+     margin: 0 10px;
+   -webkit-perspective: 600px;
+      -moz-perspective: 600px;
+       -ms-perspective: 600px;
+           perspective: 600px;
+ }
+
+ nav ul li .front {
+   text-align: center;
+   -webkit-transform: rotateX(0deg) rotateY(0deg);
+      -moz-transform: rotateX(0deg) rotateY(0deg);
+       -ms-transform: rotateX(0deg) rotateY(0deg);
+        -o-transform: rotateX(0deg) rotateY(0deg);
+   -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+       -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+           transition: all 0.5s ease-in-out;
+   -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+       -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+           backface-visibility: hidden;
+   -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+           transform-style: preserve-3d;
+ }
+
+ nav ul li:hover .front {
+   -webkit-transform: rotateX(0deg) rotateY(180deg);
+      -moz-transform: rotateX(0deg) rotateY(180deg);
+       -ms-transform: rotateX(0deg) rotateY(180deg);
+        -o-transform: rotateX(0deg) rotateY(180deg);
+ }
+
+ nav ul li .back {
+   position: absolute;
+   top: 0;
+   width: inherit;
+   height: inherit;
+   text-align: center;
+   z-index: -1;
+   -webkit-transform: rotateX(0deg) rotateY(-180deg);
+      -moz-transform: rotateX(0deg) rotateY(-180deg);
+       -ms-transform: rotateX(0deg) rotateY(-180deg);
+        -o-transform: rotateX(0deg) rotateY(-180deg);
+   -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+       -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+           transition: all 0.5s ease-in-out;
+   -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+       -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+           backface-visibility: hidden;
+   -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+           transform-style: preserve-3d;
+ }
+
+ nav ul li:hover .back {
+   z-index: 1;
+   -webkit-transform: rotateX(0deg) rotateY(0deg);
+      -moz-transform: rotateX(0deg) rotateY(0deg);
+       -ms-transform: rotateX(0deg) rotateY(0deg);
+        -o-transform: rotateX(0deg) rotateY(0deg);
+ }
+
+ nav ul li i {
+   line-height: 100px !important;
+   color: white;
+   vertical-align: middle !important;
+ }
+
+ nav ul li span {
+   font-family: 'Roboto';
+   font-size: 20px;
+   font-weight: 300;
+   line-height: 100px;
+   color: white;
+   text-transform: lowercase;
+   vertical-align: middle;
+ }
+
+ nav ul li.color-1 .front,
+ nav ul li.color-1 .back {
+   background-color: #e6567a;
+ }
+
+ nav ul li.color-2 .front,
+ nav ul li.color-2 .back {
+   background-color: #00c0e4;
+ }
+
+ nav ul li.color-3 .front,
+ nav ul li.color-3 .back {
+   background-color: #5bd999;
+ }
+
+ nav ul li.color-4 .front,
+ nav ul li.color-4 .back {
+   background-color: #7658f4;
+ }
+
+ nav ul li.color-5 .front,
+ nav ul li.color-5 .back {
+   background-color: #eac14d;
+ }
