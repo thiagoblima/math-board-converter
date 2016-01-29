@@ -25,3 +25,8 @@
   text-shadow:$paragraph-text-shadow;
   color:$paragraph-color;
 }
+
+@mixin math-table($padding-right, $padding-left){
+  padding-right:$padding-right;
+  padding-left:$padding-left;
+}
