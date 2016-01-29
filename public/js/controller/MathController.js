@@ -5,7 +5,7 @@ app.controller("MathController", [ '$scope', function($scope){
     subtitle: "Converting all Math's Task"
   };
 
-  $scope.threeCollumn = {
+  $scope.intro = {
     paragraphs:{
       collumnOne: 'Here\'s your quick and smooth math converter, anytime <span>you</span> want!',
       collumnTwo: 'Get registered and receive the latest math news, anytime <span>you</span> want!',
