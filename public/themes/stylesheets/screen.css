@@ -22,6 +22,8 @@
  *Just need to get it imported into the partials documents
  *such as: _base.scss, _functions.scss
  */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 /* line 10, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
@@ -57,12 +59,170 @@ main #container-wrapper section#intro-section div article p {
   font-size: 1.5em;
 }
 
-/* line 40, ../sass/partials/_base.scss */
-button {
+/* line 41, ../sass/partials/_base.scss */
+#table {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+/* line 43, ../sass/partials/_base.scss */
+#table thead {
+  background-color: #ffd452 !important;
+}
+/* line 46, ../sass/partials/_base.scss */
+#table button {
   background-color: #75a3d1 !important;
 }
 
-/* line 43, ../sass/partials/_base.scss */
-thead {
-  background-color: #ffd452 !important;
+/*@_nav.scss
+ *Here will be the code of the main nav, keyframes are out in modules classes
+ *Colors and shades will ever be outside here, probably found on colors class.
+ *Mixins also will be written outside this file.
+ */
+/* line 10, ../sass/partials/_nav.scss */
+.panel {
+  background-color: transparent !important;
+  padding: 0;
+}
+
+/* line 14, ../sass/partials/_nav.scss */
+nav ul {
+  min-width: 600px;
+  position: relative;
+  display: table;
+  margin: 50px auto;
+  clear: both;
+}
+
+/* line 22, ../sass/partials/_nav.scss */
+nav ul li {
+  list-style: none;
+  float: left;
+}
+
+/* line 27, ../sass/partials/_nav.scss */
+nav ul li a {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0 10px;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+}
+
+/* line 38, ../sass/partials/_nav.scss */
+nav ul li .front {
+  text-align: center;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 60, ../sass/partials/_nav.scss */
+nav ul li:hover .front {
+  -webkit-transform: rotateX(0deg) rotateY(180deg);
+  -moz-transform: rotateX(0deg) rotateY(180deg);
+  -ms-transform: rotateX(0deg) rotateY(180deg);
+  -o-transform: rotateX(0deg) rotateY(180deg);
+}
+
+/* line 67, ../sass/partials/_nav.scss */
+nav ul li .back {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  z-index: -1;
+  -webkit-transform: rotateX(0deg) rotateY(-180deg);
+  -moz-transform: rotateX(0deg) rotateY(-180deg);
+  -ms-transform: rotateX(0deg) rotateY(-180deg);
+  -o-transform: rotateX(0deg) rotateY(-180deg);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 94, ../sass/partials/_nav.scss */
+nav ul li:hover .back {
+  z-index: 1;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* line 102, ../sass/partials/_nav.scss */
+nav ul li i {
+  line-height: 100px !important;
+  color: white;
+  vertical-align: middle !important;
+}
+
+/* line 108, ../sass/partials/_nav.scss */
+nav ul li span {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 100px;
+  color: white;
+  text-transform: lowercase;
+  vertical-align: middle;
+}
+
+/* line 118, ../sass/partials/_nav.scss */
+nav ul li.color-1 .front,
+nav ul li.color-1 .back {
+  background-color: #e6567a;
+}
+
+/* line 123, ../sass/partials/_nav.scss */
+nav ul li.color-2 .front,
+nav ul li.color-2 .back {
+  background-color: #00c0e4;
+}
+
+/* line 128, ../sass/partials/_nav.scss */
+nav ul li.color-3 .front,
+nav ul li.color-3 .back {
+  background-color: #5bd999;
+}
+
+/* line 133, ../sass/partials/_nav.scss */
+nav ul li.color-4 .front,
+nav ul li.color-4 .back {
+  background-color: #7658f4;
+}
+
+/* line 138, ../sass/partials/_nav.scss */
+nav ul li.color-5 .front,
+nav ul li.color-5 .back {
+  background-color: #eac14d;
 }
