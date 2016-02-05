@@ -11,29 +11,31 @@
   background-color:transparent !important;
   padding:0;
 }
- nav ul {
+ nav {
+   ul {
    min-width: 600px;
    position: relative;
    display: table;
    margin: 50px auto;
    clear: both;
+ li {
+  list-style: none;
+  float: left;
+  a{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 0 10px;
+  -webkit-perspective: 600px;
+     -moz-perspective: 600px;
+      -ms-perspective: 600px;
+          perspective: 600px;
+   }
+  }
  }
+}
 
- nav ul li {
-   list-style: none;
-   float: left;
- }
 
- nav ul li a {
-     width: 100px;
-     height: 100px;
-     float: left;
-     margin: 0 10px;
-   -webkit-perspective: 600px;
-      -moz-perspective: 600px;
-       -ms-perspective: 600px;
-           perspective: 600px;
- }
 
  nav ul li .front {
    text-align: center;
