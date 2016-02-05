@@ -14,10 +14,9 @@
 
  nav {
    ul {
-   @include ul-settings(600px, relative, table, 50px auto, both);
+   @include ul-nav-settings(600px, relative, table, 50px auto, both);
  li {
-  list-style: none;
-  float: left;
+   @include li-nav-settings(none, left);
   a{
     width: 100px;
     height: 100px;
