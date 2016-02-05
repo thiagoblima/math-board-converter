@@ -7,6 +7,9 @@
 @import "shadows";
 @import "colors";
 
+
+/* _base.scss  @mixins */
+
 @mixin head-splash($bgcolor, $color){
   background-color:$bgcolor;
   color:$color;
@@ -29,4 +32,12 @@
 @mixin math-table($padding-right, $padding-left){
   padding-right:$padding-right;
   padding-left:$padding-left;
+}
+
+
+/* _nav.scss @mixins */
+
+@mixin nav-panel($bg-color, $padding){
+  background-color:$bg-color;
+  padding:$padding;
 }
