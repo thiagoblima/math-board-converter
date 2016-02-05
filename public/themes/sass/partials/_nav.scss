@@ -14,11 +14,7 @@
 
  nav {
    ul {
-   min-width: 600px;
-   position: relative;
-   display: table;
-   margin: 50px auto;
-   clear: both;
+   @include ul-settings(600px, relative, table, 50px auto, both);
  li {
   list-style: none;
   float: left;
