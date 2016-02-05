@@ -42,10 +42,15 @@
   padding:$padding;
 }
 
-@mixin ul-settings($min-width, $position, $display, $margin, $clear){
+@mixin ul-nav-settings($min-width, $position, $display, $margin, $clear){
   min-width:$min-width;
   position:$position;
   display:$display;
   margin:$margin;
   clear:$clear;
+}
+
+@mixin li-nav-settings($list-style, $float){
+  list-style:$list-style;
+  float:$float;
 }
