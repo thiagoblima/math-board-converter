@@ -6,11 +6,12 @@
 
  @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
  @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+ @import 'modules/functions';
 
 .panel{
-  background-color:transparent !important;
-  padding:0;
+  @include nav-panel($nav-color, 0);
 }
+
  nav {
    ul {
    min-width: 600px;
