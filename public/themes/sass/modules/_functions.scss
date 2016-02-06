@@ -77,3 +77,12 @@
   text-transform:$text-transform;
   vertical-align:$vertical-align;
 }
+
+@mixin li-back-nav-settings($position, $top, $width, $height, $text-align, $z-index){
+  position:$position;
+  top:$top;
+  width:$width;
+  height:$height;
+  text-align:$text-align;
+  z-index:$z-index;  
+}
