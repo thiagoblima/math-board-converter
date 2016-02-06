@@ -153,9 +153,10 @@ nav ul li:hover
   -moz-transform: rotateX(0deg) rotateY(180deg);
   -ms-transform: rotateX(0deg) rotateY(180deg);
   -o-transform: rotateX(0deg) rotateY(180deg);
+  transform: rotateX(0deg) rotateY(180deg);
 }
 
-/* line 68, ../sass/partials/_nav.scss */
+/* line 65, ../sass/partials/_nav.scss */
 nav ul li .back {
   position: absolute;
   top: 0;
@@ -182,7 +183,7 @@ nav ul li .back {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 88, ../sass/partials/_nav.scss */
+/* line 85, ../sass/partials/_nav.scss */
 nav ul li :hover
 .back {
   z-index: 1;
@@ -192,13 +193,13 @@ nav ul li :hover
   -o-transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 104, ../sass/partials/_nav.scss */
+/* line 101, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
-/* line 107, ../sass/partials/_nav.scss */
+/* line 104, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: "Roboto";
   font-size: 20px;
@@ -209,31 +210,31 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 115, ../sass/partials/_nav.scss */
+/* line 112, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
 
-/* line 120, ../sass/partials/_nav.scss */
+/* line 117, ../sass/partials/_nav.scss */
 nav ul li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
 
-/* line 125, ../sass/partials/_nav.scss */
+/* line 122, ../sass/partials/_nav.scss */
 nav ul li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
 
-/* line 130, ../sass/partials/_nav.scss */
+/* line 127, ../sass/partials/_nav.scss */
 nav ul li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
 
-/* line 135, ../sass/partials/_nav.scss */
+/* line 132, ../sass/partials/_nav.scss */
 nav ul li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
