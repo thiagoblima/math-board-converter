@@ -7,25 +7,23 @@
  @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
  @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
  @import 'modules/functions';
+ @import 'modules/animation-nav';
 
 .panel{
   @include nav-panel($nav-color, 0);
 }
 
- nav {
-   ul {
+nav {
+  ul {
    @include ul-nav-settings(600px, relative, table, 50px auto, both);
- li {
+  li {
    @include li-nav-settings(none, left);
-  a{
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin: 0 10px;
-  -webkit-perspective: 600px;
-     -moz-perspective: 600px;
-      -ms-perspective: 600px;
-          perspective: 600px;
+   a {
+   @include a-nav-settings(100px, 100px, left, 0 10px);
+  -webkit-perspective: $perspective;
+     -moz-perspective: $perspective;
+      -ms-perspective: $perspective;
+          perspective: $perspective;
    }
   }
  }
