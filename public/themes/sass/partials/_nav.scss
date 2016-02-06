@@ -107,11 +107,17 @@ nav{
 }
 
 
- nav ul li i {
-   line-height: 100px !important;
-   color: white;
-   vertical-align: middle !important;
- }
+nav{
+  ul{
+   li{
+     i{
+
+      @include i-nav-settings(100px !important, white, middle !important);
+
+      }
+    }
+  }
+}
 
  nav ul li span {
    font-family: 'Roboto';
