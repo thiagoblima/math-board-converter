@@ -147,7 +147,7 @@ nav ul li:hover
   -o-transform: rotateX(0deg) rotateY(180deg);
 }
 
-/* line 72, ../sass/partials/_nav.scss */
+/* line 71, ../sass/partials/_nav.scss */
 nav ul li .back {
   position: absolute;
   top: 0;
@@ -174,7 +174,7 @@ nav ul li .back {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 97, ../sass/partials/_nav.scss */
+/* line 96, ../sass/partials/_nav.scss */
 nav ul li :hover
 .back {
   z-index: 1;
@@ -184,13 +184,13 @@ nav ul li :hover
   -o-transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 113, ../sass/partials/_nav.scss */
+/* line 112, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
-/* line 116, ../sass/partials/_nav.scss */
+/* line 115, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: 'Roboto';
   font-size: 20px;
