@@ -116,7 +116,7 @@ nav ul li a {
   perspective: 600px;
 }
 
-/* line 34, ../sass/partials/_nav.scss */
+/* line 36, ../sass/partials/_nav.scss */
 nav ul li .front {
   text-align: center;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -139,7 +139,7 @@ nav ul li .front {
   transform-style: preserve-3d;
 }
 
-/* line 56, ../sass/partials/_nav.scss */
+/* line 61, ../sass/partials/_nav.scss */
 nav ul li:hover .front {
   -webkit-transform: rotateX(0deg) rotateY(180deg);
   -moz-transform: rotateX(0deg) rotateY(180deg);
@@ -147,7 +147,7 @@ nav ul li:hover .front {
   -o-transform: rotateX(0deg) rotateY(180deg);
 }
 
-/* line 63, ../sass/partials/_nav.scss */
+/* line 68, ../sass/partials/_nav.scss */
 nav ul li .back {
   position: absolute;
   top: 0;
@@ -175,7 +175,7 @@ nav ul li .back {
   transform-style: preserve-3d;
 }
 
-/* line 90, ../sass/partials/_nav.scss */
+/* line 95, ../sass/partials/_nav.scss */
 nav ul li:hover .back {
   z-index: 1;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -184,14 +184,14 @@ nav ul li:hover .back {
   -o-transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 98, ../sass/partials/_nav.scss */
+/* line 103, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
 
-/* line 104, ../sass/partials/_nav.scss */
+/* line 109, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: 'Roboto';
   font-size: 20px;
@@ -202,31 +202,31 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 114, ../sass/partials/_nav.scss */
+/* line 119, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
 
-/* line 119, ../sass/partials/_nav.scss */
+/* line 124, ../sass/partials/_nav.scss */
 nav ul li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
 
-/* line 124, ../sass/partials/_nav.scss */
+/* line 129, ../sass/partials/_nav.scss */
 nav ul li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
 
-/* line 129, ../sass/partials/_nav.scss */
+/* line 134, ../sass/partials/_nav.scss */
 nav ul li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
 
-/* line 134, ../sass/partials/_nav.scss */
+/* line 139, ../sass/partials/_nav.scss */
 nav ul li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
