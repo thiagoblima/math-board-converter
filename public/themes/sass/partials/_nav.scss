@@ -7,6 +7,7 @@
  @import 'modules/functions';
  @import 'modules/animation-nav';
  @import 'modules/fonts';
+ @import 'modules/colors';
 
 .panel{
   @include nav-panel($nav-color, 0);
@@ -116,25 +117,25 @@ nav{
 
  nav ul li.color-1 .front,
  nav ul li.color-1 .back {
-   background-color: #e6567a;
+   background-color:$home-nav-color;
  }
 
  nav ul li.color-2 .front,
  nav ul li.color-2 .back {
-   background-color: #00c0e4;
+   background-color:$blog-nav-color;
  }
 
  nav ul li.color-3 .front,
  nav ul li.color-3 .back {
-   background-color: #5bd999;
+   background-color:$photo-nav-color;
  }
 
  nav ul li.color-4 .front,
  nav ul li.color-4 .back {
-   background-color: #7658f4;
+   background-color:$about-nav-color;
  }
 
  nav ul li.color-5 .front,
  nav ul li.color-5 .back {
-   background-color: #eac14d;
+   background-color:$chat-nav-color;
  }
