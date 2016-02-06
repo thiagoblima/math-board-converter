@@ -53,12 +53,12 @@ nav{
       -moz-transform-style: preserve-3d;
         -o-transform-style: preserve-3d;
            transform-style: preserve-3d;
-   }&:hover .front{
+   }&:hover
+     .front{
      -webkit-transform: rotateX(0deg) rotateY(180deg);
         -moz-transform: rotateX(0deg) rotateY(180deg);
          -ms-transform: rotateX(0deg) rotateY(180deg);
           -o-transform: rotateX(0deg) rotateY(180deg);
-
       }
     }
   }
@@ -66,7 +66,10 @@ nav{
 
 
 
- nav ul li .back {
+nav{
+  ul{
+    li {
+     .back {
    position: absolute;
    top: 0;
    width: inherit;
@@ -91,15 +94,18 @@ nav{
       -moz-transform-style: preserve-3d;
         -o-transform-style: preserve-3d;
            transform-style: preserve-3d;
- }
+      }:hover
+       .back{
+       z-index: 1;
+       -webkit-transform: rotateX(0deg) rotateY(0deg);
+          -moz-transform: rotateX(0deg) rotateY(0deg);
+           -ms-transform: rotateX(0deg) rotateY(0deg);
+            -o-transform: rotateX(0deg) rotateY(0deg);
+      }
+    }
+  }
+}
 
- nav ul li:hover .back {
-   z-index: 1;
-   -webkit-transform: rotateX(0deg) rotateY(0deg);
-      -moz-transform: rotateX(0deg) rotateY(0deg);
-       -ms-transform: rotateX(0deg) rotateY(0deg);
-        -o-transform: rotateX(0deg) rotateY(0deg);
- }
 
  nav ul li i {
    line-height: 100px !important;
