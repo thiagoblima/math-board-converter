@@ -49,10 +49,10 @@ nav{
        -ms-backface-visibility: $backface-settings;
         -o-backface-visibility: $backface-settings;
            backface-visibility: $backface-settings;
-   -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-           transform-style: preserve-3d;
+   -webkit-transform-style: $transform-style;
+      -moz-transform-style: $transform-style;
+        -o-transform-style: $transform-style;
+           transform-style: $transform-style;
    }&:hover
      .front{
      -webkit-transform: rotateX($initial-deg) rotateY($flip-deg-front);
@@ -84,10 +84,10 @@ nav{
        -ms-backface-visibility: $backface-settings;
         -o-backface-visibility: $backface-settings;
            backface-visibility: $backface-settings;
-   -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-           transform-style: preserve-3d;
+   -webkit-transform-style: $transform-style;
+      -moz-transform-style: $transform-style;
+        -o-transform-style: $transform-style;
+           transform-style: $transform-style;
       }:hover
        .back{
        z-index: 1;
