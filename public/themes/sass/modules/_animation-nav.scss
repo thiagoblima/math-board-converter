@@ -6,7 +6,8 @@
 
 
 $perspective: 600px;
-$initial-deg: 0deg;
+$rotateX-default: rotateX(0deg);
+$rotateY-default: rotateY(0deg);
 $flip-deg-front: 180deg;
 $flip-deg-back: -180deg;
 $transition-settings: all 0.5s ease-in-out;
