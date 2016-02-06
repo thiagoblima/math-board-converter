@@ -52,10 +52,7 @@ nav{
            transform-style: $transform-style;
    }&:hover
      .front{
-     -webkit-transform: rotateX(0deg) rotateY(180deg);
-        -moz-transform: rotateX(0deg) rotateY(180deg);
-         -ms-transform: rotateX(0deg) rotateY(180deg);
-          -o-transform: rotateX(0deg) rotateY(180deg);
+     @include transform-crossbrowser($rotateX-default, $rotateY-flip-front);
       }
     }
   }
