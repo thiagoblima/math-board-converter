@@ -87,6 +87,13 @@
   z-index:$z-index;
 }
 
+@mixin perspective-crossbrowser($value){
+  -webkit-perspective:$value;
+     -moz-perspective:$value;
+      -ms-perspective:$value;
+       -o-perspective:$value;
+}
+
 @mixin transform-crossbrowser($rotateX, $rotateY){
   -webkit-transform:$rotateX $rotateY;
      -moz-transform:$rotateX $rotateY;
