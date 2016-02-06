@@ -64,10 +64,7 @@ nav{
     li{
      .back{
    @include li-back-nav-settings(absolute, 0, inherit, inherit, center, -1);
-   -webkit-transform: rotateX(0deg) rotateY(-180deg);
-      -moz-transform: rotateX(0deg) rotateY(-180deg);
-       -ms-transform: rotateX(0deg) rotateY(-180deg);
-        -o-transform: rotateX(0deg) rotateY(-180deg);
+   @include transform-crossbrowser($rotateX-default, $rotateY-flip-back);
    -webkit-transition: $transition-settings;
       -moz-transition: $transition-settings;
        -ms-transition: $transition-settings;
@@ -85,10 +82,7 @@ nav{
       }:hover
        .back{
        z-index: 1;
-       -webkit-transform: rotateX(0deg) rotateY(0deg);
-          -moz-transform: rotateX(0deg) rotateY(0deg);
-           -ms-transform: rotateX(0deg) rotateY(0deg);
-            -o-transform: rotateX(0deg) rotateY(0deg);
+       @include transform-crossbrowser($rotateX-default, $rotateY-default);
       }
     }
   }
