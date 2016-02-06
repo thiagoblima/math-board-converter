@@ -4,10 +4,9 @@
  *Mixins also will be written outside this file.
  */
 
- @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
- @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
  @import 'modules/functions';
  @import 'modules/animation-nav';
+ @import 'modules/fonts';
 
 .panel{
   @include nav-panel($nav-color, 0);
@@ -65,7 +64,6 @@ nav{
 }
 
 
-
 nav{
   ul{
     li {
@@ -114,17 +112,12 @@ nav{
       @include i-nav-settings(100px !important, white, middle !important);
       }
       span{
-        font-family: 'Roboto';
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 100px;
-        color: white;
-        text-transform: lowercase;
-        vertical-align: middle;
+      @include span-nav-settings($nav-font-roboto, 20px, 300, 100px, white, lowercase, middle);
       }
     }
   }
 }
+
 
  nav ul li.color-1 .front,
  nav ul li.color-1 .back {
