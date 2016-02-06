@@ -111,23 +111,20 @@ nav{
   ul{
    li{
      i{
-
       @include i-nav-settings(100px !important, white, middle !important);
-
+      }
+      span{
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 100px;
+        color: white;
+        text-transform: lowercase;
+        vertical-align: middle;
       }
     }
   }
 }
-
- nav ul li span {
-   font-family: 'Roboto';
-   font-size: 20px;
-   font-weight: 300;
-   line-height: 100px;
-   color: white;
-   text-transform: lowercase;
-   vertical-align: middle;
- }
 
  nav ul li.color-1 .front,
  nav ul li.color-1 .back {
