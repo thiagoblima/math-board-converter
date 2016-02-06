@@ -184,14 +184,14 @@ nav ul li :hover
   -o-transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 110, ../sass/partials/_nav.scss */
+/* line 113, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
 
-/* line 116, ../sass/partials/_nav.scss */
+/* line 122, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: 'Roboto';
   font-size: 20px;
@@ -202,31 +202,31 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 126, ../sass/partials/_nav.scss */
+/* line 132, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
 
-/* line 131, ../sass/partials/_nav.scss */
+/* line 137, ../sass/partials/_nav.scss */
 nav ul li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
 
-/* line 136, ../sass/partials/_nav.scss */
+/* line 142, ../sass/partials/_nav.scss */
 nav ul li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
 
-/* line 141, ../sass/partials/_nav.scss */
+/* line 147, ../sass/partials/_nav.scss */
 nav ul li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
 
-/* line 146, ../sass/partials/_nav.scss */
+/* line 152, ../sass/partials/_nav.scss */
 nav ul li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
