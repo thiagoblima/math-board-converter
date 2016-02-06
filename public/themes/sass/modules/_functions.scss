@@ -67,3 +67,13 @@
   color:$color;
   vertical-align:$vertical-align;
 }
+
+@mixin span-nav-settings($font-family, $font-size, $font-weight, $line-height, $color, $text-transform, $vertical-align){
+  font-family:$font-family;
+  font-size:$font-size;
+  font-weight:$font-weight;
+  line-height:$line-height;
+  color:$color;
+  text-transform:$text-transform;
+  vertical-align:$vertical-align;
+}
