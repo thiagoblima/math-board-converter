@@ -16,22 +16,24 @@
 nav {
   ul {
    @include ul-nav-settings(600px, relative, table, 50px auto, both);
-  li {
-   @include li-nav-settings(none, left);
-   a {
-   @include a-nav-settings(100px, 100px, left, 0 10px);
-  -webkit-perspective: $perspective;
-     -moz-perspective: $perspective;
-      -ms-perspective: $perspective;
-          perspective: $perspective;
-   }
+   li {
+    @include li-nav-settings(none, left);
+    a {
+    @include a-nav-settings(100px, 100px, left, 0 10px);
+    -webkit-perspective: $perspective;
+       -moz-perspective: $perspective;
+        -ms-perspective: $perspective;
+            perspective: $perspective;
+      }
+    }
   }
- }
 }
 
 
-
- nav ul li .front {
+nav{
+  ul{
+    li{
+     .front {
    text-align: center;
    -webkit-transform: rotateX(0deg) rotateY(0deg);
       -moz-transform: rotateX(0deg) rotateY(0deg);
@@ -51,7 +53,10 @@ nav {
       -moz-transform-style: preserve-3d;
         -o-transform-style: preserve-3d;
            transform-style: preserve-3d;
+   }
+  }
  }
+}
 
  nav ul li:hover .front {
    -webkit-transform: rotateX(0deg) rotateY(180deg);
