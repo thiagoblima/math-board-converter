@@ -7,6 +7,8 @@
  *Any color of the structure has be here, following the rule;
  *Just import the class and it can be called anytime
  */
+/* _base.scss colors */
+/* _nav.scss colors */
 /*@_base.scss
  *HTML structure will be organized here as layout and general settings
  *Small pieces takes makes a section will you find organized in other file
@@ -84,6 +86,11 @@ main #container-wrapper section#intro-section div article p {
  *The purpose of this class is not to have @mixins otherwise
  *Small ajustments as in px or deg for the flip animation on nav
  *Just import the class and it can be called anytime
+ */
+/*@_fonts.scss
+ *All the font's variables have to be set here fora better modularization
+ *It doesn't matter which DOM part it is, the important thing is to make it.
+ *Just import this class where it should be used.
  */
 /* line 12, ../sass/partials/_nav.scss */
 .panel {
@@ -174,7 +181,7 @@ nav ul li .back {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 96, ../sass/partials/_nav.scss */
+/* line 91, ../sass/partials/_nav.scss */
 nav ul li :hover
 .back {
   z-index: 1;
@@ -184,15 +191,15 @@ nav ul li :hover
   -o-transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 112, ../sass/partials/_nav.scss */
+/* line 107, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
-/* line 115, ../sass/partials/_nav.scss */
+/* line 110, ../sass/partials/_nav.scss */
 nav ul li span {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 20px;
   font-weight: 300;
   line-height: 100px;
@@ -201,31 +208,31 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 129, ../sass/partials/_nav.scss */
+/* line 118, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
 
-/* line 134, ../sass/partials/_nav.scss */
+/* line 123, ../sass/partials/_nav.scss */
 nav ul li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
 
-/* line 139, ../sass/partials/_nav.scss */
+/* line 128, ../sass/partials/_nav.scss */
 nav ul li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
 
-/* line 144, ../sass/partials/_nav.scss */
+/* line 133, ../sass/partials/_nav.scss */
 nav ul li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
 
-/* line 149, ../sass/partials/_nav.scss */
+/* line 138, ../sass/partials/_nav.scss */
 nav ul li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
