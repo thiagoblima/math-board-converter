@@ -12,12 +12,12 @@
   @include nav-panel($nav-color, 0);
 }
 
-nav {
-  ul {
+nav{
+  ul{
    @include ul-nav-settings(600px, relative, table, 50px auto, both);
-   li {
+   li{
     @include li-nav-settings(none, left);
-    a {
+    a{
     @include a-nav-settings(100px, 100px, left, 0 10px);
     -webkit-perspective: $perspective;
        -moz-perspective: $perspective;
@@ -32,7 +32,7 @@ nav {
 nav{
   ul{
     li{
-     .front {
+     .front{
    text-align: center;
    -webkit-transform: rotateX(0deg) rotateY(0deg);
       -moz-transform: rotateX(0deg) rotateY(0deg);
@@ -66,14 +66,9 @@ nav{
 
 nav{
   ul{
-    li {
-     .back {
-   position: absolute;
-   top: 0;
-   width: inherit;
-   height: inherit;
-   text-align: center;
-   z-index: -1;
+    li{
+     .back{
+   @include li-back-nav-settings(absolute, 0, inherit, inherit, center, -1);
    -webkit-transform: rotateX(0deg) rotateY(-180deg);
       -moz-transform: rotateX(0deg) rotateY(-180deg);
        -ms-transform: rotateX(0deg) rotateY(-180deg);
