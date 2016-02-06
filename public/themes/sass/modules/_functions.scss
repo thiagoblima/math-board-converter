@@ -54,3 +54,10 @@
   list-style:$list-style;
   float:$float;
 }
+
+@mixin a-nav-settings($width, $height, $float, $margin){
+  width:$width;
+  height:$height;
+  float:$float;
+  margin:$margin;
+}
