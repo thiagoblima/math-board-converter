@@ -84,5 +84,13 @@
   width:$width;
   height:$height;
   text-align:$text-align;
-  z-index:$z-index;  
+  z-index:$z-index;
+}
+
+@mixin transform-crossbrowser($rotateX, $rotateY){
+  -webkit-transform:$rotateX $rotateY;
+     -moz-transform:$rotateX $rotateY;
+      -ms-transform:$rotateX $rotateY;
+       -o-transform:$rotateX $rotateY;
+          transform:$rotateX $rotateY;
 }
