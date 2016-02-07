@@ -34,11 +34,7 @@ nav{
    text-align: center;
    @include transform-crossbrowser($rotateX-default, $rotateY-default);
    @include transition-crossbrowser($transition-settings);
-   -webkit-backface-visibility: $backface-settings;
-      -moz-backface-visibility: $backface-settings;
-       -ms-backface-visibility: $backface-settings;
-        -o-backface-visibility: $backface-settings;
-           backface-visibility: $backface-settings;
+   @include backface-crossbrowser($backface-settings);
    -webkit-transform-style: $transform-style;
       -moz-transform-style: $transform-style;
         -o-transform-style: $transform-style;
@@ -59,11 +55,7 @@ nav{
    @include li-back-nav-settings(absolute, 0, inherit, inherit, center, -1);
    @include transform-crossbrowser($rotateX-default, $rotateY-flip-back);
    @include transition-crossbrowser($transition-settings);
-   -webkit-backface-visibility: $backface-settings;
-      -moz-backface-visibility: $backface-settings;
-       -ms-backface-visibility: $backface-settings;
-        -o-backface-visibility: $backface-settings;
-           backface-visibility: $backface-settings;
+   @include backface-crossbrowser($backface-settings);
    -webkit-transform-style: $transform-style;
       -moz-transform-style: $transform-style;
         -o-transform-style: $transform-style;
