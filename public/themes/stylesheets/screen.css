@@ -140,13 +140,12 @@ nav ul li .front {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 46, ../sass/partials/_nav.scss */
+/* line 42, ../sass/partials/_nav.scss */
 nav ul li:hover
 .front {
   -webkit-transform: rotateX(0deg) rotateY(180deg);
@@ -156,7 +155,7 @@ nav ul li:hover
   transform: rotateX(0deg) rotateY(180deg);
 }
 
-/* line 58, ../sass/partials/_nav.scss */
+/* line 54, ../sass/partials/_nav.scss */
 nav ul li .back {
   position: absolute;
   top: 0;
@@ -178,13 +177,12 @@ nav ul li .back {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-  backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 71, ../sass/partials/_nav.scss */
+/* line 63, ../sass/partials/_nav.scss */
 nav ul li :hover
 .back {
   z-index: 1;
@@ -195,13 +193,13 @@ nav ul li :hover
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 84, ../sass/partials/_nav.scss */
+/* line 76, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
-/* line 87, ../sass/partials/_nav.scss */
+/* line 79, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: "Roboto";
   font-size: 20px;
@@ -212,31 +210,31 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 95, ../sass/partials/_nav.scss */
+/* line 87, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
 
-/* line 100, ../sass/partials/_nav.scss */
+/* line 92, ../sass/partials/_nav.scss */
 nav ul li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
 
-/* line 105, ../sass/partials/_nav.scss */
+/* line 97, ../sass/partials/_nav.scss */
 nav ul li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
 
-/* line 110, ../sass/partials/_nav.scss */
+/* line 102, ../sass/partials/_nav.scss */
 nav ul li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
 
-/* line 115, ../sass/partials/_nav.scss */
+/* line 107, ../sass/partials/_nav.scss */
 nav ul li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
