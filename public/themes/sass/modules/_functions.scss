@@ -109,3 +109,10 @@
        -o-transition:$value;
           transition:$value;
 }
+
+@mixin backface-crossbrowser($value){
+  -webkit-backface-visibility:$value;
+     -moz-backface-visibility:$value;
+      -ms-backface-visibility:$value;
+       -o-backface-visibility:$value;
+}
