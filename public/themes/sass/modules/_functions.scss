@@ -101,3 +101,11 @@
        -o-transform:$rotateX $rotateY;
           transform:$rotateX $rotateY;
 }
+
+@mixin transition-crossbrowser($value){
+  -webkit-transition:$value;
+     -moz-transition:$value;
+      -ms-transition:$value;
+       -o-transition:$value;
+          transition:$value;
+}
