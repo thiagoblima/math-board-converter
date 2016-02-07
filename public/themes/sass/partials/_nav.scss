@@ -15,12 +15,12 @@
 
 nav{
   ul{
-   @include ul-nav-settings(600px, relative, table, 50px auto, both);
+      @include ul-nav-settings(600px, relative, table, 50px auto, both);
    li{
-    @include li-nav-settings(none, left);
+      @include li-nav-settings(none, left);
     a{
-    @include a-nav-settings(100px, 100px, left, 0 10px);
-    @include perspective-crossbrowser($perspective);
+      @include a-nav-settings(100px, 100px, left, 0 10px);
+      @include perspective-crossbrowser($perspective);
       }
     }
   }
@@ -54,7 +54,7 @@ nav{
        @include transition-crossbrowser($transition-settings);
        @include backface-crossbrowser($backface-settings);
        @include transform-style-crossbrowser($transform-style);
-      }:hover
+     }&:hover
        .back{
        z-index: 1;
        @include transform-crossbrowser($rotateX-default, $rotateY-default);
@@ -78,27 +78,27 @@ nav{
 }
 
 
- nav ul li.color-1 .front,
- nav ul li.color-1 .back {
-   background-color:$home-nav-color;
- }
-
- nav ul li.color-2 .front,
- nav ul li.color-2 .back {
-   background-color:$blog-nav-color;
- }
-
- nav ul li.color-3 .front,
- nav ul li.color-3 .back {
-   background-color:$photo-nav-color;
- }
-
- nav ul li.color-4 .front,
- nav ul li.color-4 .back {
-   background-color:$about-nav-color;
- }
-
- nav ul li.color-5 .front,
- nav ul li.color-5 .back {
-   background-color:$chat-nav-color;
- }
+nav{
+  ul{
+   li.color-1 .front,
+   li.color-1 .back {
+        background-color:$home-nav-color;
+    }&
+    li.color-2 .front,
+    li.color-2 .back {
+        background-color:$blog-nav-color;
+    }&
+    li.color-3 .front,
+    li.color-3 .back {
+        background-color:$photo-nav-color;
+    }&
+    li.color-4 .front,
+    li.color-4 .back {
+      background-color:$about-nav-color;
+    }&
+    li.color-5 .front,
+    li.color-5 .back {
+      background-color:$chat-nav-color;
+    }
+  }
+}
