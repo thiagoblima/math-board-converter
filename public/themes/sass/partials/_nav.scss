@@ -31,17 +31,14 @@ nav{
   ul{
     li{
      .front{
-   text-align: center;
-   @include transform-crossbrowser($rotateX-default, $rotateY-default);
-   @include transition-crossbrowser($transition-settings);
-   @include backface-crossbrowser($backface-settings);
-   -webkit-transform-style: $transform-style;
-      -moz-transform-style: $transform-style;
-        -o-transform-style: $transform-style;
-           transform-style: $transform-style;
+       text-align: center;
+       @include transform-crossbrowser($rotateX-default, $rotateY-default);
+       @include transition-crossbrowser($transition-settings);
+       @include backface-crossbrowser($backface-settings);
+       @include transform-style-crossbrowser($transform-style);
    }&:hover
      .front{
-     @include transform-crossbrowser($rotateX-default, $rotateY-flip-front);
+       @include transform-crossbrowser($rotateX-default, $rotateY-flip-front);
       }
     }
   }
@@ -52,14 +49,11 @@ nav{
   ul{
     li{
      .back{
-   @include li-back-nav-settings(absolute, 0, inherit, inherit, center, -1);
-   @include transform-crossbrowser($rotateX-default, $rotateY-flip-back);
-   @include transition-crossbrowser($transition-settings);
-   @include backface-crossbrowser($backface-settings);
-   -webkit-transform-style: $transform-style;
-      -moz-transform-style: $transform-style;
-        -o-transform-style: $transform-style;
-           transform-style: $transform-style;
+       @include li-back-nav-settings(absolute, 0, inherit, inherit, center, -1);
+       @include transform-crossbrowser($rotateX-default, $rotateY-flip-back);
+       @include transition-crossbrowser($transition-settings);
+       @include backface-crossbrowser($backface-settings);
+       @include transform-style-crossbrowser($transform-style);
       }:hover
        .back{
        z-index: 1;
@@ -74,10 +68,10 @@ nav{
   ul{
    li{
      i{
-      @include i-nav-settings(100px !important, white, middle !important);
+       @include i-nav-settings(100px !important, white, middle !important);
       }
       span{
-      @include span-nav-settings($nav-font-roboto, 20px, 300, 100px, white, lowercase, middle);
+       @include span-nav-settings($nav-font-roboto, 20px, 300, 100px, white, lowercase, middle);
       }
     }
   }
