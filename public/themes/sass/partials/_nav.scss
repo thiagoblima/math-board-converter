@@ -20,10 +20,7 @@ nav{
     @include li-nav-settings(none, left);
     a{
     @include a-nav-settings(100px, 100px, left, 0 10px);
-    -webkit-perspective: $perspective;
-       -moz-perspective: $perspective;
-        -ms-perspective: $perspective;
-            perspective: $perspective;
+    @include perspective-crossbrowser($perspective);
       }
     }
   }
