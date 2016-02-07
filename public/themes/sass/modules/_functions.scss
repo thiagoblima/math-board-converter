@@ -116,3 +116,11 @@
       -ms-backface-visibility:$value;
        -o-backface-visibility:$value;
 }
+
+@mixin transform-style-crossbrowser($value){
+  -webkit-transform-style:$value;
+     -moz-transform-style:$value;
+      -ms-transform-style:$value;
+       -o-transform-style:$value;
+          transform-style:$value;
+}
