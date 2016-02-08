@@ -4,12 +4,11 @@
  *Some more header animate edits can appear here
  */
 
-
  .head header{
-          position:fixed;
-          width:100%;
-         hgroup{
-               h1{
+  position:fixed;
+  width:100%;
+  hgroup{
+       h1{
    font-size:3.6em;
    transition:font-size 400ms ease-in-out;
  }
@@ -18,4 +17,3 @@
   }
  }
 }
- $header-transition:500ms ease-in-out;
