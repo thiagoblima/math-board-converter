@@ -26,36 +26,63 @@
  */
 /* _base.scss  @mixins */
 /* _nav.scss @mixins */
+/*@_header.scss
+ *Header animation and class which is added by the AngularJS directive
+ *Should stay here and be set up the time the scroll event calls it
+ *Some more header animate edits can appear here
+ */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-/* line 10, ../sass/partials/_base.scss */
+/* line 8, ../sass/partials/_header.scss */
+.head header {
+  position: fixed;
+  width: 100%;
+}
+/* line 12, ../sass/partials/_header.scss */
+.head header hgroup h1 {
+  font-size: 3.6em;
+  /*margin-top: 190px !important;*/
+  transition: font-size 400ms linear;
+}
+/* line 17, ../sass/partials/_header.scss */
+.head header hgroup h2 {
+  display: none;
+}
+
+/* line 11, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
 
-/* line 15, ../sass/partials/_base.scss */
+/* line 16, ../sass/partials/_base.scss */
 main #container-wrapper {
   width: 100%;
   padding: 0;
   overflow: hidden;
 }
-/* line 20, ../sass/partials/_base.scss */
+/* line 21, ../sass/partials/_base.scss */
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
+  transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -moz-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+  -ms-transition: 500ms ease-in-out;
   text-shadow: 4px 4px 1px black;
 }
-/* line 24, ../sass/partials/_base.scss */
+/* line 25, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
 }
-/* line 28, ../sass/partials/_base.scss */
+/* line 29, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
+  z-index: -20;
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 30, ../sass/partials/_base.scss */
+/* line 32, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
@@ -63,16 +90,22 @@ main #container-wrapper section#intro-section div article p {
   font-size: 1.5em;
 }
 
-/* line 41, ../sass/partials/_base.scss */
+/* line 43, ../sass/partials/_base.scss */
+.content-wrapper {
+  position: relative;
+  top: 320px;
+}
+
+/* line 48, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 43, ../sass/partials/_base.scss */
+/* line 50, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 46, ../sass/partials/_base.scss */
+/* line 53, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
@@ -240,10 +273,4 @@ nav ul
 li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
-}
-
-/* line 106, ../sass/partials/_nav.scss */
-.head header {
-  text-align: center !important;
-  transition: text-align 400ms ease-out !important;
 }
