@@ -11,8 +11,7 @@
          hgroup{
                h1{
    font-size:3.6em;
-   /*margin-top: 190px !important;*/
-   transition:font-size 400ms linear;
+   transition:font-size 400ms ease-in-out;
  }
  h2{
     display:none;
