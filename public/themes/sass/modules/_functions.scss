@@ -10,18 +10,14 @@
 
 /* _base.scss  @mixins */
 
-@mixin head-splash($bgcolor, $color, $transition){
+@mixin head-splash($bgcolor, $color){
   background-color:$bgcolor;
   color:$color;
-  transition:$transition;
-  -webkit-transition:$transition;
-  -moz-transition:$transition;
-  -o-transition:$transition;
-  -ms-transition:$transition;
 }
 
-@mixin content-wrapper($position, $top, $height){
+@mixin content-wrapper($position, $z-index, $top, $height){
   position:$position;
+  z-index:$z-index;
   top:$top;
   height:$height;
 }
