@@ -5,5 +5,5 @@ app.directive('headSection', function(){
        data: '='
      },
      templateUrl: 'js/directives/headSection.html'
-   };
- });
+  };
+});
