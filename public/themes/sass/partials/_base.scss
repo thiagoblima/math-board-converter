@@ -33,17 +33,16 @@ p{
    @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color);
    padding:7em 2em 7.8em 2em;
    font-size: 1.5em;
+         }
+        }
       }
-     }
     }
-   }
   }
- }
+}
 
- .content-wrapper{
-   position:relative;
-   top:320px;
- }
+.content-wrapper{
+  @include content-wrapper(relative, 320px, 1200px);
+}
 
 #table{
   @include math-table(50px, 50px);
