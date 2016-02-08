@@ -20,6 +20,12 @@
   -ms-transition:$transition;
 }
 
+@mixin content-wrapper($position, $top, $height){
+  position:$position;
+  top:$top;
+  height:$height;
+}
+
 @mixin intro-splash($height, $color){
   height:$height;
   background-color:$color;
