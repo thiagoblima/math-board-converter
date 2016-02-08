@@ -17,9 +17,8 @@ main{
    width:100%;
    padding:0;
    overflow:hidden;
-
 header{
-   @include head-splash($header-color, $text-color, $header-transition);
+   @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
 }
 section#intro-section{
@@ -27,7 +26,6 @@ section#intro-section{
    padding:50px;
 div{
   article{
-   z-index:-20;
    @include intro-splash(400px, $table-color);
 p{
    @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color);
@@ -40,9 +38,24 @@ p{
   }
 }
 
+/**
+  *@name: content-wrapper (AngularJS Directive: scroll.js)
+  *@description: Content-wrapper is active up the time the navChange directive
+  *From AngularJS.
+  */
+
+
 .content-wrapper{
-  @include content-wrapper(relative, 320px, 1200px);
+  @include content-wrapper(relative, -20, 320px, 1200px);
 }
+
+
+/**
+  *@name: table-settings
+  *@description: the table which the pure Java Script is apllied math folder
+  *We've got the model and the view class
+  */
+
 
 #table{
   @include math-table(50px, 50px);
