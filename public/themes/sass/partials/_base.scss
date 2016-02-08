@@ -5,6 +5,7 @@
  */
 
 @import "modules/functions";
+@import "header";
 
 
 body{
@@ -18,7 +19,7 @@ main{
    overflow:hidden;
 
 header{
-   @include head-splash($header-color, $text-color);
+   @include head-splash($header-color, $text-color, $header-transition);
    @include text-splash($head-text-shadow);
 }
 section#intro-section{
@@ -26,17 +27,23 @@ section#intro-section{
    padding:50px;
 div{
   article{
+   z-index:-20;
    @include intro-splash(400px, $table-color);
 p{
    @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color);
    padding:7em 2em 7.8em 2em;
    font-size: 1.5em;
+      }
      }
     }
    }
   }
  }
-}
+
+ .content-wrapper{
+   position:relative;
+   top:320px;
+ }
 
 #table{
   @include math-table(50px, 50px);
