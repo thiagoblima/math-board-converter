@@ -41,10 +41,9 @@
 /* line 12, ../sass/partials/_header.scss */
 .head header hgroup h1 {
   font-size: 3.6em;
-  /*margin-top: 190px !important;*/
-  transition: font-size 400ms linear;
+  transition: font-size 400ms ease-in-out;
 }
-/* line 17, ../sass/partials/_header.scss */
+/* line 16, ../sass/partials/_header.scss */
 .head header hgroup h2 {
   display: none;
 }
@@ -94,18 +93,19 @@ main #container-wrapper section#intro-section div article p {
 .content-wrapper {
   position: relative;
   top: 320px;
+  height: 1200px;
 }
 
-/* line 48, ../sass/partials/_base.scss */
+/* line 47, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 50, ../sass/partials/_base.scss */
+/* line 49, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 53, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
