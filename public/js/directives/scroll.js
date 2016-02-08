@@ -1,3 +1,10 @@
+/**
+ *@name: scroll.js
+ *@description: Scroll event that modifies the way header and content-wrapper
+ *Behaves. Important to observe the tags on index.html and its built there.
+ *Excellent alternative, code less, build more.
+ */
+
 app.directive('scroll', function($window){
   return function(scope, element, attrs){
     angular.element($window).bind('scroll', function(){
