@@ -1,0 +1,22 @@
+/*@_header.scss
+ *Header animation and class which is added by the AngularJS directive
+ *Should stay here and be set up the time the scroll event calls it
+ *Some more header animate edits can appear here
+ */
+
+
+ .head header{
+          position:fixed;
+          width:100%;
+         hgroup{
+               h1{
+   font-size:3.6em;
+   /*margin-top: 190px !important;*/
+   transition:font-size 400ms linear;
+ }
+ h2{
+    display:none;
+  }
+ }
+}
+ $header-transition:500ms ease-in-out;
