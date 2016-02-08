@@ -10,9 +10,14 @@
 
 /* _base.scss  @mixins */
 
-@mixin head-splash($bgcolor, $color){
+@mixin head-splash($bgcolor, $color, $transition){
   background-color:$bgcolor;
   color:$color;
+  transition:$transition;
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -o-transition:$transition;
+  -ms-transition:$transition;
 }
 
 @mixin intro-splash($height, $color){
