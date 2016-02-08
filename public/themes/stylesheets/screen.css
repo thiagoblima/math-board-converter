@@ -241,3 +241,9 @@ li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
 }
+
+/* line 106, ../sass/partials/_nav.scss */
+.head header {
+  text-align: center !important;
+  transition: text-align 400ms ease-out !important;
+}
