@@ -5,7 +5,7 @@
  *Excellent alternative, code less, build more.
  */
 
-app.directive('scroll', function($window){
+app.directive('scrollHeader', function($window){
   return function(scope, element, attrs){
     angular.element($window).bind('scroll', function(){
       if(this.pageYOffset >= 100){
