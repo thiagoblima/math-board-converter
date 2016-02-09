@@ -9,11 +9,27 @@ app.directive('scrollHeader', function($window){
   return function(scope, element, attrs){
     angular.element($window).bind('scroll', function(){
       if(this.pageYOffset >= 100){
-        scope.navChange = true;
+        scope.headAnimate = true;
         console.log("Scrolled bellow header.");
       }else{
-        scope.navChange = false;
+        scope.headAnimate = false;
         console.log("Header is viewed.");
+      }
+      scope.$apply();
+    });
+  };
+});
+
+
+app.directive('scrollNav', function($window){
+  return function(scope, element, attrs){
+    angular.element($window).bind('scroll', function(){
+      if(this.pageYOffset >= 190){
+        scope.navAnimate = true;
+        console.log("Scrolled bellow Nav");
+      }else{
+        scope.navAnimate = false;
+        console.log("Nav is viewed");
       }
       scope.$apply();
     });
