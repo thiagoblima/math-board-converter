@@ -84,8 +84,8 @@ main #container-wrapper section#intro-section div article p {
 }
 
 /**
-  *@name: content-wrapper (AngularJS Directive: scroll.js)
-  *@description: Content-wrapper is active up the time the navChange directive
+  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
+  *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
 /* line 48, ../sass/partials/_base.scss */
@@ -97,20 +97,33 @@ main #container-wrapper section#intro-section div article p {
 }
 
 /**
+  *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
+  *@description: Content-wrapper is active up the time the navChange directive
+  *From AngularJS.
+  */
+/* line 59, ../sass/partials/_base.scss */
+.content-wrapper-nav {
+  position: relative;
+  top: 500px;
+  z-index: -20;
+  height: 1320px;
+}
+
+/**
   *@name: table-settings
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 60, ../sass/partials/_base.scss */
+/* line 73, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 62, ../sass/partials/_base.scss */
+/* line 75, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 65, ../sass/partials/_base.scss */
+/* line 78, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
@@ -278,4 +291,12 @@ nav ul
 li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d;
+}
+
+/* line 106, ../sass/partials/_nav.scss */
+.nav nav {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  top: 129px;
 }
