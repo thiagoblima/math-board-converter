@@ -39,8 +39,8 @@ p{
 }
 
 /**
-  *@name: content-wrapper (AngularJS Directive: scroll.js)
-  *@description: Content-wrapper is active up the time the navChange directive
+  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
+  *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
 
@@ -49,6 +49,19 @@ p{
   @include content-wrapper(relative, -20, 320px, 1200px);
 }
 
+/**
+  *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
+  *@description: Content-wrapper is active up the time the navChange directive
+  *From AngularJS.
+  */
+
+
+.content-wrapper-nav{
+  position:relative;
+  top:500px;
+  z-index:-20;
+  height:1320px;
+}
 
 /**
   *@name: table-settings
