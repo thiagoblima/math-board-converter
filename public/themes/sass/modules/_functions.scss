@@ -131,3 +131,11 @@
        -o-transform-style:$value;
           transform-style:$value;
 }
+
+@mixin nav-scroll-active($position, $top, $width, $margin){
+  position:$position;
+  top:$top;
+  width:$width;
+  margin:$margin;
+
+}
