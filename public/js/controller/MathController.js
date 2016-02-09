@@ -15,5 +15,4 @@ app.controller("MathController", [ '$scope', function($scope){
 
   $scope.table = [ 'Esponential', 'Fixed', 'Precision', 'String', 'Ceil', 'Floor', 'Round', 'Absolute' ];
 
-
 }]);
