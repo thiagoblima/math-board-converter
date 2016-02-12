@@ -155,6 +155,9 @@ main #container-wrapper section#intro-section div article p {
   top: 150px;
   width: 100%;
   margin: 0 auto;
+  z-index: 999;
+  background-color: #000000;
+  transition: background-color 500ms ease-in-out;
 }
 
 /* line 21, ../sass/partials/_nav.scss */
