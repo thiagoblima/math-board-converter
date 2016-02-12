@@ -132,10 +132,12 @@
           transform-style:$value;
 }
 
-@mixin nav-scroll-active($position, $top, $width, $margin){
+@mixin nav-scroll-active($position, $top, $width, $margin, $z-index, $color, $transition){
   position:$position;
   top:$top;
   width:$width;
   margin:$margin;
-
+  z-index:$z-index;
+  background-color:$color;
+  transition:$transition;
 }
