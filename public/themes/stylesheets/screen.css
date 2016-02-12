@@ -152,7 +152,7 @@ main #container-wrapper section#intro-section div article p {
 /* line 16, ../sass/partials/_nav.scss */
 .navigation nav {
   position: fixed;
-  top: 129px;
+  top: 150px;
   width: 100%;
   margin: 0 auto;
 }
