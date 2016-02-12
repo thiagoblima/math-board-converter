@@ -24,7 +24,7 @@ app.directive('scrollHeader', function($window){
 app.directive('scrollNav', function($window){
   return function(scope, element, attrs){
     angular.element($window).bind('scroll', function(){
-      if(this.pageYOffset >= 190){
+      if(this.pageYOffset >= 169){
         scope.navAnimate = true;
         console.log("Scrolled bellow Nav");
       }else{
