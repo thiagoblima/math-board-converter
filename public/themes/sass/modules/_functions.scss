@@ -44,6 +44,11 @@
 
 /* _nav.scss @mixins */
 
+@mixin nav-layer($bg-color, $transition){
+  background-color:$bg-color;
+  transition:$transition;
+}
+
 @mixin nav-panel($bg-color, $padding){
   background-color:$bg-color;
   padding:$padding;
