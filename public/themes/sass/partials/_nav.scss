@@ -18,6 +18,8 @@
 }
 
 nav{
+  background-color:transparent;
+  transition:500ms ease-in-out;
   ul{
       @include ul-nav-settings(600px, relative, table, 50px auto, both);
    li{
