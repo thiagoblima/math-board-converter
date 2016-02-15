@@ -152,7 +152,7 @@ main #container-wrapper section#intro-section div article p {
 /* line 16, ../sass/partials/_nav.scss */
 .navigation nav {
   position: fixed;
-  top: 150px;
+  top: 175px;
   width: 100%;
   margin: 0 auto;
   z-index: 999;
@@ -170,7 +170,7 @@ nav ul {
   min-width: 600px;
   position: relative;
   display: table;
-  margin: 50px auto;
+  margin: 25px auto;
   clear: both;
 }
 /* line 24, ../sass/partials/_nav.scss */
