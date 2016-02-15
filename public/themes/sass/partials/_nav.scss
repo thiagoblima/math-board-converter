@@ -18,7 +18,7 @@
 }
 
 nav{
-  @include nav-layer(transparent, 500ms ease-in-out);
+  @include nav-layer($nav-color-layer, $nav-scroll-bg-back);
   ul{
       @include ul-nav-settings(600px, relative, table, 50px auto, both);
    li{
