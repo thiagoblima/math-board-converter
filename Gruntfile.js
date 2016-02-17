@@ -33,16 +33,17 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'build/js/angular.min.js': 'public/js/controller/MathController.js'
-        }
-      }
-    },
-
-
-    sass: {
-      build: {
-        files: {
-          'build/css/main.css': 'public/themes/sass/screen.scss'
+        'build/js/angular.min.js':
+          [
+            'public/js/controller/MathController.js',
+            'public/js/directives/headSection.js',
+            'public/js/directives/introSection.js',
+            'public/js/directives/mainNav.js',
+            'public/js/directives/scroll.js',
+            'public/js/math/model/number.js',
+            'public/js/math/view/number_view.js',
+            'public/js/app.js'
+          ]
         }
       }
     },
@@ -60,10 +61,20 @@ module.exports = function(grunt) {
     },
 
 
+    sass: {
+      build: {
+        files: {
+          'build/css/main.css': 'public/themes/sass/screen.scss'
+        }
+      }
+    },
+
+
+
     watch: {
       stylesheets: {
-        files: ['public/themes/**/*.css', 'public/themes/**/*.scss'],
-        tasks: ['scss', 'cssmin']
+        files: ['public/themes/**/*.css', 'public/themes/**/*.css'],
+        tasks: ['css', 'cssmin']
       },
       scripts: {
         files: 'public/js/**/*.js',
@@ -81,6 +92,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['jshint', 'uglify', 'cssmin', 'sass']);
 
 };
