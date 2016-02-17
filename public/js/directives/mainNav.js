@@ -11,5 +11,5 @@ app.directive('mainNav', function(){
       data: '='
     },
      templateUrl:'/js/directives/mainNav.html'
-   }
+   };
 });
