@@ -49,18 +49,6 @@ module.exports = function(grunt) {
     },
 
 
-    cssmin: {
-      options: {
-        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
-      },
-      build: {
-        files: {
-          'build/css/screen.min.css': 'public/themes/stylesheets/screen.css'
-        }
-      }
-    },
-
-
     sass: {
       build: {
         files: {
@@ -70,11 +58,22 @@ module.exports = function(grunt) {
     },
 
 
+    cssmin: {
+      options: {
+        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+      },
+      build: {
+        files: {
+         'build/css/screen.min.css': 'public/themes/stylesheets/screen.css'
+        }
+      }
+    },
+
 
     watch: {
       stylesheets: {
-        files: ['public/themes/**/*.css', 'public/themes/**/*.css'],
-        tasks: ['css', 'cssmin']
+        files: ['public/themes/stylesheets/**/*.css', 'public/themes/sass/**/*.scss'],
+        tasks: ['cssmin', 'sass']
       },
       scripts: {
         files: 'public/js/**/*.js',
