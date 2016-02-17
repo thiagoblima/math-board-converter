@@ -1,16 +1,14 @@
 /**
  *@name: Gruntfile.js
  *
- *@author:Thiago Lima <thiagolimasp@live.com>
+ *@author: thiagolimasp@live.com (Thiago lima)
  *
  *@description: Responsible for the building process upon AngularJS, SASS
  *and time stamp it after the building process, always to let the server
  *know the date the building process was taken.
  */
 
-
-
-
+'use strict';
 
 module.exports = function(grunt) {
 
@@ -35,7 +33,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'build/js/magic.min.js': 'src/js/magic.js'
+          'build/js/angular.min.js': 'public/js/controller/MathController.js'
         }
       }
     },
