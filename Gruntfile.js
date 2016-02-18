@@ -35,14 +35,14 @@ module.exports = function(grunt) {
         files: {
         'build/js/angular.min.js':
           [
+            'public/js/app.js',
             'public/js/controller/MathController.js',
             'public/js/directives/headSection.js',
             'public/js/directives/introSection.js',
             'public/js/directives/mainNav.js',
             'public/js/directives/scroll.js',
             'public/js/math/model/number.js',
-            'public/js/math/view/number_view.js',
-            'public/js/app.js'
+            'public/js/math/view/number_view.js'
           ]
         }
       }
