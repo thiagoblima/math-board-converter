@@ -15,9 +15,8 @@
   color:$color;
 }
 
-@mixin content-wrapper($position, $z-index, $top, $height){
+@mixin content-wrapper($position, $top, $height){
   position:$position;
-  z-index:$z-index;
   top:$top;
   height:$height;
 }
