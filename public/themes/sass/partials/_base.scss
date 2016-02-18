@@ -24,6 +24,8 @@ header{
 section#intro-section{
    margin-bottom:30px;
    padding:50px;
+   position:relative;
+   z-index:-100;
 div{
   article{
    @include intro-splash(400px, $table-color);
@@ -31,7 +33,7 @@ p{
    @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color);
    padding:7em 2em 7.8em 2em;
    font-size: 1.5em;
-         }
+          }
         }
       }
     }
@@ -46,7 +48,7 @@ p{
 
 
 .content-wrapper{
-  @include content-wrapper(relative, -20, 320px, 1200px);
+  @include content-wrapper(relative, 320px, 1200px);
 }
 
 /**
@@ -59,7 +61,6 @@ p{
 .content-wrapper-nav{
   position:relative;
   top:500px;
-  z-index:-20;
   height:1320px;
 }
 
