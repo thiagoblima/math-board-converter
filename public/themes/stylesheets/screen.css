@@ -69,13 +69,15 @@ main #container-wrapper header {
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
+  position: relative;
+  z-index: -100;
 }
-/* line 28, ../sass/partials/_base.scss */
+/* line 30, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 30, ../sass/partials/_base.scss */
+/* line 32, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
@@ -88,10 +90,9 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
-/* line 48, ../sass/partials/_base.scss */
+/* line 50, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
-  z-index: -20;
   top: 320px;
   height: 1200px;
 }
@@ -101,11 +102,10 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
   */
-/* line 59, ../sass/partials/_base.scss */
+/* line 61, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
-  z-index: -20;
   height: 1320px;
 }
 
@@ -114,16 +114,16 @@ main #container-wrapper section#intro-section div article p {
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 73, ../sass/partials/_base.scss */
+/* line 74, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 75, ../sass/partials/_base.scss */
+/* line 76, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 78, ../sass/partials/_base.scss */
+/* line 79, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
