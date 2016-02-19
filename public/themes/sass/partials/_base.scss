@@ -25,9 +25,8 @@ div{
   article{
    @include intro-splash(400px, $table-color);
 p{
-   @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color);
-   padding:7em 2em 7.8em 2em;
-   font-size: 1.5em;
+   @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, 7em 2em 7.8em 2em, 1.5em);
+
           }
         }
       }
