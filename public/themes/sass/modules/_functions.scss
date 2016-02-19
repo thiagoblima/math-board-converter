@@ -34,6 +34,12 @@
   height:$height;
 }
 
+@mixin content-wrapper-nav($position, $top, $height){
+  position:$position;
+  top:$top;
+  height:$height;
+}
+
 @mixin intro-splash($height, $color){
   height:$height;
   background-color:$color;
