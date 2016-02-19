@@ -1,1 +1,1 @@
-# Java_Script_Data_Types
+# Java Script Data Types
