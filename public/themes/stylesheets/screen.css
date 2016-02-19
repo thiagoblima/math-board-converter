@@ -114,16 +114,16 @@ main #container-wrapper section#intro-section div article p {
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 68, ../sass/partials/_base.scss */
+/* line 66, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 70, ../sass/partials/_base.scss */
+/* line 68, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 73, ../sass/partials/_base.scss */
+/* line 71, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
