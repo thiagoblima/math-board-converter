@@ -14,18 +14,13 @@ body{
 
 main{
 #container-wrapper{
-   width:100%;
-   padding:0;
-   overflow:hidden;
+   @include container-wrapper(100%, 0, hidden);
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
 }
 section#intro-section{
-   margin-bottom:30px;
-   padding:50px;
-   position:relative;
-   z-index:-100;
+  @include intro-section(30px, 50px, relative, -100);
 div{
   article{
    @include intro-splash(400px, $table-color);
