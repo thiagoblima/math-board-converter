@@ -59,25 +59,25 @@ main #container-wrapper {
   padding: 0;
   overflow: hidden;
 }
-/* line 20, ../sass/partials/_base.scss */
+/* line 18, ../sass/partials/_base.scss */
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
   text-shadow: 4px 4px 1px black;
 }
-/* line 24, ../sass/partials/_base.scss */
+/* line 22, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
   position: relative;
   z-index: -100;
 }
-/* line 30, ../sass/partials/_base.scss */
+/* line 25, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 32, ../sass/partials/_base.scss */
+/* line 27, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
@@ -90,7 +90,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
-/* line 50, ../sass/partials/_base.scss */
+/* line 45, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -102,7 +102,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
   */
-/* line 61, ../sass/partials/_base.scss */
+/* line 56, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
@@ -114,16 +114,16 @@ main #container-wrapper section#intro-section div article p {
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 74, ../sass/partials/_base.scss */
+/* line 69, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 76, ../sass/partials/_base.scss */
+/* line 71, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 79, ../sass/partials/_base.scss */
+/* line 74, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
