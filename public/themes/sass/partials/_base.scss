@@ -53,9 +53,7 @@ p{
 
 
 .content-wrapper-nav{
-  position:relative;
-  top:500px;
-  height:1320px;
+  @include content-wrapper-nav(relative, 500px, 1320px);
 }
 
 /**
