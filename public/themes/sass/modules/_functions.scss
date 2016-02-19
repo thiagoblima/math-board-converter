@@ -15,6 +15,19 @@
   color:$color;
 }
 
+@mixin container-wrapper($width, $padding, $overflow){
+  width:$width;
+  padding:$padding;
+  overflow:$overflow;
+}
+
+@mixin intro-section($margin-bottom, $padding, $position, $z-index){
+  margin-bottom:$margin-bottom;
+  padding:$padding;
+  position:$position;
+  z-index:$z-index;
+}
+
 @mixin content-wrapper($position, $top, $height){
   position:$position;
   top:$top;
