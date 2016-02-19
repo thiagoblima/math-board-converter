@@ -43,9 +43,11 @@
   text-shadow:$head-text-shadow;
 }
 
-@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color){
+@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, $padding, $font-size){
   text-shadow:$paragraph-text-shadow;
   color:$paragraph-color;
+  padding:$padding;
+  font-size:$font-size;
 }
 
 @mixin math-table($padding-right, $padding-left){
