@@ -69,7 +69,7 @@
             if(isNaN(View.math.user.getExponential())){
               exponential = View.math.results.exponential.innerHTML = '0';
             }else{
-               apply(this.exponential);
+               apply(this, [exponential]);
             }
           },
           fixed:function(fixed){
@@ -79,7 +79,7 @@
             if(isNaN(View.math.user.getFixed())){
                fixed = View.math.results.fixed.innerHTML = '0';
             }else{
-                apply(this.fixed);
+                apply(this, [fixed]);
             }
           },
           precision:function(precision){
@@ -89,7 +89,7 @@
             if(isNaN(View.math.user.getPrecision())){
                precision =  View.math.results.precision.innerHTML = '0';
             }else{
-               apply(this.precision);
+               apply(this, [precision]);
             }
           },
           string:function(string){
@@ -99,7 +99,7 @@
             if(View.math.user.getString().toString() === ''){
                string =  View.math.results.string.innerHTML = 'Enter a number.';
             }else{
-               apply(this.string);
+               apply(this, [string]);
             }
           },
           ceil:function(ceil){
