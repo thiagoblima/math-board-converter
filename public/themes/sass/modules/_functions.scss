@@ -28,6 +28,13 @@
   z-index:$z-index;
 }
 
+@mixin splash-intro($font-family, $text-align, $color, $margin-top){
+  font-family:$font-family;
+  text-align:$text-align;
+  color:$color;
+  margin-top:$margin-top;
+}
+
 @mixin content-wrapper($position, $top, $height){
   position:$position;
   top:$top;
