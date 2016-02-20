@@ -43,10 +43,10 @@ module.exports = function(grunt) {
              *Hopefully any change for the next updates
             */
 
-            'public/js/libs/angular/angular.min.js',
-            'public/js/libs/angular-sanitize/angular-sanitize.min.js',
-            'public/js/jquery/dist/jquery.min.js',
-            'public/js/bootstrap/dist/js/bootstrap.min.js',
+            'public/libs/angular/angular.min.js',
+            'public/libs/angular-sanitize/angular-sanitize.min.js',
+            'public/libs/jquery/dist/jquery.min.js',
+            'public/libs/bootstrap/dist/js/bootstrap.min.js',
 
             /**
              *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
@@ -54,7 +54,6 @@ module.exports = function(grunt) {
              *@see: They're basicly distributed on public/js
              *Hopefully any change for the next updates
             */
-
 
             'public/js/app.js',
             'public/js/controller/MathController.js',
