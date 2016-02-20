@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        'build/js/devbuild.min.js':
+        'public/build/js/devbuild.min.js':
           [
 
             /**
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     sass: {
       build: {
         files: {
-          'build/css/main.css': 'public/themes/sass/screen.scss'
+          'public/build/css/main.css': 'public/themes/sass/screen.scss'
         }
       }
     },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-         'build/css/screen.min.css': 'public/themes/stylesheets/screen.css'
+         'public/build/css/screen.min.css': 'public/themes/stylesheets/screen.css'
         }
       }
     },
