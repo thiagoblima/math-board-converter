@@ -4,10 +4,6 @@
  *Mixins also will be written outside this file.
  */
 
- @import 'modules/functions';
- @import 'modules/animation-nav';
- @import 'modules/fonts';
- @import 'modules/colors';
 
 .panel{
   @include nav-panel($nav-color, 0);
