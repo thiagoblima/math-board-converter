@@ -33,8 +33,29 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        'build/js/angular.min.js':
+        'build/js/devbuild.min.js':
           [
+
+            /**
+             *@description: Here goes the vendor's scripts
+             *
+             *@see: All of them are based on the root: /public/libs/
+             *Hopefully any change for the next updates
+            */
+
+            'public/js/libs/angular/angular.min.js',
+            'public/js/libs/angular-sanitize/angular-sanitize.min.js',
+            'public/js/jquery/dist/jquery.min.js',
+            'public/js/bootstrap/dist/js/bootstrap.min.js',
+
+            /**
+             *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
+             *
+             *@see: They're basicly distributed on public/js
+             *Hopefully any change for the next updates
+            */
+
+
             'public/js/app.js',
             'public/js/controller/MathController.js',
             'public/js/directives/headSection.js',
