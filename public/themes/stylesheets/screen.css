@@ -2,6 +2,18 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*@_animation-nav.scss
+ *The purpose of this class is not to have @mixins otherwise
+ *Small ajustments as in px or deg for the flip animation on nav
+ *Just import the class and it can be called anytime
+ */
+/*@_fonts.scss
+ *All the font's variables have to be set here fora better modularization
+ *It doesn't matter which DOM part it is, the important thing is to make it.
+ *Just import this class where it should be used.
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
@@ -9,11 +21,6 @@
  */
 /* _base.scss colors */
 /* _nav.scss colors */
-/*@_base.scss
- *HTML structure will be organized here as layout and general settings
- *Small pieces takes makes a section will you find organized in other file
- *such as: buttons, transitions, colors or somehing like this...
- */
 /*@_functions.scss
  *All the @mixins are on this file to prevent messy codes
  *Just need to get it imported into the partials documents
@@ -31,8 +38,6 @@
  *Should stay here and be set up the time the scroll event calls it
  *Some more header animate edits can appear here
  */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 /* line 7, ../sass/partials/_header.scss */
 .head header {
   position: fixed;
@@ -48,36 +53,41 @@
   display: none;
 }
 
-/* line 11, ../sass/partials/_base.scss */
+/*@_base.scss
+ *HTML structure will be organized here as layout and general settings
+ *Small pieces takes makes a section will you find organized in other file
+ *such as: buttons, transitions, colors or somehing like this...
+ */
+/* line 8, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
 
-/* line 16, ../sass/partials/_base.scss */
+/* line 13, ../sass/partials/_base.scss */
 main #container-wrapper {
   width: 100%;
   padding: 0;
   overflow: hidden;
 }
-/* line 18, ../sass/partials/_base.scss */
+/* line 15, ../sass/partials/_base.scss */
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
   text-shadow: 4px 4px 1px black;
 }
-/* line 22, ../sass/partials/_base.scss */
+/* line 19, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
   position: relative;
   z-index: -100;
 }
-/* line 25, ../sass/partials/_base.scss */
+/* line 22, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 27, ../sass/partials/_base.scss */
+/* line 24, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
@@ -90,7 +100,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
-/* line 44, ../sass/partials/_base.scss */
+/* line 41, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -102,7 +112,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
   */
-/* line 55, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
@@ -114,16 +124,16 @@ main #container-wrapper section#intro-section div article p {
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 66, ../sass/partials/_base.scss */
+/* line 63, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 68, ../sass/partials/_base.scss */
+/* line 65, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 71, ../sass/partials/_base.scss */
+/* line 68, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
@@ -133,23 +143,13 @@ main #container-wrapper section#intro-section div article p {
  *Colors and shades will ever be outside here, probably found on colors class.
  *Mixins also will be written outside this file.
  */
-/*@_animation-nav.scss
- *The purpose of this class is not to have @mixins otherwise
- *Small ajustments as in px or deg for the flip animation on nav
- *Just import the class and it can be called anytime
- */
-/*@_fonts.scss
- *All the font's variables have to be set here fora better modularization
- *It doesn't matter which DOM part it is, the important thing is to make it.
- *Just import this class where it should be used.
- */
-/* line 12, ../sass/partials/_nav.scss */
+/* line 8, ../sass/partials/_nav.scss */
 .panel {
   background-color: transparent !important;
   padding: 0;
 }
 
-/* line 16, ../sass/partials/_nav.scss */
+/* line 12, ../sass/partials/_nav.scss */
 .navigation nav {
   position: fixed;
   top: 175px;
@@ -160,12 +160,12 @@ main #container-wrapper section#intro-section div article p {
   transition: background-color 500ms ease-in-out;
 }
 
-/* line 20, ../sass/partials/_nav.scss */
+/* line 16, ../sass/partials/_nav.scss */
 nav {
   background-color: transparent;
   transition: 500ms ease-in-out;
 }
-/* line 22, ../sass/partials/_nav.scss */
+/* line 18, ../sass/partials/_nav.scss */
 nav ul {
   min-width: 600px;
   position: relative;
@@ -173,12 +173,12 @@ nav ul {
   margin: 25px auto;
   clear: both;
 }
-/* line 24, ../sass/partials/_nav.scss */
+/* line 20, ../sass/partials/_nav.scss */
 nav ul li {
   list-style: none;
   float: left;
 }
-/* line 26, ../sass/partials/_nav.scss */
+/* line 22, ../sass/partials/_nav.scss */
 nav ul li a {
   width: 100px;
   height: 100px;
@@ -190,7 +190,7 @@ nav ul li a {
   -o-perspective: 600px;
 }
 
-/* line 38, ../sass/partials/_nav.scss */
+/* line 34, ../sass/partials/_nav.scss */
 nav ul li .front {
   text-align: center;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
@@ -213,7 +213,7 @@ nav ul li .front {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 44, ../sass/partials/_nav.scss */
+/* line 40, ../sass/partials/_nav.scss */
 nav ul li:hover
 .front {
   -webkit-transform: rotateX(0deg) rotateY(180deg);
@@ -223,7 +223,7 @@ nav ul li:hover
   transform: rotateX(0deg) rotateY(180deg);
 }
 
-/* line 56, ../sass/partials/_nav.scss */
+/* line 52, ../sass/partials/_nav.scss */
 nav ul li .back {
   position: absolute;
   top: 0;
@@ -251,7 +251,7 @@ nav ul li .back {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 62, ../sass/partials/_nav.scss */
+/* line 58, ../sass/partials/_nav.scss */
 nav ul li:hover
 .back {
   z-index: 1;
@@ -262,13 +262,13 @@ nav ul li:hover
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 75, ../sass/partials/_nav.scss */
+/* line 71, ../sass/partials/_nav.scss */
 nav ul li i {
   line-height: 100px !important;
   color: white;
   vertical-align: middle !important;
 }
-/* line 78, ../sass/partials/_nav.scss */
+/* line 74, ../sass/partials/_nav.scss */
 nav ul li span {
   font-family: "Roboto";
   font-size: 20px;
@@ -279,30 +279,30 @@ nav ul li span {
   vertical-align: middle;
 }
 
-/* line 88, ../sass/partials/_nav.scss */
+/* line 84, ../sass/partials/_nav.scss */
 nav ul li.color-1 .front,
 nav ul li.color-1 .back {
   background-color: #e6567a;
 }
-/* line 91, ../sass/partials/_nav.scss */
+/* line 87, ../sass/partials/_nav.scss */
 nav ul
 li.color-2 .front,
 nav ul li.color-2 .back {
   background-color: #00c0e4;
 }
-/* line 95, ../sass/partials/_nav.scss */
+/* line 91, ../sass/partials/_nav.scss */
 nav ul
 li.color-3 .front,
 nav ul li.color-3 .back {
   background-color: #5bd999;
 }
-/* line 99, ../sass/partials/_nav.scss */
+/* line 95, ../sass/partials/_nav.scss */
 nav ul
 li.color-4 .front,
 nav ul li.color-4 .back {
   background-color: #7658f4;
 }
-/* line 103, ../sass/partials/_nav.scss */
+/* line 99, ../sass/partials/_nav.scss */
 nav ul
 li.color-5 .front,
 nav ul li.color-5 .back {
