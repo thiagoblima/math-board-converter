@@ -18,6 +18,7 @@ header{
 }
 section#intro-section{
   @include intro-section(30px, 50px, relative, -100);
+  h1{ @include splash-intro($intro-font-josefin, center, $splash-color, -20px) }
 div{
   article{
    @include intro-splash(400px, $table-color);
