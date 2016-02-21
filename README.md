@@ -16,15 +16,16 @@ Technologies you are going to see in this project:
 1. Front-end
 
  * [`HTML5`](https://www.w3.org/TR/html5/)
- * [`CSS3`]()
- * [`Java Script (pure)`]()
- * [`AngularJS`]()
- * [`GruntJS`]()
- * [`SASS`]()
- * [`Compass`]()
+ * [`CSS3`](https://www.w3.org/TR/css-syntax-3/)
+ * [`Bootstrap`](http://getbootstrap.com/)
+ * [`Java Script (pure)`](https://www.w3.org/standards/webdesign/script)
+ * [`AngularJS`](https://angularjs.org/)
+ * [`GruntJS`](http://gruntjs.com/)
+ * [`SASS`](http://sass-lang.com/)
+ * [`Compass`](http://compass-style.org/)
 
 2. Back-end
 
- * [`NodeJS`]()
- * [`Express`]()
- * [`MongoDB`]()
+ * [`NodeJS`](https://nodejs.org/en/)
+ * [`Express`](http://expressjs.com/)
+ * [`MongoDB`](https://www.mongodb.org/)
