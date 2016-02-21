@@ -59,9 +59,9 @@ The building process also occurs into that folder. **Read** `Gruntfile.js`.
     * `SASS`
     * `prod-deploy`
 
-2. For public compiling, not for the build - `compass`
+2. For public compiling, **not for the build** - `compass`
 
-  * SASS pre-compile process for the source, not the build  
+  * SASS pre-compile process for the source
     * `compass watch path/to/the/themes/`
 
 3. `node app.js` would start the application if everything is fine.        
