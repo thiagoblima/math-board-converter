@@ -16,6 +16,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+    path: "<%= srcpath %>/build",
+    srcpath: "public",
+
 
     jshint: {
       options: {
@@ -31,7 +34,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        'public/build/js/devbuild.min.js':
+        '<%= path %>/js/devbuild.min.js':
           [
 
             /**
@@ -41,10 +44,10 @@ module.exports = function(grunt) {
              *Hopefully any change for the next updates
             */
 
-            'public/libs/angular/angular.min.js',
-            'public/libs/angular-sanitize/angular-sanitize.min.js',
-            'public/libs/jquery/dist/jquery.min.js',
-            'public/libs/bootstrap/dist/js/bootstrap.min.js',
+            '<%= srcpath %>/libs/angular/angular.min.js',
+            '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
+            '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
+            '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
 
             /**
              *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
@@ -53,14 +56,14 @@ module.exports = function(grunt) {
              *Hopefully any change for the next updates
             */
 
-            'public/js/app.js',
-            'public/js/controller/MathController.js',
-            'public/js/directives/headSection.js',
-            'public/js/directives/introSection.js',
-            'public/js/directives/mainNav.js',
-            'public/js/directives/scroll.js',
-            'public/js/math/model/number.js',
-            'public/js/math/view/number_view.js'
+            '<%= srcpath %>/js/app.js',
+            '<%= srcpath %>/js/controller/MathController.js',
+            '<%= srcpath %>/js/directives/headSection.js',
+            '<%= srcpath %>/js/directives/introSection.js',
+            '<%= srcpath %>/js/directives/mainNav.js',
+            '<%= srcpath %>/js/directives/scroll.js',
+            '<%= srcpath %>/js/math/model/number.js',
+            '<%= srcpath %>/js/math/view/number_view.js'
           ]
         }
       }
@@ -70,7 +73,7 @@ module.exports = function(grunt) {
     sass: {
       build: {
         files: {
-          'public/build/css/main.css': 'public/themes/sass/screen.scss'
+          '<%= path %>/css/main.css': '<%= srcpath %>/themes/sass/screen.scss'
         }
       }
     },
@@ -82,7 +85,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-         'public/build/css/screen.min.css': 'public/themes/stylesheets/screen.css'
+         '<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css'
         }
       }
     },
@@ -90,11 +93,11 @@ module.exports = function(grunt) {
 
     watch: {
       stylesheets: {
-        files: ['public/themes/stylesheets/**/*.css', 'public/themes/sass/**/*.scss'],
+        files: ['<%= path %>/themes/stylesheets/**/*.css', '<%= path %>/themes/sass/**/*.scss'],
         tasks: ['cssmin', 'sass']
       },
       scripts: {
-        files: 'public/js/**/*.js',
+        files: '<%= path %>/js/**/*.js',
         tasks: ['jshint', 'uglify']
       }
     }
