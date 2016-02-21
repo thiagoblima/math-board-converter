@@ -29,3 +29,25 @@ Technologies you are going to see in this project:
  * [`NodeJS`](https://nodejs.org/en/)
  * [`Express`](http://expressjs.com/)
  * [`MongoDB`](https://www.mongodb.org/)
+
+##Getting started
+
+On the root you can identify the `app.js` and notice the *app* is run on the *public* folder.
+
+The building process also occurs into that folder. **Read** `Gruntfile.js`.
+
+1. Building Process
+
+  * Dev build `grunt dev` is registered
+    * `uglify`
+    * `JSHint`
+    * `cssmin`
+    * `SASS`
+    * `dev-deploy`
+  * Stage build `grunt stage` is unregistered  
+    * `uglify`
+    * `JSHint`
+    * `cssmin`
+    * `SASS`
+    * `stage-deploy`
+    
