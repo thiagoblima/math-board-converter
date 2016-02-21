@@ -44,10 +44,17 @@ The building process also occurs into that folder. **Read** `Gruntfile.js`.
     * `cssmin`
     * `SASS`
     * `dev-deploy`
+
   * Stage build `grunt stage` is unregistered  
     * `uglify`
     * `JSHint`
     * `cssmin`
     * `SASS`
     * `stage-deploy`
-    
+
+  * Production build `grunt production` is unregistered  
+    * `uglify`
+    * `JSHint`
+    * `cssmin`
+    * `SASS`
+    * `prod-deploy`
