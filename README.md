@@ -15,17 +15,17 @@ Technologies you are going to see in this project:
 
 1. Front-end
 
-* `HTML5`
-* `CSS3`
-* `Java Script (pure)`
-* `AngularJS`
-* `GruntJS`
-* `SASS`
-* `Compass`
+ * `HTML5`
+ * `CSS3`
+ * `Java Script (pure)`
+ * `AngularJS`
+ * `GruntJS`
+ * `SASS`
+ * `Compass`
 
 2. Back-end
 
-* `NodeJS`
-* `Express`
-* `MongoDB`
-* `NodeJS Driver`
+ * `NodeJS`
+ * `Express`
+ * `MongoDB`
+ * `NodeJS Driver`
