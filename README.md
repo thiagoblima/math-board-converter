@@ -63,4 +63,6 @@ The building process also occurs into that folder. **Read** `Gruntfile.js`.
 
   * SASS pre-compile process for the source, not the build  
     * `compass watch path/to/the/themes/`
-        
+
+3. `node app.js` would start the application if everything is fine.        
+  * `localhost:3412` is the default port.
