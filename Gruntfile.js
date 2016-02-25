@@ -19,6 +19,11 @@ module.exports = function(grunt) {
     path: "<%= srcpath %>/build",
     srcpath: "public",
 
+    jsfiles: [
+
+
+
+    ],
 
     jshint: {
       options: {
