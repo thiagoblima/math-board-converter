@@ -21,7 +21,33 @@ module.exports = function(grunt) {
 
     jsfiles: [
 
+      /**
+       *@description: Here goes the vendor's scripts
+       *
+       *@see: All of them are based on the root: /public/libs/
+       *Hopefully any change for the next updates
+      */
 
+      '<%= srcpath %>/libs/angular/angular.min.js',
+      '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
+      '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
+      '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
+
+      /**
+       *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
+       *
+       *@see: They're basicly distributed on public/js
+       *Hopefully any change for the next updates
+      */
+
+      '<%= srcpath %>/js/app.js',
+      '<%= srcpath %>/js/controller/MathController.js',
+      '<%= srcpath %>/js/directives/headSection.js',
+      '<%= srcpath %>/js/directives/introSection.js',
+      '<%= srcpath %>/js/directives/mainNav.js',
+      '<%= srcpath %>/js/directives/scroll.js',
+      '<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/view/number_view.js'
 
     ],
 
@@ -42,33 +68,7 @@ module.exports = function(grunt) {
         '<%= path %>/js/devbuild.min.js':
           [
 
-            /**
-             *@description: Here goes the vendor's scripts
-             *
-             *@see: All of them are based on the root: /public/libs/
-             *Hopefully any change for the next updates
-            */
 
-            '<%= srcpath %>/libs/angular/angular.min.js',
-            '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
-            '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
-            '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
-
-            /**
-             *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
-             *
-             *@see: They're basicly distributed on public/js
-             *Hopefully any change for the next updates
-            */
-
-            '<%= srcpath %>/js/app.js',
-            '<%= srcpath %>/js/controller/MathController.js',
-            '<%= srcpath %>/js/directives/headSection.js',
-            '<%= srcpath %>/js/directives/introSection.js',
-            '<%= srcpath %>/js/directives/mainNav.js',
-            '<%= srcpath %>/js/directives/scroll.js',
-            '<%= srcpath %>/js/math/model/number.js',
-            '<%= srcpath %>/js/math/view/number_view.js'
           ]
         }
       }
