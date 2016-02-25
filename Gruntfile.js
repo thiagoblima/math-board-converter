@@ -65,11 +65,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        '<%= path %>/js/devbuild.min.js':
-          [
-
-
-          ]
+        '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ]
         }
       }
     },
