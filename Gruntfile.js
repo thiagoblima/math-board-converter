@@ -61,7 +61,10 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
+        compress: false,
+        beautify: false,
+        mangle: false
       },
       build: {
         files: {
