@@ -34,7 +34,9 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
 
       /**
-       *@description: Here goes the @author's scripts thiagolimasp (Thiago Lima)
+       *@description: Here goes the
+       *
+       *@author's scripts thiagolimasp (Thiago Lima)
        *
        *@see: They're basicly distributed on public/js
        *Hopefully any change for the next updates
@@ -51,9 +53,20 @@ module.exports = function(grunt) {
 
     ],
 
+    htmlpages: [
+
+      /**
+       *@description: Here goes the html pages
+       *
+       *@see: All of them are based on the root: /public/
+       *Hopefully any change for the next updates
+      */
+      '<%= srcpath %>/index.html'
+    ],
+
     htmlbuild:{
       dist:{
-        src:'<%= srcpath %>/index.html',
+        src:'<%= htmlpages %>',
         dest:'<%= srcpath %>/build'
       }
     },
