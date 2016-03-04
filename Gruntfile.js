@@ -52,7 +52,10 @@ module.exports = function(grunt) {
     ],
 
     htmlbuild:{
-
+      dist:{
+        src:'<%= srcpath %>',
+        dest:'<%= srcpath %>/build'
+      }
     },
 
     jshint: {
