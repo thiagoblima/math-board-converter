@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 
     htmlbuild:{
       dist:{
-        src:'<%= srcpath %>',
+        src:'<%= srcpath %>/index.html',
         dest:'<%= srcpath %>/build'
       }
     },
@@ -121,11 +121,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('dev', ['jshint', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'uglify', 'cssmin', 'sass']);
 
 };
