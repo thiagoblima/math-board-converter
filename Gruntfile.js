@@ -109,7 +109,8 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-         '<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css'
+         '<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
+         '<%= path %>/css/vendor.min.css': '<%= srcpath %>/libs/bootstrap/dist/css/bootstrap.min.css'
         }
       }
     },
@@ -130,7 +131,6 @@ module.exports = function(grunt) {
     }
 
   });
-
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
