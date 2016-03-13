@@ -71,6 +71,8 @@ module.exports = function(grunt) {
       }
     },
 
+
+
     jshint: {
       options: {
         reporter: require('jshint-stylish')
@@ -132,6 +134,7 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-build');
