@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     path: "<%= srcpath %>/build",
     srcpath: "public",
+    directivePath:"<%= srcpath %>/js/directives",
 
     jsfiles: [
 
@@ -32,7 +33,14 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
       '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
+      '<%= srcpath %>/js/app.js',
+      '<%= srcpath %>/js/controller/MathController.js',
+      '<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/view/number_view.js'
 
+    ],
+
+    angularjsfiles: [
       /**
        *@description: Here goes the
        *
@@ -42,14 +50,10 @@ module.exports = function(grunt) {
        *Hopefully any change for the next updates
       */
 
-      '<%= srcpath %>/js/app.js',
-      '<%= srcpath %>/js/controller/MathController.js',
       '<%= srcpath %>/js/directives/headSection.js',
       '<%= srcpath %>/js/directives/introSection.js',
       '<%= srcpath %>/js/directives/mainNav.js',
-      '<%= srcpath %>/js/directives/scroll.js',
-      '<%= srcpath %>/js/math/model/number.js',
-      '<%= srcpath %>/js/math/view/number_view.js'
+      '<%= srcpath %>/js/directives/scroll.js'
 
     ],
 
@@ -90,7 +94,8 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ]
+        '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
+        '<%= path %>/js/directives/angularjs.min.js': ["<%= angularjsfiles %>"]
         }
       }
     },
@@ -134,7 +139,7 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  //grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-build');
@@ -143,6 +148,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['jshint', 'htmlbuild', /*'copy',*/ 'uglify', 'cssmin', 'sass']);
 
 };
