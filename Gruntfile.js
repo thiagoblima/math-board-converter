@@ -18,7 +18,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     path: "<%= srcpath %>/build",
     srcpath: "public",
-    directivePath:"<%= srcpath %>/js/directives",
+    directivepath:"<%= srcpath %>/build/js/directives",
+    mathpath:"<%= srcpath %>/build/js/math",
 
     jsfiles: [
 
@@ -34,15 +35,14 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
       '<%= srcpath %>/js/app.js',
-      '<%= srcpath %>/js/controller/MathController.js',
-      '<%= srcpath %>/js/math/model/number.js',
-      '<%= srcpath %>/js/math/view/number_view.js'
+      '<%= srcpath %>/js/controller/MathController.js'
 
     ],
 
     angularjsfiles: [
+
       /**
-       *@description: Here goes the
+       *@description: Here goes the AngularJS Directives
        *
        *@author's scripts thiagolimasp (Thiago Lima)
        *
@@ -54,6 +54,22 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/directives/introSection.js',
       '<%= srcpath %>/js/directives/mainNav.js',
       '<%= srcpath %>/js/directives/scroll.js'
+
+    ],
+
+    mathjsfiles: [
+
+      /**
+       *@description: Here goes the Math app Java Script
+       *
+       *@author's scripts thiagolimasp (Thiago Lima)
+       *
+       *@see: They're basicly distributed on public/js
+       *Hopefully any change for the next updates
+      */
+
+      '<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/view/number_view.js'
 
     ],
 
@@ -95,7 +111,9 @@ module.exports = function(grunt) {
       build: {
         files: {
         '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
-        '<%= path %>/js/directives/angularjs.min.js': ["<%= angularjsfiles %>"]
+        '<%= directivepath %>/angularjs.min.js': [ "<%= angularjsfiles %>" ],
+        '<%= mathpath %>/mathapp.min.js': [ "<%= mathjsfiles %>" ]
+
         }
       }
     },
