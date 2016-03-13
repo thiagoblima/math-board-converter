@@ -143,6 +143,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
 
 };
