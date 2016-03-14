@@ -18,8 +18,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     path: "<%= srcpath %>/build",
     srcpath: "public",
-    directivepath:"<%= srcpath %>/build/js/directives",
-    mathpath:"<%= srcpath %>/build/js/math",
+    directivepath: "<%= srcpath %>/build/js/directives",
+    mathpath: "<%= srcpath %>/build/js/math",
 
     jsfiles: [
 
@@ -113,7 +113,6 @@ module.exports = function(grunt) {
         '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
         '<%= directivepath %>/angularjs.min.js': [ "<%= angularjsfiles %>" ],
         '<%= mathpath %>/mathapp.min.js': [ "<%= mathjsfiles %>" ]
-
         }
       }
     },
