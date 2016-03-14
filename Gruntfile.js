@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     path: "<%= srcpath %>/build",
     srcpath: "public",
-    directivepath: "<%= srcpath %>/build/js/directives",
+    directivespath: "<%= srcpath %>/build/js/directives",
     mathpath: "<%= srcpath %>/build/js/math",
 
     jsfiles: [
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
        *
        *@author's scripts thiagolimasp (Thiago Lima)
        *
-       *@see: They're basicly distributed on public/js
+       *@see: They're basicly distributed on public/js/directives/
        *Hopefully any change for the next updates
       */
 
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
        *
        *@author's scripts thiagolimasp (Thiago Lima)
        *
-       *@see: They're basicly distributed on public/js
+       *@see: They're basicly distributed on public/js/math/
        *Hopefully any change for the next updates
       */
 
@@ -81,7 +81,25 @@ module.exports = function(grunt) {
        *@see: All of them are based on the root: /public/
        *Hopefully any change for the next updates
       */
+
       '<%= srcpath %>/index.html'
+    ],
+
+    directivespages:[
+
+      /**
+       *@description: Here goes the AngularJS Directives (HTML)
+       *
+       *@author's scripts thiagolimasp (Thiago Lima)
+       *
+       *@see: They're basicly distributed on public/js/directives/
+       *Hopefully any change for the next updates
+      */
+
+      '<%= srcpath %>/js/directives/headSection.html',
+      '<%= srcpath %>/js/directives/introSection.html',
+      '<%= srcpath %>/js/directives/mainNav.html',
+
     ],
 
     htmlbuild:{
@@ -91,6 +109,16 @@ module.exports = function(grunt) {
       }
     },
 
+
+    copy: {
+      main: {
+        expand: true,
+        flatten: true,
+        filter: 'isFile',
+        src: '<%= directivespages %>',
+        dest: '<%= directivespath %>'
+      },
+    },
 
 
     jshint: {
@@ -111,7 +139,7 @@ module.exports = function(grunt) {
       build: {
         files: {
         '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
-        '<%= directivepath %>/angularjs.min.js': [ "<%= angularjsfiles %>" ],
+        '<%= directivespath %>/angularjs.min.js': [ "<%= angularjsfiles %>" ],
         '<%= mathpath %>/mathapp.min.js': [ "<%= mathjsfiles %>" ]
         }
       }
@@ -156,7 +184,7 @@ module.exports = function(grunt) {
 
   });
 
-  //grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-build');
@@ -165,6 +193,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('dev', ['jshint', 'htmlbuild', /*'copy',*/ 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
 
 };
