@@ -194,5 +194,6 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
-  grunt.registerTask('production,', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('production', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev-deploy', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
 };
