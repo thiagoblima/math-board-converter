@@ -34,11 +34,11 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
       '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
-      '<%= srcpath %>/js/math/model/number.js',
-      '<%= srcpath %>/js/math/view/number_view.js',
+      /*'<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/view/number_view.js',*/
       '<%= srcpath %>/js/app.js',
       '<%= srcpath %>/js/controller/MathController.js',
-
+      mathjsfiles
     ],
 
     angularjsfiles: [
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 
     ],
 
-    /*mathjsfiles: [
+    mathjsfiles: [
 
       /**
        *@description: Here goes the Math app Java Script
@@ -70,10 +70,10 @@ module.exports = function(grunt) {
        *Hopefully any change for the next updates
       */
 
-      /*'<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/model/number.js',
       '<%= srcpath %>/js/math/view/number_view.js'
 
-    ], */
+    ],
 
     htmlpages: [
 
