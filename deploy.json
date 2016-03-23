@@ -1,7 +1,7 @@
 {
 
- "host" : "",
- "username" : "",
- "password" : "" 
+ "host" : "servergrove.com",
+ "username" : "admindev",
+ "password" : "***********" 
 
 };
