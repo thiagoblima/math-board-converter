@@ -16,10 +16,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+    deploy: grunt.file.readJSON('deploy.json'),
     path: "<%= srcpath %>/build",
     srcpath: "public",
     directivespath: "<%= srcpath %>/build/js/directives",
     mathpath: "<%= srcpath %>/build/js/math",
+
 
     jsfiles: [
 
@@ -85,7 +87,7 @@ module.exports = function(grunt) {
 
     ],
 
-    htmlpages: [
+    htmlpages:[
 
       /**
        *@description: Here goes the html pages
