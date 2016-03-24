@@ -180,6 +180,31 @@ module.exports = function(grunt) {
       }
     },
 
+    sftp:{
+      test:{
+        files:{
+          "./" : ".json"
+        },
+        options:{
+          path: '/tmp/',
+          host: '<%= deploy.host %>',
+          username: '<%= deploy.username %>',
+          password: '<%= deploy.password %>',
+          showProgress: true
+        }
+      }
+    },
+    sshexec: {
+        test: {
+          command: 'uptime',
+        options: {
+          host: '<%= deploy.host %>',
+          username: '<%= deploy.username %>',
+          password: '<%= deploy.password %>'
+       }
+     }
+   },
+
 
     watch: {
       stylesheets: {
