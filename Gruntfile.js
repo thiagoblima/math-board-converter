@@ -17,11 +17,18 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
     deploy: grunt.file.readJSON('deploy.json'),
+
+   /**
+    *@description: Here some variables will store paths for building process
+    */
+
     path: "<%= srcpath %>/build",
     srcpath: "public",
     directivespath: "<%= srcpath %>/build/js/directives",
     mathpath: "<%= srcpath %>/build/js/math",
-
+    cssbuild: "css",
+    jsbuild: "js",
+    directivesbuild: "<%= jsbuild %>/directives",
 
     jsfiles: [
 
