@@ -10,7 +10,7 @@
 }
 
 .navigation nav{
-  @include nav-scroll-active(fixed, 181px, 100%, 0 auto, 999, $background-nav-scroll, $nav-scroll-bg);
+  @include nav-scroll-active(fixed, 180px, 100%, 0 auto, 999, $background-nav-scroll, $nav-scroll-bg);
 }
 
 nav{
