@@ -6,6 +6,11 @@ app.controller("MathController", [ '$scope', function($scope){
   };
 
   $scope.intro = {
+
+    header:{
+      title: 'Welcome, here you\'re going to find Math conversion fastly'
+    },
+
     paragraphs:{
       collumnOne: 'Here\'s your quick and smooth math converter, anytime <span>you</span> want!',
       collumnTwo: 'Get registered and receive the latest math news, anytime <span>you</span> want!',
