@@ -142,7 +142,7 @@ main #container-wrapper {
 
 .navigation nav {
   position: fixed;
-  top: 181px;
+  top: 180px;
   width: 100%;
   margin: 0 auto;
   z-index: 999;
