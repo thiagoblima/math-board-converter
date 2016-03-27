@@ -8,7 +8,7 @@ app.controller("MathController", [ '$scope', function($scope){
   $scope.intro = {
 
     header:{
-      title: 'Welcome, here you\'re going to find Math conversion fastly'
+      title: 'Welcome, here you\'re going to find Math conversion easily'
     },
 
     paragraphs:{
