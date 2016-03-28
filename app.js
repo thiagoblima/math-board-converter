@@ -29,7 +29,7 @@ var express = require('express'),
  app.engine('html', cons.swig);
  app.set('view engine', 'html');
  app.set("views", __dirname + '/public/build/js/directives');
- app.use(express.static( __dirname + '/public/build'));
+ app.use(express.static( __dirname + '/public'));
 
  app.listen(port);
  console.log("Math Server Started");
