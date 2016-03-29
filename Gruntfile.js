@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/directives",
 
-    jsfiles: [
+    jsfiles:[
 
       /**
        *@description: Here goes the author and vendor's scripts
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
     ],
 
-    angularjsfiles: [
+    angularjsfiles:[
 
       /**
        *@description: Here goes the AngularJS Directives
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
 
     ],
 
-    mathjsfiles: [
+    mathjsfiles:[
 
       /**
        *@description: Here goes the Math app Java Script
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
 
     ],
 
-    htmlpages:[
+    htmlpages: [
 
       /**
        *@description: Here goes the html pages
@@ -123,8 +123,8 @@ module.exports = function(grunt) {
 
     ],
 
-    htmlbuild:{
-      dist:{
+    htmlbuild: {
+      dist: {
         src:'<%= htmlpages %>',
         dest:'<%= srcpath %>/build'
       }
@@ -187,9 +187,9 @@ module.exports = function(grunt) {
       }
     },
 
-    sftp:{
-      test:{
-        files:{
+    sftp: {
+      test: {
+        files: {
           "./" : ".json"
         },
         options:{
