@@ -60,43 +60,43 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
-/* line 8, ../sass/partials/_base.scss */
+/* line 7, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
 
-/* line 13, ../sass/partials/_base.scss */
+/* line 12, ../sass/partials/_base.scss */
 main #container-wrapper {
   width: 100%;
   padding: 0;
   overflow: hidden;
 }
-/* line 15, ../sass/partials/_base.scss */
+/* line 14, ../sass/partials/_base.scss */
 main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
   text-shadow: 4px 4px 1px black;
 }
-/* line 19, ../sass/partials/_base.scss */
+/* line 18, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
   position: relative;
   z-index: -100;
 }
-/* line 21, ../sass/partials/_base.scss */
+/* line 20, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section h1 {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   color: #ffffff !important;
   margin-top: -20px;
 }
-/* line 23, ../sass/partials/_base.scss */
+/* line 22, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 25, ../sass/partials/_base.scss */
+/* line 24, ../sass/partials/_base.scss */
 main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
@@ -109,7 +109,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
   */
-/* line 42, ../sass/partials/_base.scss */
+/* line 41, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -121,7 +121,7 @@ main #container-wrapper section#intro-section div article p {
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
   */
-/* line 53, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
@@ -133,16 +133,16 @@ main #container-wrapper section#intro-section div article p {
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-/* line 64, ../sass/partials/_base.scss */
+/* line 63, ../sass/partials/_base.scss */
 #table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 66, ../sass/partials/_base.scss */
+/* line 65, ../sass/partials/_base.scss */
 #table thead {
   background-color: #ffd452 !important;
 }
-/* line 69, ../sass/partials/_base.scss */
+/* line 68, ../sass/partials/_base.scss */
 #table button {
   background-color: #75a3d1 !important;
 }
