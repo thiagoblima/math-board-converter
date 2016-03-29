@@ -215,14 +215,14 @@ module.exports = function(grunt) {
 
     watch: {
       stylesheets: {
-        files: ['<%= path %>/themes/stylesheets/**/*.css', '<%= path %>/themes/sass/**/*.scss'],
+        files: ['<%= srcpath %>/themes/stylesheets/**/*.css', '<%= path %>/themes/sass/**/*.scss'],
         tasks: ['cssmin', 'sass']
       },
       scripts: {
-        files: '<%= path %>/js/**/*.js',
+        files: '<%= srcpath %>/js/**/*.js',
         tasks: ['jshint', 'uglify'],
         options: {
-          livereload: true,
+          livereload: 3412
         }
       }
     }
