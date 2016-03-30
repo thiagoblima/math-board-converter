@@ -110,7 +110,7 @@ main #container-wrapper div#table {
 }
 /* line 45, ../sass/partials/_base.scss */
 main #container-wrapper div#table h1 {
-  color: white;
+  color: #ffffff !important;
 }
 /* line 46, ../sass/partials/_base.scss */
 main #container-wrapper div#table thead {
