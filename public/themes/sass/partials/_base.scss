@@ -42,7 +42,7 @@ section#intro-section{
 
 div#table{
   @include math-table(50px, 50px);
-  h1{ color: white; }
+  h1{ @include math-table-intro($splash-color); }
   thead{
     background-color: $table-color;
   }
