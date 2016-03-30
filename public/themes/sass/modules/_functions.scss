@@ -68,6 +68,10 @@
   padding-left:$padding-left;
 }
 
+@mixin math-table-intro($splash-color){
+  color:$splash-color;
+}
+
 
 /* _nav.scss @mixins */
 
