@@ -100,6 +100,8 @@ main #container-wrapper {
   main #container-wrapper div#table {
     padding-right: 50px;
     padding-left: 50px; }
+    main #container-wrapper div#table h1 {
+      color: #ffffff !important; }
     main #container-wrapper div#table thead {
       background-color: #ffd452 !important; }
     main #container-wrapper div#table button {
