@@ -16,7 +16,7 @@
 var express = require('express'),
     cons    = require("consolidate"),
     app     = express(),
-    port    = process.env.PORT || 3412;
+    port    = process.env.PORT || 35729;
 
 
 /**
