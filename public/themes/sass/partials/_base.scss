@@ -8,28 +8,55 @@ body{
   background-color:$layer-color;
 }
 
+
+
 main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
+
+
+
+
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
 }
+
+
+
+
 section#intro-section{
   @include intro-section(30px, 50px, relative, -100);
   h1{ @include splash-intro($intro-font-josefin, center, $splash-color, -20px) }
-div{
-  article{
-   @include intro-splash(400px, $table-color);
-p{
-   @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, 7em 2em 7.8em 2em, 1.5em);
-
-          }
-        }
+  div{
+     article{
+        @include intro-splash(400px, $table-color);
+     p{
+        @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, 7em 2em 7.8em 2em, 1.5em);
       }
     }
   }
 }
+
+
+
+div#table{
+  @include math-table(50px, 50px);
+  h1{ color: white; }
+  thead{
+    background-color: $table-color;
+  }
+  button{
+    background-color: $btn-color;
+  }
+}
+
+
+
+
+ }
+}
+
 
 /**
   *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
@@ -58,14 +85,3 @@ p{
   *@description: the table which the pure Java Script is apllied math folder
   *We've got the model and the view class
   */
-
-
-#table{
-  @include math-table(50px, 50px);
-  thead{
-    background-color: $table-color;
-  }
-  button{
-    background-color: $btn-color;
-  }
-}
