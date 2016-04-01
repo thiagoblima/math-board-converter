@@ -42,7 +42,7 @@ section#intro-section{
 
 div#table{
   @include math-table(50px, 50px);
-  h1{ @include math-table-intro($splash-color); }
+  h1{ @include math-table-intro($splash-color, $intro-font-josefin); }
   thead{
     background-color: $table-color;
   }
@@ -58,7 +58,7 @@ div#table{
 }
 
 
-/**
+ /**
   *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
   *@description: Content-wrapper is active up the time the headChange directive
   *From AngularJS.
@@ -69,7 +69,7 @@ div#table{
   @include content-wrapper(relative, 320px, 1200px);
 }
 
-/**
+ /**
   *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
