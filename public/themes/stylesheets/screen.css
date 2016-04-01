@@ -133,9 +133,9 @@ main #container-wrapper footer {
   background-color: #333333 !important;
   width: 100%;
 }
-/* line 66, ../sass/partials/_base.scss */
+/* line 63, ../sass/partials/_base.scss */
 main #container-wrapper footer section h5 {
-  color: white;
+  color: #ffffff !important;
 }
 
 /**
@@ -143,7 +143,7 @@ main #container-wrapper footer section h5 {
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 84, ../sass/partials/_base.scss */
+/* line 81, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -155,7 +155,7 @@ main #container-wrapper footer section h5 {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 95, ../sass/partials/_base.scss */
+/* line 92, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
