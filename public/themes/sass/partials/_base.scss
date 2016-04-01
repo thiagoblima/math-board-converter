@@ -39,6 +39,12 @@ section#intro-section{
 }
 
 
+/**
+  *@name: table-settings
+  *@description: the table which the pure Java Script is apllied math folder
+  *We've got the model and the view class
+  */
+
 
 div#table{
   @include math-table(50px, 50px);
@@ -51,7 +57,17 @@ div#table{
   }
 }
 
-
+footer{
+  position:fixed;
+  bottom:0;
+  background-color:$layer-color;
+  width:100%;
+ section{
+   h5{
+     color:white;
+   }
+ }
+}
 
 
  }
@@ -79,9 +95,3 @@ div#table{
 .content-wrapper-nav{
   @include content-wrapper-nav(relative, 500px, 1320px);
 }
-
-/**
-  *@name: table-settings
-  *@description: the table which the pure Java Script is apllied math folder
-  *We've got the model and the view class
-  */
