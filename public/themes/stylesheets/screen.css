@@ -111,6 +111,7 @@ main #container-wrapper div#table {
 /* line 45, ../sass/partials/_base.scss */
 main #container-wrapper div#table h1 {
   color: #ffffff !important;
+  font-family: "Josefin Sans", sans-serif;
 }
 /* line 46, ../sass/partials/_base.scss */
 main #container-wrapper div#table thead {
@@ -122,10 +123,10 @@ main #container-wrapper div#table button {
 }
 
 /**
-  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
-  *@description: Content-wrapper is active up the time the headChange directive
-  *From AngularJS.
-  */
+ *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
+ *@description: Content-wrapper is active up the time the headChange directive
+ *From AngularJS.
+ */
 /* line 68, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
@@ -134,10 +135,10 @@ main #container-wrapper div#table button {
 }
 
 /**
-  *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
-  *@description: Content-wrapper is active up the time the navChange directive
-  *From AngularJS.
-  */
+ *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
+ *@description: Content-wrapper is active up the time the navChange directive
+ *From AngularJS.
+ */
 /* line 79, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
