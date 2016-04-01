@@ -70,6 +70,11 @@ main #container-wrapper {
   width: 100%;
   padding: 0;
   overflow: hidden;
+  /**
+    *@name: table-settings
+    *@description: the table which the pure Java Script is apllied math folder
+    *We've got the model and the view class
+    */
 }
 /* line 20, ../sass/partials/_base.scss */
 main #container-wrapper header {
@@ -103,23 +108,34 @@ main #container-wrapper section#intro-section div article p {
   padding: 7em 2em 7.8em 2em;
   font-size: 1.5em;
 }
-/* line 43, ../sass/partials/_base.scss */
+/* line 49, ../sass/partials/_base.scss */
 main #container-wrapper div#table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 45, ../sass/partials/_base.scss */
+/* line 51, ../sass/partials/_base.scss */
 main #container-wrapper div#table h1 {
   color: #ffffff !important;
   font-family: "Josefin Sans", sans-serif;
 }
-/* line 46, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 main #container-wrapper div#table thead {
   background-color: #ffd452 !important;
 }
-/* line 49, ../sass/partials/_base.scss */
+/* line 55, ../sass/partials/_base.scss */
 main #container-wrapper div#table button {
   background-color: #75a3d1 !important;
+}
+/* line 60, ../sass/partials/_base.scss */
+main #container-wrapper footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #333333 !important;
+  width: 100%;
+}
+/* line 66, ../sass/partials/_base.scss */
+main #container-wrapper footer section h5 {
+  color: white;
 }
 
 /**
@@ -127,7 +143,7 @@ main #container-wrapper div#table button {
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 68, ../sass/partials/_base.scss */
+/* line 84, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -139,18 +155,13 @@ main #container-wrapper div#table button {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 79, ../sass/partials/_base.scss */
+/* line 95, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
   height: 1320px;
 }
 
-/**
-  *@name: table-settings
-  *@description: the table which the pure Java Script is apllied math folder
-  *We've got the model and the view class
-  */
 /*@_nav.scss
  *Here will be the code of the main nav, keyframes are out in modules classes
  *Colors and shades will ever be outside here, probably found on colors class.
