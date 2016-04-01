@@ -73,6 +73,14 @@
   font-family:$intro-font-josefin;
 }
 
+@mixin footer($position, $bottom, $background-color, $width){
+  position:$position;
+  bottom:$bottom;
+  background-color:$background-color;
+  width:$width;
+  
+}
+
 
 /* _nav.scss @mixins */
 
