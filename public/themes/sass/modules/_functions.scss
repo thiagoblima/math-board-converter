@@ -68,8 +68,9 @@
   padding-left:$padding-left;
 }
 
-@mixin math-table-intro($splash-color){
+@mixin math-table-intro($splash-color, $intro-font-josefin){
   color:$splash-color;
+  font-family:$intro-font-josefin;
 }
 
 
