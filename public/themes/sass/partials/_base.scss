@@ -58,13 +58,10 @@ div#table{
 }
 
 footer{
-  position:fixed;
-  bottom:0;
-  background-color:$layer-color;
-  width:100%;
+  @include footer(fixed, 0, $layer-color, 100%);
  section{
    h5{
-     color:white;
+     color:$splash-color;
    }
  }
 }
