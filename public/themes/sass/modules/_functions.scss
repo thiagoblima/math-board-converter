@@ -73,12 +73,15 @@
   font-family:$intro-font-josefin;
 }
 
-@mixin footer($position, $bottom, $background-color, $width){
+@mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
   position:$position;
   bottom:$bottom;
   background-color:$background-color;
+  font-family:$font-family;
+  text-align:$align;
   width:$width;
-  
+  margin-left:$margin;
+
 }
 
 
