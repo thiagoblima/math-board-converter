@@ -14,9 +14,24 @@
 
 
 var express = require('express'),
-    cons    = require("consolidate"),
     app     = express(),
-    port    = process.env.PORT || 3412;
+    port    = process.env.PORT || 3412,
+    connect = {
+
+              sucess: function(msg, callback){
+                      msg = console.log("Math Server Started on port: "+ port),
+                 callback = function(){
+                    return;
+                  };
+
+                  callback(msg);
+
+                    return {
+                     callback
+                  };
+              }
+
+             };
 
 
 /**
@@ -26,10 +41,7 @@ var express = require('express'),
  *swig templates on the build.
  */
 
- app.engine('html', cons.swig);
- app.set('view engine', 'html');
- app.set("views", __dirname + '/public/build/js/directives');
  app.use(express.static( __dirname + '/public/build'));
-
  app.listen(port);
- console.log("Math Server Started");
+
+ connect.sucess();
