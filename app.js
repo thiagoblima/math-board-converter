@@ -3,8 +3,8 @@
  *
  *@description: Nodejs server, application start.
  *
- *Express, Consolidate and Swig are set on
- *node_modules as dependencies
+ *Express is set as dependecy on node_modules
+ *Other dependencies appear soon
  */
 
 
@@ -19,7 +19,7 @@ var express = require('express'),
     connect = {
 
               sucess: function(msg, callback){
-                      msg = console.log("Math Server Started on port: "+ port),
+                  var msg = console.log("Math Server Started on port: "+ port),
                  callback = function(){
                     return;
                   };
@@ -28,10 +28,9 @@ var express = require('express'),
 
                     return {
                      callback
-                  };
-              }
-
-             };
+                   };
+                 }
+              };
 
 
 /**
