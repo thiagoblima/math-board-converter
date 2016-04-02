@@ -129,8 +129,11 @@ body main #container-wrapper div#table button {
 body main #container-wrapper footer {
   position: fixed;
   bottom: 0;
-  background-color: #333333 !important;
-  width: 100%;
+  background-color: #976151;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  width: 25%;
+  margin-left: 75%;
 }
 /* line 63, ../sass/partials/_base.scss */
 body main #container-wrapper footer section h5 {
@@ -179,7 +182,7 @@ body main #container-wrapper footer section h5 {
   width: 100%;
   margin: 0 auto;
   z-index: 999;
-  background-color: #000000;
+  background-color: #333333;
   transition: background-color 500ms ease-in-out;
 }
 
