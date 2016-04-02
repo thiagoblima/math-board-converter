@@ -58,7 +58,7 @@ div#table{
 }
 
 footer{
-  @include footer(fixed, 0, $layer-color, 100%);
+  @include footer(fixed, 0, $bottom-color, $intro-font-josefin, center, 25%, 75%);
  section{
    h5{
      color:$splash-color;
