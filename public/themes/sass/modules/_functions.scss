@@ -84,6 +84,10 @@
 
 }
 
+@mixin glyphicon-element($glyphicon){
+  font-family:$glyphicon;
+}
+
 
 /* _nav.scss @mixins */
 
