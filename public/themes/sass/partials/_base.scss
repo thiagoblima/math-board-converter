@@ -61,7 +61,7 @@ footer{
   @include footer(fixed, 0, $bottom-color, $intro-font-josefin, center, 25%, 75%);
  section{
    span{
-     @include glyphicon-element($glyphicon);
+     @include glyphicon-element($glyphicon, left);
    }
    h5{
      color:$splash-color;
