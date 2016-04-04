@@ -138,6 +138,7 @@ body main #container-wrapper footer {
 /* line 63, ../sass/partials/_base.scss */
 body main #container-wrapper footer section span {
   font-family: "Glyphicons Halflings";
+  float: left;
 }
 /* line 66, ../sass/partials/_base.scss */
 body main #container-wrapper footer section h5 {
