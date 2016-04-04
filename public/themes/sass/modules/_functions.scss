@@ -84,8 +84,9 @@
 
 }
 
-@mixin glyphicon-element($glyphicon){
+@mixin glyphicon-element($glyphicon, $float){
   font-family:$glyphicon;
+  float:$float;
 }
 
 
