@@ -58,10 +58,10 @@ div#table{
 }
 
 footer{
-  @include footer(fixed, 0, $bottom-color, $intro-font-josefin, center, 5%, 95%);
+  @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
  section{
    span{
-     @include glyphicon-element($glyphicon, left, 50%, $splash-color);
+     @include glyphicon-element($glyphicon, 2em, left, 50%, $splash-color);
    }
    h5{
      color:$splash-color;
