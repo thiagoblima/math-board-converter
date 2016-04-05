@@ -19,10 +19,12 @@ app.controller("MathController", [ '$scope', function($scope){
   };
 
   $scope.table = {
+
     intro:{
-      text: "Math Quick Tasks"  
+      text: "Math Quick Tasks"
     },
 
     title: [ 'Esponential', 'Fixed', 'Precision', 'String', 'Ceil', 'Floor', 'Round', 'Absolute' ]
   };
+
 }]);
