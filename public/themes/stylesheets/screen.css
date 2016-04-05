@@ -139,7 +139,6 @@ body main #container-wrapper aside {
 body main #container-wrapper aside section span {
   font-family: "Glyphicons Halflings";
   font-size: 2em;
-  float: left;
   margin-left: 26%;
   color: #ffffff !important;
 }
