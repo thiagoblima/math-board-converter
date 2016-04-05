@@ -126,7 +126,7 @@ body main #container-wrapper div#table button {
   background-color: #75a3d1 !important;
 }
 /* line 60, ../sass/partials/_base.scss */
-body main #container-wrapper footer {
+body main #container-wrapper aside {
   position: fixed;
   bottom: 0;
   background-color: transparent;
@@ -136,15 +136,15 @@ body main #container-wrapper footer {
   margin-left: 95%;
 }
 /* line 63, ../sass/partials/_base.scss */
-body main #container-wrapper footer section span {
+body main #container-wrapper aside section span {
   font-family: "Glyphicons Halflings";
   font-size: 2em;
   float: left;
-  margin-left: 50%;
+  margin-left: 26%;
   color: #ffffff !important;
 }
 /* line 66, ../sass/partials/_base.scss */
-body main #container-wrapper footer section h5 {
+body main #container-wrapper aside section h5 {
   color: #ffffff !important;
 }
 
