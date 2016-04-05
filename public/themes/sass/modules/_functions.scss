@@ -84,9 +84,11 @@
 
 }
 
-@mixin glyphicon-element($glyphicon, $float){
+@mixin glyphicon-element($glyphicon, $float, $margin, $color){
   font-family:$glyphicon;
   float:$float;
+  margin-left:$margin;
+  color:$color;
 }
 
 
