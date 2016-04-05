@@ -145,7 +145,6 @@ body main #container-wrapper footer section span {
 /* line 66, ../sass/partials/_base.scss */
 body main #container-wrapper footer section h5 {
   color: #ffffff !important;
-  display: none;
 }
 
 /**
@@ -153,7 +152,7 @@ body main #container-wrapper footer section h5 {
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 86, ../sass/partials/_base.scss */
+/* line 85, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -165,7 +164,7 @@ body main #container-wrapper footer section h5 {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 97, ../sass/partials/_base.scss */
+/* line 96, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
