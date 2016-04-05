@@ -129,7 +129,7 @@ body main #container-wrapper div#table button {
 body main #container-wrapper footer {
   position: fixed;
   bottom: 0;
-  background-color: #976151;
+  background-color: transparent;
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   width: 5%;
@@ -138,6 +138,7 @@ body main #container-wrapper footer {
 /* line 63, ../sass/partials/_base.scss */
 body main #container-wrapper footer section span {
   font-family: "Glyphicons Halflings";
+  font-size: 2em;
   float: left;
   margin-left: 50%;
   color: #ffffff !important;
