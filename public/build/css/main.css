@@ -111,15 +111,20 @@ body {
         background-color: #ffd452 !important; }
       body main #container-wrapper div#table button {
         background-color: #75a3d1 !important; }
-    body main #container-wrapper footer {
+    body main #container-wrapper aside {
       position: fixed;
       bottom: 0;
-      background-color: #976151;
+      background-color: transparent;
       font-family: "Josefin Sans", sans-serif;
       text-align: center;
-      width: 25%;
-      margin-left: 75%; }
-      body main #container-wrapper footer section h5 {
+      width: 5%;
+      margin-left: 95%; }
+      body main #container-wrapper aside section span {
+        font-family: "Glyphicons Halflings";
+        font-size: 2em;
+        margin-left: 26%;
+        color: #ffffff !important; }
+      body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
 
 /**
