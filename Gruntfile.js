@@ -22,13 +22,16 @@ module.exports = function(grunt) {
     *@description: Here some variables will store paths for building process
     */
 
-    path: "<%= srcpath %>/build",
     srcpath: "public",
     directivespath: "<%= srcpath %>/build/js/directives",
+    webfontpath: "<%= srcpath %>/libs/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
+    path: "<%= srcpath %>/build",
     cssbuild: "css",
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/directives",
+    webfontbuild: "<%= path %>/css/fonts",
+
 
     jsfiles:[
 
@@ -84,11 +87,10 @@ module.exports = function(grunt) {
       /**
        *@description: Here goes the Math app Java Script
        *
-       *@author's scripts thiagolimasp (Thiago Lima)
        *
        *@see: They're basicly distributed on public/js/math/
        *Hopefully any change for the next updates
-      */
+       */
 
       '<%= srcpath %>/js/math/model/number.js',
       '<%= srcpath %>/js/math/view/number_view.js'
@@ -102,7 +104,7 @@ module.exports = function(grunt) {
        *
        *@see: All of them are based on the root: /public/
        *Hopefully any change for the next updates
-      */
+       */
 
       '<%= srcpath %>/index.html'
     ],
@@ -112,16 +114,27 @@ module.exports = function(grunt) {
       /**
        *@description: Here goes the AngularJS Directives (HTML)
        *
-       *@author's scripts thiagolimasp (Thiago Lima)
-       *
        *@see: They're basicly distributed on public/js/directives/
        *Hopefully any change for the next updates
-      */
+       */
 
       '<%= srcpath %>/js/directives/headSection.html',
       '<%= srcpath %>/js/directives/introSection.html',
       '<%= srcpath %>/js/directives/socialSection.html',
       '<%= srcpath %>/js/directives/mainNav.html'
+
+    ],
+
+    webfonts:[
+
+      /**
+       *@description: Here goes the WebFonts and Icons (bootstrap)
+       *
+       *@see: They're basicly distributed on public/libs/bootstrap/fonts
+       *Hopefully any change for the next updates
+       */
+
+       '<%= webfontpath %>/*'
 
     ],
 
@@ -141,6 +154,12 @@ module.exports = function(grunt) {
         src: '<%= directivespages %>',
         dest: '<%= directivespath %>'
       },
+      webfonts:{
+        expand: true,
+        flatten: true,
+        src: '<%= webfonts %>',
+        dest: '<%= webfontbuild %>'
+      }
     },
 
 
