@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     cssbuild: "css",
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/directives",
-    webfontbuild: "<%= path %>/css/fonts",
+    webfontbuild: "<%= path %>/fonts",
 
 
     jsfiles:[
