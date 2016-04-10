@@ -17,12 +17,11 @@ var express = require('express'),
     app     = express(),
     port    = process.env.PORT || 3412,
     connect = {
-
-              sucess: function(msg, callback){
-                  var msg = console.log("Math Server Started on port: "+ port),
-                 callback = function(){
-                    return;
-                  };
+                sucess: function(msg, callback){
+                   var msg = console.log("Math Server Started on port: "+ port),
+                   callback = function(){
+                     return;
+                   };
                   return callback(msg);
                 }
               };
