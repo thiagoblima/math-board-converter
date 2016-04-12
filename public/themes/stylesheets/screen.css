@@ -146,13 +146,17 @@ body main #container-wrapper aside section span {
 body main #container-wrapper aside section h5 {
   color: #ffffff !important;
 }
+/* line 72, ../sass/partials/_base.scss */
+body main #container-wrapper footer {
+  height: 1000px;
+}
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 86, ../sass/partials/_base.scss */
+/* line 89, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -164,7 +168,7 @@ body main #container-wrapper aside section h5 {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 97, ../sass/partials/_base.scss */
+/* line 100, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
