@@ -35,3 +35,19 @@ app.directive('scrollNav', function($window){
     });
   };
 });
+
+
+app.directive('scrollTable', function($window){
+  return function(scope, element, attrs){
+    angular.element($window).bind('scroll', function(){
+      if(this.pageYOffset >= 907){
+        scope.mathTable = true;
+        console.log("Scrolled bellow table");
+      }else{
+        scope.mathTable = false;
+        console.log("Math is viewed");
+      }
+      scope.$apply();
+    });
+  };
+});
