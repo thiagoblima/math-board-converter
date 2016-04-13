@@ -4,6 +4,12 @@
  *such as: buttons, transitions, colors or somehing like this...
  */
 
+
+.math{
+  position:relative;
+  z-index:-10;
+}
+
 body{
   background-color:$layer-color;
 
