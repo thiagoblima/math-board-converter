@@ -60,11 +60,17 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
-/* line 7, ../sass/partials/_base.scss */
+/* line 8, ../sass/partials/_base.scss */
+.math {
+  position: relative;
+  z-index: -10;
+}
+
+/* line 13, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
-/* line 14, ../sass/partials/_base.scss */
+/* line 20, ../sass/partials/_base.scss */
 body main #container-wrapper {
   width: 100%;
   padding: 0;
@@ -75,57 +81,57 @@ body main #container-wrapper {
     *We've got the model and the view class
     */
 }
-/* line 20, ../sass/partials/_base.scss */
+/* line 26, ../sass/partials/_base.scss */
 body main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
   text-shadow: 4px 4px 1px black;
 }
-/* line 28, ../sass/partials/_base.scss */
+/* line 34, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
   position: relative;
   z-index: -100;
 }
-/* line 30, ../sass/partials/_base.scss */
+/* line 36, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section h1 {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   color: #ffffff !important;
   margin-top: -20px;
 }
-/* line 32, ../sass/partials/_base.scss */
+/* line 38, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 34, ../sass/partials/_base.scss */
+/* line 40, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
   padding: 7em 2em 7.8em 2em;
   font-size: 1.5em;
 }
-/* line 49, ../sass/partials/_base.scss */
+/* line 55, ../sass/partials/_base.scss */
 body main #container-wrapper div#table {
   padding-right: 50px;
   padding-left: 50px;
 }
-/* line 51, ../sass/partials/_base.scss */
+/* line 57, ../sass/partials/_base.scss */
 body main #container-wrapper div#table h1 {
   color: #ffffff !important;
   font-family: "Josefin Sans", sans-serif;
 }
-/* line 52, ../sass/partials/_base.scss */
+/* line 58, ../sass/partials/_base.scss */
 body main #container-wrapper div#table thead {
   background-color: #ffd452 !important;
 }
-/* line 55, ../sass/partials/_base.scss */
+/* line 61, ../sass/partials/_base.scss */
 body main #container-wrapper div#table button {
   background-color: #75a3d1 !important;
 }
-/* line 60, ../sass/partials/_base.scss */
+/* line 66, ../sass/partials/_base.scss */
 body main #container-wrapper aside {
   position: fixed;
   bottom: 0;
@@ -135,18 +141,18 @@ body main #container-wrapper aside {
   width: 5%;
   margin-left: 95%;
 }
-/* line 63, ../sass/partials/_base.scss */
+/* line 69, ../sass/partials/_base.scss */
 body main #container-wrapper aside section span {
   font-family: "Glyphicons Halflings";
   font-size: 2em;
   margin-left: 26%;
   color: #ffffff !important;
 }
-/* line 66, ../sass/partials/_base.scss */
+/* line 72, ../sass/partials/_base.scss */
 body main #container-wrapper aside section h5 {
   color: #ffffff !important;
 }
-/* line 72, ../sass/partials/_base.scss */
+/* line 78, ../sass/partials/_base.scss */
 body main #container-wrapper section#guide {
   height: 1000px;
   background-color: #F2D6A2;
@@ -157,7 +163,7 @@ body main #container-wrapper section#guide {
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 89, ../sass/partials/_base.scss */
+/* line 95, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -169,7 +175,7 @@ body main #container-wrapper section#guide {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 100, ../sass/partials/_base.scss */
+/* line 106, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
