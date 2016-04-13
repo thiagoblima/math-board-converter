@@ -68,6 +68,9 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
+.mathTable {
+  display: none; }
+
 body {
   background-color: #333333 !important; }
   body main #container-wrapper {
