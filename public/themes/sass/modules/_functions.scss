@@ -91,6 +91,11 @@
   color:$color;
 }
 
+@mixin guide-section($height, $background-color){
+  height:$height;
+  background-color:$background-color;
+}
+
 
 /* _nav.scss @mixins */
 
