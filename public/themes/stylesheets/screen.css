@@ -147,7 +147,7 @@ body main #container-wrapper aside section h5 {
   color: #ffffff !important;
 }
 /* line 72, ../sass/partials/_base.scss */
-body main #container-wrapper footer {
+body main #container-wrapper section#guide {
   height: 1000px;
   background-color: #F2D6A2;
 }
@@ -157,7 +157,7 @@ body main #container-wrapper footer {
  *@description: Content-wrapper is active up the time the headChange directive
  *From AngularJS.
  */
-/* line 90, ../sass/partials/_base.scss */
+/* line 89, ../sass/partials/_base.scss */
 .content-wrapper {
   position: relative;
   top: 320px;
@@ -169,7 +169,7 @@ body main #container-wrapper footer {
  *@description: Content-wrapper is active up the time the navChange directive
  *From AngularJS.
  */
-/* line 101, ../sass/partials/_base.scss */
+/* line 100, ../sass/partials/_base.scss */
 .content-wrapper-nav {
   position: relative;
   top: 500px;
