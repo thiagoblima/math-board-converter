@@ -69,9 +69,8 @@ aside{
  }
 }
 
-footer{
-  height:1000px;
-  background-color:#F2D6A2;
+section#guide{
+  @include guide-section(1000px, $guide-color);
 }
 
 
