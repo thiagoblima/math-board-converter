@@ -71,10 +71,6 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
-.math {
-  position: relative;
-  z-index: -10; }
-
 body {
   background-color: #333333 !important; }
   body main #container-wrapper {
@@ -108,6 +104,9 @@ body {
           color: #ffffff !important;
           padding: 7em 2em 7.8em 2em;
           font-size: 1.5em; }
+    body main #container-wrapper .math {
+      position: relative;
+      z-index: -10; }
     body main #container-wrapper div#table {
       padding-right: 50px;
       padding-left: 50px; }
