@@ -64,16 +64,10 @@
  *such as: buttons, transitions, colors or somehing like this...
  */
 /* line 8, ../sass/partials/_base.scss */
-.math {
-  position: relative;
-  z-index: -10;
-}
-
-/* line 13, ../sass/partials/_base.scss */
 body {
   background-color: #333333 !important;
 }
-/* line 20, ../sass/partials/_base.scss */
+/* line 15, ../sass/partials/_base.scss */
 body main #container-wrapper {
   width: 100%;
   padding: 0;
@@ -84,39 +78,44 @@ body main #container-wrapper {
     *We've got the model and the view class
     */
 }
-/* line 26, ../sass/partials/_base.scss */
+/* line 21, ../sass/partials/_base.scss */
 body main #container-wrapper header {
   background-color: #e05151 !important;
   color: #fff !important;
   text-shadow: 4px 4px 1px black;
 }
-/* line 35, ../sass/partials/_base.scss */
+/* line 30, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section {
   margin-bottom: 30px;
   padding: 50px;
   position: relative;
   z-index: -100;
 }
-/* line 37, ../sass/partials/_base.scss */
+/* line 32, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section h1 {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   color: #ffffff !important;
   margin-top: -20px;
 }
-/* line 39, ../sass/partials/_base.scss */
+/* line 34, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section div article {
   height: 400px;
   background-color: #ffd452 !important;
 }
-/* line 41, ../sass/partials/_base.scss */
+/* line 36, ../sass/partials/_base.scss */
 body main #container-wrapper section#intro-section div article p {
   text-shadow: 3px 2px 1px #d9411e;
   color: #ffffff !important;
   padding: 7em 2em 7.8em 2em;
   font-size: 1.5em;
 }
-/* line 56, ../sass/partials/_base.scss */
+/* line 51, ../sass/partials/_base.scss */
+body main #container-wrapper .math {
+  position: relative;
+  z-index: -10;
+}
+/* line 55, ../sass/partials/_base.scss */
 body main #container-wrapper div#table {
   padding-right: 50px;
   padding-left: 50px;
