@@ -15,6 +15,20 @@
   color:$color;
 }
 
+@mixin header-scroll($position, $width, $height, $transition){
+  position:$position;
+  width:$width;
+  height:$height;
+  transition:$transition;
+}
+
+@mixin hgroup-header-one($font-size, $transition, $margin-top){
+  font-size:$font-size;
+  transition:$transition;
+  margin-top:$margin-top;
+
+}
+
 @mixin container-wrapper($width, $padding, $overflow){
   width:$width;
   padding:$padding;
