@@ -5,11 +5,6 @@
  */
 
 
-.math{
-  position:relative;
-  z-index:-10;
-}
-
 body{
   background-color:$layer-color;
 
@@ -53,7 +48,12 @@ section#intro-section{
   */
 
 
+.math{
+  @include math-table-position(relative, -10);
+}
+
 div#table{
+
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($splash-color, $intro-font-josefin); }
   thead{
