@@ -63,6 +63,11 @@
   font-size:$font-size;
 }
 
+@mixin math-table-position($position, $z-index){
+  position:$position;
+  z-index:$z-index;
+}
+
 @mixin math-table($padding-right, $padding-left){
   padding-right:$padding-right;
   padding-left:$padding-left;
