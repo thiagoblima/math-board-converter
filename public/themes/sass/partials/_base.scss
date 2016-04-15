@@ -26,6 +26,7 @@ main{
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
+
 }
 
 
@@ -104,5 +105,5 @@ section#guide{
 
 
 .content-wrapper-nav{
-  @include content-wrapper-nav(relative, 500px, 1320px);
+  @include content-wrapper-nav(relative, 465px, 1320px);
 }
