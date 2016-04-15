@@ -10,11 +10,9 @@ body{
 
 
 
-
 main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
-
 
 
 
@@ -23,7 +21,6 @@ header{
    @include text-splash($head-text-shadow);
 
 }
-
 
 
 
