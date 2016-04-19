@@ -12,7 +12,7 @@ app.directive('introSection', function(){
     scope:{
       data: '='
     },
-    templateUrl:'js/directives/introSection.html'
+    templateUrl:'js/directives/views/introSection.html'
   };
 
 });
