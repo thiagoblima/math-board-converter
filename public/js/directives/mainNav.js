@@ -10,6 +10,6 @@ app.directive('mainNav', function(){
      scope:{
       data: '='
     },
-     templateUrl:'/js/directives/mainNav.html'
+     templateUrl:'/js/directives/views/mainNav.html'
    };
 });
