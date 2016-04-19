@@ -11,6 +11,6 @@ app.directive('headSection', function(){
      scope:{
        data: '='
      },
-     templateUrl: 'js/directives/headSection.html'
+     templateUrl: 'js/directives/views/headSection.html'
   };
 });
