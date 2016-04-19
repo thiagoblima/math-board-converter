@@ -8,6 +8,6 @@ app.directive('socialSection', function(){
    return{
     restrict: 'E',
     scope:{},
-    templateUrl:'js/directives/socialSection.html'
+    templateUrl:'js/directives/views/socialSection.html'
   };
 });
