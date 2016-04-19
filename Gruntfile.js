@@ -23,7 +23,8 @@ module.exports = function(grunt) {
     */
 
     srcpath: "public",
-    directivespath: "<%= srcpath %>/build/js/directives",
+    directivespath: "<%= srcpath %>/build/js/directives/views",
+    directivesjs: "<%= srcpath %>/build/js/directives",
     webfontpath: "<%= srcpath %>/libs/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
     path: "<%= srcpath %>/build",
@@ -118,10 +119,10 @@ module.exports = function(grunt) {
        *Hopefully any change for the next updates
        */
 
-      '<%= srcpath %>/js/directives/headSection.html',
-      '<%= srcpath %>/js/directives/introSection.html',
-      '<%= srcpath %>/js/directives/socialSection.html',
-      '<%= srcpath %>/js/directives/mainNav.html'
+      '<%= srcpath %>/js/directives/views/headSection.html',
+      '<%= srcpath %>/js/directives/views/introSection.html',
+      '<%= srcpath %>/js/directives/views/socialSection.html',
+      '<%= srcpath %>/js/directives/views/mainNav.html'
 
     ],
 
@@ -181,7 +182,7 @@ module.exports = function(grunt) {
       build: {
         files: {
         '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
-        '<%= directivespath %>/angularjs.min.js': [ "<%= angularjsfiles %>" ]
+        '<%= directivesjs %>/angularjs.min.js': [ "<%= angularjsfiles %>" ]
         }
       }
     },
