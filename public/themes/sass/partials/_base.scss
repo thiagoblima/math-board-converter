@@ -19,7 +19,11 @@ main{
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
+   height:250px;
 
+hgroup{
+  float:left;
+ }
 }
 
 
