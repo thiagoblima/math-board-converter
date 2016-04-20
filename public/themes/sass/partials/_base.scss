@@ -22,7 +22,7 @@ header{
    @include head-settings(250px);
 
 hgroup{
-  float:left;
+  @include hgroup-settings(left);
  }
 }
 
