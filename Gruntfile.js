@@ -69,7 +69,6 @@ module.exports = function(grunt) {
       /**
        *@description: Here goes the AngularJS Directives
        *
-       *@author's scripts thiagolimasp (Thiago Lima)
        *
        *@see: They're basicly distributed on public/js/directives/
        *Hopefully any change for the next updates
