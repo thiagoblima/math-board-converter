@@ -85,7 +85,10 @@ body {
     body main #container-wrapper header {
       background-color: #e05151 !important;
       color: #fff !important;
-      text-shadow: 4px 4px 1px black; }
+      text-shadow: 4px 4px 1px black;
+      height: 250px; }
+      body main #container-wrapper header hgroup {
+        float: left; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
