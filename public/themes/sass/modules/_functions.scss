@@ -15,6 +15,10 @@
   color:$color;
 }
 
+@mixin head-settings($height){
+  height:$height;
+}
+
 @mixin header-scroll($position, $width, $height, $transition){
   position:$position;
   width:$width;
