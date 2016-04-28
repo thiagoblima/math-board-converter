@@ -139,21 +139,25 @@ module.exports = function(grunt) {
     ],
 
     htmlbuild: {
-      dist: {
+      html: {
         src:'<%= htmlpages %>',
         dest:'<%= srcpath %>/build'
+      },
+      angularjs: {
+        src: '<%= directivespages %>',
+        dest: '<%= directivespath %>'
       }
     },
 
 
     copy: {
-      angularjs: {
+      /*angularjs: {
         expand: true,
         flatten: true,
         filter: 'isFile',
         src: '<%= directivespages %>',
         dest: '<%= directivespath %>'
-      },
+      },*/
       webfonts:{
         expand: true,
         flatten: true,
@@ -202,7 +206,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-         '<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
+         //'<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
          '<%= path %>/css/vendor.min.css': '<%= srcpath %>/libs/bootstrap/dist/css/bootstrap.min.css'
         }
       }
@@ -243,7 +247,7 @@ module.exports = function(grunt) {
         }
       },
       html:{
-        files: ['<%= htmlpages %>'],
+        files: ['<%= htmlpages %>', '<%= directivespages %>'],
         tasks: ['htmlbuild'],
         opstions: {
           livereload: true
