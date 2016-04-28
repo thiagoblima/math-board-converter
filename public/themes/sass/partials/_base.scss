@@ -75,8 +75,7 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, white );
-  display:none;
+  @include guide-section(1000px, $guide-color);
 }
 
 
