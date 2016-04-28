@@ -14,8 +14,6 @@ main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
 
-
-
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
@@ -25,7 +23,6 @@ hgroup{
   @include hgroup-settings(left);
  }
 }
-
 
 
 section#intro-section{
@@ -78,7 +75,8 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, $guide-color);
+  @include guide-section(1000px, white );
+  display:none;
 }
 
 
