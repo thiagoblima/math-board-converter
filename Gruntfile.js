@@ -236,17 +236,24 @@ module.exports = function(grunt) {
 
     watch: {
       stylesheets: {
-        files: ['<%= srcpath %>/themes/stylesheets/**/*.css', '<%= path %>/themes/sass/**/*.scss'],
+        files: ['<%= srcpath %>/themes/stylesheets/**/*.css', '<%= srcpath %>/themes/sass/**/*.scss'],
         tasks: ['cssmin', 'sass'],
         options: {
-          livereload: 35729
+          livereload: true
+        }
+      },
+      html:{
+        files: ['<%= htmlpages %>'],
+        tasks: ['htmlbuild'],
+        opstions: {
+          livereload: true
         }
       },
       scripts: {
         files: '<%= srcpath %>/js/**/*.js',
         tasks: ['jshint', 'uglify'],
         options: {
-          livereload: 35729
+          livereload: true
         }
       }
     }
