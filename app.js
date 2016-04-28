@@ -34,7 +34,7 @@ var express = require('express'),
  *swig templates on the build.
  */
 
- app.use(express.static( __dirname + '/public/build'));
+ app.use(express.static( __dirname + '/build'));
  app.listen(port);
 
  connect.sucess();
