@@ -23,11 +23,11 @@ module.exports = function(grunt) {
     */
 
     srcpath: "public",
-    directivespath: "<%= srcpath %>/build/js/directives/views",
-    directivesjs: "<%= srcpath %>/build/js/directives",
+    directivespath: "build/js/directives/views",
+    directivesjs: "build/js/directives",
     webfontpath: "<%= srcpath %>/libs/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
-    path: "<%= srcpath %>/build",
+    path: "build",
     cssbuild: "css",
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/directives",
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
     htmlbuild: {
       html: {
         src:'<%= htmlpages %>',
-        dest:'<%= srcpath %>/build'
+        dest:'<%= path %>'
       },
       angularjs: {
         src: '<%= directivespages %>',
