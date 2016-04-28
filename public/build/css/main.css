@@ -137,7 +137,8 @@ body {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
       height: 1000px;
-      background-color: #F2D6A2; }
+      background-color: white;
+      display: none; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
