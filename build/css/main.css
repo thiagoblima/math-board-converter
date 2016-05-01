@@ -58,6 +58,11 @@
     margin-top: -20px; }
   .head header hgroup h2 {
     display: none; }
+  .head header section {
+    transition: 400ms ease-in-out;
+    margin-top: -50px; }
+    .head header section button {
+      font-size: 24px !important; }
 
 /*@_colors.scss
  *A class color to have the variables ready to be called
@@ -95,7 +100,7 @@ body {
         body main #container-wrapper header section form button {
           font-size: 34px;
           border: none;
-          background-color: #e05151 !important; }
+          background-color: transparent; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
