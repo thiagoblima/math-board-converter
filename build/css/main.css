@@ -66,6 +66,9 @@
     .head header section i {
       font-size: 24px !important; }
 
+.deactive {
+  display: none; }
+
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
@@ -93,7 +96,8 @@ body {
       background-color: #e05151 !important;
       color: #fff !important;
       text-shadow: 4px 4px 1px black;
-      height: 250px; }
+      height: 250px;
+      z-index: 5000; }
       body main #container-wrapper header hgroup {
         float: left; }
       body main #container-wrapper header section {
