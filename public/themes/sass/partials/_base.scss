@@ -32,6 +32,9 @@ section{
         @include search-button(34px, none, transparent);
         text-shadow:none;
       }
+      input.form-control.search{
+        @include search-bar-settings(left, 250px);
+      }
     }
   }
 }
