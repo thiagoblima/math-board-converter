@@ -26,11 +26,10 @@ section{
   @include header-search-settings(right, 40px);
   form{
     button{
-      @include search-button(34px, none, transparent);
+      @include search-button(34px, none, transparent, none);
       }
       i{
-        @include search-button(34px, none, transparent);
-        text-shadow:none;
+        @include search-button(34px, none, transparent, none);
       }
       input.form-control.search{
         @include search-bar-settings(left, 250px, 500ms ease-in);
@@ -91,9 +90,7 @@ aside{
 
 section#guide{
   @include guide-section(1000px, $guide-color);
-}
-
-
+   }
   }
  }
 }
