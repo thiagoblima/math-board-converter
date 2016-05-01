@@ -10,6 +10,12 @@ app.directive('headSection', function($window){
      scope:{
        data: '='
      },
-     templateUrl: 'js/directives/views/headSection.html'
+     templateUrl: 'js/directives/views/headSection.html',
+     link: function(data, element, attrs){
+       data.showMe = false;
+       data.myFunc = function(){
+          data.showMe = !data.showMe;
+      };
+    }
   };
 });
