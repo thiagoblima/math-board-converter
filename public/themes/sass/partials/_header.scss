@@ -28,6 +28,16 @@
  }
 }
 
+/**
+ *@name: deactive
+ *
+ *@class: .deactive
+ *
+ *@description: helper class targeting to head-active,
+ *with the purpose to vanish the <i></i> element in order to
+ *appear the button (with the search request on the back-end) instead.
+ */
+
 .deactive{
   display:none;
 }
