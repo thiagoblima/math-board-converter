@@ -4,7 +4,7 @@
  *being parsed data through the scope as data.
  */
 
-app.directive('headSection', function($window){
+app.directive('headSection', function(){
   return{
      restrict: 'EA',
      scope:{
