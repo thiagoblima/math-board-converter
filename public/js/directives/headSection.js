@@ -4,9 +4,9 @@
  *being parsed data through the scope as data.
  */
 
-app.directive('headSection', function(){
+app.directive('headSection', function($window){
   return{
-     restrict: 'E',
+     restrict: 'EA',
      scope:{
        data: '='
      },
