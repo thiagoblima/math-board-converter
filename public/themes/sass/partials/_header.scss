@@ -15,10 +15,9 @@
   }
  }
  section {
-  transition: 400ms ease-in-out;
-  margin-top:-50px;
+   @include search-scroll(400ms ease-in-out, -50px);
   button{
-    font-size:24px !important;
+    @include search-button-scroll(24px !important);
   }
  }
 }
