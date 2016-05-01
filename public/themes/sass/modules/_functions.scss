@@ -56,6 +56,11 @@
   font-size:$font;
 }
 
+@mixin header-search-input-active($opacity, $margin){
+  opacity:$opacity;
+  margin-top:$margin;
+}
+
 @mixin hgroup-header-one($font-size, $transition, $margin-top){
   font-size:$font-size;
   transition:$transition;
