@@ -15,8 +15,9 @@
   color:$color;
 }
 
-@mixin head-settings($height){
+@mixin head-settings($height, $index){
   height:$height;
+  z-index:$index;
 }
 
 @mixin hgroup-settings($float){
