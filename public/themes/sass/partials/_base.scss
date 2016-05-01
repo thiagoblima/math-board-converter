@@ -22,6 +22,10 @@ header{
 hgroup{
   @include hgroup-settings(left);
  }
+section{
+    @include header-search-settings(right);
+
+ }
 }
 
 
