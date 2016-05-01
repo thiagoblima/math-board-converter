@@ -14,4 +14,11 @@
     display:none;
   }
  }
+ section {
+  transition: 400ms ease-in-out;
+  margin-top:-50px;
+  button{
+    font-size:24px !important;
+  }
+ }
 }
