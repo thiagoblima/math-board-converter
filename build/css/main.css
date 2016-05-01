@@ -65,6 +65,8 @@
       font-size: 24px !important; }
     .head header section i {
       font-size: 24px !important; }
+    .head header section input.form-control.search {
+      opacity: 0.7; }
 
 .deactive {
   display: none; }
