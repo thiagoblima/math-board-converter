@@ -29,10 +29,11 @@
   padding:$padding;
 }
 
-@mixin search-button($font-size, $border, $background-color){
+@mixin search-button($font-size, $border, $background-color, $text-shadow){
   font-size:$font-size;
   border:$border;
   background-color:$background-color;
+  text-shadow:$text-shadow;
 }
 
 @mixin search-bar-settings($float, $width, $transition){
