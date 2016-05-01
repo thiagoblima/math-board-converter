@@ -25,7 +25,7 @@ hgroup{
 section{
   @include header-search-settings(right, 40px);
   i{
-    font-size:34px;
+     @include search-button(34px);
   }
  }
 }
