@@ -63,6 +63,8 @@
     margin-top: -50px; }
     .head header section button {
       font-size: 24px !important; }
+    .head header section i {
+      font-size: 24px !important; }
 
 /*@_colors.scss
  *A class color to have the variables ready to be called
@@ -100,7 +102,13 @@ body {
         body main #container-wrapper header section form button {
           font-size: 34px;
           border: none;
-          background-color: transparent; }
+          background-color: transparent;
+          display: none; }
+        body main #container-wrapper header section form i {
+          font-size: 34px;
+          border: none;
+          background-color: transparent;
+          text-shadow: none; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
