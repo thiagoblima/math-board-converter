@@ -23,8 +23,9 @@
   float:$float;
 }
 
-@mixin header-search-settings($float){
+@mixin header-search-settings($float, $padding){
   float:$float;
+  padding:$padding;
 }
 
 @mixin header-scroll($position, $width, $height, $transition){
