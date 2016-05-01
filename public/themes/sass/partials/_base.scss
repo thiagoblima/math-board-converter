@@ -23,8 +23,10 @@ hgroup{
   @include hgroup-settings(left);
  }
 section{
-    @include header-search-settings(right);
-
+  @include header-search-settings(right, 50px);
+  i{
+    font-size:44px;
+  }
  }
 }
 
