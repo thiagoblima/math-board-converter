@@ -28,6 +28,10 @@
   padding:$padding;
 }
 
+@mixin search-button($font-size){
+  font-size:$font-size;
+}
+
 @mixin header-scroll($position, $width, $height, $transition){
   position:$position;
   width:$width;
