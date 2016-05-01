@@ -92,8 +92,10 @@ body {
       body main #container-wrapper header section {
         float: right;
         padding: 40px; }
-        body main #container-wrapper header section i {
-          font-size: 34px; }
+        body main #container-wrapper header section form button {
+          font-size: 34px;
+          border: none;
+          background-color: #e05151 !important; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
