@@ -24,10 +24,14 @@ hgroup{
  }
 section{
   @include header-search-settings(right, 40px);
-  i{
-     @include search-button(34px);
+  form{
+    button{
+      @include search-button(34px);
+      border:none;
+      background-color:#e05151 !important;
+      }
+    }
   }
- }
 }
 
 
