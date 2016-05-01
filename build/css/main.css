@@ -102,8 +102,7 @@ body {
         body main #container-wrapper header section form button {
           font-size: 34px;
           border: none;
-          background-color: transparent;
-          display: none; }
+          background-color: transparent; }
         body main #container-wrapper header section form i {
           font-size: 34px;
           border: none;
