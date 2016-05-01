@@ -27,7 +27,6 @@ section{
   form{
     button{
       @include search-button(34px, none, transparent);
-      display:none;
       }
       i{
         @include search-button(34px, none, transparent);
