@@ -114,7 +114,8 @@ body {
           text-shadow: none; }
         body main #container-wrapper header section form input.form-control.search {
           float: left;
-          width: 250px; }
+          width: 250px;
+          transition: 500ms ease-in; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
