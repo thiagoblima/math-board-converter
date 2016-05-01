@@ -112,6 +112,9 @@ body {
           border: none;
           background-color: transparent;
           text-shadow: none; }
+        body main #container-wrapper header section form input.form-control.search {
+          float: left;
+          width: 250px; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
