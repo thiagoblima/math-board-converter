@@ -89,6 +89,8 @@ body {
       height: 250px; }
       body main #container-wrapper header hgroup {
         float: left; }
+      body main #container-wrapper header section {
+        float: right; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
