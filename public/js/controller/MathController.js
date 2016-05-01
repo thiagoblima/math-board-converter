@@ -5,6 +5,10 @@ app.controller("MathController", [ '$scope', function($scope){
     subtitle: "Converting all Math's Task"
   };
 
+
+  $scope.class = "active";
+  
+
   $scope.intro = {
 
     header:{
