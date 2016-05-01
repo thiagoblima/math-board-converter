@@ -26,7 +26,7 @@ section{
   @include header-search-settings(right, 40px);
   form{
     button{
-      @include search-button(34px, none, $header-color);
+      @include search-button(34px, none, transparent);
       }
     }
   }
