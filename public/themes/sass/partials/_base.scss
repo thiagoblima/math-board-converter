@@ -23,9 +23,9 @@ hgroup{
   @include hgroup-settings(left);
  }
 section{
-  @include header-search-settings(right, 50px);
+  @include header-search-settings(right, 40px);
   i{
-    font-size:44px;
+    font-size:34px;
   }
  }
 }
