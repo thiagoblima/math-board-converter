@@ -33,8 +33,7 @@ section{
         text-shadow:none;
       }
       input.form-control.search{
-        @include search-bar-settings(left, 250px);
-        transition:500ms ease-in;
+        @include search-bar-settings(left, 250px, 500ms ease-in);
       }
     }
   }
