@@ -15,7 +15,7 @@
   }
  }
  section {
-   @include search-scroll(400ms ease-in-out, -50px);
+    @include search-scroll(400ms ease-in-out, -50px);
   button{
     @include search-button-scroll(24px !important);
   }
@@ -23,8 +23,7 @@
     @include search-button-scroll(24px !important);
   }
   input.form-control.search{
-    opacity:0.7;
-    margin-top:-5px;
+    @include header-search-input-active(0.7, -5px);
   }
  }
 }
