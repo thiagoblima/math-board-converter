@@ -13,7 +13,7 @@ app.directive('headSection', function($window){
      templateUrl: 'js/directives/views/headSection.html',
      link: function(data, element, attrs){
        data.showMe = false;
-       data.myFunc = function(){
+       data.searchOpen = function(){
           data.showMe = !data.showMe;
       };
     }
