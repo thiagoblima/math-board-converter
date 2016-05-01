@@ -23,6 +23,10 @@
   float:$float;
 }
 
+@mixin header-search-settings($float){
+  float:$float;
+}
+
 @mixin header-scroll($position, $width, $height, $transition){
   position:$position;
   width:$width;
