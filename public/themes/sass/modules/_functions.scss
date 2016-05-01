@@ -35,9 +35,10 @@
   background-color:$background-color;
 }
 
-@mixin search-bar-settings($float, $width){
+@mixin search-bar-settings($float, $width, $transition){
   float:$float;
   width:$width;
+  transition:$transition;
 }
 
 @mixin header-scroll($position, $width, $height, $transition){
