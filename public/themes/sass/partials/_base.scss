@@ -17,7 +17,7 @@ main{
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
-   @include head-settings(250px);
+   @include head-settings(250px, 5000);
 
 hgroup{
   @include hgroup-settings(left);
