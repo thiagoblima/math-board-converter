@@ -41,11 +41,19 @@
   transition:$transition;
 }
 
+@mixin search-scroll($transition, $margin){
+  transition:$transition;
+  margin-top:$margin;
+}
+
+@mixin search-button-scroll($font){
+  font-size:$font;
+}
+
 @mixin hgroup-header-one($font-size, $transition, $margin-top){
   font-size:$font-size;
   transition:$transition;
   margin-top:$margin-top;
-
 }
 
 @mixin container-wrapper($width, $padding, $overflow){
