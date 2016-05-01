@@ -19,5 +19,8 @@
   button{
     @include search-button-scroll(24px !important);
   }
+  i{
+    @include search-button-scroll(24px !important);
+  }
  }
 }
