@@ -17,6 +17,7 @@ app.controller("MathController", [ '$scope', function($scope){
       collumnTwo: 'Get registered and receive the latest math news, anytime <span>you</span> want!',
       collumnThree: 'Share get a lot of discounts on our latest services made for <span>you</span>!'
     }
+
   };
 
   $scope.table = {
@@ -25,7 +26,16 @@ app.controller("MathController", [ '$scope', function($scope){
       text: "Math Quick Tasks"
     },
 
-    title: [ 'Esponential', 'Fixed', 'Precision', 'String', 'Ceil', 'Floor', 'Round', 'Absolute' ]
+    title: [
+       {name: 'Esponential'},
+       {name: 'Fixed'},
+       {name: 'Precision'},
+       {name: 'String'},
+       {name: 'Ceil'},
+       {name: 'Floor'},
+       {name: 'Round'},
+       {name: 'Absolute'}
+    ]
   };
 
 }]);
