@@ -91,7 +91,7 @@ aside{
 section#guide{
   @include guide-section(1000px, $guide-color);
   h1{
-     @include guide-header-one(50px, center, white, 1px 1px 2px black);
+     @include guide-header-one(50px, center, white, 1px 1px 2px black, $intro-font-josefin);
     }
    }
   }
