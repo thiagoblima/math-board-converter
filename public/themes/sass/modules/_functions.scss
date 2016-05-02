@@ -127,9 +127,10 @@
   padding-left:$padding-left;
 }
 
-@mixin math-table-intro($splash-color, $intro-font-josefin){
+@mixin math-table-intro($splash-color, $intro-font-josefin, $text){
   color:$splash-color;
   font-family:$intro-font-josefin;
+  text-align:$text;
 }
 
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
@@ -153,6 +154,13 @@
 @mixin guide-section($height, $background-color){
   height:$height;
   background-color:$background-color;
+}
+
+@mixin guide-header-one($padding, $text-align, $color, $text-shadow){
+  padding:$padding;
+  text-align:$text-align;
+  color:$color;
+  text-shadow:$text-shadow;
 }
 
 
