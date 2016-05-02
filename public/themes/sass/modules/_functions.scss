@@ -156,11 +156,12 @@
   background-color:$background-color;
 }
 
-@mixin guide-header-one($padding, $text-align, $color, $text-shadow){
+@mixin guide-header-one($padding, $text-align, $color, $text-shadow, $font-family){
   padding:$padding;
   text-align:$text-align;
   color:$color;
   text-shadow:$text-shadow;
+  font-family:$font-family;
 }
 
 
