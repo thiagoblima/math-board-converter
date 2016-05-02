@@ -183,7 +183,8 @@ body {
         padding: 50px;
         text-align: center;
         color: white;
-        text-shadow: 1px 1px 2px black; }
+        text-shadow: 1px 1px 2px black;
+        font-family: "Josefin Sans", sans-serif; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
