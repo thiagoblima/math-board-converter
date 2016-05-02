@@ -6,9 +6,6 @@ app.controller("MathController", [ '$scope', function($scope){
   };
 
 
-  $scope.class = "active";
-  
-
   $scope.intro = {
 
     header:{
