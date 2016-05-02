@@ -67,7 +67,7 @@ section#intro-section{
 div#table{
 
   @include math-table(50px, 50px);
-  h1{ @include math-table-intro($splash-color, $intro-font-josefin); }
+  h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); }
   thead{
     background-color: $table-color;
   }
@@ -90,6 +90,9 @@ aside{
 
 section#guide{
   @include guide-section(1000px, $guide-color);
+  h1{
+     @include guide-header-one(50px, center, white, 1px 1px 2px black);
+    }
    }
   }
  }
