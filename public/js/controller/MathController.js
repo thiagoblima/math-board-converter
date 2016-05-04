@@ -38,4 +38,12 @@ app.controller("MathController", [ '$scope', function($scope){
     ]
   };
 
+  $scope.guide = {
+
+       header:{
+          description: 'Guide: Follow the walkthrough and share:'
+       }
+
+  };
+
 }]);
