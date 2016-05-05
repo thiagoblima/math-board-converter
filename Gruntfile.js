@@ -239,21 +239,6 @@ module.exports = function(grunt) {
      }
    },
 
-   connect: {
-        options: {
-          port: 3412,
-          livereload: 5729,
-          hostname: 'localhost'
-        },
-        livereload: {
-          options: {
-            open: true,
-            base:'build'
-          }
-        }
-      },
-
-
     watch: {
       stylesheets: {
         files: ['<%= srcpath %>/themes/stylesheets/**/*.css', '<%= srcpath %>/themes/sass/**/*.scss'],
@@ -286,7 +271,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ssh');
 
