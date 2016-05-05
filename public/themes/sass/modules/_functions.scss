@@ -152,10 +152,11 @@
 }
 
 
-@mixin guide-section($height, $padding-left, $padding-right){
+@mixin guide-section($height, $padding-left, $padding-right, $margin-top){
   height:$height;
   padding-left:$padding-left;
   padding-right:$padding-right;
+  margin-top:$margin-top;
 }
 
 @mixin guide-head-wrap($background){
@@ -171,9 +172,10 @@
   font-family:$font-family;
 }
 
-@mixin guide-glyphicon-element($font-family, $font-size){
+@mixin guide-glyphicon-element($font-family, $font-size, $color){
   font-family:$font-family;
   font-size:$font-size;
+  color:$color;
 }
 
 
