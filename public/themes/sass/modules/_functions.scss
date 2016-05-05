@@ -151,10 +151,16 @@
   color:$color;
 }
 
-@mixin guide-section($height, $background-color){
+@mixin guide-section($height, $padding-left, $padding-right){
   height:$height;
-  background-color:$background-color;
+  padding-left:$padding-left;
+  padding-right:$padding-right;
 }
+
+@mixin guide-head-wrap($background){
+  background-color:$background;
+}
+
 
 @mixin guide-header-one($padding, $text-align, $color, $text-shadow, $font-family){
   padding:$padding;
