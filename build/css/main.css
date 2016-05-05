@@ -188,6 +188,9 @@ body {
           color: white;
           text-shadow: 1px 1px 2px black;
           font-family: "Josefin Sans", sans-serif; }
+        body main #container-wrapper section#guide article section p span {
+          font-family: "Glyphicons Halflings";
+          font-size: 2em; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
