@@ -89,7 +89,7 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, 50px, 65px);
+  @include guide-section(1000px, 50px, 65px, 30px);
   article{
     @include guide-head-wrap($guide-color);
   h1{
@@ -97,8 +97,9 @@ section#guide{
      }
      section{
        p{
+       text-align:center;
        span{
-          @include guide-glyphicon-element($glyphicon, 2em);
+          @include guide-glyphicon-element($glyphicon, 4em, $layer-color);
         }
       }
     }
