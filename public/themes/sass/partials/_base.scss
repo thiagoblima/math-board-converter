@@ -80,7 +80,7 @@ aside{
   @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
  section{
    span{
-     @include glyphicon-element($glyphicon, 2em, 26%, $splash-color);
+     @include social-glyphicon-element($glyphicon, 2em, 26%, $splash-color);
    }
    h5{
      color:$splash-color;
@@ -95,7 +95,14 @@ section#guide{
   h1{
      @include guide-header-one(50px, center, white, 1px 1px 2px black, $intro-font-josefin);
      }
-   }
+     section{
+       p{
+       span{
+          @include guide-glyphicon-element($glyphicon, 2em);
+        }
+      }
+    }
+  }
 }
 
 
