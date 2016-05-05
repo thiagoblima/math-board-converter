@@ -6,9 +6,9 @@
 
 app.directive("guideSection", function(){
    return{
-     restrict: "E",
+     restrict: "EA",
      scope:{
-      data: "=" 
+      data: "="
      },
      templateUrl: 'js/directives/views/guideSection.html'
    };
