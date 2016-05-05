@@ -89,11 +89,16 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, $guide-color);
+  @include guide-section(1000px, 50px, 65px);
+  article{
+    @include guide-head-wrap($guide-color);
   h1{
      @include guide-header-one(50px, center, white, 1px 1px 2px black, $intro-font-josefin);
-    }
+     }
    }
+}
+
+
   }
  }
 }
