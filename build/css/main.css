@@ -72,7 +72,7 @@
 /**
  *@name: deactive
  *
- *@class: .deactive
+ *@class:
  *
  *@description: helper class targeting to head-active,
  *with the purpose to vanish the <i></i> element in order to
@@ -178,13 +178,16 @@ body {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
       height: 1000px;
-      background-color: #F2D6A2; }
-      body main #container-wrapper section#guide h1 {
-        padding: 50px;
-        text-align: center;
-        color: white;
-        text-shadow: 1px 1px 2px black;
-        font-family: "Josefin Sans", sans-serif; }
+      padding-left: 50px;
+      padding-right: 65px; }
+      body main #container-wrapper section#guide article {
+        background-color: #F2D6A2; }
+        body main #container-wrapper section#guide article h1 {
+          padding: 50px;
+          text-align: center;
+          color: white;
+          text-shadow: 1px 1px 2px black;
+          font-family: "Josefin Sans", sans-serif; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
