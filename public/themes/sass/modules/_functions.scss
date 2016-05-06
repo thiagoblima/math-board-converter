@@ -110,12 +110,13 @@
   text-shadow:$head-text-shadow;
 }
 
-@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, $padding, $font-size, $font-family){
+@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, $padding, $font-size, $font-family, $text-align){
   text-shadow:$paragraph-text-shadow;
   color:$paragraph-color;
   padding:$padding;
   font-size:$font-size;
   font-family:$font-family;
+  text-align:$text-align;
 }
 
 @mixin math-table-position($position, $z-index){
