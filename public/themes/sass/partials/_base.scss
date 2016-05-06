@@ -89,18 +89,24 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, 50px, 65px, 30px);
+  @include guide-section(1000px, 50px, 65px, 0);
   article{
     @include guide-head-wrap(transparent);
   h1{
-     @include guide-header-one(50px, center, white, 1px 1px 2px black, $intro-font-josefin);
+     @include guide-header-one(0, center, white, 1px 1px 2px black, $intro-font-josefin);
      }
      section{
        p{
        text-align:center;
+       padding-top:60px;
        span{
           @include guide-glyphicon-element($glyphicon, 4em, white);
+          transition:300ms ease-out;
         }
+      }:hover{
+        color:red;
+        transform: scale(0.9);
+        transition:transform 300ms ease-in;
       }
     }
   }
