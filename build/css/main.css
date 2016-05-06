@@ -145,8 +145,9 @@ body {
         body main #container-wrapper section#intro-section div article p {
           text-shadow: 3px 2px 1px #d9411e;
           color: #ffffff !important;
-          padding: 7em 2em 7.8em 2em;
-          font-size: 1.5em; }
+          padding: 5em 2em 7.8em 2em;
+          font-size: 2em;
+          font-family: "Josefin Sans", sans-serif; }
     body main #container-wrapper .math {
       position: relative;
       z-index: -10; }
