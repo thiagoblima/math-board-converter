@@ -46,7 +46,7 @@ section#intro-section{
      article{
         @include intro-splash(400px, $table-color);
      p{
-        @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, 5em 2em 7.8em 2em, 2em, $intro-font-josefin);
+        @include paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, 5em 2em 7.8em 2em, 2em, $intro-font-josefin, center);
       }
     }
   }
@@ -91,7 +91,7 @@ aside{
 section#guide{
   @include guide-section(1000px, 50px, 65px, 30px);
   article{
-    @include guide-head-wrap($guide-color);
+    @include guide-head-wrap(transparent);
   h1{
      @include guide-header-one(50px, center, white, 1px 1px 2px black, $intro-font-josefin);
      }
@@ -99,7 +99,7 @@ section#guide{
        p{
        text-align:center;
        span{
-          @include guide-glyphicon-element($glyphicon, 4em, $layer-color);
+          @include guide-glyphicon-element($glyphicon, 4em, white);
         }
       }
     }
