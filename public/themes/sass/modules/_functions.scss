@@ -161,6 +161,15 @@
   margin-top:$margin-top;
 }
 
+@mixin guide-icon-wrap($margin-top){
+  margin-top:$margin-top;
+}
+
+@mixin guide-icon-paragraph($text-align, $transition){
+  text-align:$text-align;
+  transition:$transition;
+}
+
 @mixin guide-head-wrap($background){
   background-color:$background;
 }
@@ -179,6 +188,8 @@
   font-size:$font-size;
   color:$color;
 }
+
+
 
 
 /* _nav.scss @mixins */
