@@ -8,8 +8,6 @@
 body{
   background-color:$layer-color;
 
-
-
 main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
