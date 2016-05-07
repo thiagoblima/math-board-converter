@@ -153,6 +153,10 @@
   color:$color;
 }
 
+@mixin animate-social($transition, $color){
+  transition:$transition;
+  color:$color;
+}
 
 @mixin guide-section($height, $padding-left, $padding-right, $margin-top){
   height:$height;
