@@ -183,6 +183,14 @@ body {
         color: #ffffff !important;
         transition: 300ms ease-out;
         color: #ffffff; }
+      body main #container-wrapper aside section :hover:after {
+        position: absolute;
+        right: 50px;
+        content: " -Hi, User!";
+        font-size: 2rem;
+        width: 200px;
+        height: 30px;
+        background-color: white; }
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
         transition: 300ms ease-out;
         color: #FFA9A9 !important; }
