@@ -85,17 +85,22 @@ aside{
    }:hover:after{
      position:absolute;
      right:50px;
-     content:" -Hi, User!";
      font-size:2rem;
      width:200px;
      height:30px;
      background-color:white;
-   }:hover:nth-child(n + 1){
-         @include animate-social(300ms ease-out, #FFA9A9 !important);
+       }:hover:nth-child(n + 1){
+          @include animate-social(300ms ease-out, #FFA9A9 !important);
+          }:hover:nth-child(n + 1):after{
+             content:"Profile";
        }:hover:nth-child(n + 2){
-         @include animate-social(300ms ease-out, #04AFF4 !important);
+          @include animate-social(300ms ease-out, #04AFF4 !important);
+          }:hover:nth-child(n + 2):after{
+             content:"Comments";
        }:hover:nth-child(n + 3){
-         @include animate-social(300ms ease-out, red !important);
+          @include animate-social(300ms ease-out, red !important);
+          }:hover:nth-child(n + 3):after{
+          content:"(0)Likes";
        }h5{
          color:$splash-color;
        }
