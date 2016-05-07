@@ -186,7 +186,6 @@ body {
       body main #container-wrapper aside section :hover:after {
         position: absolute;
         right: 50px;
-        content: " -Hi, User!";
         font-size: 2rem;
         width: 200px;
         height: 30px;
@@ -194,12 +193,18 @@ body {
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
         transition: 300ms ease-out;
         color: #FFA9A9 !important; }
+      body main #container-wrapper aside section :hover:nth-child(n + 1):after {
+        content: "Profile"; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
         transition: 300ms ease-out;
         color: #04AFF4 !important; }
+      body main #container-wrapper aside section :hover:nth-child(n + 2):after {
+        content: "Comments"; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
         transition: 300ms ease-out;
         color: red !important; }
+      body main #container-wrapper aside section :hover:nth-child(n + 3):after {
+        content: "(0)Likes"; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
