@@ -7,6 +7,11 @@
  *Small ajustments as in px or deg for the flip animation on nav
  *Just import the class and it can be called anytime
  */
+/*@_animation-social.scss
+ *The purpose of this class is not to have @mixins otherwise
+ *Small ajustments as in px or deg for the flip animation on nav
+ *Just import the class and it can be called anytime
+ */
 /*@_fonts.scss
  *All the font's variables have to be set here fora better modularization
  *It doesn't matter which DOM part it is, the important thing is to make it.
@@ -176,16 +181,17 @@ body {
         font-size: 2em;
         margin-left: 26%;
         color: #ffffff !important;
-        transition: 300ms ease-out; }
+        transition: 300ms ease-out;
+        color: #ffffff; }
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
-        color: #FFA9A9 !important;
-        transition: 300ms ease-out; }
+        transition: 300ms ease-out;
+        color: #FFA9A9 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
-        color: #04AFF4 !important;
-        transition: 300ms ease-out; }
+        transition: 300ms ease-out;
+        color: #04AFF4 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
-        color: red !important;
-        transition: 300ms ease-out; }
+        transition: 300ms ease-out;
+        color: red !important; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
