@@ -204,7 +204,7 @@ body {
           body main #container-wrapper section#guide article section div :hover {
             color: red;
             transform: scale(0.9);
-            transition: transform 300ms ease-out; }
+            transition: 300ms ease-out; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
