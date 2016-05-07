@@ -175,13 +175,17 @@ body {
         font-family: "Glyphicons Halflings";
         font-size: 2em;
         margin-left: 26%;
-        color: #ffffff !important; }
+        color: #ffffff !important;
+        transition: 300ms ease-out; }
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
-        color: #FFA9A9 !important; }
+        color: #FFA9A9 !important;
+        transition: 300ms ease-out; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
-        color: #04AFF4 !important; }
+        color: #04AFF4 !important;
+        transition: 300ms ease-out; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
-        color: red !important; }
+        color: red !important;
+        transition: 300ms ease-out; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
