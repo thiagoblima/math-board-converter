@@ -170,6 +170,12 @@
   transition:$transition;
 }
 
+@mixin guide-icon-paragraph-hover($color, $transform, $transition){
+  color:$color;
+  transform:$transform;
+  transition:$transition;
+}
+
 @mixin guide-head-wrap($background){
   background-color:$background;
 }
@@ -183,10 +189,11 @@
   font-family:$font-family;
 }
 
-@mixin guide-glyphicon-element($font-family, $font-size, $color){
+@mixin guide-glyphicon-element($font-family, $font-size, $color, $transition){
   font-family:$font-family;
   font-size:$font-size;
   color:$color;
+  transition:$transition;
 }
 
 
