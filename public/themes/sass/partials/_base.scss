@@ -101,13 +101,10 @@ section#guide{
        p{
          @include guide-icon-paragraph(center, 300ms ease-out);
        span{
-          @include guide-glyphicon-element($glyphicon, 5em, white);
-          transition:300ms ease-out;
+          @include guide-glyphicon-element($glyphicon, 5em, white, 300ms ease-out);
         }
       }:hover{
-          color:red;
-          transform: scale(0.9);
-          transition:transform 300ms ease-out;
+          @include guide-icon-paragraph-hover(red, scale(0.9), 300ms ease-out);
         }
       }
     }
