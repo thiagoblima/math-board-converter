@@ -5,6 +5,15 @@ app.controller("MathController", [ '$scope', function($scope){
     subtitle: "Converting all Math's Task"
   };
 
+  $scope.nav = {
+    options:{
+      home:{name:"HOME"},
+      blog:{name:"BLOG"},
+      photos:{name:"PHOTOS"},
+      about:{name:"ABOUT ME"},
+      contact:{name:"CONTACT"}
+    }
+  };
 
   $scope.intro = {
 
