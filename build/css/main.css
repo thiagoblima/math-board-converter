@@ -7,11 +7,6 @@
  *Small ajustments as in px or deg for the flip animation on nav
  *Just import the class and it can be called anytime
  */
-/*@_animation-social.scss
- *The purpose of this class is not to have @mixins otherwise
- *Small ajustments as in px or deg for the flip animation on nav
- *Just import the class and it can be called anytime
- */
 /*@_fonts.scss
  *All the font's variables have to be set here fora better modularization
  *It doesn't matter which DOM part it is, the important thing is to make it.
