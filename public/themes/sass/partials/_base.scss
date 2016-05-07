@@ -81,16 +81,13 @@ aside{
  section{
    span{
      @include social-glyphicon-element($glyphicon, 2em, 26%, $splash-color);
-     transition:300ms ease-out;
+     @include animate-social(300ms ease-out, #ffffff);
        }:hover:nth-child(n + 1){
-         color:#FFA9A9 !important;
-         transition:300ms ease-out;
+         @include animate-social(300ms ease-out, #FFA9A9 !important);
        }:hover:nth-child(n + 2){
-         color:#04AFF4 !important;
-         transition:300ms ease-out;
+         @include animate-social(300ms ease-out, #04AFF4 !important);
        }:hover:nth-child(n + 3){
-         color:red !important;
-         transition:300ms ease-out;
+         @include animate-social(300ms ease-out, red !important);
        }h5{
          color:$splash-color;
        }
