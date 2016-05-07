@@ -153,6 +153,14 @@
   color:$color;
 }
 
+@mixin social-span-hover($position, $right, $font-size, $width, $height){
+  position:$position;
+  right:$right;
+  font-size:$font-size;
+  width:$width;
+  height:$height;
+}
+
 @mixin animate-social($transition, $color){
   transition:$transition;
   color:$color;
