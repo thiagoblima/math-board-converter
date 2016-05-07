@@ -97,10 +97,9 @@ section#guide{
      }
      section{
        div{
-          margin-top:100px;
+         @include guide-icon-wrap(100px);
        p{
-          text-align:center;
-          transition:300ms ease-out;
+         @include guide-icon-paragraph(center, 300ms ease-out);
        span{
           @include guide-glyphicon-element($glyphicon, 5em, white);
           transition:300ms ease-out;
