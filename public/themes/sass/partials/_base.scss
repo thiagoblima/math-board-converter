@@ -100,7 +100,7 @@ aside{
        }:hover:nth-child(n + 3){
           @include animate-social(300ms ease-out, red !important);
           }:hover:nth-child(n + 3):after{
-          content:"(0)Likes";
+             content:"(0)Likes";
        }h5{
          color:$splash-color;
        }
