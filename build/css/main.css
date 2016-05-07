@@ -202,10 +202,10 @@ body {
         color: #ffffff; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
         transition: 300ms ease-out;
-        color: red !important; }
+        color: #ff0000 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 3):after {
         content: "(0)Likes";
-        background-color: red;
+        background-color: #ff0000;
         color: #ffffff; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
