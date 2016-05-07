@@ -191,18 +191,20 @@ body {
           color: white;
           text-shadow: 1px 1px 2px black;
           font-family: "Josefin Sans", sans-serif; }
-        body main #container-wrapper section#guide article section p {
-          text-align: center;
-          padding-top: 60px; }
-          body main #container-wrapper section#guide article section p span {
-            font-family: "Glyphicons Halflings";
-            font-size: 4em;
-            color: white;
+        body main #container-wrapper section#guide article section div {
+          margin-top: 130px; }
+          body main #container-wrapper section#guide article section div p {
+            text-align: center;
             transition: 300ms ease-out; }
-        body main #container-wrapper section#guide article section :hover {
-          color: red;
-          transform: scale(0.9);
-          transition: transform 300ms ease-in; }
+            body main #container-wrapper section#guide article section div p span {
+              font-family: "Glyphicons Halflings";
+              font-size: 5em;
+              color: white;
+              transition: 300ms ease-out; }
+          body main #container-wrapper section#guide article section div :hover {
+            color: red;
+            transform: scale(0.9);
+            transition: transform 300ms ease-out; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
