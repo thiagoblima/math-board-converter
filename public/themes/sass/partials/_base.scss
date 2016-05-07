@@ -65,9 +65,11 @@ section#intro-section{
 }
 
 div#table{
-
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); }
+  #math-table{
+    margin-top:90px;
+  }
   thead{
     background-color: $table-color;
   }
@@ -83,24 +85,25 @@ aside{
      @include social-glyphicon-element($glyphicon, 2em, 26%, $splash-color);
      @include animate-social(300ms ease-out, #ffffff);
    }:hover:after{
-     position:absolute;
-     right:50px;
-     font-size:2rem;
-     width:200px;
-     height:30px;
-     background-color:white;
+     @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
        }:hover:nth-child(n + 1){
-          @include animate-social(300ms ease-out, #FFA9A9 !important);
+          @include animate-social(300ms ease-out, #ffA9A9 !important);
           }:hover:nth-child(n + 1):after{
              content:"Profile";
+             background-color:#ffA9A9;
+             color:#ffffff;
        }:hover:nth-child(n + 2){
           @include animate-social(300ms ease-out, #04AFF4 !important);
           }:hover:nth-child(n + 2):after{
              content:"Comments";
+             background-color:#04AFF4;
+             color:#ffffff;
        }:hover:nth-child(n + 3){
           @include animate-social(300ms ease-out, red !important);
           }:hover:nth-child(n + 3):after{
              content:"(0)Likes";
+             background-color:red;
+             color:#ffffff;
        }h5{
          color:$splash-color;
        }
@@ -108,7 +111,7 @@ aside{
 }
 
 section#guide{
-  @include guide-section(1000px, 50px, 65px, 0);
+  @include guide-section(1000px, 50px, 65px, 90px);
   article{
     @include guide-head-wrap(transparent);
   h1{
