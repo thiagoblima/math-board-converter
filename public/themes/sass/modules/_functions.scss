@@ -166,6 +166,11 @@
   color:$color;
 }
 
+@mixin animate-social-after($background-color, $color){
+  background-color:$background-color;
+  color:$color;  
+}
+
 @mixin guide-section($height, $padding-left, $padding-right, $margin-top){
   height:$height;
   padding-left:$padding-left;
