@@ -96,17 +96,20 @@ section#guide{
      @include guide-header-one(0, center, white, 1px 1px 2px black, $intro-font-josefin);
      }
      section{
+       div{
+          margin-top:130px;
        p{
-       text-align:center;
-       padding-top:60px;
+          text-align:center;
+          transition:300ms ease-out;
        span{
-          @include guide-glyphicon-element($glyphicon, 4em, white);
+          @include guide-glyphicon-element($glyphicon, 5em, white);
           transition:300ms ease-out;
         }
       }:hover{
-        color:red;
-        transform: scale(0.9);
-        transition:transform 300ms ease-in;
+          color:red;
+          transform: scale(0.9);
+          transition:transform 300ms ease-out;
+        }
       }
     }
   }
