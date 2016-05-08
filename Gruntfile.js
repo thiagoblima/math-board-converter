@@ -79,7 +79,8 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/directives/mainNav.js',
       '<%= srcpath %>/js/directives/socialsection.js',
       '<%= srcpath %>/js/directives/scroll.js',
-      '<%= srcpath %>/js/directives/guideSection.js'
+      '<%= srcpath %>/js/directives/guideSection.js',
+      '<%= srcpath %>/js/filters/searchFilter.js',
 
     ],
 
