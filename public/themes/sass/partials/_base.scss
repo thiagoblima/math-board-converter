@@ -91,17 +91,17 @@ aside{
           @include animate-social(300ms ease-out, #ffA9A9 !important);
        }:hover:nth-child(n + 1):after{
              content:"Profile";
-             @include animate-social-after(#ffA9A9, #ffffff, 100px);
+             @include animate-social-after($intro-font-josefin, #ffA9A9, #ffffff, 100px, 5px);
        }:hover:nth-child(n + 2){
           @include animate-social(300ms ease-out, #04AFF4 !important);
        }:hover:nth-child(n + 2):after{
              content:"Comments";
-             @include animate-social-after(#04AFF4, #ffffff, 100px);
+             @include animate-social-after($intro-font-josefin, #04AFF4, #ffffff, 100px, 5px);
        }:hover:nth-child(n + 3){
           @include animate-social(300ms ease-out, #ff0000 !important);
       }:hover:nth-child(n + 3):after{
              content:"(0)Likes";
-             @include animate-social-after(#ff0000, #ffffff, 100px);
+             @include animate-social-after($intro-font-josefin, #ff0000, #ffffff, 100px, 5px);
        }h5{
          color:$splash-color;
        }
