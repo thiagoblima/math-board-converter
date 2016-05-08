@@ -16,6 +16,7 @@ app.directive('headSection', function(){
        data.searchOpen = function(){
           data.showMe = !data.showMe;
       };
+      data.search = "Search a Math Info...";
     }
   };
 });
