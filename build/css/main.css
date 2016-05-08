@@ -184,7 +184,7 @@ body {
         position: absolute;
         right: 50px;
         font-size: 2rem;
-        width: 200px;
+        width: 100px;
         height: 40px; }
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
         transition: 300ms ease-out;
