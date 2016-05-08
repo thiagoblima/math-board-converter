@@ -115,6 +115,8 @@ body {
       body main #container-wrapper header section {
         float: right;
         padding: 40px; }
+        body main #container-wrapper header section p {
+          padding-right: 30px; }
         body main #container-wrapper header section form button {
           font-size: 34px;
           border: none;
@@ -184,7 +186,7 @@ body {
         position: absolute;
         right: 50px;
         font-size: 2rem;
-        width: 100px;
+        width: 200px;
         height: 40px; }
       body main #container-wrapper aside section :hover:nth-child(n + 1) {
         transition: 300ms ease-out;
@@ -192,21 +194,24 @@ body {
       body main #container-wrapper aside section :hover:nth-child(n + 1):after {
         content: "Profile";
         background-color: #ffA9A9;
-        color: #ffffff; }
+        color: #ffffff;
+        width: 100px; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
         transition: 300ms ease-out;
         color: #04AFF4 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 2):after {
         content: "Comments";
         background-color: #04AFF4;
-        color: #ffffff; }
+        color: #ffffff;
+        width: 100px; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
         transition: 300ms ease-out;
         color: #ff0000 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 3):after {
         content: "(0)Likes";
         background-color: #ff0000;
-        color: #ffffff; }
+        color: #ffffff;
+        width: 100px; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
