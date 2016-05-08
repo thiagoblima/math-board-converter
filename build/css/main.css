@@ -193,25 +193,31 @@ body {
         color: #ffA9A9 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 1):after {
         content: "Profile";
+        font-family: "Josefin Sans", sans-serif;
         background-color: #ffA9A9;
         color: #ffffff;
-        width: 100px; }
+        width: 100px;
+        padding-top: 5px; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
         transition: 300ms ease-out;
         color: #04AFF4 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 2):after {
         content: "Comments";
+        font-family: "Josefin Sans", sans-serif;
         background-color: #04AFF4;
         color: #ffffff;
-        width: 100px; }
+        width: 100px;
+        padding-top: 5px; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
         transition: 300ms ease-out;
         color: #ff0000 !important; }
       body main #container-wrapper aside section :hover:nth-child(n + 3):after {
         content: "(0)Likes";
+        font-family: "Josefin Sans", sans-serif;
         background-color: #ff0000;
         color: #ffffff;
-        width: 100px; }
+        width: 100px;
+        padding-top: 5px; }
       body main #container-wrapper aside section h5 {
         color: #ffffff !important; }
     body main #container-wrapper section#guide {
