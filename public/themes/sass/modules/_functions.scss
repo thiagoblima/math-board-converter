@@ -166,10 +166,12 @@
   color:$color;
 }
 
-@mixin animate-social-after($background-color, $color, $width){
+@mixin animate-social-after($font-family, $background-color, $color, $width, $padding-top){
+  font-family:$font-family;
   background-color:$background-color;
   color:$color;
   width:$width;
+  padding-top:$padding-top;
 }
 
 @mixin guide-section($height, $padding-left, $padding-right, $margin-top){
