@@ -22,6 +22,9 @@ hgroup{
  }
 section{
   @include header-search-settings(right, 40px);
+  p{
+    padding-right:30px;
+  }
   form{
     button{
       @include search-button(34px, none, transparent, none);
@@ -88,17 +91,17 @@ aside{
           @include animate-social(300ms ease-out, #ffA9A9 !important);
        }:hover:nth-child(n + 1):after{
              content:"Profile";
-             @include animate-social-after(#ffA9A9, #ffffff);
+             @include animate-social-after(#ffA9A9, #ffffff, 100px);
        }:hover:nth-child(n + 2){
           @include animate-social(300ms ease-out, #04AFF4 !important);
        }:hover:nth-child(n + 2):after{
              content:"Comments";
-             @include animate-social-after(#04AFF4, #ffffff);
+             @include animate-social-after(#04AFF4, #ffffff, 100px);
        }:hover:nth-child(n + 3){
           @include animate-social(300ms ease-out, #ff0000 !important);
       }:hover:nth-child(n + 3):after{
              content:"(0)Likes";
-             @include animate-social-after(#ff0000, #ffffff);
+             @include animate-social-after(#ff0000, #ffffff, 100px);
        }h5{
          color:$splash-color;
        }
