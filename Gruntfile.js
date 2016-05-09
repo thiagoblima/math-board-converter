@@ -144,6 +144,12 @@ module.exports = function(grunt) {
 
     ],
 
+    clean: {
+      build: {
+        src: ['<%= path %>/js/*.js', '<%= path %>/js/directives/*.js']
+      }
+    },
+
     htmlbuild: {
       html: {
         src:'<%= htmlpages %>',
@@ -276,11 +282,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-ssh');
 
 
   grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
-  grunt.registerTask('production', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('production', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
   grunt.registerTask('dev-deploy', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
   grunt.registerTask('production-deploy', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
 };
