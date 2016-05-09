@@ -286,8 +286,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ssh');
 
 
-  grunt.registerTask('dev', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
   grunt.registerTask('production', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
-  grunt.registerTask('dev-deploy', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
-  grunt.registerTask('production-deploy', ['jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
+  grunt.registerTask('dev-deploy', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
+  grunt.registerTask('production-deploy', [ 'clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
 };
