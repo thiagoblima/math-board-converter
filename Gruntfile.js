@@ -12,6 +12,8 @@
 
 module.exports = function(grunt) {
 
+  var cacheHash = ((new Date()).valueOf().toString()) + (Math.floor((Math.random()*1000000)+1).toString());
+  console.log("This cached version: ", cacheHash);
 
   grunt.initConfig({
 
@@ -22,6 +24,7 @@ module.exports = function(grunt) {
     *@description: Here some variables will store paths for building process
     */
 
+    hash: cacheHash,
     srcpath: "public",
     directivespath: "build/js/directives/views",
     directivesjs: "build/js/directives",
