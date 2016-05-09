@@ -190,7 +190,7 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        '<%= path %>/js/devbuild.min.js': [ "<%= jsfiles %>" ],
+        '<%= path %>/js/devbuild.<%= hash %>.min.js': [ "<%= jsfiles %>" ],
         '<%= directivesjs %>/angularjs.min.js': [ "<%= angularjsfiles %>" ]
         }
       }
