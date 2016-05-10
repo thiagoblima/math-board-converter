@@ -7,7 +7,7 @@
 
 
 
- @media only screen and (min-device-width: 360px) and (max-device-height: 640px)
+ @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait)
  {
 
 /**
@@ -23,22 +23,27 @@
      #container-wrapper{
        header{
           section{
-              @include samsung-galaxy-S5-search(fixed, 7%, 2%);
-             }
-          }
-       }
-    }
+              @include samsung-galaxy-S5-search(fixed, 3%, 2%);
+              form{
+                input.form-control.search{
+                  width:150px !important;
+               }
+            }
+         }
+      }
+   }
+}
 
     .head{
        header{
          section{
-           margin-top:-130px !important;
+           @include samsung-galaxy-S5-offset-search(-60px !important);
          }
        }
      }
 
      .content-wrapper{
-       @include content-wrapper(relative, 320px, 2180px !important);
+       @include content-wrapper(relative, 320px, 2130px !important);
      }
 
 }
