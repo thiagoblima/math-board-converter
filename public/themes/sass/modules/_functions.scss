@@ -323,3 +323,17 @@
   background-color:$color;
   transition:$transition;
 }
+
+
+
+/*
+ * Breakpoints: Samsung Galaxy S5
+ * Matches: (min-device-width: 360px) and (max-device-height: 640px)
+ *
+ */
+
+@mixin samsung-galaxy-S5-search($position, $top, $right){
+  position:$position;
+  top:$top;
+  right:$right;
+}
