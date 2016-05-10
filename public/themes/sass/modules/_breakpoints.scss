@@ -5,7 +5,8 @@
  */
 
 
- /* Samsung Galaxy S5 ----------- */
+
+
  @media only screen and (min-device-width: 360px) and (max-device-height: 640px)
  {
 
@@ -14,6 +15,8 @@
   *
   *@description: Controlling its margin-top in order to
   *appear inside the header section.
+  *@optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+  *
   */
 
    main{
