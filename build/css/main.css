@@ -42,6 +42,11 @@
 /* _nav.scss colors */
 /* _base.scss  @mixins */
 /* _nav.scss @mixins */
+/*
+ * Breakpoints: Samsung Galaxy S5
+ * Matches: (min-device-width: 360px) and (max-device-height: 640px)
+ *
+ */
 /*@_breakpoints.scss
  *The purpose is to separate breakpoints in order to make it
  *modular and easier to track code.
