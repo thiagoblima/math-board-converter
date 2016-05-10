@@ -52,7 +52,7 @@
  *modular and easier to track code.
  *Just import the class and it can be called anytime
  */
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   /**
     *@name: Section Search Input
     *
@@ -63,16 +63,18 @@
     */
   main #container-wrapper header section {
     position: fixed;
-    top: 7%;
+    top: 3%;
     right: 2%; }
+    main #container-wrapper header section form input.form-control.search {
+      width: 150px !important; }
 
   .head header section {
-    margin-top: -130px !important; }
+    margin-top: -60px !important; }
 
   .content-wrapper {
     position: relative;
     top: 320px;
-    height: 2180px !important; } }
+    height: 2130px !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
@@ -147,7 +149,9 @@ body {
         float: right;
         padding: 40px; }
         body main #container-wrapper header section p {
-          padding-right: 30px; }
+          padding-right: 50px;
+          font-size: 16px;
+          margin-left: 70px; }
         body main #container-wrapper header section form button {
           font-size: 34px;
           border: none;
@@ -161,7 +165,9 @@ body {
         body main #container-wrapper header section form input.form-control.search {
           float: left;
           width: 250px;
-          transition: 500ms ease-in; }
+          transition: 500ms ease-in;
+          margin-left: 70px;
+          margin-right: 10px; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
