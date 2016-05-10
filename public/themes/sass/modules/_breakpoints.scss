@@ -23,9 +23,7 @@
      #container-wrapper{
        header{
           section{
-              position:fixed;
-              top:7%;
-              right:2%;
+              @include samsung-galaxy-S5-search(fixed, 7%, 2%);
              }
           }
        }
