@@ -47,6 +47,21 @@
  *modular and easier to track code.
  *Just import the class and it can be called anytime
  */
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
+  /**
+    *@name: Section Search Input
+    *
+    *@description: Controlling its margin-top in order to
+    *appear inside the header section.
+    */
+  main #container-wrapper header section {
+    position: fixed;
+    top: 7%;
+    right: 2%; }
+
+  .head header section {
+    margin-top: -130px !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
