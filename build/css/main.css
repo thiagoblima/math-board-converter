@@ -61,7 +61,12 @@
     right: 2%; }
 
   .head header section {
-    margin-top: -130px !important; } }
+    margin-top: -130px !important; }
+
+  .content-wrapper {
+    position: relative;
+    top: 320px;
+    height: 2180px !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
