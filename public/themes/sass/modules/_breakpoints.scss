@@ -35,4 +35,9 @@
          }
        }
      }
+
+     .content-wrapper{
+       @include content-wrapper(relative, 320px, 2180px !important);
+     }
+
 }
