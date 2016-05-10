@@ -54,7 +54,7 @@
  */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   /**
-    *@name: Section Search Input
+    *@name: Section Search Input (Portrait)
     *
     *@description: Controlling its margin-top in order to
     *appear inside the header section.
@@ -70,6 +70,29 @@
 
   .head header section {
     margin-top: -60px !important; }
+
+  .content-wrapper {
+    position: relative;
+    top: 320px;
+    height: 2130px !important; } }
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) {
+  /**
+   *@name: Section Search Input Landscape
+   *
+   *@description: Controlling its margin-top in order to
+   *appear inside the header section.
+   *@optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+   *
+   */
+  main #container-wrapper header section {
+    position: fixed;
+    top: 9%;
+    right: 2%; }
+    main #container-wrapper header section form input.form-control.search {
+      width: 150px !important; }
+
+  .head header section {
+    margin-top: -55px !important; }
 
   .content-wrapper {
     position: relative;
