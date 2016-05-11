@@ -70,7 +70,7 @@
     #container-wrapper{
       header{
          section{
-             @include samsung-galaxy-S5-search(fixed, 9%, 2%);
+             @include samsung-galaxy-S5-search(absolute, 20%, 2%);
              form{
                input.form-control.search{
                  width:150px !important;
@@ -84,7 +84,7 @@
    .head{
       header{
         section{
-          @include samsung-galaxy-S5-offset-search(-60px !important);
+          @include samsung-galaxy-S5-offset-search(-30px !important);
         }
       }
     }
