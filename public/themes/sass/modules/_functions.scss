@@ -110,8 +110,7 @@
   text-shadow:$head-text-shadow;
 }
 
-@mixin paragraph-three-collumn($paragraph-text-shadow, $paragraph-color, $padding, $font-size, $font-family, $text-align){
-  text-shadow:$paragraph-text-shadow;
+@mixin paragraph-three-collumn($paragraph-color, $padding, $font-size, $font-family, $text-align){
   color:$paragraph-color;
   padding:$padding;
   font-size:$font-size;
