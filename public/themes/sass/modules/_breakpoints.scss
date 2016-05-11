@@ -23,7 +23,7 @@
      #container-wrapper{
        header{
           section{
-              @include samsung-galaxy-S5-search(fixed, 3%, 2%);
+              @include samsung-galaxy-S5-search(absolute, 7%, 2%);
               form{
                 input.form-control.search{
                   width:150px !important;
@@ -37,7 +37,7 @@
     .head{
        header{
          section{
-           @include samsung-galaxy-S5-offset-search(-60px !important);
+           @include samsung-galaxy-S5-offset-search(-15px !important);
          }
        }
      }
@@ -84,7 +84,7 @@
    .head{
       header{
         section{
-          @include samsung-galaxy-S5-offset-search(-55px !important);
+          @include samsung-galaxy-S5-offset-search(-60px !important);
         }
       }
     }
