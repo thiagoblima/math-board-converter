@@ -86,14 +86,14 @@
    *
    */
   main #container-wrapper header section {
-    position: fixed;
-    top: 9%;
+    position: absolute;
+    top: 20%;
     right: 2%; }
     main #container-wrapper header section form input.form-control.search {
       width: 150px !important; }
 
   .head header section {
-    margin-top: -60px !important; }
+    margin-top: -30px !important; }
 
   .content-wrapper {
     position: relative;
