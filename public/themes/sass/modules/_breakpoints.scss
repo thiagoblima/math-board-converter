@@ -94,3 +94,32 @@
     }
 
 }
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1074px) and (max-width: 1224px) {
+/* Styles */
+main{
+  #container-wrapper{
+    header{
+       section{
+         //background-color:black !important;
+           @include samsung-galaxy-S5-search(absolute, 7%, 2%);
+           form{
+             input.form-control.search{
+            //   width:150px !important;
+             }
+          }
+       }
+    }
+  }
+}
+
+}
