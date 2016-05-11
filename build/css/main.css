@@ -33,6 +33,7 @@
  *Just need to get it imported into the partials documents
  *such as: _base.scss, _functions.scss
  */
+/* $paragraph-text-shadow: 3px 2px 1px #d9411e; */
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
@@ -62,14 +63,14 @@
     *
     */
   main #container-wrapper header section {
-    position: fixed;
-    top: 3%;
+    position: absolute;
+    top: 7%;
     right: 2%; }
     main #container-wrapper header section form input.form-control.search {
       width: 150px !important; }
 
   .head header section {
-    margin-top: -60px !important; }
+    margin-top: -15px !important; }
 
   .content-wrapper {
     position: relative;
@@ -92,7 +93,7 @@
       width: 150px !important; }
 
   .head header section {
-    margin-top: -55px !important; }
+    margin-top: -60px !important; }
 
   .content-wrapper {
     position: relative;
@@ -205,8 +206,7 @@ body {
         height: 400px;
         background-color: #ffd452 !important; }
         body main #container-wrapper section#intro-section div article p {
-          text-shadow: 3px 2px 1px #d9411e;
-          color: #ffffff !important;
+          color: #333333 !important;
           padding: 5em 2em 7.8em 2em;
           font-size: 2em;
           font-family: "Josefin Sans", sans-serif;
