@@ -99,6 +99,16 @@
     position: relative;
     top: 320px;
     height: 2130px !important; } }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1074px) and (max-width: 1224px) {
+  /* Styles */
+  main #container-wrapper header section {
+    position: absolute;
+    top: 7%;
+    right: 2%; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
@@ -162,7 +172,7 @@ body {
       *We've got the model and the view class
       */ }
     body main #container-wrapper header {
-      background-color: #e05151 !important;
+      background-color: #e05151;
       color: #fff !important;
       text-shadow: 4px 4px 1px black;
       height: 250px;
