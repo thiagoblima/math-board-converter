@@ -53,6 +53,10 @@
  *modular and easier to track code.
  *Just import the class and it can be called anytime
  */
+/**
+  * @breakpoint : Samsung S5
+  * @orientation: portrait
+  */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
   /**
     *@name: Section Search Input (Portrait)
@@ -76,6 +80,10 @@
     position: relative;
     top: 320px;
     height: 2130px !important; } }
+/**
+  * @breakpoint : Samsung S5
+  * @orientation: landscape
+  */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) {
   /**
    *@name: Section Search Input Landscape
@@ -102,7 +110,11 @@
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   /* Styles */ }
-/* Desktops and laptops ----------- */
+/**
+  * @breakpoint : Search Bar header 1
+  *
+  */
+/* Search Breakpoint 1 ----------- */
 @media only screen and (min-width: 1074px) and (max-width: 1224px) {
   /* Styles */
   main #container-wrapper header section {
