@@ -172,7 +172,7 @@ main{
   .head{
      header{
        section{
-         @include search-breakpoint(absolute !important, 40% !important, 2% !important);
+         @include search-breakpoint(absolute !important, 50% !important, 2% !important);
        }
      }
    }
