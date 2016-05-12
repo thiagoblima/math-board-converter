@@ -340,3 +340,9 @@
 @mixin samsung-galaxy-S5-offset-search($margin-top){
   margin-top:$margin-top;
 }
+
+
+@mixin breakpoint-search($position, $margin-top){
+  position:$position;
+  margin-top:$margin-top;
+}
