@@ -29,7 +29,7 @@
      #container-wrapper{
        header{
           section{
-              @include samsung-galaxy-S5-search(absolute, 7%, 2%);
+              @include samsung-galaxy-S5-search(absolute, 7% !important, 2%);
               form{
                 input.form-control.search{
                   width:150px !important;
@@ -144,5 +144,43 @@ main{
      }
    }
  }
+
+}
+
+
+/* Search Breakpoint 2 ----------- */
+@media only screen and (min-width : 930px) and (max-width: 1110px) {
+
+  main{
+    #container-wrapper{
+      header{
+         section{
+           position:absolute;
+           top:16%;
+           right:2%;
+           //background-color:black !important;
+          // @include samsung-galaxy-S5-search(absolute, 7%, 2%);
+          //@include breakpoint-search(relative, -50px !important);
+             form{
+               input.form-control.search{
+                 width:150px !important;
+               }
+            }
+         }
+      }
+    }
+  }
+
+  .head{
+     header{
+       section{
+         //@include samsung-galaxy-S5-offset-search(-50px !important);
+         position:absolute !important;
+         top:40% !important;
+         right:2% !important;
+
+       }
+     }
+   }
 
 }
