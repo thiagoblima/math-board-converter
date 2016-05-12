@@ -68,7 +68,7 @@
     */
   main #container-wrapper header section {
     position: absolute;
-    top: 7%;
+    top: 7% !important;
     right: 2%; }
     main #container-wrapper header section form input.form-control.search {
       width: 150px !important; }
@@ -121,6 +121,19 @@
     width: 150px !important; }
   main .head header section {
     margin-top: -50px !important; } }
+/* Search Breakpoint 2 ----------- */
+@media only screen and (min-width: 930px) and (max-width: 1110px) {
+  main #container-wrapper header section {
+    position: absolute;
+    top: 16%;
+    right: 2%; }
+    main #container-wrapper header section form input.form-control.search {
+      width: 150px !important; }
+
+  .head header section {
+    position: absolute !important;
+    top: 40% !important;
+    right: 2% !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
