@@ -337,12 +337,13 @@
   right:$right;
 }
 
-@mixin samsung-galaxy-S5-offset-search($margin-top){
-  margin-top:$margin-top;
+@mixin search-breakpoint($position, $top, $right){
+  position:$position;
+  top:$top;
+  right:$right;
 }
 
 
-@mixin breakpoint-search($position, $margin-top){
-  position:$position;
+@mixin samsung-galaxy-S5-offset-search($margin-top){
   margin-top:$margin-top;
 }
