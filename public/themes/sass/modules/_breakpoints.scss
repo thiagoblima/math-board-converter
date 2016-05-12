@@ -7,6 +7,12 @@
 
 
 
+ /**
+   * @breakpoint : Samsung S5
+   * @orientation: portrait
+   */
+
+
  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait)
  {
 
@@ -50,8 +56,10 @@
 
 
 
-
-
+/**
+  * @breakpoint : Samsung S5
+  * @orientation: landscape
+  */
 
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape)
@@ -103,7 +111,12 @@
 }
 
 
-/* Desktops and laptops ----------- */
+/**
+  * @breakpoint : Search Bar header 1
+  *
+  */
+
+/* Search Breakpoint 1 ----------- */
 @media only screen and (min-width : 1074px) and (max-width: 1224px) {
 /* Styles */
 main{
