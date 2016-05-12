@@ -78,7 +78,7 @@
     #container-wrapper{
       header{
          section{
-             @include samsung-galaxy-S5-search(absolute, 20%, 2%);
+             @include samsung-galaxy-S5-search(absolute, 20% !important, 2% !important);
              form{
                input.form-control.search{
                  width:150px !important;
@@ -116,6 +116,7 @@
   *
   */
 
+
 /* Search Breakpoint 1 ----------- */
 @media only screen and (min-width : 1110px) and (max-width: 1224px) {
 /* Styles */
@@ -148,15 +149,21 @@ main{
 }
 
 
+/**
+  * @breakpoint : Search Bar header 2
+  *
+  */
+
+
 /* Search Breakpoint 2 ----------- */
-@media only screen and (min-width : 930px) and (max-width: 1110px) {
+@media only screen and (min-width : 640px) and (max-width: 1110px) {
 
   main{
     #container-wrapper{
       header{
          section{
            position:absolute;
-           top:16%;
+           top:18%;
            right:2%;
            //background-color:black !important;
           // @include samsung-galaxy-S5-search(absolute, 7%, 2%);
