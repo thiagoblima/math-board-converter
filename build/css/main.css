@@ -136,7 +136,7 @@
 
   .head header section {
     position: absolute !important;
-    top: 40% !important;
+    top: 50% !important;
     right: 2% !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
