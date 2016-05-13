@@ -181,6 +181,12 @@ main{
 }
 
 
+/**
+  * @breakpoint : Search Bar header 3
+  *
+  */
+
+
 /* Search Breakpoint 3 ----------- */
 
 @media only screen and (max-width : 670px){
@@ -206,6 +212,22 @@ main{
         }
       }
     }
+  }
+
+}
+
+
+/**
+  * @breakpoint : Guide Section 1
+  *
+  */
+
+/* Guide Section Breakpoint 1 ----------- */
+
+@media only screen and (max-width : 1009px){
+
+  .content-wrapper{
+    height:2130px !important;
   }
 
 }
