@@ -153,7 +153,7 @@ main{
 
 
 /* Search Breakpoint 2 ----------- */
-@media only screen and (min-width : 340px) and (max-width: 1110px) {
+@media only screen and (min-width : 296px) and (max-width: 1110px) {
 
   main{
     #container-wrapper{
@@ -193,9 +193,9 @@ main{
           transition: 300ms ease-out;
           h2{
             opacity:0;
-            transition: opacity 300ms ease-out;
+            transition: opacity 600ms ease-out;
           }
-          h1{ text-align: center; transition:opacity; }
+          h1{ text-align: center; transition: text-align 500ms ease-out; }
         }
         section{
           form{
