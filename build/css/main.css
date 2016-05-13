@@ -138,6 +138,10 @@
     position: absolute !important;
     top: 50% !important;
     right: 2% !important; } }
+/**
+  * @breakpoint : Search Bar header 3
+  *
+  */
 /* Search Breakpoint 3 ----------- */
 @media only screen and (max-width: 670px) {
   main #container-wrapper header hgroup {
@@ -151,6 +155,14 @@
       transition: text-align 500ms ease-out; }
   main #container-wrapper header section form input.form-control.search {
     width: 256px !important; } }
+/**
+  * @breakpoint : Guide Section 1
+  *
+  */
+/* Guide Section Breakpoint 1 ----------- */
+@media only screen and (max-width: 1009px) {
+  .content-wrapper {
+    height: 2130px !important; } }
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
  *Should stay here and be set up the time the scroll event calls it
