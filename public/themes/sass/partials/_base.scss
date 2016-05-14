@@ -94,10 +94,10 @@ aside{
    }:hover:after{
      @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
        }:hover:nth-child(n + 1){
-          @include animate-social(300ms ease-out, #ffA9A9 !important);
+          @include animate-social(300ms ease-out, #e05151 !important);
        }:hover:nth-child(n + 1):after{
              content:"Profile";
-             @include animate-social-after($intro-font-josefin, #ffA9A9, #ffffff, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, #e05151, #ffffff, 100px, 5px);
        }:hover:nth-child(n + 2){
           @include animate-social(300ms ease-out, #04AFF4 !important);
        }:hover:nth-child(n + 2):after{
