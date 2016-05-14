@@ -27,13 +27,13 @@ module.exports = function(grunt) {
     hash: cacheHash,
     srcpath: "public",
     directivespath: "build/js/directives/views",
-    directivesjs: "build/js/directives",
+    directivesjs: "build/js/app",
     webfontpath: "<%= srcpath %>/libs/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
     path: "build",
     cssbuild: "css",
     jsbuild: "js",
-    directivesbuild: "<%= jsbuild %>/directives",
+    directivesbuild: "<%= jsbuild %>/app",
     webfontbuild: "<%= path %>/fonts",
 
 
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
 
     clean: {
       build: {
-        src: ['<%= path %>/js/*.js', '<%= path %>/js/directives/*.js']
+        src: ['<%= path %>/js/*.js', '<%= path %>/js/angularjs/*.js']
       }
     },
 
