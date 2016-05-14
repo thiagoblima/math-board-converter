@@ -23,11 +23,7 @@ hgroup{
 section{
   @include header-search-settings(right, 40px);
   p{
-    padding-right:50px;
-    font-size:16px;
-    margin-left:70px;
-    text-shadow:none;
-    padding:8px;
+    @include search-paragraph-settings(50px, 16px, 70px, none, 8px);
   }
   form{
     button{
