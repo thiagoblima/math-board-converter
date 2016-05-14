@@ -347,3 +347,27 @@
 @mixin samsung-galaxy-S5-offset-search($margin-top){
   margin-top:$margin-top;
 }
+
+
+
+/*
+ * Breakpoints: Guide Section
+ * Matches: (max-width : 670px)
+ *
+ */
+
+
+ @mixin container-wrapper-breakpoint($float, $transition){
+   float:$float;
+   transition:$transition;
+ }
+
+@mixin container-wrapper-h2-breakpoint($opacity, $transition){
+  opacity:$opacity;
+  transition:$transition;
+}
+
+@mixin container-wrapper-h1-breakpoint($text-align, $transition){
+  text-align:$text-align;
+  transition:$transition;
+}
