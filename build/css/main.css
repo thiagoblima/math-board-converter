@@ -163,6 +163,15 @@
   main #container-wrapper header section form input.form-control.search {
     width: 256px !important; } }
 /**
+  * @breakpoint : Header Wrapper
+  *
+  */
+/* Guide Section Breakpoint 4 ----------- */
+@media screen and (max-width: 768px) {
+  main #container-wrapper header {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important; } }
+/**
   * @breakpoint : Guide Section 1
   *
   */
