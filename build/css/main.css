@@ -48,6 +48,11 @@
  * Matches: (min-device-width: 360px) and (max-device-height: 640px)
  *
  */
+/*
+ * Breakpoints: Guide Section
+ * Matches: (max-width : 670px)
+ *
+ */
 /*@_breakpoints.scss
  *The purpose is to separate breakpoints in order to make it
  *modular and easier to track code.
@@ -148,6 +153,8 @@
     float: none !important;
     transition: 300ms ease-out; }
     main #container-wrapper header hgroup h2 {
+      opacity: 0;
+      transition: opacity 600ms ease-out;
       opacity: 0;
       transition: opacity 600ms ease-out; }
     main #container-wrapper header hgroup h1 {
