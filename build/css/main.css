@@ -166,10 +166,22 @@
   main #container-wrapper .header header section {
     display: none !important; } }
 /**
+  * @breakpoint : Search Bar header 4
+  *
+  */
+/* Search Breakpoint 4 ----------- */
+@media only screen and (max-width: 405px) {
+  main #container-wrapper header h1 {
+    font-size: 3.0rem;
+    text-shadow: 2px 2px black; }
+  main #container-wrapper header h2 {
+    font-size: 2.1rem;
+    text-shadow: 2px 2px black; } }
+/**
   * @breakpoint : Header Wrapper
   *
   */
-/* Guide Section Breakpoint 4 ----------- */
+/* Guide Section Breakpoint 5 ----------- */
 @media screen and (max-width: 768px) {
   main #container-wrapper header {
     padding-top: 48px !important;
