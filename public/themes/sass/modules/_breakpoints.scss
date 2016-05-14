@@ -197,9 +197,9 @@ main{
         hgroup{
           @include container-wrapper-breakpoint(none !important, 300ms ease-out);
           h2{
-            @include container-wrapper-h2-breakpoint(0, opacity 600ms ease-out);
+            @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );
           }
-          h1{ @include container-wrapper-h1-breakpoint(center, text-align 500ms ease-out );  }
+          h1{ @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );  }
         }
         section{
           opacity:0;
@@ -208,6 +208,13 @@ main{
             input.form-control.search{
                  width:256px !important;
             }
+          }
+        }
+      }
+      .header{
+        header{
+          section{
+            display:none !important;
           }
         }
       }
