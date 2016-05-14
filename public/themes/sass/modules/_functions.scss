@@ -36,10 +36,12 @@
   text-shadow:$text-shadow;
 }
 
-@mixin search-bar-settings($float, $width, $transition){
+@mixin search-bar-settings($float, $width, $transition, $margin-left, $margin-right){
   float:$float;
   width:$width;
   transition:$transition;
+  margin-left:$margin-left;
+  margin-right:$margin-right;
 }
 
 @mixin header-scroll($position, $width, $height, $transition){
