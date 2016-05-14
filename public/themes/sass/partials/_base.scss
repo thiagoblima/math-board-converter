@@ -37,9 +37,7 @@ section{
         @include search-button(34px, none, transparent, none);
       }
       input.form-control.search{
-        @include search-bar-settings(left, 250px, 500ms ease-in);
-        margin-left:70px;
-        margin-right:10px;
+        @include search-bar-settings(left, 250px, 500ms ease-in, 70px, 10px);
       }
     }
   }
