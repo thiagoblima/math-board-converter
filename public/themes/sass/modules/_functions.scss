@@ -44,6 +44,14 @@
   margin-right:$margin-right;
 }
 
+@mixin search-paragraph-settings($padding-right, $font-size, $margin-left, $text-shadow, $padding){
+  padding-right:$padding-right;
+  font-size:$font-size;
+  margin-left:$margin-left;
+  text-shadow:$text-shadow;
+  padding:$padding;
+}
+
 @mixin header-scroll($position, $width, $height, $transition){
   position:$position;
   width:$width;
