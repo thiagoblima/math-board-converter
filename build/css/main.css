@@ -49,7 +49,7 @@
  *
  */
 /*
- * Breakpoints: Guide Section
+ * Breakpoints: Search Section
  * Matches: (max-width : 670px)
  *
  */
@@ -153,8 +153,8 @@
     float: none !important;
     transition: 300ms ease-out; }
     main #container-wrapper header hgroup h2 {
-      opacity: 0;
-      transition: opacity 600ms ease-out; }
+      text-align: center;
+      transition: text-align 500ms ease-out; }
     main #container-wrapper header hgroup h1 {
       text-align: center;
       transition: text-align 500ms ease-out; }
@@ -162,7 +162,9 @@
     opacity: 0;
     transition: 500ms ease-out; }
     main #container-wrapper header section form input.form-control.search {
-      width: 256px !important; } }
+      width: 256px !important; }
+  main #container-wrapper .header header section {
+    display: none !important; } }
 /**
   * @breakpoint : Header Wrapper
   *
