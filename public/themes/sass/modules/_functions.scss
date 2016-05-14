@@ -351,7 +351,7 @@
 
 
 /*
- * Breakpoints: Guide Section
+ * Breakpoints: Search Section
  * Matches: (max-width : 670px)
  *
  */
@@ -362,12 +362,7 @@
    transition:$transition;
  }
 
-@mixin container-wrapper-h2-breakpoint($opacity, $transition){
-  opacity:$opacity;
-  transition:$transition;
-}
-
-@mixin container-wrapper-h1-breakpoint($text-align, $transition){
+@mixin container-wrapper-hgroup-breakpoint($text-align, $transition){
   text-align:$text-align;
   transition:$transition;
 }
