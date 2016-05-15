@@ -377,6 +377,16 @@
   transition:$transition;
 }
 
+/*
+ * Breakpoints: Header wrapper
+ * Matches: (max-width : 768px)
+ *
+ */
+
+@mixin header-breakpoint-wrapper($padding-top, $padding-bottom){
+  padding-top:$padding-top;
+  padding-bottom:$padding-bottom;
+}
 
 /*
  * Breakpoints: Header h1 and h2 elements
