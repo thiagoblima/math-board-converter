@@ -290,8 +290,7 @@ main{
  main{
    #container-wrapper{
      header{
-       padding-top:48px !important;
-       padding-bottom:48px !important;
+       @include header-breakpoint-wrapper(48px !important, 48px !important);
      }
    }
  }
