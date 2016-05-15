@@ -268,13 +268,9 @@ main{
       header{
         h1{
          @include search-header-font-breakpoint(3.0rem, 2px 2px black);
-         font-size:3.0rem;
-         text-shadow:2px 2px black;
         }
         h2{
          @include search-header-font-breakpoint(2.1rem, 2px 2px black);
-         font-size:2.1rem;
-         text-shadow:2px 2px black;
         }
       }
     }
