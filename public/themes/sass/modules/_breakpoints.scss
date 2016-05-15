@@ -210,7 +210,7 @@ main{
           }
         }
       }
-    
+
 
 /**
   * @breakpoint : Menu Breakpoint 3
@@ -243,6 +243,7 @@ main{
 
 }
 
+
 /**
   * @breakpoint : Search Bar header 4
   *
@@ -250,6 +251,37 @@ main{
 
 
 /* Search Breakpoint 4 ----------- */
+
+
+@media only screen and (max-width: 529px){
+
+  nav{
+    ul{
+      @include menu-margin-breakpoint(30px !important);
+      li{
+        @include menu-margin-breakpoint(5px !important);
+        a{
+          @include menu-a-breakpoint(65px !important, 0 4px !important, 500ms ease-out);
+          div.front{
+           i.fa.fa-4x{
+             @include menu-glyphicon-font-size(1.8em !important);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+/**
+  * @breakpoint : Search Bar header 5
+  *
+  */
+
+
+/* Search Breakpoint 5 ----------- */
 
 
 @media only screen and (max-width: 405px ){
@@ -275,7 +307,7 @@ main{
   *
   */
 
-/* Guide Section Breakpoint 5 ----------- */
+/* Guide Section Breakpoint 6 ----------- */
 
 
 @media screen and (max-width: 768px){
