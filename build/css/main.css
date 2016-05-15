@@ -53,6 +53,11 @@
  * Matches: (max-width : 670px)
  *
  */
+/*
+ * Breakpoints: Header h1 and h2 elements
+ * Matches: (max-width : 405px)
+ *
+ */
 /*@_breakpoints.scss
  *The purpose is to separate breakpoints in order to make it
  *modular and easier to track code.
@@ -188,9 +193,13 @@
 /* Search Breakpoint 4 ----------- */
 @media only screen and (max-width: 405px) {
   main #container-wrapper header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px black;
     font-size: 3.0rem;
     text-shadow: 2px 2px black; }
   main #container-wrapper header h2 {
+    font-size: 2.1rem;
+    text-shadow: 2px 2px black;
     font-size: 2.1rem;
     text-shadow: 2px 2px black; } }
 /**
