@@ -184,8 +184,6 @@
       transition: 500ms ease-out; }
       main #container-wrapper header section form input.form-control.search {
         width: 256px !important; }
-    main #container-wrapper .header header section {
-      display: none !important; }
     main #container-wrapper nav ul {
       margin-left: 30px; }
       main #container-wrapper nav ul li {
