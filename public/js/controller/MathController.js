@@ -11,7 +11,7 @@ app.controller("MathController", [ '$scope', function($scope){
       home:{name:"HOME"},
       blog:{name:"BLOG"},
       photos:{name:"PHOTOS"},
-      about:{name:"ABOUT ME"},
+      about:{name:"ABOUT"},
       contact:{name:"CONTACT"}
     }
   };
