@@ -58,6 +58,11 @@
  * Matches: (max-width : 405px)
  *
  */
+/*
+ * Breakpoints: Nav icons elements
+ * Matches: (max-width : 670px)
+ *
+ */
 /*@_breakpoints.scss
  *The purpose is to separate breakpoints in order to make it
  *modular and easier to track code.
@@ -156,10 +161,10 @@
 @media only screen and (max-width: 670px) {
   main #container-wrapper {
     /**
-      * @breakpoint : Search Bar header 3
+      * @breakpoint : Menu Breakpoint 3
       *
       */
-    /* Search Breakpoint 3 ----------- */ }
+    /* Menu Breakpoint 3 ----------- */ }
     main #container-wrapper header hgroup {
       float: none !important;
       transition: 300ms ease-out; }
