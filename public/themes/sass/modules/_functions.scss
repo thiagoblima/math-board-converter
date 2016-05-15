@@ -376,3 +376,15 @@
   text-align:$text-align;
   transition:$transition;
 }
+
+
+/*
+ * Breakpoints: Header h1 and h2 elements
+ * Matches: (max-width : 405px)
+ *
+ */
+
+@mixin search-header-font-breakpoint($font-size, $text-shadow){
+  font-size:$font-size;
+  text-shadow:$text-shadow;
+}
