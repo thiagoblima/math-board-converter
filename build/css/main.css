@@ -221,7 +221,19 @@
     text-shadow: 2px 2px black; }
   main #container-wrapper header h2 {
     font-size: 2.1rem;
-    text-shadow: 2px 2px black; } }
+    text-shadow: 2px 2px black; }
+
+  nav ul {
+    margin-left: 30px !important; }
+    nav ul li {
+      margin-left: 5px !important;
+      float: none !important; }
+      nav ul li a {
+        width: 55px !important;
+        margin: 0 4px !important;
+        transition: 500ms ease-out; }
+        nav ul li a div.front i.fa.fa-4x {
+          font-size: 1.8em !important; } }
 /**
   * @breakpoint : Header Wrapper
   *
