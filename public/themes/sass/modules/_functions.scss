@@ -388,3 +388,26 @@
   font-size:$font-size;
   text-shadow:$text-shadow;
 }
+
+
+
+/*
+ * Breakpoints: Nav icons elements
+ * Matches: (max-width : 670px)
+ *
+ */
+
+
+@mixin menu-margin-breakpoint($margin-left){
+  margin-left:$margin-left;
+}
+
+@mixin menu-a-breakpoint($width, $margin, $transition){
+  width:$width;
+  margin:$margin;
+  transition:$transition;
+}
+
+@mixin menu-glyphicon-font-size($font-size){
+  font-size:$font-size;
+}
