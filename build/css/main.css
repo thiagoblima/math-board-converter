@@ -149,22 +149,38 @@
   */
 /* Search Breakpoint 3 ----------- */
 @media only screen and (max-width: 670px) {
-  main #container-wrapper header hgroup {
-    float: none !important;
-    transition: 300ms ease-out; }
-    main #container-wrapper header hgroup h2 {
-      text-align: center;
-      transition: text-align 500ms ease-out; }
-    main #container-wrapper header hgroup h1 {
-      text-align: center;
-      transition: text-align 500ms ease-out; }
-  main #container-wrapper header section {
-    opacity: 0;
-    transition: 500ms ease-out; }
-    main #container-wrapper header section form input.form-control.search {
-      width: 256px !important; }
-  main #container-wrapper .header header section {
-    display: none !important; } }
+  main #container-wrapper {
+    /**
+      * @breakpoint : Search Bar header 3
+      *
+      */
+    /* Search Breakpoint 3 ----------- */ }
+    main #container-wrapper header hgroup {
+      float: none !important;
+      transition: 300ms ease-out; }
+      main #container-wrapper header hgroup h2 {
+        text-align: center;
+        transition: text-align 500ms ease-out; }
+      main #container-wrapper header hgroup h1 {
+        text-align: center;
+        transition: text-align 500ms ease-out; }
+    main #container-wrapper header section {
+      opacity: 0;
+      transition: 500ms ease-out; }
+      main #container-wrapper header section form input.form-control.search {
+        width: 256px !important; }
+    main #container-wrapper .header header section {
+      display: none !important; }
+    main #container-wrapper nav ul {
+      margin-left: 30px; }
+      main #container-wrapper nav ul li {
+        margin-left: 5px; }
+        main #container-wrapper nav ul li a {
+          width: 85px;
+          margin: 0 4px;
+          transition: 500ms ease-out; }
+          main #container-wrapper nav ul li a div.front i.fa.fa-4x {
+            font-size: 2.5em; } }
 /**
   * @breakpoint : Search Bar header 4
   *
@@ -289,6 +305,8 @@ body {
           transition: 500ms ease-in;
           margin-left: 70px;
           margin-right: 10px; }
+    body main #container-wrapper nav ul li a {
+      transition: 500ms ease-in; }
     body main #container-wrapper section#intro-section {
       margin-bottom: 30px;
       padding: 50px;
