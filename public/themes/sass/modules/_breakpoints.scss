@@ -267,6 +267,11 @@ main{
              @include menu-glyphicon-font-size(1.8em !important);
             }
           }
+          div.back{
+           span{
+             font-size:1.7rem !important;
+            }
+          }
         }
       }
     }
@@ -312,6 +317,11 @@ main{
              @include menu-glyphicon-font-size(1.8em !important);
             }
           }
+          div.back{
+           span{
+             font-size:1.5rem !important;
+            }
+          }
         }
       }
     }
@@ -340,6 +350,11 @@ main{
           div.front{
            i.fa.fa-4x{
              @include menu-glyphicon-font-size(1.8em !important);
+            }
+          }
+          div.back{
+           span{
+             font-size:1.2rem !important;
             }
           }
         }
