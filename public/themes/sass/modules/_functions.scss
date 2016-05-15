@@ -382,6 +382,10 @@
   transition:$transition;
 }
 
+@mixin search-bar-breakpoint-input($width){
+  width:$width;
+}
+
 /*
  * Breakpoints: Header wrapper
  * Matches: (max-width : 768px)
