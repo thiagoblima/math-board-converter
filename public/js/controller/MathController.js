@@ -7,7 +7,6 @@ app.controller('MathController', MathController);
     subtitle: "Converting all Math's Task",
   };
 
-
   $scope.nav = {
     options:{
       home:{name:"HOME"},
