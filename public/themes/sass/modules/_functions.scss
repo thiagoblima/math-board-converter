@@ -377,6 +377,11 @@
   transition:$transition;
 }
 
+@mixin search-section-breakpoint($opacity, $transition){
+  opacity:$opacity;
+  transition:$transition;
+}
+
 /*
  * Breakpoints: Header wrapper
  * Matches: (max-width : 768px)
