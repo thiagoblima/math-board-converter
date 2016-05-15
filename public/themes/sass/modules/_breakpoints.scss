@@ -220,26 +220,24 @@ main{
       }
 
 /**
-  * @breakpoint : Search Bar header 3
+  * @breakpoint : Menu Breakpoint 3
   *
   */
 
 
-/* Search Breakpoint 3 ----------- */
+/* Menu Breakpoint 3 ----------- */
 
 
     nav{
       ul{
-        margin-left:30px;
+        @include menu-margin-breakpoint(30px);
         li{
-          margin-left:5px;
+          @include menu-margin-breakpoint(5px);
           a{
-            width:85px;
-            margin:0 4px;
-            transition:500ms ease-out;
+            @include menu-a-breakpoint(85px, 0 4px, 500ms ease-out);
             div.front{
              i.fa.fa-4x{
-               font-size:2.5em;
+               @include menu-glyphicon-font-size(2.5em);
               }
             }
           }
