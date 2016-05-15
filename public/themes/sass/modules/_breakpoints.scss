@@ -32,7 +32,7 @@
               @include samsung-galaxy-S5-search(absolute, 7% !important, 2%);
               form{
                 input.form-control.search{
-                  width:150px !important;
+                  @include search-bar-breakpoint-input(150px !important);
                }
             }
          }
@@ -81,7 +81,7 @@
              @include samsung-galaxy-S5-search(absolute, 20% !important, 2% !important);
              form{
                input.form-control.search{
-                 width:150px !important;
+                 @include search-bar-breakpoint-input(150px !important);
               }
            }
         }
@@ -127,7 +127,7 @@ main{
        section{
            form{
              input.form-control.search{
-               width:150px !important;
+               @include search-bar-breakpoint-input(150px !important);
              }
           }
        }
@@ -162,7 +162,7 @@ main{
            @include search-breakpoint(absolute, 18%, 2%);
              form{
                input.form-control.search{
-                 width:150px !important;
+                 @include search-bar-breakpoint-input(150px !important);
             }
           }
         }
@@ -205,7 +205,7 @@ main{
           @include search-section-breakpoint(0, 500ms ease-out);
           form{
             input.form-control.search{
-                 width:256px !important;
+              @include search-bar-breakpoint-input(256px !important);
             }
           }
         }
