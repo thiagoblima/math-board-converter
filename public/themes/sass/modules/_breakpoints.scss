@@ -199,11 +199,10 @@ main{
           h2{
             @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );
           }
-          h1{ @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );  }
+          h1{  @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );  }
         }
         section{
-          opacity:0;
-          transition:500ms ease-out;
+          @include search-section-breakpoint(0, 500ms ease-out);
           form{
             input.form-control.search{
                  width:256px !important;
