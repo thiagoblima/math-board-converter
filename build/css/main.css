@@ -199,6 +199,22 @@
   *
   */
 /* Search Breakpoint 4 ----------- */
+@media only screen and (max-width: 529px) {
+  nav ul {
+    margin-left: 30px !important; }
+    nav ul li {
+      margin-left: 5px !important; }
+      nav ul li a {
+        width: 65px !important;
+        margin: 0 4px !important;
+        transition: 500ms ease-out; }
+        nav ul li a div.front i.fa.fa-4x {
+          font-size: 1.8em !important; } }
+/**
+  * @breakpoint : Search Bar header 5
+  *
+  */
+/* Search Breakpoint 5 ----------- */
 @media only screen and (max-width: 405px) {
   main #container-wrapper header h1 {
     font-size: 3rem;
@@ -210,7 +226,7 @@
   * @breakpoint : Header Wrapper
   *
   */
-/* Guide Section Breakpoint 5 ----------- */
+/* Guide Section Breakpoint 6 ----------- */
 @media screen and (max-width: 768px) {
   main #container-wrapper header {
     padding-top: 48px !important;
