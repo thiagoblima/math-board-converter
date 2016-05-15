@@ -146,7 +146,7 @@ module.exports = function(grunt) {
 
     clean: {
       build: {
-        src: ['<%= path %>/js/*.js', '<%= path %>/js/angularjs/*.js']
+        src: ['<%= path %>/js/*.js', '<%= path %>/js/app/*.js']
       }
     },
 
