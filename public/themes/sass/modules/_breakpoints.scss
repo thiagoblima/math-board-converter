@@ -299,6 +299,24 @@ main{
     }
   }
 
+  nav{
+    ul{
+      @include menu-margin-breakpoint(30px !important);
+      li{
+        @include menu-margin-breakpoint(5px !important);
+        float:none !important;
+        a{
+          @include menu-a-breakpoint(55px !important, 0 4px !important, 500ms ease-out);
+          div.front{
+           i.fa.fa-4x{
+             @include menu-glyphicon-font-size(1.8em !important);
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
