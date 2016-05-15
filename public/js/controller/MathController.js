@@ -1,4 +1,6 @@
-app.controller("MathController", [ '$scope', function($scope){
+app.controller('MathController', MathController);
+
+ function MathController($scope){
 
   $scope.header = {
     title: "Math Board Converter",
@@ -56,4 +58,6 @@ app.controller("MathController", [ '$scope', function($scope){
 
   };
 
-}]);
+}
+
+MathController.$inject = ['$scope'];
