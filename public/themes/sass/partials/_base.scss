@@ -40,6 +40,17 @@ section{
 }
 
 
+nav{
+  ul{
+    li{
+     a{
+       transition: 500ms ease-in;
+      }
+    }
+  }
+}
+
+
 section#intro-section{
   @include intro-section(30px, 50px, relative, -100);
   h1{ @include splash-intro($intro-font-josefin, center, $splash-color, -20px) }
