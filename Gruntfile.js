@@ -259,7 +259,7 @@ module.exports = function(grunt) {
       },
       html:{
         files: ['<%= htmlpages %>', '<%= directivespages %>'],
-        tasks: ['htmlbuild'],
+        tasks: ['uglify', 'htmlbuild'],
         opstions: {
           livereload: true
         }
