@@ -19,7 +19,8 @@ app.controller('HeadController', HeadController);
       about:{name:"ABOUT"},
       contact:{name:"CONTACT"}
     }
-    
+
+
   };
 
   $scope.intro = {
