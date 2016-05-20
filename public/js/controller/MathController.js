@@ -3,7 +3,7 @@ app.controller('HeadController', HeadController);
 
  function HeadController($scope){
    $scope.header = [
-    { title: "Math Board Converter", subtitle: "Converting all Math's Task" }
+    { settings: {title: "Math Board Converter", subtitle: "Converting all Math's Task" } }
    ];
  }
 
