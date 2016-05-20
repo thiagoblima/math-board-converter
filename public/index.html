@@ -35,7 +35,7 @@
 
 </head>
 <main ng-controller="MathController as Math">
- <section class="container" id="container-wrapper" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
+ <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
    <head-section data="header"></head-section>
    <div ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav' : navAnimate}">
    <main-nav data="nav"></main-nav>
