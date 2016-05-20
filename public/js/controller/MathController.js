@@ -1,11 +1,15 @@
 app.controller('MathController', MathController);
+app.controller('HeadController', HeadController);
+
+ function HeadController($scope){
+   $scope.header = [
+    { title: "Math Board Converter", subtitle: "Converting all Math's Task" }
+   ];
+ }
+
+ HeadController.$inject = ['$scope'];
 
  function MathController($scope){
-
-  $scope.header = {
-    title: "Math Board Converter",
-    subtitle: "Converting all Math's Task",
-  };
 
   $scope.nav = {
     options:{
