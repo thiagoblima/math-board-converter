@@ -1,6 +1,51 @@
+/**
+  *@author: Thiago Lima
+  *
+  *@description: General Controllers class, they're separated
+  *into sections to get easier and more readable.
+  *
+  *@name: MathController, HeadController, NavController
+  *
+  */
+
+
+
+
+
+/**
+  *@name: app
+  *
+  *@description: Controllers import, all of them should
+  *be imported underneath.
+  *
+  */
+
+
 app.controller('MathController', MathController);
 app.controller('HeadController', HeadController);
 app.controller('NavController', NavController);
+
+
+
+
+
+/**
+  *@name: Dependency Injection
+  *
+  *@description: This is where you just import the
+  *dependencies to the $scope, never forget it, otherwise
+  *app won't work correctly and may cause a break on the components.
+  *
+  */
+
+
+HeadController.$inject = ['$scope'];
+NavController.$inject = ['$scope'];
+MathController.$inject = ['$scope'];
+
+
+
+
 
  function HeadController($scope){
    $scope.header = [
@@ -8,7 +53,7 @@ app.controller('NavController', NavController);
    ];
  }
 
- HeadController.$inject = ['$scope'];
+
 
  function NavController($scope){
    $scope.nav = {
@@ -20,7 +65,7 @@ app.controller('NavController', NavController);
    };
  }
 
- NavController.$inject = ['$scope'];
+
 
  function MathController($scope){
 
@@ -65,5 +110,3 @@ app.controller('NavController', NavController);
   };
 
 }
-
-MathController.$inject = ['$scope'];
