@@ -1,5 +1,6 @@
 app.controller('MathController', MathController);
 app.controller('HeadController', HeadController);
+app.controller('NavController', NavController);
 
  function HeadController($scope){
    $scope.header = [
@@ -9,19 +10,19 @@ app.controller('HeadController', HeadController);
 
  HeadController.$inject = ['$scope'];
 
+ function NavController($scope){
+   $scope.nav = {
+       home:{name:"HOME"},
+       blog:{name:"BLOG"},
+       photos:{name:"PHOTOS"},
+       about:{name:"ABOUT"},
+       contact:{name:"CONTACT"}
+   };
+ }
+
+ NavController.$inject = ['$scope'];
+
  function MathController($scope){
-
-  $scope.nav = {
-    options:{
-      home:{name:"HOME"},
-      blog:{name:"BLOG"},
-      photos:{name:"PHOTOS"},
-      about:{name:"ABOUT"},
-      contact:{name:"CONTACT"}
-    }
-
-
-  };
 
   $scope.intro = {
 
