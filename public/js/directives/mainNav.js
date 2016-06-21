@@ -6,7 +6,7 @@
 
 app.directive('mainNav', function(){
    return{
-     restrict: 'E',
+     restrict: 'EA',
      scope:{
       data: '='
     },
