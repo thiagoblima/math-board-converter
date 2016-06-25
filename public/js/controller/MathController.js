@@ -4,7 +4,8 @@
   *@description: General Controllers class, they're separated
   *into sections to get easier and more readable.
   *
-  *@name: MathController, HeadController, NavController
+  *@name: HeadController, NavController, IntroController,
+  *TableController, GuideController.
   *
   */
 
