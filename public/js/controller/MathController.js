@@ -24,6 +24,7 @@
 app.controller('MathController', MathController);
 app.controller('HeadController', HeadController);
 app.controller('NavController', NavController);
+app.controller('IntroController', IntroController);
 
 
 
@@ -42,7 +43,7 @@ app.controller('NavController', NavController);
 HeadController.$inject = ['$scope'];
 NavController.$inject = ['$scope'];
 MathController.$inject = ['$scope'];
-
+IntroController.$inject = ['$scope'];
 
 
 
@@ -66,22 +67,26 @@ MathController.$inject = ['$scope'];
  }
 
 
+ function IntroController($scope){
+   $scope.intro = {
+
+     header:{
+       title: 'Welcome, here you\'re going to find Math conversion easily'
+     },
+
+     paragraphs:{
+       collumnOne: 'Here\'s your quick and smooth math converter, anytime <span>you</span> want!',
+       collumnTwo: 'Get registered and receive the latest math news, anytime <span>you</span> want!',
+       collumnThree: 'Share get a lot of discounts on our latest services made for <span>you</span>!'
+     }
+
+   };
+ }
+
 
  function MathController($scope){
 
-  $scope.intro = {
 
-    header:{
-      title: 'Welcome, here you\'re going to find Math conversion easily'
-    },
-
-    paragraphs:{
-      collumnOne: 'Here\'s your quick and smooth math converter, anytime <span>you</span> want!',
-      collumnTwo: 'Get registered and receive the latest math news, anytime <span>you</span> want!',
-      collumnThree: 'Share get a lot of discounts on our latest services made for <span>you</span>!'
-    }
-
-  };
 
   $scope.table = {
 
