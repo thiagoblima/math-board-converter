@@ -70,6 +70,10 @@ GuideController.$inject = ['$scope'];
  function IntroController($scope){
    $scope.intro = {
 
+     head:{
+      title: 'Math Board Coverter'
+     },
+
      header:{
        title: 'Welcome, here you\'re going to find Math conversion easily'
      },
