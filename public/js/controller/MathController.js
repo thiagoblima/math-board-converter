@@ -26,6 +26,7 @@ app.controller('HeadController', HeadController);
 app.controller('NavController', NavController);
 app.controller('IntroController', IntroController);
 app.controller('TableController', TableController);
+app.controller('GuideController', GuideController);
 
 
 
@@ -45,6 +46,7 @@ NavController.$inject = ['$scope'];
 MathController.$inject = ['$scope'];
 IntroController.$inject = ['$scope'];
 TableController.$inject = ['$scope'];
+GuideController.$inject = ['$scope'];
 
 
 
@@ -106,15 +108,14 @@ TableController.$inject = ['$scope'];
  }
 
 
- function MathController($scope){
+ function GuideController($scope){
 
+   $scope.guide = {
 
-  $scope.guide = {
+        header:{
+           description: 'Guide: Follow the walkthrough and share:'
+        }
 
-       header:{
-          description: 'Guide: Follow the walkthrough and share:'
-       }
+   };
 
-  };
-
-}
+ }
