@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-uk" ng-app="MathApp">
+<html lang="en-uk" ng-app="MathApp" ng-controller="IntroController">
 <head>
   <title>Math Board Coverter</title>
 
@@ -34,10 +34,10 @@
   <!-- /build -->
 
 </head>
-<main ng-controller="IntroController">
+<main ng-controller="GuideController">
  <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
    <head-section data="header"></head-section>
-   <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav' : navAnimate}">
+   <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
    <main-nav data="nav"></main-nav>
    <intro-section data="intro"></intro-section>
    <div ng-controller="TableController" class="row" id="table" scroll-table ng-class="{math:mathTable}">
