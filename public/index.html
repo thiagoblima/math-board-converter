@@ -34,7 +34,7 @@
   <!-- /build -->
 
 </head>
-<main>
+<main ng-controller="IntroController as Intro">
  <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
    <head-section data="header"></head-section>
    <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav' : navAnimate}">
