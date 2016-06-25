@@ -21,7 +21,6 @@
   */
 
 
-app.controller('MathController', MathController);
 app.controller('HeadController', HeadController);
 app.controller('NavController', NavController);
 app.controller('IntroController', IntroController);
@@ -43,7 +42,6 @@ app.controller('GuideController', GuideController);
 
 HeadController.$inject = ['$scope'];
 NavController.$inject = ['$scope'];
-MathController.$inject = ['$scope'];
 IntroController.$inject = ['$scope'];
 TableController.$inject = ['$scope'];
 GuideController.$inject = ['$scope'];
