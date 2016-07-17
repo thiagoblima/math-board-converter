@@ -56,7 +56,6 @@ GuideController.$inject = ['$scope'];
  }
 
 
-
  function NavController($scope){
    $scope.nav = {
        home:{name:"HOME"},
