@@ -194,9 +194,10 @@
   margin-top:$margin-top;
 }
 
-@mixin guide-icon-paragraph($text-align, $transition){
+@mixin guide-icon-paragraph($text-align, $transition, $color){
   text-align:$text-align;
   transition:$transition;
+  color:$color;
 }
 
 @mixin guide-icon-paragraph-hover($color, $transform, $transition){
