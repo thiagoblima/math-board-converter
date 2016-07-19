@@ -490,7 +490,7 @@ body {
             body main #container-wrapper section#guide article section div p.heroclass {
               font-size: 1.8em;
               padding: 1.3em;
-              font-family: "Josefin Sans", sans-serif; }
+              font-family: "Josefin Sans"; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
