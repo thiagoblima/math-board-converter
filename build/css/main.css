@@ -487,6 +487,10 @@ body {
               color: red;
               transform: scale(0.9);
               transition: 300ms ease-out; }
+            body main #container-wrapper section#guide article section div p.heroclass {
+              font-size: 1.8em;
+              padding: 1.3em;
+              font-family: "Josefin Sans", sans-serif; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
