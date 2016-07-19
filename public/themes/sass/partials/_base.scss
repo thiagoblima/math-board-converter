@@ -136,9 +136,7 @@ section#guide{
           }:hover{
             @include guide-icon-paragraph-hover(red, scale(0.9), 300ms ease-out);
           }&.heroclass{
-            font-size: 1.8em;
-            padding: 1.3em;
-            font-family: "Josefin Sans", sans-serif;
+            @include guide-hero-class(1.8em, 1.3em, "Josefin Sans");
           }
         }
       }

@@ -226,6 +226,11 @@
   transition:$transition;
 }
 
+@mixin guide-hero-class($font-size, $padding, $font-family){
+  font-size:$font-size;
+  padding:$padding;
+  font-family:$font-family;
+}
 
 
 
