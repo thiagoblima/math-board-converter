@@ -131,12 +131,13 @@ section#guide{
          @include guide-icon-wrap(100px);
        p{
          @include guide-icon-paragraph(center, 300ms ease-out);
+         color:white;
        span{
           @include guide-glyphicon-element($glyphicon, 5em, white, 300ms ease-out);
-        }
-      }:hover{
+        }:hover{
           @include guide-icon-paragraph-hover(red, scale(0.9), 300ms ease-out);
         }
+      }
       }
     }
   }
