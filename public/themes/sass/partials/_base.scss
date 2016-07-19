@@ -130,8 +130,7 @@ section#guide{
        div{
          @include guide-icon-wrap(100px);
        p{
-         @include guide-icon-paragraph(center, 300ms ease-out);
-         color:white;
+         @include guide-icon-paragraph(center, 300ms ease-out, white);
        span{
           @include guide-glyphicon-element($glyphicon, 5em, white, 300ms ease-out);
         }:hover{
