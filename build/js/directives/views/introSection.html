@@ -1,14 +1,10 @@
 <section id="intro-section" class="row">
   <div class="col-md-12">
     <h1 ng-bind-html="data.header.title"></h1>
-    <article class="col-md-4">
-      <p ng-bind-html="data.paragraphs.collumnOne" class="paragraph-three-collumn"></p>
-    </article>
-    <article class="col-md-4">
-      <p ng-bind-html="data.paragraphs.collumnTwo" class="paragraph-three-collumn"></p>
-    </article>
-    <article class="col-md-4">
-     <p ng-bind-html="data.paragraphs.collumnThree" class="paragraph-three-column"></p>
-   </article>
+    <div ng-repeat=" key in data.paragraphs">
+     <article ng-class="key.class">
+       <p ng-bind-html="key.description" class="paragraph-three-collumn"></p>
+     </article>
+   </div>
  </div>
 </section>
