@@ -17,10 +17,10 @@ var express = require('express'),
     app     = express(),
     port    = process.env.PORT || 3412,
     connect = {
-                sucess: function(msg, callback){
+                success: function(msg, callback){
                    var msg = console.log("Math Server Started on port: "+ port),
-                   callback = function(){
-                     return;
+                   callback = function(value){
+                     return value;
                    };
                   return callback(msg);
                 }
@@ -37,4 +37,4 @@ var express = require('express'),
  app.use(express.static( __dirname + '/build'));
  app.listen(port);
 
- connect.sucess();
+ connect.success();
