@@ -1,10 +1,10 @@
 <section id="guide" class="row">
   <article class="col-md-12">
     <h1 ng-bind-html="data.header.description"></h1>
-    <section ng-repeat="key in data.text">
-       <div ng-class="key.class">
+    <section ng-repeat=" key in data.text">
+       <div class="col-md-4">
          <p><span ng-class="key.glyphicon" aria-hidden="true"></span></p>
-         <p class="heroclass"> {{ key.description }} </p>
+         <p class="heroclass"> {{ key.description }}</p>
        </div>
     </section>
   </article>
