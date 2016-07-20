@@ -58,11 +58,53 @@ GuideController.$inject = ['$scope'];
 
  function NavController($scope){
    $scope.nav = {
-       home:{name:"HOME"},
-       blog:{name:"BLOG"},
-       photos:{name:"PHOTOS"},
-       about:{name:"ABOUT"},
-       contact:{name:"CONTACT"}
+       settings:[
+         {
+
+            name: 'home',
+            color:'color-1',
+            front:'front',
+            back:'back',
+            icon:'fa fa-home fa-4x'
+
+         },
+         {
+           
+            name: 'blog',
+            color:'color-2',
+            front:'front',
+            back:'back',
+            icon:'fa fa-align-left fa-4x'
+
+         },
+         {
+           
+            name: 'photos',
+            color:'color-3',
+            front:'front',
+            back:'back',
+            icon:'fa fa-camera-retro fa-4x'
+
+         },
+         {
+           
+            name: 'about',
+            color:'color-4',
+            front:'front',
+            back:'back',
+            icon:'fa fa-user fa-4x'
+
+          },
+          {
+           
+            name: 'contact',
+            color:'color-5',
+            front:'front',
+            back:'back',
+            icon:'fa fa-comments fa-4x'
+
+          }
+       ]
    };
  }
 
