@@ -116,7 +116,25 @@ GuideController.$inject = ['$scope'];
 
         header:{
            description: 'Guide: Follow the walkthrough and share:'
-        }
+        },
+
+        text:[
+            {
+              name: "study", 
+              glyphicon:"glyphicon-education", 
+              description:"Study cases for your career. Get Certified in a year."
+            },
+            {
+              name: "development", 
+              glyphicon:"glyphicon-stats", 
+              description:"Constant development and great results in a month."
+            },
+            {
+              name: "business", 
+              glyphicon: "glyphicon-briefcase", 
+              description:"The best for your business and newtwork development."
+            },
+        ]
 
    };
 
