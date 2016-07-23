@@ -5,3 +5,13 @@
   *settings and enchancement model view architecture.
   *
   */
+
+
+app.controller('TableMath', HeadController);
+
+  function TableMath() {
+      
+      mv= this;
+      mv.math = [];
+
+  }
