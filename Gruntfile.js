@@ -40,15 +40,16 @@ module.exports = function(grunt) {
     jsfiles:[
 
       /**
-       *@description: Here goes the author and vendor's scripts
+       *@description: Here goes the author Angular.js scripts
        *
-       *@see: All of them are based on the root: /public/libs/
+       *@see: All of them are based on the root: /public/js/
        *Hopefully any change for the next updates
       */
 
       '<%= vendorjs %>',
       '<%= srcpath %>/js/app.js',
       '<%= srcpath %>/js/controller/MathController.js',
+      '<%= srcpath %>/js/controller/TableController.js',
       '<%= mathjsfiles %>'
     ],
 
