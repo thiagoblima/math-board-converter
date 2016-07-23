@@ -27,6 +27,7 @@ app.controller('NavController', NavController);
 app.controller('IntroController', IntroController);
 app.controller('TableController', TableController);
 app.controller('GuideController', GuideController);
+  
 
 
 
@@ -140,27 +141,6 @@ GuideController.$inject = ['$scope'];
    };
  }
 
- function TableController($scope){
-
-   $scope.table = {
-
-     intro:{
-       text: "Math Quick Tasks"
-     },
-
-     title: [
-        {name: 'Esponential'},
-        {name: 'Fixed'},
-        {name: 'Precision'},
-        {name: 'String'},
-        {name: 'Ceil'},
-        {name: 'Floor'},
-        {name: 'Round'},
-        {name: 'Absolute'}
-     ]
-   };
-
- }
 
 
  function GuideController($scope){
