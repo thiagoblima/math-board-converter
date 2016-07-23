@@ -10,9 +10,6 @@
 app.controller('TableController', TableController);
 
 
-//TableController.$inject = ['$scope'];
-
-
 function TableController(){
 
    var vm = this;   
