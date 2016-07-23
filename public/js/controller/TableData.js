@@ -31,6 +31,4 @@ function TableController(){
      ]
    };
 
-   vm.info = { test: "testing" };
-
  }
