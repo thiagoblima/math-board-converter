@@ -19,6 +19,20 @@ app.filter('exponentialFilter', function(){
    };
 });
 
+/*
+ *@name: ceilFilter 
+ */
+
+app.filter('fixedFilter', function(){
+   return function(input){
+     if(input){
+       if(input === undefined) input = "";
+       if(isNaN(input)) input = "Insert any number";
+       return input.toFixed(2);  
+     }  
+   };
+});
+
 
 /*
  *@name: ceilFilter 
