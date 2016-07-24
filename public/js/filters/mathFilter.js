@@ -9,6 +9,21 @@
  *@name: ceilFilter 
  */
 
+app.filter('exponentialFilter', function(){
+   return function(input){
+     if(input){
+       if(input === undefined) input = "";
+       if(isNaN(input)) input = "Insert any number";
+       return input.toExponential();  
+     }
+   };
+});
+
+
+/*
+ *@name: ceilFilter 
+ */
+
 app.filter('ceilFilter', function(){
     return function(input){
       if(input){
