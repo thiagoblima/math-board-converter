@@ -14,7 +14,7 @@ app.filter('exponentialFilter', function(){
      if(input){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "Insert any number";
-       return input.toExponential();  
+       return JSON.stringify([input.toExponential()]);  
      }
    };
 });
@@ -28,7 +28,7 @@ app.filter('fixedFilter', function(){
      if(input){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "Insert any number";
-       return input.toFixed(2);  
+       return JSON.stringify([input.toFixed(2)]);  
      }  
    };
 });
@@ -42,7 +42,7 @@ app.filter('precisionFilter', function(){
      if(input){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "Insert any number";
-       return input.toPrecision();  
+       return JSON.stringify([input.toPrecision()]);  
      }  
    };
 });
@@ -56,7 +56,7 @@ app.filter('stringFilter', function(){
      if(input){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "Insert any number";
-       return input.toString();  
+       return JSON.stringify([input.toString()]);  
      }
    };
 });
@@ -71,7 +71,7 @@ app.filter('ceilFilter', function(){
       if(input){
         if (input === undefined) input = "";
         if (isNaN(input)) input = "Insert a float number";
-        return Math.ceil(input);
+        return JSON.stringify([Math.ceil(input)]);
       } 
     };
 });
@@ -85,7 +85,7 @@ app.filter('floorFilter', function(){
       if(input){
         if(input === undefined) input = "";
         if(isNaN(input)) input = "Insert a float number";
-        return Math.floor(input);  
+        return JSON.stringify([Math.floor(input)]);  
       }
     };
 });
@@ -99,7 +99,7 @@ app.filter('roundFilter', function(){
       if(input){
         if(input === undefined) input = "";
         if(isNaN(input)) input = "Insert a float number";
-        return Math.round(input); 
+        return JSON.stringify([Math.round(input)]); 
       }
     };
 });
@@ -113,7 +113,7 @@ app.filter('absoluteFilter', function(){
      if(input){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "This must be a number";
-       return Math.abs(input);  
+       return JSON.stringify([Math.abs(input)]);  
      }
    };
 });
