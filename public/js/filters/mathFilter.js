@@ -4,12 +4,31 @@
  * library to convert the table values.
  */
 
+
+/*
+ *@name: ceilFilter 
+ */
+
 app.filter('ceilFilter', function(){
     return function(input){
       if(input){
         if (input === undefined) input = "";
-        if (isNaN(input)) input = "Insert a number";
+        if (isNaN(input)) input = "Insert a float number";
         return Math.ceil(input);
       } 
+    };
+});
+
+/*
+ *@name: floorFilter 
+ */
+
+app.filter('floorFilter', function(){
+    return function(input){
+      if(input){
+        if(input === undefined) input = "";
+        if(isNaN(input)) input = "Insert a float number";
+        return Math.floor(input);  
+      }
     };
 });
