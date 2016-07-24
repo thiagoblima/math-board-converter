@@ -32,3 +32,17 @@ app.filter('floorFilter', function(){
       }
     };
 });
+
+/*
+ *@name: roundFilter 
+ */
+
+app.filter('roundFilter', function(){
+    return function(input){
+      if(input){
+        if(input === undefined) input =  "";
+        if(isNaN(input)) input = "Insert a float number";
+        return Math.round(input); 
+      }
+    };
+});
