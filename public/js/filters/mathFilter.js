@@ -33,6 +33,19 @@ app.filter('fixedFilter', function(){
    };
 });
 
+/*
+ *@name: ceilFilter 
+ */
+
+app.filter('precisionFilter', function(){
+   return function(input){
+     if(input){
+       if(input === undefined) input = "";
+       if(isNaN(input)) input = "Insert any number";
+       return input.toPrecision();  
+     }  
+   };
+});
 
 /*
  *@name: ceilFilter 
