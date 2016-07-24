@@ -6,7 +6,7 @@
 
 
 /*
- *@name: ceilFilter 
+ *@name: exponentialFilter 
  */
 
 app.filter('exponentialFilter', function(){
@@ -20,7 +20,7 @@ app.filter('exponentialFilter', function(){
 });
 
 /*
- *@name: ceilFilter 
+ *@name: fixedFilter 
  */
 
 app.filter('fixedFilter', function(){
@@ -34,7 +34,7 @@ app.filter('fixedFilter', function(){
 });
 
 /*
- *@name: ceilFilter 
+ *@name: precisionFilter 
  */
 
 app.filter('precisionFilter', function(){
@@ -46,6 +46,21 @@ app.filter('precisionFilter', function(){
      }  
    };
 });
+
+/*
+ *@name: stringFilter 
+ */
+
+app.filter('stringFilter', function(){
+   return function(input){
+     if(input){
+       if(input === undefined) input = "";
+       if(isNaN(input)) input = "Insert any number";
+       return input.toString();  
+     }
+   };
+});
+
 
 /*
  *@name: ceilFilter 
@@ -90,7 +105,7 @@ app.filter('roundFilter', function(){
 });
 
 /*
- *@name: roundFilter 
+ *@name: absoluteFilter 
  */
 
 app.filter('absoluteFilter', function(){
