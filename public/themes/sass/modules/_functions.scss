@@ -144,6 +144,12 @@
   text-align:$text;
 }
 
+@mixin math-table-effect($color, $transition){
+  color:$color;
+  transition:$transition;
+
+}
+
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
   position:$position;
   bottom:$bottom;
