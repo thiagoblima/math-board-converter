@@ -1,0 +1,10 @@
+/*_table.scss
+ *AngularJS Animation created through the model/view biding switch true/false
+ *Elements works with tbody>td states, enchancing the UI through AngularJS.
+ *All the element's animations should be set here on true boolean return.
+ */
+
+ td.ng-binding.effect{
+     color: #000000;
+     transition: 600ms ease-out;
+ }

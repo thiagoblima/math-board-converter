@@ -80,10 +80,19 @@ div#table{
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); }
   #math-table{
-    margin-top:90px;
+    margin-top: 90px;
   }
   thead{
     background-color: $table-color;
+  }
+  tbody{
+    tr{
+     color: #ffffff;
+     font-size: 1.3em;
+     font-family: "Josefin Sans";
+     text-align: center;
+     transition: 600ms ease-in;
+    }
   }
   button{
     background-color: $btn-color;
