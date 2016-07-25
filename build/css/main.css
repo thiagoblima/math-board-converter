@@ -274,45 +274,6 @@
 @media only screen and (max-width: 1009px) {
   .content-wrapper {
     height: 2130px !important; } }
-/*@_header.scss
- *Header animation and class which is added by the AngularJS directive
- *Should stay here and be set up the time the scroll event calls it
- *Some more header animate edits can appear here
- */
-.head header {
-  position: fixed;
-  width: 100%;
-  height: 10px !important;
-  transition: height 200ms ease-in-out !important; }
-  .head header hgroup h1 {
-    font-size: 2.6em;
-    transition: font-size 400ms ease-in-out;
-    margin-top: -20px; }
-  .head header hgroup h2 {
-    display: none; }
-  .head header section {
-    transition: 400ms ease-in-out;
-    margin-top: -50px; }
-    .head header section button {
-      font-size: 24px !important; }
-    .head header section i {
-      font-size: 24px !important; }
-    .head header section input.form-control.search {
-      opacity: 0.7;
-      margin-top: -5px; }
-
-/**
- *@name: deactive
- *
- *@class:
- *
- *@description: helper class targeting to head-active,
- *with the purpose to vanish the <i></i> element in order to
- *appear the button (with the search request on the back-end) instead.
- */
-.deactive {
-  display: none; }
-
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
@@ -404,6 +365,12 @@ body {
         margin-top: 90px; }
       body main #container-wrapper div#table thead {
         background-color: #ffd452 !important; }
+      body main #container-wrapper div#table tbody tr {
+        color: #ffffff;
+        font-size: 1.3em;
+        font-family: "Josefin Sans";
+        text-align: center;
+        transition: 600ms ease-in; }
       body main #container-wrapper div#table button {
         background-color: #75a3d1 !important; }
     body main #container-wrapper aside {
@@ -511,6 +478,45 @@ body {
   position: relative;
   top: 465px;
   height: 1320px; }
+
+/*@_header.scss
+ *Header animation and class which is added by the AngularJS directive
+ *Should stay here and be set up the time the scroll event calls it
+ *Some more header animate edits can appear here
+ */
+.head header {
+  position: fixed;
+  width: 100%;
+  height: 10px !important;
+  transition: height 200ms ease-in-out !important; }
+  .head header hgroup h1 {
+    font-size: 2.6em;
+    transition: font-size 400ms ease-in-out;
+    margin-top: -20px; }
+  .head header hgroup h2 {
+    display: none; }
+  .head header section {
+    transition: 400ms ease-in-out;
+    margin-top: -50px; }
+    .head header section button {
+      font-size: 24px !important; }
+    .head header section i {
+      font-size: 24px !important; }
+    .head header section input.form-control.search {
+      opacity: 0.7;
+      margin-top: -5px; }
+
+/**
+ *@name: deactive
+ *
+ *@class:
+ *
+ *@description: helper class targeting to head-active,
+ *with the purpose to vanish the <i></i> element in order to
+ *appear the button (with the search request on the back-end) instead.
+ */
+.deactive {
+  display: none; }
 
 /*@_nav.scss
  *Here will be the code of the main nav, keyframes are out in modules classes
@@ -648,5 +654,14 @@ nav ul
 li.color-5 .front,
 nav ul li.color-5 .back {
   background-color: #eac14d; }
+
+/*_table.scss
+ *AngularJS Animation created through the model/view biding switch true/false
+ *Elements works with tbody>td states, enchancing the UI through AngularJS.
+ *All the element's animations should be set here on true boolean return.
+ */
+td.ng-binding.effect {
+  color: #000000;
+  transition: 600ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */
