@@ -86,7 +86,8 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/directives/scroll.js',
       '<%= srcpath %>/js/directives/guideSection.js',
       '<%= srcpath %>/js/filters/searchFilter.js',
-      '<%= srcpath %>/js/filters/mathFilter.js'
+      '<%= srcpath %>/js/filters/mathFilter.js',
+      '<%= srcpath %>/js/filters/animation.js'
 
     ],
 
