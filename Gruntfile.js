@@ -65,6 +65,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/angular/angular.min.js',
       '<%= srcpath %>/libs/angular-sanitize/angular-sanitize.min.js',
       '<%= srcpath %>/libs/angular-animate/angular-animate.min.js',
+      '<%= srcpath %>/libs/angular-messages/angular-messages.min.js',
       '<%= srcpath %>/libs/jquery/dist/jquery.min.js',
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
     ],
