@@ -5,9 +5,9 @@ Complementary tasks are going to be added here for the students, easily to manag
 
 ##Architecture
 
-Designed and build with the `NodeJS` architecture on **back-end** having `MongoDB` as **database** providing **API RESTful**.
+Designed and build with the `NodeJS` architecture on **back-end** having `Exprees` providing **API RESTful** and `MongoDB` as **NoSQL** **database** service *JSON* formated.
 
-It counts with the *Superheroic* framework on **front-end** `AngularJS` with the *services and directives purposes*.
+It counts with the *Superheroic* framework on  `AngularJS` enchancing **front-end** *services and directives purposes*.
 
 ##References
 
