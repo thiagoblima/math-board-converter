@@ -28,7 +28,9 @@ function TableController(){
         {name: 'Floor'},
         {name: 'Round'},
         {name: 'Absolute'}
-     ]
-   };
+     ],
+  
+  };
 
- }
+}
+
