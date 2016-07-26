@@ -87,11 +87,7 @@ div#table{
   }
   tbody{
     tr{
-     color: #ffffff;
-     font-size: 1.3em;
-     font-family: "Josefin Sans";
-     text-align: center;
-     transition: 600ms ease-in;
+     @include math-table-tbody-tr(#ffffff, 1.3em,"Josefin Sans", center, 600ms ease-in);
     }
   }
   button{
