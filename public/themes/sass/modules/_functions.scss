@@ -147,7 +147,14 @@
 @mixin math-table-effect($color, $transition){
   color:$color;
   transition:$transition;
+}
 
+@mixin math-table-tbody-tr($color, $font-size, $font-family, $text-align, $transition){
+  color:$color;
+  font-size:$font-size;
+  font-family:$font-family;
+  text-align:$text-align;
+  transition:$transition;
 }
 
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
