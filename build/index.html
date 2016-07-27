@@ -24,7 +24,7 @@
 
 
 </head>
-<main ng-controller="GuideController" animate-test>
+<main ng-controller="GuideController">
   <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
     <head-section data="header"></head-section>
     <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
@@ -71,9 +71,15 @@
               <tr>
                 <td>
                   <form name="mathExponential">
-                    <input class="form-control" ng-model="Object.math.exponential" type="number" name="exponential" required>
+                    <input class="form-control" 
+                           ng-model="Object.math.exponential"
+                           pattern="^\d+$"
+                           type="number" 
+                           name="exponential" 
+                           required>
                     <div ng-messages="mathExponential.exponential.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Not Allowed ".," </span>
                     </div>
                   </form>
                 </td>
@@ -82,6 +88,7 @@
                     <input class="form-control" ng-model="Object.math.fixed" type="number" name="fixed" required>
                     <div ng-messages="mathFixed.fixed.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Wrong pattern</span>
                     </div>
                   </form>
                 </td>
@@ -131,11 +138,11 @@
                     <div ng-messages="mathAbsolute.absolute.$error">
                       <span ng-message="required">Enter a number</span>
                     </div>
+                  </form>
                 </td>
-                </form>
               </tr>
               <tr>
-                <td><button class="btn btn-primary" type="button" id="exponential">Convert</button></td>
+                <td><button  class="btn btn-primary" type="button" id="exponential">Convert</button></td>
                 <td><button class="btn btn-primary" type="button" id="string">Convert</button></td>
                 <td><button class="btn btn-primary" type="button" id="precision">Convert</button></td>
                 <td><button class="btn btn-primary" type="button" id="value">Convert</button></td>
@@ -153,9 +160,8 @@
     <guide-section data="guide"></guide-section>
   </section>
 </main>
-<script src="js/devbuild.1469589203584668489.min.js" type="text/javascript"></script>
-<script src="js/app/angularjs.1469589203584668489.min.js" type="text/javascript"></script>
-
+<script src="js/devbuild.1469598316239728390.min.js" type="text/javascript"></script>
+<script src="js/app/angularjs.1469598316239728390.min.js" type="text/javascript"></script>
 
 
 
