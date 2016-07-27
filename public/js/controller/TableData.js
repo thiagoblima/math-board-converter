@@ -32,5 +32,9 @@ function TableController(){
   
   };
 
+  vm.options = {
+    pattern:'\d{1,2}[\,\.]{1}\d{1,2}'
+  };
+
 }
 
