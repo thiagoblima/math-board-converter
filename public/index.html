@@ -82,7 +82,18 @@
             </td>
           </tr>
           <tr>
-            <td><input class="form-control" ng-model="Object.math.exponential" type="number" name="exponential"></td>
+            <td>
+              <form name="mathExponential">
+                <input class="form-control" 
+                       ng-model="Object.math.exponential" 
+                       type="number" 
+                       name="exponential" 
+                required>
+                <div ng-messages="mathExponential.exponential.$error" style="color:red">
+                   <span ng-message="required">You did not enter a field</span>
+                </div>
+              </form>
+            </td>  
             <td><input class="form-control" ng-model="Object.math.fixed" type="number" name="fixed"></td>
             <td><input class="form-control" ng-model="Object.math.precision" type="number" name="precision"></td>
             <td><input class="form-control" ng-model="Object.math.string" type="number" name="string"></td>
