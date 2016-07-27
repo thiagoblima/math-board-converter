@@ -5,8 +5,8 @@
  *based on ng-show/hide tags, something special may be written here.
  */
 
-app.directive('animateTest', function($animate, $tmeout){
+app.directive('animateTest', function($animate){
    return function(scope, elem, attr){
-
+    return;
   };  
 });
