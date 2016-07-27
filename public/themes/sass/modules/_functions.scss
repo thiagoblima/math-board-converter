@@ -157,6 +157,13 @@
   transition:$transition;
 }
 
+@mixin math-table-ng-active($color, $margin-top, $background-color, $transition){
+  color:$color;
+  margin-top:$margin-top;
+  background-color:$background-color;
+  transition:$transition;
+}
+
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
   position:$position;
   bottom:$bottom;
