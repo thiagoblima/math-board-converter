@@ -91,10 +91,10 @@ div#table{
      td{
        form{
          div.ng-active{
-          color: white !important;
-          margin-top: 0.4em;
-          background-color: rgb(224, 81, 81);
-          transition: 500ms cubic-bezier(0.52, 0.87, 0, 1.32);
+           @include math-table-ng-active(
+            #ffffff !important, 0.4em, rgb(224, 81, 81),  
+              500ms cubic-bezier(0.52, 0.87, 0, 1.32)
+           );
          }
        }
      }
