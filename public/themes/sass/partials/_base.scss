@@ -86,9 +86,19 @@ div#table{
     background-color: $table-color;
   }
   tbody{
-    tr{
+   tr{
      @include math-table-tbody-tr(#ffffff, 1.3em,"Josefin Sans", center, 600ms ease-in);
-    }
+     td{
+       form{
+         div.ng-active{
+          color: white !important;
+          margin-top: 0.4em;
+          background-color: rgb(224, 81, 81);
+          transition: 500ms cubic-bezier(0.52, 0.87, 0, 1.32);
+         }
+       }
+     }
+   }
   }
   button{
     background-color: $btn-color;
