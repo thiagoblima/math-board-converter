@@ -371,6 +371,11 @@ body {
         font-family: "Josefin Sans";
         text-align: center;
         transition: 600ms ease-in; }
+        body main #container-wrapper div#table tbody tr td form div.ng-active {
+          color: white !important;
+          margin-top: 0.4em;
+          background-color: #e05151;
+          transition: 500ms cubic-bezier(0.52, 0.87, 0, 1.32); }
       body main #container-wrapper div#table button {
         background-color: #75a3d1 !important; }
     body main #container-wrapper aside {
