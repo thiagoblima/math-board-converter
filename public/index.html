@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en-uk" ng-app="MathApp" ng-controller="IntroController">
+
 <head>
   <title>{{intro.head.title}}</title>
 
@@ -8,21 +9,21 @@
   <meta name="keywords" content="Math, mathematics, converter, web, Java Script">
   <meta name="author" content="Thiago Lima">
 
-<!-- build:remove -->
- <link href="themes/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
- <link href="themes/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
- <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<!-- /build -->
+  <!-- build:remove -->
+  <link href="themes/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="themes/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- /build -->
 
-<!-- build:process -->
-<link href="<%= cssbuild %>/vendor.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<link href="<%= cssbuild %>/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<link href="<%= cssbuild %>/main.css.map" media="screen, projection" rel="stylesheet" type="text/css" />
-<!-- <link href="<%= cssbuild %>/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
-<!-- /build -->
+  <!-- build:process -->
+  <link href="<%= cssbuild %>/vendor.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="<%= cssbuild %>/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="<%= cssbuild %>/main.css.map" media="screen, projection" rel="stylesheet" type="text/css" />
+  <!-- <link href="<%= cssbuild %>/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
+  <!-- /build -->
 
 
- <!--[if IE]>
+  <!--[if IE]>
      <link href="themes/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  <![endif]-->
 
@@ -37,89 +38,133 @@
 
 </head>
 <main ng-controller="GuideController" animate-test>
- <section class="container" id="container-wrapper" ng-controller="HeadController" 
-   scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
-   <head-section data="header"></head-section>
-   <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
-   <main-nav data="nav"></main-nav>
-   <intro-section data="intro"></intro-section>
-   <div ng-controller="TableController as Object" class="row" id="table" scroll-table ng-class="{math:mathTable}">
-     <section class="table-responsive col-md-12">
-       <h1>{{ Object.table.intro.text }}</h1>
-       <table class="table table-striped" id="math-table">
-         <thead>
-          <tr>
-            <th ng-repeat="key in Object.table.title">
-              {{ key.name }}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td ng-class="{effect: Object.math.exponential}">
-              {{ Object.math.exponential | exponentialFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.fixed}">
-              {{ Object.math.fixed | fixedFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.precision}">
-              {{ Object.math.precision | precisionFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.string}">
-              {{ Object.math.string | stringFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.ceil}">
-              {{ Object.math.ceil | ceilFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.floor}">
-              {{ Object.math.floor | floorFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.round}">
-              {{ Object.math.round | roundFilter }}
-            </td>
-            <td ng-class="{effect: Object.math.absolute}">
-              {{ Object.math.absolute | absoluteFilter }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <form name="mathExponential">
-                <input class="form-control" 
-                       ng-model="Object.math.exponential" 
-                       type="number" 
-                       name="exponential" 
-                required>
-                <div ng-messages="mathExponential.exponential.$error" style="color:red">
-                   <span ng-message="required">You did not enter a field</span>
-                </div>
-              </form>
-            </td>  
-            <td><input class="form-control" ng-model="Object.math.fixed" type="number" name="fixed"></td>
-            <td><input class="form-control" ng-model="Object.math.precision" type="number" name="precision"></td>
-            <td><input class="form-control" ng-model="Object.math.string" type="number" name="string"></td>
-            <td><input class="form-control" ng-model="Object.math.ceil" type="number" name="ceil"></td>
-            <td><input class="form-control" ng-model="Object.math.floor" type="number" name="floor"></td>
-            <td><input class="form-control" ng-model="Object.math.round" type="number" name="round"></td>
-            <td><input class="form-control" ng-model="Object.math.absolute" type="number" name="absolute"></td>
-          </tr>
-          <tr>
-            <td><button class="btn btn-primary" type="button" id="exponential">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="string">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="precision">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="value">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="ceil">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="floor">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="round">Convert</button></td>
-            <td><button class="btn btn-primary" type="button" id="absolute">Convert</button></td>
-           </tr>
-       </tbody>
-     </table>
-    </section>
-   </div>
-  </div>
- <social-section></social-section>
- <guide-section data="guide"></guide-section>
-</section>
+  <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
+    <head-section data="header"></head-section>
+    <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
+      <main-nav data="nav"></main-nav>
+      <intro-section data="intro"></intro-section>
+      <div ng-controller="TableController as Object" class="row" id="table" scroll-table ng-class="{math:mathTable}">
+        <section class="table-responsive col-md-12">
+          <h1>{{ Object.table.intro.text }}</h1>
+          <table class="table table-striped" id="math-table">
+            <thead>
+              <tr>
+                <th ng-repeat="key in Object.table.title">
+                  {{ key.name }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td ng-class="{effect: Object.math.exponential}">
+                  {{ Object.math.exponential | exponentialFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.fixed}">
+                  {{ Object.math.fixed | fixedFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.precision}">
+                  {{ Object.math.precision | precisionFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.string}">
+                  {{ Object.math.string | stringFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.ceil}">
+                  {{ Object.math.ceil | ceilFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.floor}">
+                  {{ Object.math.floor | floorFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.round}">
+                  {{ Object.math.round | roundFilter }}
+                </td>
+                <td ng-class="{effect: Object.math.absolute}">
+                  {{ Object.math.absolute | absoluteFilter }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <form name="mathExponential">
+                    <input class="form-control" ng-model="Object.math.exponential" type="number" name="exponential" required>
+                    <div ng-messages="mathExponential.exponential.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathFixed">
+                    <input class="form-control" ng-model="Object.math.fixed" type="number" name="fixed" required>
+                    <div ng-messages="mathFixed.fixed.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathPrecision">
+                    <input class="form-control" ng-model="Object.math.precision" type="number" name="precision" required>
+                    <div ng-messages="mathPrecision.precision.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathString">
+                    <input class="form-control" ng-model="Object.math.string" type="number" name="string" required>
+                    <div ng-messages="mathString.string.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathCeil">
+                    <input class="form-control" ng-model="Object.math.ceil" type="number" name="ceil" required>
+                    <div ng-messages="mathCeil.ceil.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathFloor">
+                    <input class="form-control" ng-model="Object.math.floor" type="number" name="floor" required>
+                    <div ng-messages="mathFloor.floor.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathRound">
+                    <input class="form-control" ng-model="Object.math.round" type="number" name="round" required>
+                    <div ng-messages="mathRound.round.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                  </form>
+                </td>
+                <td>
+                  <form name="mathAbsolute">
+                    <input class="form-control" ng-model="Object.math.absolute" type="number" name="absolute" required>
+                    <div ng-messages="mathAbsolute.absolute.$error">
+                      <span ng-message="required">Enter a number</span>
+                    </div>
+                </td>
+                </form>
+              </tr>
+              <tr>
+                <td><button class="btn btn-primary" type="button" id="exponential">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="string">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="precision">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="value">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="ceil">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="floor">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="round">Convert</button></td>
+                <td><button class="btn btn-primary" type="button" id="absolute">Convert</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <social-section></social-section>
+    <guide-section data="guide"></guide-section>
+  </section>
 </main>
 <!-- build:process -->
 <script src="<%= jsbuild %>/devbuild.<%= hash %>.min.js" type="text/javascript"></script>
@@ -156,4 +201,5 @@
 <!-- View Class -->
 <script src="/js/math/view/number_view.js" type="text/javascript"></script>
 <!-- /build -->
+
 </html>
