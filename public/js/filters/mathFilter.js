@@ -11,7 +11,7 @@
 
 app.filter('exponentialFilter', function(){
    return function(input){
-     if(input){
+     if(parseInt(input)){
        if(input === undefined) input = "";
        if(isNaN(input)) input = "Insert any number";
        return JSON.stringify([ { result: input.toExponential() } ]);  
