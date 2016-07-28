@@ -88,12 +88,14 @@
                     <input class="form-control" 
                            ng-model="Object.math.exponential"
                            pattern="^\d+$"
+                           ng-maxlength="6"
                            type="number" 
                            name="exponential" 
                            required>
                     <div ng-messages="mathExponential.exponential.$error">
                       <span ng-message="required">Enter a number</span>
-                      <span ng-message="pattern">Not Allowed ".," </span>
+                      <span ng-message="pattern">Not Allowed ".,"0</span>
+                      <span ng-message="maxlength">Too long!</span>
                     </div>
                   </form>
                 </td>
