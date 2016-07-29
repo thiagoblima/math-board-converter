@@ -102,13 +102,18 @@
                 <td>
                   <form name="mathFixed">
                     <input class="form-control" 
-                           ng-model="Object.math.fixed" 
+                           ng-model="Object.math.fixed"
+                           pattern="^([0-9,.])*$"
+                           ng-minlength="3"
+                           ng-maxlength="6" 
                            type="number" 
                            name="fixed" 
                            required>
                     <div ng-messages="mathFixed.fixed.$error">
                       <span ng-message="required">Enter a number</span>
                       <span ng-message="pattern">Wrong pattern</span>
+                      <span ng-message="maxlength">Too long!</span>
+                      <span ng-message="minlength">Too short!</span>
                     </div>
                   </form>
                 </td>
