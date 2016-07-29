@@ -361,6 +361,10 @@ body {
         color: #ffffff !important;
         font-family: "Josefin Sans", sans-serif;
         text-align: center; }
+      body main #container-wrapper div#table h3.ng-binding {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: "Josefin Sans", sans-serif; }
       body main #container-wrapper div#table #math-table {
         margin-top: 90px; }
       body main #container-wrapper div#table thead {
@@ -482,7 +486,7 @@ body {
 .content-wrapper-nav {
   position: relative;
   top: 465px;
-  height: 1320px; }
+  height: 100%; }
 
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
