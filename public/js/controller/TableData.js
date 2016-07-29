@@ -32,10 +32,11 @@ function TableController(){
   
   };
 
-  vm.expMask = "9999";
-
-  vm.placeMask = function () {
-     vm.expMask= "9999";
+  vm.placeMask = function() {
+     vm.expMask= function(val, el){
+       val = el.replace(/-/g, "");
+       return val;
+     };
   };
 }
 
