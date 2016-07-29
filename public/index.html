@@ -139,11 +139,17 @@
                   <form name="mathString">
                     <input class="form-control" 
                            ng-model="Object.math.string" 
+                           ng-minlength="1"
+                           ng-maxlength="16"
+                           pattern="^([0-9.,])*$"
                            type="number" 
                            name="string" 
                            required>
                     <div ng-messages="mathString.string.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Wrong pattern</span>
+                      <span ng-message="maxlength">Too long!</span>
+                      <span ng-message="minlength">Too short!</span>
                     </div>
                   </form>
                 </td>
