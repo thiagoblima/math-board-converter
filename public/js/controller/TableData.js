@@ -8,11 +8,18 @@
 
 
 app.controller('TableController', TableController);
- 
+
+TableController.$inject = ['$scope'];
+
+
 
 function TableController(){
 
    var vm = this;   
+
+   vm.placeMask = placeMask();
+   
+
    vm.table = {
 
      intro:{
@@ -32,11 +39,9 @@ function TableController(){
   
   };
 
-  vm.placeMask = function() {
-     vm.expMask= function(val, el){
-       val = el.replace(/-/g, "");
-       return val;
-     };
-  };
+   function placeMask() {
+     vm.val = "Have Fan"; 
+     return vm.val.replace(/fan/i, "Fun!");
+  }
+ 
 }
-
