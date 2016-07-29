@@ -47,6 +47,8 @@
       <div ng-controller="TableController as Object" class="row" id="table" scroll-table ng-class="{math:mathTable}">
         <section class="table-responsive col-md-12">
           <h1>{{ Object.table.intro.text }}</h1>
+          <h3>{{ Object.placeMask }}</h3>
+
           <table class="table table-striped" id="math-table">
             <thead>
               <tr>
@@ -103,7 +105,7 @@
                   <form name="mathFixed">
                     <input class="form-control" 
                            ng-model="Object.math.fixed"
-                           pattern="^([0-9,.)*$"
+                           pattern="^([0-9,.])*$"
                            ng-minlength="3"
                            ng-maxlength="6" 
                            type="number" 
@@ -216,9 +218,9 @@
           </table>
         </section>
       </div>
-    </div>
     <social-section></social-section>
     <guide-section data="guide"></guide-section>
+   </div>
   </section>
 </main>
 <!-- build:process -->
