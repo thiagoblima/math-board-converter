@@ -17,7 +17,7 @@ function TableController(){
 
    var vm = this;   
 
-   vm.placeMask = placeMask();
+   vm.textFun = textFun();
    
 
    vm.table = {
@@ -39,7 +39,7 @@ function TableController(){
   
   };
 
-   function placeMask() {
+   function textFun() {
      vm.val = "Have Fan"; 
      return vm.val.replace(/fan/i, "Fun!");
   }
