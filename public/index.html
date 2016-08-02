@@ -163,7 +163,7 @@
                            ng-minlength="4"
                            ng-maxlength="16"                  
                            type="number"
-                           pattern="^\d+(\.\d+)?$" 
+                           pattern="^\d+(\.\d+)?$"
                            name="ceil" 
                            required>
                     <div ng-messages="mathCeil.ceil.$error">
@@ -178,11 +178,17 @@
                   <form name="mathFloor">
                     <input class="form-control" 
                            ng-model="Object.math.floor" 
-                           type="number" 
+                           ng-minlength="4"
+                           ng-maxlength="16" 
+                           type="number"
+                           pattern="^\d+(\.\d+)?$" 
                            name="floor" 
                            required>
                     <div ng-messages="mathFloor.floor.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Wrong pattern</span>
+                      <span ng-message="maxlength">Too long!</span>
+                      <span ng-message="minlength">Too short!</span>
                     </div>
                   </form>
                 </td>
