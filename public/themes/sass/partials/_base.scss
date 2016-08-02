@@ -73,16 +73,14 @@ section#intro-section{
 
 
 .math{
-  @include math-table-position(relative, -10);
+  @include math-table-position(relative, 0);
 }
 
 div#table{
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); }
   h3.ng-binding{
-    color: #FFFFFF;
-    text-align: center;
-    font-family:$intro-font-josefin;
+    @include math-table-h3-ng-binding(#FFFFFF, center, $intro-font-josefin); 
   }
   #math-table{
     margin-top: 90px;
