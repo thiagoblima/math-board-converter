@@ -48,6 +48,7 @@
         <section class="table-responsive col-md-12">
           <h1>{{ Object.table.intro.text }}</h1>
           <h3>{{ Object.textFun }}</h3>
+          <h3>{{ Object.clearExponential }}</h3>
           <table class="table table-striped" id="math-table">
             <thead>
               <tr>
@@ -88,7 +89,7 @@
                   <form name="mathExponential">
                     <input class="form-control" 
                            ng-model="Object.math.exponential"
-                           ng-focus="Object.clearExponential"
+                           ng-change="Object.clearExponential"
                            pattern="^\d+$"
                            ng-maxlength="16"
                            type="number" 
@@ -96,7 +97,7 @@
                            required>
                     <div ng-messages="mathExponential.exponential.$error">
                       <span ng-message="required">Enter a number</span>
-                      <span ng-message="pattern">Not Allowed ".,"0</span>
+                      <span ng-message="pattern">Not Allowed ".,"</span>
                       <span ng-message="maxlength">Too long!</span>
                     </div>
                   </form>
