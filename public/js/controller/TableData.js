@@ -45,11 +45,10 @@ function TableController(){
      return vm.val.replace(/fan/i, "Fun!");
   }
 
-  function clearExponential(){
-     vm.value = "";
-     if(vm.value === "-")
-     return vm.value.replace(/-/i, "");  
-     
+  function clearExponential(value) {
+     vm.value = '-';
+     return vm.value.replace(/-/i, 1);
   }
+
  
 }
