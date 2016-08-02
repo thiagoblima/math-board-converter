@@ -18,6 +18,7 @@ function TableController(){
    var vm = this;   
 
    vm.textFun = textFun();
+   vm.clearExponential = clearExponential();
    
 
    vm.table = {
@@ -42,6 +43,13 @@ function TableController(){
    function textFun() {
      vm.val = "Have Fan"; 
      return vm.val.replace(/fan/i, "Fun!");
+  }
+
+  function clearExponential(){
+     vm.value = "";
+     if(vm.value === "-")
+     return vm.value.replace(/-/i, "");  
+     
   }
  
 }

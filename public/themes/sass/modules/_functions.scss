@@ -164,6 +164,12 @@
   transition:$transition;
 }
 
+@mixin math-table-h3-ng-binding($color, $text-align, $font-family){
+  color:$color;
+  text-align:$text-align;
+  font-family:$font-family;
+}
+
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
   position:$position;
   bottom:$bottom;
