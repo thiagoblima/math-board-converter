@@ -353,7 +353,7 @@ body {
           text-align: center; }
     body main #container-wrapper .math {
       position: relative;
-      z-index: -10; }
+      z-index: 0; }
     body main #container-wrapper div#table {
       padding-right: 50px;
       padding-left: 50px; }
