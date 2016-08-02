@@ -48,7 +48,6 @@
         <section class="table-responsive col-md-12">
           <h1>{{ Object.table.intro.text }}</h1>
           <h3>{{ Object.textFun }}</h3>
-
           <table class="table table-striped" id="math-table">
             <thead>
               <tr>
@@ -89,6 +88,7 @@
                   <form name="mathExponential">
                     <input class="form-control" 
                            ng-model="Object.math.exponential"
+                           ng-focus="Object.clearExponential"
                            pattern="^\d+$"
                            ng-maxlength="16"
                            type="number" 
