@@ -41,13 +41,13 @@ function TableController(){
   };
 
    function textFun() {
-     vm.val = "Have Fan"; 
-     return vm.val.replace(/fan/i, "Fun!");
+     vm.val = '-'; 
+     return vm.val.replace(/-/i, "Play with the values");
   }
 
-  function clearExponential(value) {
-     vm.value = '-';
-     return vm.value.replace(/-/i, 1);
+  function clearExponential() {
+     vm.value = 'Have Fan';
+     return vm.value.replace(/fan/i, "Fun!");
   }
 
  
