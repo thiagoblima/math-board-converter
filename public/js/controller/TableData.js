@@ -11,16 +11,24 @@ app.controller('TableController', TableController);
 
 TableController.$inject = ['$scope'];
 
-
-
 function TableController(){
 
    var vm = this;   
 
    vm.textFun = textFun();
    vm.clearExponential = clearExponential();
-   
 
+   function textFun() {
+     vm.val = '-'; 
+     return vm.val.replace(/-/i, "Play with the values");
+   }
+
+   function clearExponential() {
+     vm.value = '-';
+     return vm.value.replace(/-/i, "Have Fun!");
+   }
+
+   
    vm.table = {
 
      intro:{
@@ -39,16 +47,5 @@ function TableController(){
      ],
   
   };
-
-   function textFun() {
-     vm.val = '-'; 
-     return vm.val.replace(/-/i, "Play with the values");
-  }
-
-  function clearExponential() {
-     vm.value = 'Have Fan';
-     return vm.value.replace(/fan/i, "Fun!");
-  }
-
  
 }
