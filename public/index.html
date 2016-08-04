@@ -204,6 +204,9 @@
                            required>
                     <div ng-messages="mathRound.round.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Wrong pattern</span>
+                      <span ng-message="maxlength">Too long!</span>
+                      <span ng-message="minlength">Too short!</span>
                     </div>
                   </form>
                 </td>
@@ -211,11 +214,16 @@
                   <form name="mathAbsolute">
                     <input class="form-control" 
                            ng-model="Object.math.absolute" 
+                           pattern="^\d+$"
+                           ng-maxlength="16"
                            type="number" 
                            name="absolute" 
                            required>
                     <div ng-messages="mathAbsolute.absolute.$error">
                       <span ng-message="required">Enter a number</span>
+                      <span ng-message="pattern">Wrong pattern</span>
+                      <span ng-message="maxlength">Too long!</span>
+                      <span ng-message="minlength">Too short!</span>
                     </div>
                   </form>
                 </td>
