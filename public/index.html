@@ -196,7 +196,10 @@
                   <form name="mathRound">
                     <input class="form-control" 
                            ng-model="Object.math.round" 
-                           type="number" 
+                           ng-minlength="4"
+                           ng-maxlength="16" 
+                           type="number"
+                           pattern="^\d+(\.\d+)?$" 
                            name="round" 
                            required>
                     <div ng-messages="mathRound.round.$error">
