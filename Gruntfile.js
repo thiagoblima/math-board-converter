@@ -87,6 +87,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/directives/socialsection.js',
       '<%= srcpath %>/js/directives/scroll.js',
       '<%= srcpath %>/js/directives/guideSection.js',
+      '<%= srcpath %>/js/directives/tableSection.js',
       '<%= srcpath %>/js/filters/searchFilter.js',
       '<%= srcpath %>/js/filters/mathFilter.js',
       '<%= srcpath %>/js/filters/animation.js'
@@ -103,8 +104,8 @@ module.exports = function(grunt) {
        *Hopefully any change for the next updates
        */
 
-      '<%= srcpath %>/js/math/model/number.js',
-      '<%= srcpath %>/js/math/view/number_view.js'
+      /*'<%= srcpath %>/js/math/model/number.js',
+      '<%= srcpath %>/js/math/view/number_view.js'*/
 
     ],
 
@@ -133,7 +134,8 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/directives/views/introSection.html',
       '<%= srcpath %>/js/directives/views/socialSection.html',
       '<%= srcpath %>/js/directives/views/mainNav.html',
-      '<%= srcpath %>/js/directives/views/guideSection.html'
+      '<%= srcpath %>/js/directives/views/guideSection.html',
+      '<%= srcpath %>/js/directives/views/tableSection.html'
 
     ],
 
