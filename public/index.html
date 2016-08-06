@@ -38,7 +38,7 @@
   <!-- /build -->
 
 </head>
-<main ng-controller="GuideController">
+<main>
   <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
     <head-section data="header"></head-section>
     <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
@@ -46,7 +46,7 @@
       <intro-section data="intro"></intro-section>
       <table-section></table-section>
       <social-section></social-section>
-    <guide-section data="guide"></guide-section>
+      <guide-section></guide-section>
    </div>
   </section>
 </main>
