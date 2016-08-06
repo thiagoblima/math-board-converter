@@ -8,7 +8,7 @@ app.directive("tableSection", function(){
    return{
      restrict: "EA",
      templateUrl: 'js/directives/views/tableSection.html',
-     controllerAs:'mv',
+     controllerAs:'vm',
      bindToController: true
    };
 });
