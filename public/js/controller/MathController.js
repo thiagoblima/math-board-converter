@@ -148,9 +148,11 @@ GuideController.$inject = ['$scope'];
 
 
 
- function GuideController($scope){
+ function GuideController(){
 
-   $scope.guide = {
+   var vm = this;
+
+   vm.guide = {
 
         header:{
            description: 'Guide: Follow the walkthrough and share:'
