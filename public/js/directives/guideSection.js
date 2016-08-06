@@ -7,9 +7,8 @@
 app.directive("guideSection", function(){
    return{
      restrict: "EA",
-     scope:{
-      data: "="
-     },
-     templateUrl: 'js/directives/views/guideSection.html'
+     templateUrl: 'js/directives/views/guideSection.html',
+     controllerAs:'vm',
+     bindToController: true
    };
 });
