@@ -62,8 +62,11 @@ function HeadController($scope) {
 }
 
 
-function NavController($scope) {
-  $scope.nav = {
+function NavController() {
+
+  var vm = this;
+
+  vm.nav = {
     settings: [
       {
 
