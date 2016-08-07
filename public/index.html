@@ -41,8 +41,8 @@
 <main>
   <section class="container" id="container-wrapper" ng-controller="HeadController" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
     <head-section data="header"></head-section>
-    <div ng-controller="NavController" ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
-      <main-nav data="nav"></main-nav>
+    <div ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
+      <main-nav></main-nav>
       <intro-section></intro-section>
       <table-section></table-section>
       <social-section></social-section>
