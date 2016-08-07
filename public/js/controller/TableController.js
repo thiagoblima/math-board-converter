@@ -17,6 +17,7 @@ function TableController(){
 
    vm.textFun = textFun();
    vm.clearExponential = clearExponential();
+   vm.table = table;
 
    function textFun() {
      vm.val = '-'; 
