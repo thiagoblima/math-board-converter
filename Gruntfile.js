@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       '<%= vendorjs %>',
       '<%= srcpath %>/js/app.js',
       '<%= srcpath %>/js/controller/MathController.js',
-      '<%= srcpath %>/js/controller/TableData.js',
+      '<%= srcpath %>/js/controller/TableController.js',
       '<%= mathjsfiles %>'
     ],
 
