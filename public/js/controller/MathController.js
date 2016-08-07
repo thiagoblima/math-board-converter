@@ -50,8 +50,11 @@ GuideController.$inject = ['$scope'];
 
 
 
-function HeadController($scope) {
-  $scope.header = [
+function HeadController($Scope) {
+
+  var vm = this;
+
+  vm.header = [
     {
       settings: {
         title: "Math Board Converter",
