@@ -42,7 +42,7 @@
   <section class="container" id="container-wrapper" scroll-header scroll-nav ng-class="{head:headAnimate, navigation:navAnimate}">
     <!-- Header-Component -->
     <head-section></head-section>
-    <div ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav': navAnimate}">
+    <div ng-class="{'content-wrapper' : headAnimate, 'content-wrapper-nav' : navAnimate}">
       <!-- Nav-Component -->
       <main-nav></main-nav>
       <!-- Intro-Component -->
@@ -53,7 +53,7 @@
       <social-section></social-section>
       <!-- Guide-Component -->
       <guide-section></guide-section>
-   </div>
+    </div>
   </section>
 </main>
 <!-- build:process -->
@@ -67,7 +67,7 @@
 <!-- build:remove -->
 <!-- Controller Class -->
 <script src="/js/controller/MathController.js" type="text/javascript"></script>
-<script src="/js/controller/TableData.js" type="text/javascript"></script>
+<script src="/js/controller/TableController.js" type="text/javascript"></script>
 <!-- /build -->
 
 <!-- build:remove -->
@@ -92,4 +92,5 @@
 <!-- View Class -->
 <!-- <script src="/js/math/view/number_view.js" type="text/javascript"></script> -->
 <!-- /build -->
+
 </html>
