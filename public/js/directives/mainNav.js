@@ -7,9 +7,8 @@
 app.directive('mainNav', function(){
    return{
      restrict: 'EA',
-     scope:{
-      data: '='
-    },
-     templateUrl:'js/directives/views/mainNav.html'
+     templateUrl:'js/directives/views/mainNav.html',
+     controllerAs:"vm",
+     bindToController: true
    };
 });
