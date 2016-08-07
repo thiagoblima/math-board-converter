@@ -8,11 +8,9 @@
 
 app.directive('introSection', function(){
   return{
-    restrict: 'E',
-    scope:{
-      data: '='
-    },
-    templateUrl:'js/directives/views/introSection.html'
+    restrict: 'EA',
+    templateUrl:'js/directives/views/introSection.html',
+    controllerAs:"vm",
+    bindToController: true
   };
-
 });
