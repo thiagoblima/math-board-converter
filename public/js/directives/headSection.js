@@ -7,17 +7,17 @@
 app.directive('headSection', function(){
   return{
      restrict: 'EA',
-     scope:{
-       data: '='
+     scope: {
+       data:"="
      },
      templateUrl: 'js/directives/views/headSection.html',
      controllerAs:"vm",
-     link: function(scope, element, attrs){
-       scope.showMe = false;
-       scope.searchOpen = function(){
-          scope.showMe = !scope.showMe;
+     link: function(data, element, attrs){
+       data.showMe = false;
+       data.searchOpen = function(){
+          data.showMe = !data.showMe;
       };
-      scope.search = "Search a Math Info...";
+      data.search = "Search a Math Info...";
     }
   };
 });
