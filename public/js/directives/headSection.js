@@ -11,12 +11,13 @@ app.directive('headSection', function(){
        data: '='
      },
      templateUrl: 'js/directives/views/headSection.html',
-     link: function(data, element, attrs){
-       data.showMe = false;
-       data.searchOpen = function(){
-          data.showMe = !data.showMe;
+     controllerAs:"vm",
+     link: function(scope, element, attrs){
+       scope.showMe = false;
+       scope.searchOpen = function(){
+          scope.showMe = !scope.showMe;
       };
-      data.search = "Search a Math Info...";
+      scope.search = "Search a Math Info...";
     }
   };
 });
