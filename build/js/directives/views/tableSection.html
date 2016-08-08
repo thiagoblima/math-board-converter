@@ -3,7 +3,7 @@
         <h1>{{ vm.table.intro.text }}</h1>
         <h3>{{ vm.textFun }}</h3>
         <h3>{{ vm.clearExponential }}</h3>
-        <table class="table table-striped" id="math-table">       
+        <table class="table table-striped" id="math-table">
             <thead>
                 <tr>
                     <th ng-repeat="key in vm.table.title">
@@ -41,12 +41,10 @@
                 <tr>
                     <td>
                         <form name="mathExponential">
-                            <input class="form-control" ng-model="vm.math.exponential" ng-change="vm.clearExponential" pattern="^\d+$" ng-maxlength="16"
-                                type="number" name="exponential" required>
+                            <input class="form-control" ng-model="vm.math.exponential" pattern="^\d+$" ng-maxlength="16" type="number" name="exponential"
+                                required>
                             <div ng-messages="mathExponential.exponential.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Not Allowed ".,"</span>
-                                <span ng-message="maxlength">Too long!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -55,10 +53,7 @@
                             <input class="form-control" ng-model="vm.math.fixed" pattern="^([0-9,.])*$" ng-minlength="3" ng-maxlength="6" type="number"
                                 name="fixed" required>
                             <div ng-messages="mathFixed.fixed.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -67,10 +62,7 @@
                             <input class="form-control" ng-model="vm.math.precision" ng-minlength="3" ng-maxlength="16" pattern="^([0-9.,])*$" type="number"
                                 name="precision" required>
                             <div ng-messages="mathPrecision.precision.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -79,10 +71,7 @@
                             <input class="form-control" ng-model="vm.math.string" ng-minlength="1" ng-maxlength="16" pattern="^([0-9.,])*$" type="number"
                                 name="string" required>
                             <div ng-messages="mathString.string.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -91,10 +80,7 @@
                             <input class="form-control" ng-model="vm.math.ceil" ng-minlength="4" ng-maxlength="16" type="number" pattern="^\d+(\.\d+)?$"
                                 name="ceil" required>
                             <div ng-messages="mathCeil.ceil.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -103,10 +89,7 @@
                             <input class="form-control" ng-model="vm.math.floor" ng-minlength="4" ng-maxlength="16" type="number" pattern="^\d+(\.\d+)?$"
                                 name="floor" required>
                             <div ng-messages="mathFloor.floor.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -115,10 +98,7 @@
                             <input class="form-control" ng-model="vm.math.round" ng-minlength="4" ng-maxlength="16" type="number" pattern="^\d+(\.\d+)?$"
                                 name="round" required>
                             <div ng-messages="mathRound.round.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
@@ -126,10 +106,7 @@
                         <form name="mathAbsolute">
                             <input class="form-control" ng-model="vm.math.absolute" pattern="^\d+$" ng-maxlength="16" type="number" name="absolute" required>
                             <div ng-messages="mathAbsolute.absolute.$error">
-                                <span ng-message="required">Enter a number</span>
-                                <span ng-message="pattern">Wrong pattern</span>
-                                <span ng-message="maxlength">Too long!</span>
-                                <span ng-message="minlength">Too short!</span>
+                                <messages-section></messages-section>
                             </div>
                         </form>
                     </td>
