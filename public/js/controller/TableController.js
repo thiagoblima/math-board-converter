@@ -7,9 +7,28 @@
   */
 
 
+
 app.controller('TableController', TableController);
+app.controller('MessagesController', MessagesController);
+
+
+
+
+/**
+  *@name: Dependency Injection
+  *
+  *@description: This is where you just import the
+  *dependencies to the $scope, never forget it, otherwise
+  *app won't work correctly and may cause a break on the components.
+  *
+  */
+
+
 
 TableController.$inject = ['$scope'];
+MessagesController.$inject = ['$scope'];
+
+
 
 function TableController(){
 
@@ -28,7 +47,6 @@ function TableController(){
      vm.value = '-';
      return vm.value.replace(/-/i, "Have Fun!");
    }
-
    
    vm.table = {
 
@@ -49,4 +67,22 @@ function TableController(){
   
   };
  
+}
+
+function MessagesController(){
+
+  var vm = this;
+
+  vm.messages = {
+    
+    settings:[
+
+      { name:'required', message:'Enter a number' },
+      { name:'pattern', message:'Wrong pattern' },
+      { name:'minlength', message:'Too short!' },
+      { name:'maxlength', message:'Too long!' }
+
+    ]
+
+  };
 }
