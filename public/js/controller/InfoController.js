@@ -45,7 +45,22 @@ function HeadInfoController(){
   };
 
   vm.meta = {
-    
+
+    keyOne:{
+      type: 'description',
+      value: 'Math web online converter', 
+    },
+
+    keyTwo:{
+      type: 'keywords',
+      value: 'Math, mathematics, converter, web, Java Script'
+    },
+
+    keyThree:{
+      type: 'author',
+      value: 'Thiago Lima'
+    }
+
   };
 
 }
