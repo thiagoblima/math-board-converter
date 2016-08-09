@@ -50,6 +50,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/js/app.js',
       '<%= srcpath %>/js/controller/MathController.js',
       '<%= srcpath %>/js/controller/TableController.js',
+      '<%= srcpath %>/js/controller/InfoController.js',
       '<%= mathjsfiles %>'
     ],
 
