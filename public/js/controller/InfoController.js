@@ -44,23 +44,23 @@ function HeadInfoController(){
      name: 'Math Board Converter'
   };
 
-  vm.meta = {
-
-    keyOne:{
+  vm.meta = [
+    {     
+      
       type: 'description',
       value: 'Math web online converter', 
     },
 
-    keyTwo:{
+    {
       type: 'keywords',
       value: 'Math, mathematics, converter, web, Java Script'
     },
 
-    keyThree:{
+    {
       type: 'author',
       value: 'Thiago Lima'
     }
 
-  };
+  ];
 
 }
