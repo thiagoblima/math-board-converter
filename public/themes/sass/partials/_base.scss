@@ -12,6 +12,15 @@ main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
 
+
+
+/**
+  *@name: head-section
+  *@description: Animated header code. It binds scroll event on Angularjs
+  */
+
+
+
 header{
    @include head-splash($header-color, $text-color);
    @include text-splash($head-text-shadow);
@@ -40,6 +49,14 @@ section{
 }
 
 
+
+/**
+  *@name: nav-section
+  *@description: Animated main menu which gets fixed when scrolled above header.
+  */
+
+
+
 nav{
   ul{
     li{
@@ -49,6 +66,14 @@ nav{
     }
   }
 }
+
+
+
+/**
+  *@name: intro-section
+  *@description: The welcome and resume in a 3 collumn Bootstrap layout
+  */
+
 
 
 section#intro-section{
@@ -65,11 +90,13 @@ section#intro-section{
 }
 
 
+
 /**
   *@name: table-settings
-  *@description: the table which the pure Java Script is apllied math folder
-  *We've got the model and the view class
+  *@description: table is the model/view Mathboard home app
+  *We've got the model (_functions.scss) and the view class (_base.scss)
   */
+
 
 
 .math{
@@ -108,6 +135,16 @@ div#table{
   }
 }
 
+
+
+/**
+  *@name: social-settings
+  *@description: Social section structured code responsable for fixed icons:
+  *profile, comments, likes
+  */
+
+
+
 aside{
   @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
  section{
@@ -136,6 +173,16 @@ aside{
        }
     }
 }
+
+
+
+/**
+  *@name: guide-section
+  *@description: Three collumn bootstrap section bringing the user to
+  *web-app main products and its introduction: carrear, reports and business.
+  */
+
+
 
 section#guide{
   @include guide-section(1000px, 50px, 65px, 90px);
