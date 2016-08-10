@@ -293,9 +293,31 @@ body {
     padding: 0;
     overflow: hidden;
     /**
+      *@name: head-section
+      *@description: Animated header code. It binds scroll event on Angularjs
+      */
+    /**
+      *@name: nav-section
+      *@description: Animated main menu which gets fixed when scrolled above header.
+      */
+    /**
+      *@name: intro-section
+      *@description: The welcome and resume in a 3 collumn Bootstrap layout
+      */
+    /**
       *@name: table-settings
-      *@description: the table which the pure Java Script is apllied math folder
-      *We've got the model and the view class
+      *@description: table is the model/view Mathboard home app
+      *We've got the model (_functions.scss) and the view class (_base.scss)
+      */
+    /**
+      *@name: social-settings
+      *@description: Social section structured code responsable for fixed icons:
+      *profile, comments, likes
+      */
+    /**
+      *@name: guide-section
+      *@description: Three collumn bootstrap section bringing the user to
+      *web-app main products and its introduction: carrear, reports and business.
       */ }
     body main #container-wrapper header {
       background-color: #e05151;
