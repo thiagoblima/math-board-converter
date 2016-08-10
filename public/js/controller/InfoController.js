@@ -10,13 +10,13 @@
 
 
 
-  /**
-  *@name: app
-  *
-  *@description: Controllers import, all of them should
-  *be imported underneath.
-  *
-  */
+/**
+*@name: app
+*
+*@description: Controllers import, all of them should
+*be imported underneath.
+*
+*/
 
 
 app.controller('HeadInfoController', HeadInfoController);
@@ -36,31 +36,37 @@ app.controller('HeadInfoController', HeadInfoController);
 HeadInfoController.$inject = ['$scope'];
 
 
-function HeadInfoController(){
+function HeadInfoController() {
 
   var vm = this;
 
   vm.title = {
-     name: 'Math Board Converter'
+    name: 'Math Board Converter'
   };
 
-  vm.meta = [
-    {     
-      
+  vm.meta = {
+
+    keyOne: {
+
       type: 'description',
-      value: 'Math web online converter', 
+      value: 'Math web online converter',
+
     },
 
-    {
+    keyTwo: {
+
       type: 'keywords',
       value: 'Math, mathematics, converter, web, Java Script'
+
     },
 
-    {
+    keyThree: {
+
       type: 'author',
       value: 'Thiago Lima'
+
     }
 
-  ];
+  };
 
 }
