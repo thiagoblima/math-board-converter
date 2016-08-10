@@ -146,7 +146,7 @@ section#guide{
      }
      section{
         div{
-           @include guide-icon-wrap(100px);
+           @include guide-icon-wrap(100px, 25px);
           p{
            @include guide-icon-paragraph(center, 300ms ease-out, white);
           span{
