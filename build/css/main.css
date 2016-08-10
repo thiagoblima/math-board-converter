@@ -449,7 +449,8 @@ body {
           text-shadow: 1px 1px 2px black;
           font-family: "Josefin Sans", sans-serif; }
         body main #container-wrapper section#guide article section div {
-          margin-top: 100px; }
+          margin-top: 100px;
+          padding-top: 25px; }
           body main #container-wrapper section#guide article section div p {
             text-align: center;
             transition: 300ms ease-out;
