@@ -216,8 +216,9 @@
   margin-top:$margin-top;
 }
 
-@mixin guide-icon-wrap($margin-top){
+@mixin guide-icon-wrap($margin-top, $padding-top){
   margin-top:$margin-top;
+  padding-top:$padding-top
 }
 
 @mixin guide-icon-paragraph($text-align, $transition, $color){
