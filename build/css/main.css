@@ -471,6 +471,7 @@ body {
           text-shadow: 1px 1px 2px black;
           font-family: "Josefin Sans", sans-serif; }
         body main #container-wrapper section#guide article section div {
+          transition: 300ms ease-in;
           margin-top: 100px;
           padding-top: 25px; }
           body main #container-wrapper section#guide article section div p {
@@ -489,7 +490,10 @@ body {
             body main #container-wrapper section#guide article section div p.heroclass {
               font-size: 1.8em;
               padding: 1.3em;
-              font-family: "Josefin Sans"; }
+              font-family: "Josefin Sans", sans-serif; }
+        body main #container-wrapper section#guide article section .test-animate:hover {
+          background-color: #ffD452;
+          transition: 300ms ease-out; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
