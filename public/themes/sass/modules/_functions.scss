@@ -259,6 +259,11 @@
   font-family:$font-family;
 }
 
+@mixin guide-wrapper-class($background-color, $transition){
+  background-color:$background-color;
+  transition:$transition;
+}
+
 
 
 /* _nav.scss @mixins */

@@ -193,6 +193,7 @@ section#guide{
      }
      section{
         div{
+          transition:300ms ease-in;
            @include guide-icon-wrap(100px, 25px);
           p{
            @include guide-icon-paragraph(center, 300ms ease-out, white);
@@ -201,9 +202,11 @@ section#guide{
           }:hover{
             @include guide-icon-paragraph-hover(red, scale(0.9), 300ms ease-out);
           }&.heroclass{
-            @include guide-hero-class(1.8em, 1.3em, "Josefin Sans");
+            @include guide-hero-class(1.8em, 1.3em, $intro-font-josefin);
           }
         }
+      }.test-animate:hover{
+          @include guide-wrapper-class(#ffD452, 300ms ease-out);
       }
     }
   }
