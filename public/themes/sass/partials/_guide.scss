@@ -1,0 +1,9 @@
+/*@_guide.scss
+ *Guide section animations are built on this separate SASS module.
+ *It has got classes and keyframes which are called by Angularjs
+ */
+
+
+.guideAnimate{
+   @include guide-wrapper-class($table-color, 300ms ease-out);
+}

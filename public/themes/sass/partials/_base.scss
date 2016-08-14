@@ -5,10 +5,6 @@
  */
 
 
-.guideAnimate{
-   @include guide-wrapper-class($table-color, 300ms ease-out);
-}
-
 body{
   background-color:$layer-color;
 
