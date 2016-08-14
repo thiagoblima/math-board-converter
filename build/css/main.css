@@ -491,8 +491,8 @@ body {
               font-size: 1.8em;
               padding: 1.3em;
               font-family: "Josefin Sans", sans-serif; }
-        body main #container-wrapper section#guide article section .test-animate:hover {
-          background-color: #ffD452;
+        body main #container-wrapper section#guide article section .guide-animate:hover:nth-child(n + 1) {
+          background-color: #ffd452 !important;
           transition: 300ms ease-out; }
 
 /**
