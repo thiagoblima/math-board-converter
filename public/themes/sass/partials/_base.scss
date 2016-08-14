@@ -205,8 +205,8 @@ section#guide{
             @include guide-hero-class(1.8em, 1.3em, $intro-font-josefin);
           }
         }
-      }.test-animate:hover{
-          @include guide-wrapper-class(#ffD452, 300ms ease-out);
+      }.guide-animate:hover:nth-child(n + 1){
+          @include guide-wrapper-class($table-color, 300ms ease-out);
       }
     }
   }
