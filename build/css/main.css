@@ -286,10 +286,6 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
-.guideAnimate {
-  background-color: #ffd452 !important;
-  transition: 300ms ease-out; }
-
 body {
   background-color: #333333 !important; }
   body main #container-wrapper {
@@ -700,5 +696,13 @@ nav ul li.color-5 .back {
 td.ng-binding.effect {
   color: #000000;
   transition: 600ms ease-out; }
+
+/*@_guide.scss
+ *Guide section animations are built on this separate SASS module.
+ *It has got classes and keyframes which are called by Angularjs
+ */
+.guideAnimate {
+  background-color: #ffd452 !important;
+  transition: 300ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */
