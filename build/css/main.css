@@ -286,6 +286,10 @@
  *Small pieces takes makes a section will you find organized in other file
  *such as: buttons, transitions, colors or somehing like this...
  */
+.guideAnimate {
+  background-color: #ffd452 !important;
+  transition: 300ms ease-out; }
+
 body {
   background-color: #333333 !important; }
   body main #container-wrapper {
@@ -491,9 +495,6 @@ body {
               font-size: 1.8em;
               padding: 1.3em;
               font-family: "Josefin Sans", sans-serif; }
-        body main #container-wrapper section#guide article section .guide-animate:hover:nth-child(n + 1) {
-          background-color: #ffd452 !important;
-          transition: 300ms ease-out; }
 
 /**
  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
