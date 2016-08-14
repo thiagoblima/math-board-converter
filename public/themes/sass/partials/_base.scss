@@ -117,7 +117,7 @@ div#table{
   }
   tbody{
    tr{
-     @include math-table-tbody-tr(#ffffff, 1.3em,"Josefin Sans", center, 600ms ease-in);
+     @include math-table-tbody-tr(#ffffff, 1.3em, $font-josefin, center, 600ms ease-in);
      td{
        form{
          div.ng-active{
