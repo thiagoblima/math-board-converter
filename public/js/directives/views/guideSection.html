@@ -5,7 +5,8 @@
        <div class="col-md-4" ng-class="{ guideAnimate: hover }"
         ng-mouseenter="hover=true" ng-mouseleave="hover=false">
          <p><span ng-class="key.glyphicon" aria-hidden="true"></span></p>
-         <p class="heroclass"> {{ key.description }}</p>
+         <p class="heroclass" ng-class="{ paragraphKeyAnimate: hover }"
+         ng-mouseenter="hover=true" ng-mouseleave="hover=false"> {{ key.description }} </p>
        </div>
     </section>
   </article>
