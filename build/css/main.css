@@ -705,4 +705,18 @@ td.ng-binding.effect {
   background-color: #ffd452 !important;
   transition: 300ms ease-out; }
 
+@keyframes moveAnimate {
+  0% {
+    transform: translate(0px, 0px);
+    transition: 300ms; }
+  50% {
+    transform: translateY(20px);
+    transition: 300ms; }
+  100% {
+    transform: translate(0px);
+    transition: 300ms; } }
+.paragraphKeyAnimate {
+  animation: moveAnimate 350ms;
+  animation-iteration-count: 1; }
+
 /*# sourceMappingURL=main.css.map */
