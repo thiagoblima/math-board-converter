@@ -714,6 +714,7 @@ td.ng-binding.effect {
     transform: translateY(0px); } }
 .paragraphKeyAnimate {
   animation: moveAnimate 350ms;
-  animation-iteration-count: 1; }
+  animation-iteration-count: 1;
+  color: #333333 !important; }
 
 /*# sourceMappingURL=main.css.map */
