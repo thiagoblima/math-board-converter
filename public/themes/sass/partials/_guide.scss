@@ -10,19 +10,16 @@
 
 @keyframes moveAnimate {
     0%{
-     transform: translate(0px, 0px);
-     transition:300ms;
+     transform: translateY(0px);
     }
 
     50%{
      transform: translateY(20px);
-     transition:300ms;
     }
 
 
     100%{
-     transform: translate(0px);   
-     transition:300ms;  
+     transform: translateY(0px);   
     }
 }
 
