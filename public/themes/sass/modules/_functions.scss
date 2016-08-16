@@ -10,6 +10,7 @@
 
 /* _base.scss  @mixins */
 
+
 @mixin head-splash($bgcolor, $color){
   background-color:$bgcolor;
   color:$color;
@@ -264,7 +265,9 @@
   transition:$transition;
 }
 
-
+@mixin guide-keyframes-paragraph($translate){
+  transform:$translate;
+}
 
 /* _nav.scss @mixins */
 
