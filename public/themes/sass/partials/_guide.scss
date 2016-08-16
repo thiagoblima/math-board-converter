@@ -17,13 +17,12 @@
      @include guide-keyframes-paragraph(translateY(20px));
     }
 
-
     100%{
      @include guide-keyframes-paragraph(translateY(0px));
     }
 }
 
 .paragraphKeyAnimate{
-    animation: moveAnimate 350ms;
-    animation-iteration-count: 1;
+    @include guide-animation-prop(moveAnimate 350ms, 1);
+    color:$layer-color;
 }
