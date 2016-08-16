@@ -269,6 +269,12 @@
   transform:$translate;
 }
 
+
+@mixin guide-animation-prop($animation, $iteration){
+   animation:$animation;
+   animation-iteration-count:$iteration;
+}
+
 /* _nav.scss @mixins */
 
 @mixin nav-layer($bg-color, $transition){
