@@ -4,7 +4,8 @@
     <section ng-repeat="key in vm.guide.text">
        <div class="col-md-4" ng-class="{ guideAnimate: hover }"
         ng-mouseenter="hover=true" ng-mouseleave="hover=false">
-         <p><span ng-class="key.glyphicon" aria-hidden="true"></span></p>
+         <p><span ng-class="[key.glyphicon, { glyphiconAnimate: hover } ]"
+         ng-mouseenter="hover=true" ng-mouseleave="hover=false" aria-hidden="true"></span></p>
          <p class="heroclass" ng-class="{ paragraphKeyAnimate: hover }"
          ng-mouseenter="hover=true" ng-mouseleave="hover=false"> {{ key.description }} </p>
        </div>
