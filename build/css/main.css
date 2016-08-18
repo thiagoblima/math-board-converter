@@ -484,8 +484,7 @@ body {
               color: white;
               transition: 300ms ease-out; }
             body main #container-wrapper section#guide article section div p :hover {
-              color: red;
-              transform: scale(0.9);
+              transform: scale(0.2);
               transition: 300ms ease-out; }
             body main #container-wrapper section#guide article section div p.heroclass {
               font-size: 1.8em;
