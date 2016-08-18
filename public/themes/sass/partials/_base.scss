@@ -200,7 +200,7 @@ section#guide{
           span{
            @include guide-glyphicon-element($glyphicon, 5em, white, 300ms ease-out);
           }:hover{
-            @include guide-icon-paragraph-hover(red, scale(0.9), 300ms ease-out);
+            @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
           }&.heroclass{
             @include guide-hero-class(1.8em, 1.3em, $intro-font-josefin);
           }
