@@ -700,10 +700,6 @@ td.ng-binding.effect {
  *Guide section animations are built on this separate SASS module.
  *It has got classes and keyframes which are called by Angularjs
  */
-.guideAnimate {
-  background-color: #ffd452 !important;
-  transition: 300ms ease-out; }
-
 @keyframes moveAnimate {
   0% {
     transform: translateY(0px); }
@@ -715,5 +711,13 @@ td.ng-binding.effect {
   animation: moveAnimate 350ms;
   animation-iteration-count: 1;
   color: #333333 !important; }
+
+.guideAnimate {
+  background-color: #ffd452 !important;
+  transition: 300ms ease-out; }
+
+.glyphiconAnimate {
+  color: #333333 !important;
+  transition: 300ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */
