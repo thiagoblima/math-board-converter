@@ -264,6 +264,11 @@
   transition:$transition;
 }
 
+@mixin guide-glyphicon-animate($color, $transition){
+  color:$color;
+  transition:$transition;
+}
+
 @mixin guide-keyframes-paragraph($translate){
   transform:$translate;
 }
