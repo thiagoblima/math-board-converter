@@ -228,8 +228,7 @@
   color:$color;
 }
 
-@mixin guide-icon-paragraph-hover($color, $transform, $transition){
-  color:$color;
+@mixin guide-icon-paragraph-hover($transform, $transition){
   transform:$transform;
   transition:$transition;
 }
