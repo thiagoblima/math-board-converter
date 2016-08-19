@@ -700,7 +700,10 @@ td.ng-binding.effect {
  *Guide section animations are built on this separate SASS module.
  *It has got classes and keyframes which are called by Angularjs
  */
-@keyframes moveAnimate {
+/*
+ *@description: paragraphKeyAnimate
+ */
+@keyframes moveAnimateParagraph {
   0% {
     transform: translateY(0px); }
   50% {
@@ -708,16 +711,29 @@ td.ng-binding.effect {
   100% {
     transform: translateY(0px); } }
 .paragraphKeyAnimate {
-  animation: moveAnimate 350ms;
+  animation: moveAnimateParagraph 350ms;
   animation-iteration-count: 2;
+  color: #333333 !important; }
+
+/*
+ *@description: paragraphKeyAnimate
+ */
+@keyframes moveAnimateGlyphicon {
+  0% {
+    transform: scaleX(1); }
+  50% {
+    transform: scaleX(-1); }
+  100% {
+    transform: scaleX(1); } }
+.glyphiconKeyAnimate {
+  animation: moveAnimateGlyphicon 350ms;
+  animation-iteration-count: 1; }
+
+.glyphiconColorAnimate {
   color: #333333 !important; }
 
 .guideAnimate {
   background-color: #ffd452 !important;
-  transition: 300ms ease-out; }
-
-.glyphiconAnimate {
-  color: #333333 !important;
   transition: 300ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */
