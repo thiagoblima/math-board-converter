@@ -3,7 +3,11 @@
  *It has got classes and keyframes which are called by Angularjs
  */
 
-@keyframes moveAnimate {
+/*
+ *@description: paragraphKeyAnimate
+ */
+
+@keyframes moveAnimateParagraph {
     0%{
      @include guide-keyframes-paragraph(translateY(0px));
     }
@@ -18,15 +22,36 @@
 }
 
 .paragraphKeyAnimate{
-    @include guide-animation-prop(moveAnimate 350ms, 2);
+    @include guide-animation-prop(moveAnimateParagraph 350ms, 2);
     color:$layer-color;
 }
 
+/*
+ *@description: paragraphKeyAnimate
+ */
+
+@keyframes moveAnimateGlyphicon {
+    0%{
+        transform: scaleX(1);  
+    }
+
+    50%{
+        transform: scaleX(-1);
+    }
+
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.glyphiconKeyAnimate{
+    @include guide-animation-prop(moveAnimateGlyphicon 350ms, 1);
+}
+
+.glyphiconColorAnimate{
+    color:$layer-color;
+}
 
 .guideAnimate{
    @include guide-wrapper-class($table-color, 300ms ease-out);
-}
-
-.glyphiconAnimate {
-  @include guide-glyphicon-animate(#333333 !important, 300ms ease-out);
 }
