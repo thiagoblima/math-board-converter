@@ -18,7 +18,7 @@
 }
 
 .paragraphKeyAnimate{
-    @include guide-animation-prop(moveAnimate 350ms, 1);
+    @include guide-animation-prop(moveAnimate 350ms, 2);
     color:$layer-color;
 }
 
@@ -27,6 +27,6 @@
    @include guide-wrapper-class($table-color, 300ms ease-out);
 }
 
-.glyphiconAnimate{
+.glyphiconAnimate {
   @include guide-glyphicon-animate(#333333 !important, 300ms ease-out);
 }
