@@ -272,8 +272,9 @@
   */
 /* Guide Section Breakpoint 1 ----------- */
 @media only screen and (max-width: 1009px) {
-  .content-wrapper {
-    height: 2130px !important; } }
+  /*.content-wrapper{
+    height:2130px !important;
+  }*/ }
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
