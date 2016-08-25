@@ -37,6 +37,9 @@
             }
          }
       }
+      section#guide{
+       height:90vh !important;
+     }
    }
 }
 
@@ -49,7 +52,7 @@
      }
 
      .content-wrapper{
-       @include content-wrapper(relative, 320px, 2130px !important);
+       @include content-wrapper-breakpoint(relative, 320px);
      }
 
 }
@@ -86,7 +89,10 @@
            }
         }
      }
-  }
+     section#guide{
+       height:90vh !important;
+     }
+   }
 }
 
    .head{
@@ -98,7 +104,7 @@
     }
 
     .content-wrapper{
-      @include content-wrapper(relative, 320px, 2130px !important);
+      @include content-wrapper-breakpoint(relative, 320px);
     }
 
 }
@@ -390,7 +396,7 @@ main{
 
 /* Guide Section Breakpoint 1 ----------- */
 
-@media only screen and (max-width : 991px){
+@media only screen and (max-width : 991px) and (max-height: 1240px){
 
 body{
  main{
