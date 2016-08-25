@@ -92,14 +92,15 @@
     right: 2%; }
     main #container-wrapper header section form input.form-control.search {
       width: 150px !important; }
+  main #container-wrapper section#guide {
+    height: 90vh !important; }
 
   .head header section {
     margin-top: -15px !important; }
 
   .content-wrapper {
     position: relative;
-    top: 320px;
-    height: 2130px !important; } }
+    top: 320px; } }
 /**
   * @breakpoint : Samsung S5
   * @orientation: landscape
@@ -119,14 +120,15 @@
     right: 2% !important; }
     main #container-wrapper header section form input.form-control.search {
       width: 150px !important; }
+  main #container-wrapper section#guide {
+    height: 90vh !important; }
 
   .head header section {
     margin-top: -30px !important; }
 
   .content-wrapper {
     position: relative;
-    top: 320px;
-    height: 2130px !important; } }
+    top: 320px; } }
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   /* Styles */ }
@@ -271,7 +273,7 @@
   *
   */
 /* Guide Section Breakpoint 1 ----------- */
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) and (max-height: 1240px) {
   body main #container-wrapper section#guide {
     height: 260vh !important; } }
 /*@_colors.scss
