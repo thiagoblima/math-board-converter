@@ -423,6 +423,12 @@
    transition:$transition;
  }
 
+ @mixin content-wrapper-breakpoint($position, $top){
+   position:$position;
+   top:$top;
+ }
+
+
 @mixin container-wrapper-hgroup-breakpoint($text-align, $transition){
   text-align:$text-align;
   transition:$transition;
