@@ -80,10 +80,11 @@
   margin-top:$margin-top;
 }
 
-@mixin container-wrapper($width, $padding, $overflow){
+@mixin container-wrapper($width, $padding, $overflow, $height){
   width:$width;
   padding:$padding;
   overflow:$overflow;
+  height:$height;
 }
 
 @mixin intro-section($margin-bottom, $padding, $position, $z-index){
