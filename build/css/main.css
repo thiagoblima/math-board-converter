@@ -304,6 +304,7 @@ body {
     width: 100%;
     padding: 0;
     overflow: hidden;
+    height: 1000vh;
     /**
       *@name: head-section
       *@description: Animated header code. It binds scroll event on Angularjs
