@@ -409,6 +409,8 @@ body{
  } 
 }
 
+/* Guide Section Breakpoint 2 ----------- */
+
 @media only screen and (max-width: 737px){
 
  body{
@@ -420,6 +422,29 @@ body{
                    div{
                     padding: 0px !important;
                     margin-top: 70px !important;
+                   }
+                }
+              }
+           }
+        }    
+     }  
+  }
+
+}
+
+/* Guide Section Breakpoint 3 ----------- */
+
+@media only screen and (max-width: 462px){
+
+body{
+    main{
+       #container-wrapper{
+          section#guide{
+             article{
+                section{
+                   div{
+                    padding: 0px !important;
+                    margin-top: 30px !important;
                    }
                 }
               }
