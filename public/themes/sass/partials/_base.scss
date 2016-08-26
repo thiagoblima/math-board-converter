@@ -11,6 +11,7 @@ body{
 main{
 #container-wrapper{
    @include container-wrapper(100%, 0, hidden);
+   height:1000vh;
 
 
 
