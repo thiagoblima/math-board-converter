@@ -198,7 +198,7 @@ section#guide{
           p{
            @include guide-icon-paragraph(center, 300ms ease-out, white);
           span{
-           @include guide-glyphicon-element($glyphicon, 5em, white, 300ms ease-out);
+           @include guide-glyphicon-element($glyphicon, 5.5vmax, white, 300ms ease-out);
           }:hover{
             @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
           }&.heroclass{
