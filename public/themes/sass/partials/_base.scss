@@ -202,7 +202,7 @@ section#guide{
           }:hover{
             @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
           }&.heroclass{
-            @include guide-hero-class(1.8em, 1.3em, $intro-font-josefin);
+            @include guide-hero-class(2.2vmax, 1.3em, $intro-font-josefin);
           }
         }
       }
