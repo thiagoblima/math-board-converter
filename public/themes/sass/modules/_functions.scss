@@ -239,9 +239,10 @@
 }
 
 
-@mixin guide-header-one($padding, $text-align, $color, $text-shadow, $font-family){
+@mixin guide-header-one($padding, $text-align, $font-size, $color, $text-shadow, $font-family){
   padding:$padding;
   text-align:$text-align;
+  font-size:$font-size;
   color:$color;
   text-shadow:$text-shadow;
   font-family:$font-family;
