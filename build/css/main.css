@@ -494,7 +494,7 @@ body {
             color: white; }
             body main #container-wrapper section#guide article section div p span {
               font-family: "Glyphicons Halflings";
-              font-size: 5.5vmax;
+              font-size: 5.5vw;
               color: white;
               transition: 300ms ease-out; }
             body main #container-wrapper section#guide article section div p :hover {
