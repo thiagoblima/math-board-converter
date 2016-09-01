@@ -375,7 +375,7 @@ body {
       body main #container-wrapper section#intro-section h1 {
         font-family: "Josefin Sans", sans-serif;
         text-align: center;
-        color: #ffffff !important;
+        color: #ffffff;
         margin-top: -20px; }
       body main #container-wrapper section#intro-section div article {
         height: 400px;
@@ -393,7 +393,7 @@ body {
       padding-right: 50px;
       padding-left: 50px; }
       body main #container-wrapper div#table h1 {
-        color: #ffffff !important;
+        color: #ffffff;
         font-family: "Josefin Sans", sans-serif;
         text-align: center; }
       body main #container-wrapper div#table h3.ng-binding {
@@ -429,7 +429,7 @@ body {
         font-family: "Glyphicons Halflings";
         font-size: 2em;
         margin-left: 26%;
-        color: #ffffff !important;
+        color: #ffffff;
         transition: 300ms ease-out;
         color: #ffffff; }
       body main #container-wrapper aside section :hover:after {
@@ -469,7 +469,7 @@ body {
         width: 100px;
         padding-top: 5px; }
       body main #container-wrapper aside section h5 {
-        color: #ffffff !important; }
+        color: #ffffff; }
     body main #container-wrapper section#guide {
       height: 1000px;
       padding-left: 50px;
