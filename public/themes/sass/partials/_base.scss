@@ -189,16 +189,16 @@ section#guide{
   article{
     @include guide-head-wrap(transparent);
   h1{
-     @include guide-header-one(0, center, 3.3vw, #ffffff, 1px 1px 2px #000000, $intro-font-josefin);
+     @include guide-header-one(0, center, 3.3vw, $splash-color, 1px 1px 2px #000000, $intro-font-josefin);
      }
      section{
         div{
           transition:300ms ease-in;
            @include guide-icon-wrap(100px, 25px);
           p{
-           @include guide-icon-paragraph(center, 300ms ease-out, #ffffff);
+           @include guide-icon-paragraph(center, 300ms ease-out, $splash-color);
           span{
-           @include guide-glyphicon-element($glyphicon, 5.5vw, #ffffff, 300ms ease-out);
+           @include guide-glyphicon-element($glyphicon, 5.5vw, $splash-color, 300ms ease-out);
           }:hover{
             @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
           }&.heroclass{
