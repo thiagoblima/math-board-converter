@@ -279,13 +279,13 @@
 /* Guide Section Breakpoint 2 ----------- */
 @media only screen and (max-width: 737px) {
   body main #container-wrapper section#guide article section div {
-    padding: 0px !important;
-    margin-top: 70px !important; } }
+    /* padding: 0px !important;
+       margin-top: 70px !important; */ } }
 /* Guide Section Breakpoint 3 ----------- */
 @media only screen and (max-width: 462px) {
   body main #container-wrapper section#guide article section div {
-    padding: 0px !important;
-    margin-top: 30px !important; } }
+    /*padding: 0px !important; */
+    margin-top: 70px !important; } }
 /*@_colors.scss
  *A class color to have the variables ready to be called
  *Any color of the structure has be here, following the rule;
