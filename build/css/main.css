@@ -282,7 +282,7 @@
     /* padding: 0px !important;
        margin-top: 70px !important; */ }
     body main #container-wrapper section#guide article section div p.heroclass {
-      padding-bottom: 2em !important; } }
+      padding-bottom: 2.5em !important; } }
 /* Guide Section Breakpoint 3 ----------- */
 @media only screen and (max-width: 462px) {
   body main #container-wrapper section#guide article section div {
@@ -484,7 +484,7 @@ body {
         body main #container-wrapper section#guide article h1 {
           padding: 0;
           text-align: center;
-          font-size: 3.3vw;
+          font-size: 3vmax;
           color: #ffffff;
           text-shadow: 1px 1px 2px #000000;
           font-family: "Josefin Sans", sans-serif; }
@@ -498,7 +498,7 @@ body {
             color: #ffffff; }
             body main #container-wrapper section#guide article section div p span {
               font-family: "Glyphicons Halflings";
-              font-size: 5.5vw;
+              font-size: 5.5vmax;
               color: #ffffff;
               transition: 300ms ease-out; }
             body main #container-wrapper section#guide article section div p :hover {
