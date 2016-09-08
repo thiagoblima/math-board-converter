@@ -506,7 +506,7 @@ body {
               transition: 300ms ease-out; }
             body main #container-wrapper section#guide article section div p.heroclass {
               font-size: 2.2vmax;
-              padding: 1.3em;
+              padding: 0.7em;
               font-family: "Josefin Sans", sans-serif; }
 
 /**
