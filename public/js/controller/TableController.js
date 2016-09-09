@@ -51,7 +51,7 @@ function TableController(){
    vm.table = {
 
      intro:{
-       text: "Math Quick Tasks"
+       text: "Number Testing Tool"
      },
 
      title: [
