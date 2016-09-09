@@ -107,7 +107,10 @@ div#table{
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); font-size:4vmax; }
   h3.ng-binding{
-    @include math-table-h3-ng-binding(#FFFFFF, center, $intro-font-josefin); 
+    @include math-table-h3-ng-binding(#FFFFFF, center, $intro-font-josefin, 2.8vmax); 
+  }
+  h4.ng-binding{
+    @include math-table-h4-ng-binding(#FFFFFF, center, $intro-font-josefin, 2.5vmax, 20px);
   }
   #math-table{
     margin-top: 90px;
