@@ -166,10 +166,19 @@
   transition:$transition;
 }
 
-@mixin math-table-h3-ng-binding($color, $text-align, $font-family){
+@mixin math-table-h3-ng-binding($color, $text-align, $font-family, $font-size){
   color:$color;
   text-align:$text-align;
   font-family:$font-family;
+  font-size:$font-size;
+}
+
+@mixin math-table-h4-ng-binding($color, $text-align, $font-family, $font-size, $margin-top){
+  color:$color;
+  text-align:$text-align;
+  font-family:$font-family;
+  font-size:$font-size;
+  margin-top:$margin-top;
 }
 
 @mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
