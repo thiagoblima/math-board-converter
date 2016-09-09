@@ -40,7 +40,7 @@ function TableController(){
 
    function textFun() {
      vm.val = '-'; 
-     return vm.val.replace(/-/i, "Play with the values");
+     return vm.val.replace(/-/i, "Java Script type methods");
    }
 
    function clearExponential() {
