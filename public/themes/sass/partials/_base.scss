@@ -107,10 +107,10 @@ div#table{
   @include math-table(50px, 50px);
   h1{ @include math-table-intro($light-color, $intro-font-josefin, center); font-size:4vmax; }
   h3.ng-binding{
-    @include math-table-h3-ng-binding(#FFFFFF, center, $intro-font-josefin, 2.8vmax); 
+    @include math-table-h3-ng-binding($light-color, center, $intro-font-josefin, 2.8vmax); 
   }
   h4.ng-binding{
-    @include math-table-h4-ng-binding(#FFFFFF, center, $intro-font-josefin, 2.5vmax, 20px);
+    @include math-table-h4-ng-binding($light-color, center, $intro-font-josefin, 2.5vmax, 20px);
   }
   #math-table{
     margin-top: 90px;
@@ -120,12 +120,12 @@ div#table{
   }
   tbody{
    tr{
-     @include math-table-tbody-tr(#ffffff, 1.3em, $font-josefin, center, 600ms ease-in);
+     @include math-table-tbody-tr($light-color, 1.3em, $font-josefin, center, 600ms ease-in);
      td{
        form{
          div.ng-active{
            @include math-table-ng-active(
-            #ffffff !important, 0.4em, rgb(224, 81, 81),  
+            $light-color !important, 0.4em, rgb(224, 81, 81),  
               500ms cubic-bezier(0.52, 0.87, 0, 1.32)
            );
          }
@@ -153,24 +153,24 @@ aside{
  section{
    span{
      @include social-glyphicon-element($glyphicon, 2em, 26%, $light-color);
-     @include animate-social(300ms ease-out, #ffffff);
+     @include animate-social(300ms ease-out, $light-color);
    }:hover:after{
      @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
        }:hover:nth-child(n + 1){
           @include animate-social(300ms ease-out, #e05151 !important);
        }:hover:nth-child(n + 1):after{
              content:"Profile";
-             @include animate-social-after($intro-font-josefin, #e05151, #ffffff, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, #e05151, $light-color, 100px, 5px);
        }:hover:nth-child(n + 2){
           @include animate-social(300ms ease-out, #04AFF4 !important);
        }:hover:nth-child(n + 2):after{
              content:"Comments";
-             @include animate-social-after($intro-font-josefin, #04AFF4, #ffffff, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, #04AFF4, $light-color, 100px, 5px);
        }:hover:nth-child(n + 3){
           @include animate-social(300ms ease-out, #ff0000 !important);
       }:hover:nth-child(n + 3):after{
              content:"(0)Likes";
-             @include animate-social-after($intro-font-josefin, #ff0000, #ffffff, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, #ff0000, $light-color, 100px, 5px);
        }h5{
          color:$light-color;
        }
