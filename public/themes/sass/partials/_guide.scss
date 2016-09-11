@@ -23,7 +23,7 @@
 
 .paragraphKeyAnimate{
     @include guide-animation-prop(moveAnimateParagraph 350ms, 2);
-    color:$layer-color;
+    color:$layer-color !important;
 }
 
 /*
@@ -49,7 +49,7 @@
 }
 
 .glyphiconColorAnimate{
-    color:$layer-color;
+    color:$layer-color !important;
 }
 
 .guideAnimate{
