@@ -24,6 +24,7 @@
 /* _base.scss colors */
 /* color override / not override */
 /* _nav.scss colors */
+/* social colors */
 /*@_functions.scss
  *All the @mixins are on this file to prevent messy codes
  *Just need to get it imported into the partials documents
@@ -43,6 +44,7 @@
 /* _base.scss colors */
 /* color override / not override */
 /* _nav.scss colors */
+/* social colors */
 /* _base.scss  @mixins */
 /* _nav.scss @mixins */
 /*
@@ -305,6 +307,7 @@
 /* _base.scss colors */
 /* color override / not override */
 /* _nav.scss colors */
+/* social colors */
 /*@_base.scss
  *HTML structure will be organized here as layout and general settings
  *Small pieces takes makes a section will you find organized in other file
@@ -470,7 +473,7 @@ body {
         padding-top: 5px; }
       body main #container-wrapper aside section :hover:nth-child(n + 2) {
         transition: 300ms ease-out;
-        color: #04AFF4 !important; }
+        color: #04AFF4!important; }
       body main #container-wrapper aside section :hover:nth-child(n + 2):after {
         content: "Comments";
         font-family: "Josefin Sans", sans-serif;
@@ -480,7 +483,7 @@ body {
         padding-top: 5px; }
       body main #container-wrapper aside section :hover:nth-child(n + 3) {
         transition: 300ms ease-out;
-        color: #ff0000 !important; }
+        color: #ff0000!important; }
       body main #container-wrapper aside section :hover:nth-child(n + 3):after {
         content: "(0)Likes";
         font-family: "Josefin Sans", sans-serif;
