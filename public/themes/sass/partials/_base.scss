@@ -162,15 +162,15 @@ aside{
              content:"Profile";
              @include animate-social-after($intro-font-josefin, $header-color, $light-color, 100px, 5px);
        }:hover:nth-child(n + 2){
-          @include animate-social(300ms ease-out, #04AFF4 !important);
+          @include animate-social(300ms ease-out, $blue-comments + $override);
        }:hover:nth-child(n + 2):after{
              content:"Comments";
-             @include animate-social-after($intro-font-josefin, #04AFF4, $light-color, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, $blue-comments, $light-color, 100px, 5px);
        }:hover:nth-child(n + 3){
-          @include animate-social(300ms ease-out, #ff0000 !important);
+          @include animate-social(300ms ease-out, $red-likes + $override);
       }:hover:nth-child(n + 3):after{
              content:"(0)Likes";
-             @include animate-social-after($intro-font-josefin, #ff0000, $light-color, 100px, 5px);
+             @include animate-social-after($intro-font-josefin, $red-likes, $light-color, 100px, 5px);
        }h5{
          color:$light-color;
        }
