@@ -83,7 +83,7 @@ section#intro-section{
      article{
         @include intro-splash(400px, $table-color);
      p{
-        @include paragraph-three-collumn($paragraph-color, 5em 2em 7.8em 2em, 2em, $intro-font-josefin, center);
+        @include paragraph-three-collumn($dark-color, 5em 2em 7.8em 2em, 2em, $intro-font-josefin, center);
       }
     }
   }
