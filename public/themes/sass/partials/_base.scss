@@ -78,7 +78,7 @@ nav{
 
 section#intro-section{
   @include intro-section(30px, 50px, relative, -100);
-  h1{ @include splash-intro($intro-font-josefin, center, $splash-color, -20px) }
+  h1{ @include splash-intro($intro-font-josefin, center, $light-color, -20px) }
   div{
      article{
         @include intro-splash(400px, $table-color);
@@ -105,7 +105,7 @@ section#intro-section{
 
 div#table{
   @include math-table(50px, 50px);
-  h1{ @include math-table-intro($splash-color, $intro-font-josefin, center); font-size:4vmax; }
+  h1{ @include math-table-intro($light-color, $intro-font-josefin, center); font-size:4vmax; }
   h3.ng-binding{
     @include math-table-h3-ng-binding(#FFFFFF, center, $intro-font-josefin, 2.8vmax); 
   }
@@ -152,7 +152,7 @@ aside{
   @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
  section{
    span{
-     @include social-glyphicon-element($glyphicon, 2em, 26%, $splash-color);
+     @include social-glyphicon-element($glyphicon, 2em, 26%, $light-color);
      @include animate-social(300ms ease-out, #ffffff);
    }:hover:after{
      @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
@@ -172,7 +172,7 @@ aside{
              content:"(0)Likes";
              @include animate-social-after($intro-font-josefin, #ff0000, #ffffff, 100px, 5px);
        }h5{
-         color:$splash-color;
+         color:$light-color;
        }
     }
 }
@@ -192,16 +192,16 @@ section#guide{
   article{
     @include guide-head-wrap(transparent);
   h1{
-     @include guide-header-one(0, center, 3vmax, $splash-color, 1px 1px 2px #000000, $intro-font-josefin);
+     @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px #000000, $intro-font-josefin);
      }
      section{
         div{
           transition:300ms ease-in;
            @include guide-icon-wrap(100px, 25px);
           p{
-           @include guide-icon-paragraph(center, 300ms ease-out, $splash-color);
+           @include guide-icon-paragraph(center, 300ms ease-out, $light-color);
           span{
-           @include guide-glyphicon-element($glyphicon, 5.5vmax, $splash-color, 300ms ease-out);
+           @include guide-glyphicon-element($glyphicon, 5.5vmax, $light-color, 300ms ease-out);
           }:hover{
             @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
           }&.heroclass{
