@@ -339,7 +339,7 @@ body {
     body main #container-wrapper header {
       background-color: #e05151;
       color: #fff !important;
-      text-shadow: 4px 4px 1px black;
+      text-shadow: 2px 2px 1px black;
       height: 250px;
       z-index: 5000; }
       body main #container-wrapper header hgroup {
