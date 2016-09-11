@@ -192,7 +192,7 @@ section#guide{
   article{
     @include guide-head-wrap(transparent);
   h1{
-     @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px #000000, $intro-font-josefin);
+     @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
      }
      section{
         div{
