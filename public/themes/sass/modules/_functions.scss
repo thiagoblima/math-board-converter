@@ -498,3 +498,14 @@
 @mixin menu-glyphicon-font-size($font-size){
   font-size:$font-size;
 }
+
+
+/*
+ *@name: Spelcial Function 
+ *@description: Applying a color from the palette 
+ *
+ */
+
+ @mixin color-apply($color){
+   color:$color;
+ }
