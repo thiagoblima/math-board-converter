@@ -303,7 +303,7 @@
  *such as: buttons, transitions, colors or somehing like this...
  */
 body {
-  background-color: #333333 !important; }
+  background-color: #333333; }
   body main #container-wrapper {
     width: 100%;
     padding: 0;
@@ -338,7 +338,7 @@ body {
       */ }
     body main #container-wrapper header {
       background-color: #e05151;
-      color: #fff !important;
+      color: #fff;
       text-shadow: 2px 2px 1px black;
       height: 250px;
       z-index: 5000; }
@@ -383,9 +383,9 @@ body {
         margin-top: -20px; }
       body main #container-wrapper section#intro-section div article {
         height: 400px;
-        background-color: #ffd452 !important; }
+        background-color: #ffd452; }
         body main #container-wrapper section#intro-section div article p {
-          color: #333333 !important;
+          color: #333333;
           padding: 5em 2em 7.8em 2em;
           font-size: 2em;
           font-family: "Josefin Sans", sans-serif;
@@ -415,7 +415,7 @@ body {
       body main #container-wrapper div#table #math-table {
         margin-top: 90px; }
       body main #container-wrapper div#table thead {
-        background-color: #ffd452 !important; }
+        background-color: #ffd452; }
       body main #container-wrapper div#table tbody tr {
         color: #ffffff;
         font-size: 1.3em;
@@ -428,7 +428,7 @@ body {
           background-color: #e05151;
           transition: 500ms cubic-bezier(0.52, 0.87, 0, 1.32); }
       body main #container-wrapper div#table button {
-        background-color: #75a3d1 !important; }
+        background-color: #75a3d1; }
     body main #container-wrapper aside {
       position: fixed;
       bottom: 0;
@@ -582,7 +582,7 @@ body {
  *Mixins also will be written outside this file.
  */
 .panel {
-  background-color: transparent !important;
+  background-color: transparent;
   padding: 0; }
 
 .navigation nav {
@@ -759,7 +759,7 @@ td.ng-binding.effect {
   color: #333333 !important; }
 
 .guideAnimate {
-  background-color: #ffd452 !important;
+  background-color: #ffd452;
   transition: 300ms ease-out; }
 
 /*# sourceMappingURL=main.css.map */
