@@ -505,7 +505,7 @@ body {
           text-align: center;
           font-size: 3vmax;
           color: #ffffff;
-          text-shadow: 1px 1px 2px #000000;
+          text-shadow: 1px 1px 2px #333333;
           font-family: "Josefin Sans", sans-serif; }
         body main #container-wrapper section#guide article section div {
           transition: 300ms ease-in;
