@@ -68,6 +68,11 @@
  * Matches: (max-width : 670px)
  *
  */
+/*
+ *@name: Spelcial Function 
+ *@description: Applying a color from the palette 
+ *
+ */
 /*@_breakpoints.scss
  *The purpose is to separate breakpoints in order to make it
  *modular and easier to track code.
@@ -739,7 +744,7 @@ td.ng-binding.effect {
 .paragraphKeyAnimate {
   animation: moveAnimateParagraph 350ms;
   animation-iteration-count: 2;
-  color: #333333 !important; }
+  color: #333333!important; }
 
 /*
  *@description: paragraphKeyAnimate
@@ -756,7 +761,7 @@ td.ng-binding.effect {
   animation-iteration-count: 1; }
 
 .glyphiconColorAnimate {
-  color: #333333 !important; }
+  color: #333333!important; }
 
 .guideAnimate {
   background-color: #ffd452;
