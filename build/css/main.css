@@ -22,6 +22,7 @@
  *Just import the class and it can be called anytime
  */
 /* _base.scss colors */
+/* color override / not override */
 /* _nav.scss colors */
 /*@_functions.scss
  *All the @mixins are on this file to prevent messy codes
@@ -40,6 +41,7 @@
  *Just import the class and it can be called anytime
  */
 /* _base.scss colors */
+/* color override / not override */
 /* _nav.scss colors */
 /* _base.scss  @mixins */
 /* _nav.scss @mixins */
@@ -301,6 +303,7 @@
  *Just import the class and it can be called anytime
  */
 /* _base.scss colors */
+/* color override / not override */
 /* _nav.scss colors */
 /*@_base.scss
  *HTML structure will be organized here as layout and general settings
