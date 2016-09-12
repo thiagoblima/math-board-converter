@@ -81,9 +81,9 @@ section#intro-section{
   h1{ @include splash-intro($intro-font-josefin, center, $light-color, -20px) }
   div{
      article{
-        @include intro-splash(400px, $table-color);
+        @include intro-splash($table-color);
      p{
-        @include paragraph-three-collumn($dark-color, 5em 2em 7.8em 2em, 2em, $intro-font-josefin, center);
+        @include paragraph-three-collumn($dark-color, 2em, 2em, $intro-font-josefin, center);
       }
     }
   }
