@@ -393,11 +393,10 @@ body {
         color: #ffffff;
         margin-top: -20px; }
       body main #container-wrapper section#intro-section div article {
-        height: 400px;
         background-color: #ffd452; }
         body main #container-wrapper section#intro-section div article p {
           color: #333333;
-          padding: 5em 2em 7.8em 2em;
+          padding: 2em;
           font-size: 2em;
           font-family: "Josefin Sans", sans-serif;
           text-align: center; }
