@@ -113,8 +113,7 @@
   height:$height;
 }
 
-@mixin intro-splash($height, $color){
-  height:$height;
+@mixin intro-splash($color){
   background-color:$color;
 }
 
