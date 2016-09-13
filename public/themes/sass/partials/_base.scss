@@ -78,7 +78,7 @@ nav{
 
 section#intro-section{
   @include intro-section(30px, 50px, relative, -100);
-  h1{ @include splash-intro($intro-font-josefin, center, $light-color, -20px) }
+  h1{ @include splash-intro($intro-font-josefin, 3vmax, center, $light-color, -20px) }
   div{
      article{
         @include intro-splash($table-color);
