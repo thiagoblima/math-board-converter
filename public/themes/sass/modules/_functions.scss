@@ -94,8 +94,9 @@
   z-index:$z-index;
 }
 
-@mixin splash-intro($font-family, $text-align, $color, $margin-top){
+@mixin splash-intro($font-family, $font-size, $text-align, $color, $margin-top){
   font-family:$font-family;
+  font-size:$font-size;
   text-align:$text-align;
   color:$color;
   margin-top:$margin-top;
