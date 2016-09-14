@@ -227,8 +227,7 @@ section#guide{
 
 
 .content-wrapper{
-  @include content-wrapper(relative, 320px, 1200px);
-  transition: 400ms linear;
+  @include content-wrapper(relative, 320px, 1200px, 400ms linear);
 }
 
  /**
@@ -239,6 +238,5 @@ section#guide{
 
 
 .content-wrapper-nav{
-  @include content-wrapper-nav(relative, 465px, 100%);
-  transition: 400ms linear;
+  @include content-wrapper-nav(relative, 465px, 100%, 400ms linear);
 }
