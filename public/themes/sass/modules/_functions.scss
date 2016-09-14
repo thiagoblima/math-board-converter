@@ -102,16 +102,18 @@
   margin-top:$margin-top;
 }
 
-@mixin content-wrapper($position, $top, $height){
+@mixin content-wrapper($position, $top, $height, $transition){
   position:$position;
   top:$top;
   height:$height;
+  transition:$transition;
 }
 
-@mixin content-wrapper-nav($position, $top, $height){
+@mixin content-wrapper-nav($position, $top, $height, $transition){
   position:$position;
   top:$top;
   height:$height;
+  transition:$transition;
 }
 
 @mixin intro-splash($color){
