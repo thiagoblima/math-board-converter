@@ -537,7 +537,7 @@ body {
   position: relative;
   top: 320px;
   height: 1200px;
-  transition: 400ms linear; }
+  transition: 400ms ease-out; }
 
 /**
  *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
@@ -548,7 +548,7 @@ body {
   position: relative;
   top: 465px;
   height: 100%;
-  transition: 400ms linear; }
+  transition: 500ms ease-out; }
 
 /*@_header.scss
  *Header animation and class which is added by the AngularJS directive
