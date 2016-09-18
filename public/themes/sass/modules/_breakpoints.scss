@@ -229,7 +229,6 @@ main{
 
     nav{
       ul{
-        //@include menu-margin-breakpoint(30px);
         li{
           @include menu-margin-breakpoint(5px);
           a{
@@ -263,7 +262,6 @@ main{
 
   nav{
     ul{
-      //@include menu-margin-breakpoint(30px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
         a{
@@ -312,10 +310,8 @@ main{
 
   nav{
     ul{
-      //@include menu-margin-breakpoint(20px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
-        //float:none !important;
         a{
           @include menu-a-breakpoint(55px !important, 0 4px !important, 500ms ease-out);
           div.front{
@@ -347,10 +343,8 @@ main{
 
   nav{
     ul{
-      //@include menu-margin-breakpoint(20px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
-        //float:none !important;
         a{
           @include menu-a-breakpoint(55px !important, 0 !important, 500ms ease-out);
           div.front{
@@ -420,8 +414,6 @@ body{
              article{
                 section{
                    div{
-                   /* padding: 0px !important;
-                      margin-top: 70px !important; */
                        p.heroclass{
                         padding-bottom:2.5em !important;
                       }
@@ -446,7 +438,6 @@ body{
              article{
                 section{
                    div{
-                    /*padding: 0px !important; */
                       margin-top: 70px !important; 
                       p.heroclass{
                         padding-bottom:2em !important;
