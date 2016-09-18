@@ -233,8 +233,7 @@
     text-shadow: 2px 2px black; }
 
   nav ul li {
-    margin-left: 5px !important;
-    float: none !important; }
+    margin-left: 5px !important; }
     nav ul li a {
       width: 55px !important;
       margin: 0 4px !important;
@@ -250,11 +249,10 @@
 /* Nav Breakpoint 6 ----------- */
 @media only screen and (max-width: 352px) {
   nav ul li {
-    margin-left: 5px !important;
-    float: none !important; }
+    margin-left: 5px !important; }
     nav ul li a {
-      width: 45px !important;
-      margin: 0 4px !important;
+      width: 55px !important;
+      margin: 0 !important;
       transition: 500ms ease-out; }
       nav ul li a div.front i.fa.fa-4x {
         font-size: 1.8em !important; }
