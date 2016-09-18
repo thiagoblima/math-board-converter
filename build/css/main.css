@@ -277,15 +277,11 @@
     height: 260vh !important; } }
 /* Guide Section Breakpoint 2 ----------- */
 @media only screen and (max-width: 737px) {
-  body main #container-wrapper section#guide article section div {
-    /* padding: 0px !important;
-       margin-top: 70px !important; */ }
-    body main #container-wrapper section#guide article section div p.heroclass {
-      padding-bottom: 2.5em !important; } }
+  body main #container-wrapper section#guide article section div p.heroclass {
+    padding-bottom: 2.5em !important; } }
 /* Guide Section Breakpoint 3 ----------- */
 @media only screen and (max-width: 462px) {
   body main #container-wrapper section#guide article section div {
-    /*padding: 0px !important; */
     margin-top: 70px !important; }
     body main #container-wrapper section#guide article section div p.heroclass {
       padding-bottom: 2em !important; } }
