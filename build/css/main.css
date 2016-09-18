@@ -195,34 +195,30 @@
       transition: 500ms ease-out; }
       main #container-wrapper header section form input.form-control.search {
         width: 256px !important; }
-    main #container-wrapper nav ul {
-      margin-left: 30px; }
-      main #container-wrapper nav ul li {
-        margin-left: 5px; }
-        main #container-wrapper nav ul li a {
-          width: 85px;
-          margin: 0 4px;
-          transition: 500ms ease-out; }
-          main #container-wrapper nav ul li a div.front i.fa.fa-4x {
-            font-size: 2.5em; } }
+    main #container-wrapper nav ul li {
+      margin-left: 5px; }
+      main #container-wrapper nav ul li a {
+        width: 85px;
+        margin: 0 4px;
+        transition: 500ms ease-out; }
+        main #container-wrapper nav ul li a div.front i.fa.fa-4x {
+          font-size: 2.5em; } }
 /**
   * @breakpoint : Search Bar header 4
   *
   */
 /* Search Breakpoint 4 ----------- */
 @media only screen and (max-width: 529px) {
-  nav ul {
-    margin-left: 30px !important; }
-    nav ul li {
-      margin-left: 5px !important; }
-      nav ul li a {
-        width: 65px !important;
-        margin: 0 4px !important;
-        transition: 500ms ease-out; }
-        nav ul li a div.front i.fa.fa-4x {
-          font-size: 1.8em !important; }
-        nav ul li a div.back span {
-          font-size: 1.7rem !important; } }
+  nav ul li {
+    margin-left: 5px !important; }
+    nav ul li a {
+      width: 65px !important;
+      margin: 0 4px !important;
+      transition: 500ms ease-out; }
+      nav ul li a div.front i.fa.fa-4x {
+        font-size: 1.8em !important; }
+      nav ul li a div.back span {
+        font-size: 1.7rem !important; } }
 /**
   * @breakpoint : Search Bar header 5
   *
@@ -611,7 +607,7 @@ nav {
   background-color: transparent;
   transition: 500ms ease-in-out; }
   nav ul {
-    min-width: 600px;
+    min-width: 350px;
     position: relative;
     display: table;
     margin: 25px auto;
