@@ -229,7 +229,7 @@ main{
 
     nav{
       ul{
-        @include menu-margin-breakpoint(30px);
+        //@include menu-margin-breakpoint(30px);
         li{
           @include menu-margin-breakpoint(5px);
           a{
@@ -263,7 +263,7 @@ main{
 
   nav{
     ul{
-      @include menu-margin-breakpoint(30px !important);
+      //@include menu-margin-breakpoint(30px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
         a{

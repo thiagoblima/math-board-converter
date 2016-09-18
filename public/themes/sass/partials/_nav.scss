@@ -16,7 +16,7 @@
 nav{
   @include nav-layer($nav-color-layer, $nav-scroll-bg-back);
   ul{
-      @include ul-nav-settings(600px, relative, table, 25px auto, both);
+      @include ul-nav-settings(350px, relative, table, 25px auto, both);
    li{
       @include li-nav-settings(none, left);
     a{
