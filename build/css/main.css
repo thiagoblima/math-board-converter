@@ -232,19 +232,17 @@
     font-size: 2.1rem;
     text-shadow: 2px 2px black; }
 
-  nav ul {
-    margin-left: 20px !important; }
-    nav ul li {
-      margin-left: 5px !important;
-      float: none !important; }
-      nav ul li a {
-        width: 55px !important;
-        margin: 0 4px !important;
-        transition: 500ms ease-out; }
-        nav ul li a div.front i.fa.fa-4x {
-          font-size: 1.8em !important; }
-        nav ul li a div.back span {
-          font-size: 1.5rem !important; } }
+  nav ul li {
+    margin-left: 5px !important;
+    float: none !important; }
+    nav ul li a {
+      width: 55px !important;
+      margin: 0 4px !important;
+      transition: 500ms ease-out; }
+      nav ul li a div.front i.fa.fa-4x {
+        font-size: 1.8em !important; }
+      nav ul li a div.back span {
+        font-size: 1.5rem !important; } }
 /**
   * @breakpoint : Nav Breakpoint 6
   *
