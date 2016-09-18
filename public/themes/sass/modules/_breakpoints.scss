@@ -315,7 +315,7 @@ main{
       //@include menu-margin-breakpoint(20px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
-        float:none !important;
+        //float:none !important;
         a{
           @include menu-a-breakpoint(55px !important, 0 4px !important, 500ms ease-out);
           div.front{
@@ -350,9 +350,9 @@ main{
       //@include menu-margin-breakpoint(20px !important);
       li{
         @include menu-margin-breakpoint(5px !important);
-        float:none !important;
+        //float:none !important;
         a{
-          @include menu-a-breakpoint(45px !important, 0 4px !important, 500ms ease-out);
+          @include menu-a-breakpoint(55px !important, 0 !important, 500ms ease-out);
           div.front{
            i.fa.fa-4x{
              @include menu-glyphicon-font-size(1.8em !important);
