@@ -1,5 +1,5 @@
-/*
- *@app.js
+/**
+ *@name: app.js
  *
  *@description: Nodejs server, application start.
  *
@@ -9,17 +9,17 @@
 
 
 /**
- *@author: thiagolimasp@live.com (Thiago Lima)
+ *@author: <thiagolimasp@live.com> (Thiago Lima)
  */
 
 
-var express = require('express'),
+const express = require('express'),
     app     = express(),
     port    = process.env.PORT || 3412,
     connect = {
-                success: function(msg, callback){
-                   var msg = console.log("Math Server Started on port: "+ port),
-                   callback = function(value){
+                success: (msg, callback) => {
+                   msg = console.log("Math Server Started on port: "+ port),
+                   callback = (value) => {
                      return value;
                    };
                   return callback(msg);
