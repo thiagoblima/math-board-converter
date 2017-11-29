@@ -1,4 +1,4 @@
 node_modules
 .sass-cache
 public/libs
-build*
+build
