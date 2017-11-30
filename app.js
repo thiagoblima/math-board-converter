@@ -1,40 +1,34 @@
 /**
- *@name: app.js
- *
- *@description: Nodejs server, application start.
- *
- *Express is set as dependecy on node_modules
- *Other dependencies appear soon
+ * @author: <thiagolimasp@live.com> (Thiago Lima)
+ * 
+ * @description: Nodejs server, application start.
+ * The main nodejs server is going to be organized
+ * into controllers which will be called later on
+ * server.js
+ * 
+ * @see: More detailed info can be found on README.md
+ * as well as on the proper server.js file with contains
+ * more detailed instructions of the server organization. 
+ * 
  */
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3412;
+const connect = (message) => console.log(message + port);
 
 
 /**
- *@author: <thiagolimasp@live.com> (Thiago Lima)
+ * @description: genenral/custom static directory
+ * settings which points to the front-end build.
+ * As normally set the static directory pointing
+ * to root *build* directory.
+ * 
+ * @todo: import all the controllers here, they're going
+ * to be started once app.js is run.  
  */
 
+app.use(express.static(__dirname + '/build'));
+app.listen(port);
 
-const express = require('express'),
-    app     = express(),
-    port    = process.env.PORT || 3412,
-    connect = {
-                success: (msg, callback) => {
-                   msg = console.log("Math Server Started on port: "+ port),
-                   callback = (value) => {
-                     return value;
-                   };
-                  return callback(msg);
-                }
-              };
-
-
-/**
- *@description: genenral set up for express
- *
- *Setting views and the static path for renderimg
- *swig templates on the build.
- */
-
- app.use(express.static( __dirname + '/build'));
- app.listen(port);
-
- connect.success();
+connect("Math Server Started on port:");
