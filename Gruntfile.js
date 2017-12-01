@@ -9,19 +9,27 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = (grunt) => {
 
-  var cacheHash = ((new Date()).valueOf().toString()) + (Math.floor((Math.random()*1000000)+1).toString());
+  const cacheHash = ((new Date()).valueOf().toString()) + (Math.floor((Math.random() * 1000000) + 1).toString());
   console.log("This cached version: ", cacheHash);
+
+  // initializing loade-grunt-tasks
+  
+  function loader() {
+    return 'load-grunt-tasks';
+  };
+
+  require(loader())(grunt);
 
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
     deploy: grunt.file.readJSON('deploy.json'),
 
-   /**
-    *@description: Here some variables will store paths for building process
-    */
+    /**
+     *@description: Here some variables will store paths for building process
+     */
 
     hash: cacheHash,
     srcpath: "public",
@@ -36,7 +44,7 @@ module.exports = function(grunt) {
     webfontbuild: "<%= path %>/fonts",
 
 
-    jsfiles:[
+    jsfiles: [
 
       /**
        *@description: Here goes the author Angular.js scripts
@@ -53,7 +61,7 @@ module.exports = function(grunt) {
       '<%= mathjsfiles %>'
     ],
 
-    vendorjs:[
+    vendorjs: [
 
       /**
        *@description: Here goes the vendor's scripts
@@ -71,7 +79,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/libs/bootstrap/dist/js/bootstrap.min.js',
     ],
 
-    angularjsfiles:[
+    angularjsfiles: [
 
       /**
        *@description: Here goes the AngularJS Directives
@@ -94,7 +102,7 @@ module.exports = function(grunt) {
 
     ],
 
-    mathjsfiles:[
+    mathjsfiles: [
 
       /**
        *@description: Here goes the Math app Java Script
@@ -120,7 +128,7 @@ module.exports = function(grunt) {
       '<%= srcpath %>/index.html'
     ],
 
-    directivespages:[
+    directivespages: [
 
       /**
        *@description: Here goes the AngularJS Directives (HTML)
@@ -140,7 +148,7 @@ module.exports = function(grunt) {
 
     ],
 
-    webfonts:[
+    webfonts: [
 
       /**
        *@description: Here goes the WebFonts and Icons (bootstrap)
@@ -149,7 +157,7 @@ module.exports = function(grunt) {
        *Hopefully any change for the next updates
        */
 
-       '<%= webfontpath %>/*'
+      '<%= webfontpath %>/*'
 
     ],
 
@@ -161,8 +169,8 @@ module.exports = function(grunt) {
 
     htmlbuild: {
       html: {
-        src:'<%= htmlpages %>',
-        dest:'<%= path %>'
+        src: '<%= htmlpages %>',
+        dest: '<%= path %>'
       },
       angularjs: {
         src: '<%= directivespages %>',
@@ -179,7 +187,7 @@ module.exports = function(grunt) {
         src: '<%= directivespages %>',
         dest: '<%= directivespath %>'
       },*/
-      webfonts:{
+      webfonts: {
         expand: true,
         flatten: true,
         src: '<%= webfonts %>',
@@ -187,14 +195,12 @@ module.exports = function(grunt) {
       }
     },
 
-
-    jshint: {
+    eslint: {
+      target: ['public/js/**/*.js'],
       options: {
-        reporter: require('jshint-stylish')
-      },
-      all: ['Grunfile.js', 'public/js/**/*.js']
+        config: '.eslintrc.json'
+      }
     },
-
 
     uglify: {
       options: {
@@ -205,8 +211,8 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-        '<%= path %>/js/devbuild.<%= hash %>.min.js': [ "<%= jsfiles %>" ],
-        '<%= directivesjs %>/angularjs.<%= hash %>.min.js': [ "<%= angularjsfiles %>" ]
+          '<%= path %>/js/devbuild.<%= hash %>.min.js': ["<%= jsfiles %>"],
+          '<%= directivesjs %>/angularjs.<%= hash %>.min.js': ["<%= angularjsfiles %>"]
         }
       }
     },
@@ -227,8 +233,8 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-         //'<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
-         '<%= path %>/css/vendor.min.css': '<%= srcpath %>/libs/bootstrap/dist/css/bootstrap.min.css'
+          //'<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
+          '<%= path %>/css/vendor.min.css': '<%= srcpath %>/libs/bootstrap/dist/css/bootstrap.min.css'
         }
       }
     },
@@ -236,9 +242,9 @@ module.exports = function(grunt) {
     sftp: {
       test: {
         files: {
-          "./" : ".json"
+          "./": ".json"
         },
-        options:{
+        options: {
           path: '/tmp/',
           host: '<%= deploy.host %>',
           username: '<%= deploy.username %>',
@@ -248,15 +254,15 @@ module.exports = function(grunt) {
       }
     },
     sshexec: {
-        test: {
-          command: 'uptime',
+      test: {
+        command: 'uptime',
         options: {
           host: '<%= deploy.host %>',
           username: '<%= deploy.username %>',
           password: '<%= deploy.password %>'
-       }
-     }
-   },
+        }
+      }
+    },
 
     watch: {
       stylesheets: {
@@ -266,7 +272,7 @@ module.exports = function(grunt) {
           livereload: true
         }
       },
-      html:{
+      html: {
         files: ['<%= htmlpages %>', '<%= directivespages %>'],
         tasks: ['uglify', 'htmlbuild'],
         opstions: {
@@ -285,7 +291,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -294,9 +299,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-ssh');
 
+  grunt.registerTask('default', ['eslint']);
+  grunt.registerTask('dev', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('production', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('dev-deploy', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
+  grunt.registerTask('production-deploy', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
 
-  grunt.registerTask('dev', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
-  grunt.registerTask('production', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
-  grunt.registerTask('dev-deploy', ['clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
-  grunt.registerTask('production-deploy', [ 'clean', 'jshint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
 };
+
+
+
