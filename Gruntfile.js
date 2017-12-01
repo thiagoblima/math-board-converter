@@ -1,11 +1,10 @@
 /**
- *@name: Gruntfile.js
- *
- *@author: thiagolimasp@live.com (Thiago lima)
- *
- *@description: Responsible for the building process upon AngularJS, SASS
- *and time stamp it after the building process, always to let the server
- *know the date the building process was taken.
+ * @name: Gruntfile.js
+ * @author: <thiagolimasp@live.com> Thiago Lima
+ * @description: Responsible for the building process upon Java Script, 
+ * SASS, CSS, cleaning folders and time stamp it after the building 
+ * process, this way it's easier to always let the server know the date 
+ * of the building process was taken to (cache-buster principles).
  */
 
 'use strict';
@@ -77,7 +76,6 @@ module.exports = function(grunt) {
       /**
        *@description: Here goes the AngularJS Directives
        *
-       *
        *@see: They're basicly distributed on public/js/directives/
        *Hopefully any change for the next updates
       */
@@ -100,7 +98,6 @@ module.exports = function(grunt) {
 
       /**
        *@description: Here goes the Math app Java Script
-       *
        *
        *@see: They're basicly distributed on public/js/math/
        *Hopefully any change for the next updates
