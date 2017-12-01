@@ -28,7 +28,7 @@ module.exports = (grunt) => {
     deploy: grunt.file.readJSON('deploy.json'),
 
     /**
-     *@description: Here some variables will store paths for building process
+     *@description: Here some properties will store paths for building process
      */
 
     hash: cacheHash,
