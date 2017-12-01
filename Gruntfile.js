@@ -14,8 +14,8 @@ module.exports = (grunt) => {
   const cacheHash = ((new Date()).valueOf().toString()) + (Math.floor((Math.random() * 1000000) + 1).toString());
   console.log("This cached version: ", cacheHash);
 
-  // initializing loade-grunt-tasks
-  
+  // initializing load-grunt-tasks
+
   function loader() {
     return 'load-grunt-tasks';
   };
