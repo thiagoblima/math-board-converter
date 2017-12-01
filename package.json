@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Math Tests, Nodejs, Education",
   "main": "app.js",
+  "scripts": {
+    "linter": "grunt",
+    "dev": "grunt dev",
+    "prod": "grunt production"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thiagolimaa/Java_Script_Data_Types.git"
+    "url": "git+https://github.com/thiagolimaa/java-script-data-types.git"
   },
   "keywords": [
     "Math",
@@ -16,7 +21,7 @@
   "author": "Thiago Lima",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thiagolimaa/Java_Script_Data_Types/issues"
+    "url": "https://github.com/thiagolimaa/java-script-data-types/issues"
   },
   "homepage": "https://github.com/thiagolimaa/Java_Script_Data_Types#readme",
   "dependencies": {
