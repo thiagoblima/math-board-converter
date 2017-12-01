@@ -1,11 +1,10 @@
 /**
+ * @name: app.js
  * @author: <thiagolimasp@live.com> (Thiago Lima)
- * 
  * @description: Nodejs server, application start.
  * The main nodejs server is going to be organized
  * into controllers which will be called later on
  * server.js
- * 
  * @see: More detailed info can be found on README.md
  * as well as on the proper server.js file with contains
  * more detailed instructions of the server organization. 
