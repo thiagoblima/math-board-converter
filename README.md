@@ -11,7 +11,7 @@ MEAN Stack Application:
 
 ## Architecture
 
-The server-side counts with a REST API based architecture, using JWT user authorization for granting access on the client-side, each user receives a JWT TOKEN for a session that is going to expire or in case user logging out. 
+The server-side counts with a REST API based architecture, using JWT user authorization for granting access on the client-side, each user receives a JWT TOKEN for a session that may expire for inactivity or in case user logging out. 
 
 The client-side stores the JWT TOKEN on the *local storage* of your browser, an auth-service is provieded on its end.
 
