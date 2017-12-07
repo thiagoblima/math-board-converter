@@ -46,7 +46,7 @@ Sass 3.4.21 (Selective Steve)
 
 6. Installing back-end / server-side dependencies
 
-./
+ * ./
 
 ```
 $ npm install
@@ -54,7 +54,7 @@ $ npm install
 
 7. Installing front-end / client-side dependencies
 
-./public/
+ * ./public/
 
 ```
 $ npm install
