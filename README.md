@@ -52,26 +52,26 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
 5. Testing sass
 
-```
-$ sass -v
-Sass 3.4.21 (Selective Steve)
-```
+    ```
+    $ sass -v
+    Sass 3.4.21 (Selective Steve)
+    ```
 
 6. Installing back-end / server-side dependencies
 
- * ./
+   * ./
 
-```
-$ npm install
-``` 
+     ```
+     $ npm install
+     ``` 
 
 7. Installing front-end / client-side dependencies
 
- * ./public/
+   * ./public/
 
-```
-$ npm install
-``` 
+     ```
+     $ npm install 
+     ``` 
 
 ## References
 
