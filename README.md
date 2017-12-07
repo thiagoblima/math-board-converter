@@ -26,13 +26,12 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 2. Make sure you're using a version of Nodejs `>= v7.2.1`.
 
 2. Make sure you've got `ruby x64 architecture`installed.
-```
- Mac:
+ * Mac:
 
   * Make sure you have brew installed: [`brew link`](https://www.w3.org/TR/html5/)
   * `brew install ruby`
   * `gem install sass`
-```
+
 Linux: 
        
  * `sudo apt-get install ruby-ful`
