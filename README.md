@@ -3,9 +3,18 @@
 
 Complementary tasks are going to be added here for the students, easily to manage through the student's ID.
 
+## Intro
+
+MEAN Stack Application:
+
+ *MongoDB v3.4* *Expressjs v4.16.2* *Angular 1.x* *NodeJS v8.9.1 LTS*
+
 ## Architecture
 
-MEAN Stack, *Angular 1.x* *NodeJS 8.9.1 LTS*
+The server-side counts with a REST API based architecture, using JWT user authorization for granting access on the client-side, each user receives a JWT TOKEN for a session that is going to expire or in case user logging out. 
+
+The client-side stores the JWT TOKEN on the *local storage* of your browser, an auth-service is provieded on its end.
+
 
 ## Getting Started
 
