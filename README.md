@@ -9,7 +9,7 @@ MEAN Stack Application:
 
  * *MongoDB v3.4* 
  * *Expressjs v4.16.2* 
- * *Angular 1.x* 
+ * *Angular v1.x* 
  * *NodeJS v8.9.1 LTS*
 
 ## Architecture
