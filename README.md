@@ -73,6 +73,14 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
      $ npm install 
      ``` 
 
+8. Starting Nodejs server
+
+   > ./
+
+     ```
+     $ node app 
+     ``` 
+
 ## References
 
 Technologies you are going to see in this project:
