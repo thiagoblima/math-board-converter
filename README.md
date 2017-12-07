@@ -33,14 +33,14 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
     * `brew install ruby`
     * `gem install sass`
 
-Linux: 
+ * Linux: 
        
- * `sudo apt-get install ruby-ful`
- * `gem install sass`
+    * `sudo apt-get install ruby-ful`
+    * `gem install sass`
 
-Windows:
+* Windows:
 
- * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
+    * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
 
 4. Testing ruby
 
