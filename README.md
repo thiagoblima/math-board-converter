@@ -12,15 +12,21 @@ MEAN Stack, *Angular 1.x* *NodeJS 8.9.1 LTS*
 1. Create a fork of this repository
 
 2. Make sure you've got `ruby x64 architecture`installed.
-  a. Mac  
-       * Make sure you have brew installed: [`brew link`](https://www.w3.org/TR/html5/)
-       * `brew install ruby`
-       * `gem install sass`
-  b. Linux 
-       * `sudo apt-get install ruby-ful`
-       * `gem install sass`
-  c. Windows 
-       * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
+
+Mac:
+
+ * Make sure you have brew installed: [`brew link`](https://www.w3.org/TR/html5/)
+ * `brew install ruby`
+ * `gem install sass`
+
+Linux: 
+       
+ * `sudo apt-get install ruby-ful`
+ * `gem install sass`
+
+Windows:
+
+ * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
 
 Testing ruby
 ```
