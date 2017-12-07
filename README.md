@@ -3,8 +3,6 @@ Welcome to the e-learning Math Board Converter app, created for educational purp
 
 Complementary tasks are going to be added here for the students, easily to manage through the student's ID.
 
-[![David](https://img.shields.io/david/expressjs/express.svg?style=plastic)]()
-
 ## Intro
 
 MEAN Stack Application:
