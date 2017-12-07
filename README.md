@@ -45,10 +45,10 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
 4. Testing ruby
 
-```
-$ ruby -v
-ruby 2.2.3p173 (2015-08-18 revision 51636) [x64-mingw32]
-```
+    ```
+    $ ruby -v
+    ruby 2.2.3p173 (2015-08-18 revision 51636) [x64-mingw32]
+    ```
 
 5. Testing sass
 
