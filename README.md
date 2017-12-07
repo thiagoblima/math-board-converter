@@ -1,5 +1,5 @@
 # Math Converter
-* Welcome to the e-learning Math Board Converter app, created for educational purposes letting the students quickly convert math's tasks*
+Welcome to the e-learning Math Board Converter app, created for educational purposes letting the students quickly convert math's tasks*
 
 Complementary tasks are going to be added here for the students, easily to manage through the student's ID.
 
