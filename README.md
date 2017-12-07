@@ -11,6 +11,8 @@ MEAN Stack, *Angular 1.x* *NodeJS 8.9.1 LTS*
 
 1. Create a fork of this repository
 
+2. Make sure you're using a version of Nodejs `> v7.2.1`.
+
 2. Make sure you've got `ruby x64 architecture`installed.
 
 Mac:
@@ -28,17 +30,21 @@ Windows:
 
  * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
 
-Testing ruby
+3. Testing ruby
+
 ```
 $ ruby -v
 ruby 2.2.3p173 (2015-08-18 revision 51636) [x64-mingw32]
 ```
 
-Testing sass
+4. Testing sass
+
 ```
 $ sass -v
 Sass 3.4.21 (Selective Steve)
 ```
+
+5. 
 
 ## References
 
