@@ -94,30 +94,3 @@ Technologies you are going to see in this project:
  * [`Express`](http://expressjs.com/)
  * [`MongoDB`](https://www.mongodb.org/)
 
-## Getting started
-
-On the root you can identify the `app.js` and notice the *app* is run on the *public* folder.
-
-The building process also occurs into that folder. **Read** `Gruntfile.js`.
-
-1. Building Process
-
-  * Dev build `npm run dev` build:
-    * `uglify`
-    * `eslint`
-    * `cssmin`
-    * `SASS`
-    * `dev-deploy`
-
-  * Stage build `npm run prod` build:
-    * `uglify`
-    * `eslint`
-    * `cssmin`
-    * `SASS`
-    * `stage-deploy`
-
-  * Production build `npm run linter`   
-    * `jslint`
-
-3. `node app.js` would start the application loading the back-end server.        
-  * `http://localhost:3412` is the default port.
