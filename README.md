@@ -79,6 +79,7 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
      ```
      $ node app 
+     Math Server Started on port: http://localhost:3412
      ``` 
 
 ## References
