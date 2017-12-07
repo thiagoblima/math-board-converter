@@ -94,3 +94,5 @@ Technologies you are going to see in this project:
  * [`Express`](http://expressjs.com/)
  * [`MongoDB`](https://www.mongodb.org/)
 
+ This software is licensed under the terms of the MIT license.
+
