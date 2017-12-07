@@ -40,7 +40,7 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
 * Windows:
 
-    * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
+    * Make sure you have ruby installed: [`ruby installer link`](https://rubyinstaller.org/) 
 
 4. Testing ruby
 
