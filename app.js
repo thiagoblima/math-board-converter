@@ -30,4 +30,4 @@ const connect = (message) => console.log(message + port);
 app.use(express.static(__dirname + '/build'));
 app.listen(port);
 
-connect("Math Server Started on port:");
+connect("Math Server Started on port: http://localhost");
