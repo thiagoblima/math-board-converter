@@ -28,7 +28,7 @@ module.exports = (grunt) => {
     deploy: grunt.file.readJSON('deploy.json'),
 
     /**
-     *@description: Here some properties will store paths for building process
+     * @description: Here some properties will store paths for building process
      */
 
     hash: cacheHash,
@@ -47,10 +47,10 @@ module.exports = (grunt) => {
     jsfiles: [
 
       /**
-       *@description: Here goes the author Angular.js scripts
+       * @description: Here goes the author Angular.js scripts
        *
-       *@see: All of them are based on the root: /public/js/
-       *Hopefully any change for the next updates
+       * @see: All of them are based on the root: /public/js/
+       * Hopefully any change for the next updates
       */
 
       '<%= vendorjs %>',
@@ -64,10 +64,10 @@ module.exports = (grunt) => {
     vendorjs: [
 
       /**
-       *@description: Here goes the vendor's scripts
+       * @description: Here goes the vendor's scripts
        *
-       *@see: All of them are based on the root: /public/libs/
-       *Hopefully any change for the next updates
+       * @see: All of them are based on the root: /public/libs/
+       * Hopefully any change for the next updates
       */
 
       '<%= srcpath %>/libs/angular/angular.min.js',
@@ -82,10 +82,10 @@ module.exports = (grunt) => {
     angularjsfiles: [
 
       /**
-       *@description: Here goes the AngularJS Directives
+       * @description: Here goes the AngularJS Directives
        *
-       *@see: They're basicly distributed on public/js/directives/
-       *Hopefully any change for the next updates
+       * @see: They're basicly distributed on public/js/directives/
+       * Hopefully any change for the next updates
       */
 
       '<%= srcpath %>/js/directives/headSection.js',
@@ -105,10 +105,10 @@ module.exports = (grunt) => {
     mathjsfiles: [
 
       /**
-       *@description: Here goes the Math app Java Script
+       * @description: Here goes the Math app Java Script
        *
-       *@see: They're basicly distributed on public/js/math/
-       *Hopefully any change for the next updates
+       * @see: They're basicly distributed on public/js/math/
+       * Hopefully any change for the next updates
        */
 
       /*'<%= srcpath %>/js/math/model/number.js',
@@ -119,10 +119,10 @@ module.exports = (grunt) => {
     htmlpages: [
 
       /**
-       *@description: Here goes the html pages
+       * @description: Here goes the html pages
        *
-       *@see: All of them are based on the root: /public/
-       *Hopefully any change for the next updates
+       * @see: All of them are based on the root: /public/
+       * Hopefully any change for the next updates
        */
 
       '<%= srcpath %>/index.html'
@@ -131,10 +131,10 @@ module.exports = (grunt) => {
     directivespages: [
 
       /**
-       *@description: Here goes the AngularJS Directives (HTML)
+       * @description: Here goes the AngularJS Directives (HTML)
        *
-       *@see: They're basicly distributed on public/js/directives/
-       *Hopefully any change for the next updates
+       * @see: They're basicly distributed on public/js/directives/
+       * Hopefully any change for the next updates
        */
 
       '<%= srcpath %>/js/directives/views/headSection.html',
@@ -151,10 +151,10 @@ module.exports = (grunt) => {
     webfonts: [
 
       /**
-       *@description: Here goes the WebFonts and Icons (bootstrap)
+       * @description: Here goes the WebFonts and Icons (bootstrap)
        *
-       *@see: They're basicly distributed on public/libs/bootstrap/fonts
-       *Hopefully any change for the next updates
+       * @see: They're basicly distributed on public/libs/bootstrap/fonts
+       * Hopefully any change for the next updates
        */
 
       '<%= webfontpath %>/*'
