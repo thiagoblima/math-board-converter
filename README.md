@@ -59,7 +59,7 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
 6. Installing back-end / server-side dependencies
 
-   * ./
+   > ./
 
      ```
      $ npm install
@@ -67,7 +67,7 @@ The client-side stores the JWT TOKEN on the *local storage* of your browser, an 
 
 7. Installing front-end / client-side dependencies
 
-   * ./public/
+   > ./public/
 
      ```
      $ npm install 
