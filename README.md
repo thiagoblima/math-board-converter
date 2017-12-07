@@ -3,13 +3,38 @@
 
 Complementary tasks are going to be added here for the students, easily to manage through the student's ID.
 
-##Architecture
+## Architecture
 
-Designed and build with the `NodeJS` architecture on **back-end** having `Exprees` providing **API RESTful** and `MongoDB` as **NoSQL** **database** service *JSON* formated.
+MEAN Stack, *Angular 1.x* *NodeJS 8.9.1 LTS*
 
-It counts with the *Superheroic* framework on  `AngularJS` enchancing **front-end** *services and directives purposes*.
+## Getting Started
 
-##References
+1. Create a fork of this repository
+
+2. Make sure you've got `ruby x64 architecture`installed.
+  a. Mac  
+       * Make sure you have brew installed: [`brew link`](https://www.w3.org/TR/html5/)
+       * `brew install ruby`
+       * `gem install sass`
+  b. Linux 
+       * `sudo apt-get install ruby-ful`
+       * `gem install sass`
+  c. Windows 
+       * Make sure you have ruby installed: ['ruby installer link'](https://rubyinstaller.org/) 
+
+Testing ruby
+```
+$ ruby -v
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x64-mingw32]
+```
+
+Testing sass
+```
+$ sass -v
+Sass 3.4.21 (Selective Steve)
+```
+
+## References
 
 Technologies you are going to see in this project:
 
@@ -18,7 +43,7 @@ Technologies you are going to see in this project:
  * [`HTML5`](https://www.w3.org/TR/html5/)
  * [`CSS3`](https://www.w3.org/TR/css-syntax-3/)
  * [`Bootstrap`](http://getbootstrap.com/)
- * [`Java Script (pure)`](https://www.w3.org/standards/webdesign/script)
+ * [`Java Script ES5`](https://www.w3.org/standards/webdesign/script)
  * [`AngularJS`](https://angularjs.org/)
  * [`GruntJS`](http://gruntjs.com/)
  * [`SASS`](http://sass-lang.com/)
@@ -30,7 +55,7 @@ Technologies you are going to see in this project:
  * [`Express`](http://expressjs.com/)
  * [`MongoDB`](https://www.mongodb.org/)
 
-##Getting started
+## Getting started
 
 On the root you can identify the `app.js` and notice the *app* is run on the *public* folder.
 
@@ -38,31 +63,22 @@ The building process also occurs into that folder. **Read** `Gruntfile.js`.
 
 1. Building Process
 
-  * Dev build `grunt dev` is registered
+  * Dev build `npm run dev` build:
     * `uglify`
-    * `JSHint`
+    * `eslint`
     * `cssmin`
     * `SASS`
     * `dev-deploy`
 
-  * Stage build `grunt stage` is unregistered  
+  * Stage build `npm run prod` build:
     * `uglify`
-    * `JSHint`
+    * `eslint`
     * `cssmin`
     * `SASS`
     * `stage-deploy`
 
-  * Production build `grunt production` is unregistered  
-    * `uglify`
-    * `JSHint`
-    * `cssmin`
-    * `SASS`
-    * `prod-deploy`
+  * Production build `npm run linter`   
+    * `jslint`
 
-2. For public compiling, **not for the build** - `compass`
-
-  * SASS pre-compile process for the source
-    * `compass watch path/to/the/themes/`
-
-3. `node app.js` would start the application if everything is fine.        
-  * `localhost:3412` is the default port.
+3. `node app.js` would start the application loading the back-end server.        
+  * `http://localhost:3412` is the default port.
