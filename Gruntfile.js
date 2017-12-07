@@ -306,6 +306,3 @@ module.exports = (grunt) => {
   grunt.registerTask('production-deploy', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
 
 };
-
-
-
