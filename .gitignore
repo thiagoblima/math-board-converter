@@ -1,4 +1,13 @@
+## General node modules
 node_modules
-.sass-cache
 public/libs
+
+## SASS Cacache
+.sass-cache
+
+## Front-End Build
 build
+
+## Back-End Build
+app.js
+server.js
