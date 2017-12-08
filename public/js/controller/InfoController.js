@@ -1,72 +1,49 @@
 /**
-  *@author: Thiago Lima
-  *
-  *@description: General Controllers class, they're separated
-  *into sections to get easier and more readable.
-  *
-  *@name: InfoController storing information for head section.
-  *
-  */
-
-
+ * @author: Thiago Lima
+ * @name: InfoController 
+ * @description: storing information for head section
+ * General Controllers object, they're separated
+ * into sections to get easier and more readable.
+ */
 
 /**
-*@name: app
-*
-*@description: Controllers import, all of them should
-*be imported underneath.
-*
-*/
+ * @name: app
+ * @description: Controllers import, all of them should
+ * be imported underneath.
+ */
 
-
-app.controller('HeadInfoController', HeadInfoController);
-
-
+app.controller("HeadInfoController", HeadInfoController);
 
 /**
-  *@name: Dependency Injection
-  *
-  *@description: This is where you just import the
-  *dependencies to the $scope, never forget it, otherwise
-  *app won't work correctly and may cause a break on the components.
-  *
-  */
+ * @name: Dependency Injection
+ * @description: This is where you just import the
+ * dependencies to the $scope, never forget it, otherwise
+ * app won't work correctly and may cause a break on the components.
+ */
 
-
-HeadInfoController.$inject = ['$scope'];
-
+HeadInfoController.$inject = ["$scope"];
 
 function HeadInfoController() {
-
   var vm = this;
 
   vm.title = {
-    name: 'Math Board Converter'
+    name: "Math Board Converter"
   };
 
   vm.meta = {
-
     keyOne: {
-
-      type: 'description',
-      value: 'Math web online converter',
-
+      type: "description",
+      value: "Math web online converter"
     },
 
     keyTwo: {
-
-      type: 'keywords',
-      value: 'Math, mathematics, converter, web, Java Script'
-
+      type: "keywords",
+      value: "Math, mathematics, converter, web, Java Script"
     },
 
     keyThree: {
-
-      type: 'author',
-      value: 'Thiago Lima'
-
+      type: "author",
+      value: "Thiago Lima"
     }
-
   };
-
 }
