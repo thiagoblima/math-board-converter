@@ -11,6 +11,7 @@ MEAN Stack Application:
  * *Expressjs v4.16.2* 
  * *Angular v1.x* 
  * *NodeJS v8.9.1 LTS*
+ * *TypeScript v2.6.2 - back-end*
 
 ## Architecture
 
