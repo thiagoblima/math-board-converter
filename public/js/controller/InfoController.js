@@ -1,5 +1,5 @@
 /**
- * @author: Thiago Lima
+ * @author: <thiagolimasp@live.com> Thiago Lima
  * @name: InfoController 
  * @description: storing information for head section
  * General Controllers object, they're separated
