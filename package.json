@@ -4,12 +4,14 @@
   "description": "Math Tests, Nodejs, Education",
   "main": "app.js",
   "scripts": {
+    "init-project": "npm install && cd public && npm install",
     "client-linter": "grunt",
     "client-dev": "grunt dev",
     "client-prod": "grunt production",
+    "client-watch": "grunt watch",
     "server-watch": "npx tsc --watch",
     "server-compile": "npx tsc --listEmittedFiles",
-    "stack-dev": "grunt prod && npx tsc --listEmittedFiles && node app"
+    "stack-dev": "grunt production && npx tsc --listEmittedFiles && node app"
   },
   "repository": {
     "type": "git",
