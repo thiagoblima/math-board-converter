@@ -1,8 +1,7 @@
 /**
  * @name: app.ts
  * @author: <thiagolimasp@live.com> Thiago Lima
- * @description: Main entrance of the entire server 
- * application.
+ * @description: Main server entrance.
  * @see: All dependencies and 
  * 
  */
