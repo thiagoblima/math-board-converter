@@ -17,8 +17,8 @@ import { Server } from './server';
  */
 
 
-let port = 3412; 
-let server = new Server(express(), port);
+const port = 3412; 
+const server = new Server(express(), port);
 
 /**
  * @method: { run } 
