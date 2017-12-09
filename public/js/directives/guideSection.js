@@ -1,14 +1,14 @@
 /**
- *@name: headSection.js
- *@description: AngularJS directive set to hold the guide-section as template
- *being parsed data through the scope as data.
+ * @name: guideSection.js
+ * @description: directive component guide-section 
+ * Binding data to its scope object.
  */
 
-app.directive("guideSection", function(){
-   return{
-     restrict: "EA",
-     templateUrl: 'js/directives/views/guideSection.html',
-     controllerAs:'vm',
-     bindToController: true
-   };
+app.directive("guideSection", function() {
+  return {
+    restrict: "EA",
+    templateUrl: "js/directives/views/guideSection.html",
+    controllerAs: "vm",
+    bindToController: true
+  };
 });
