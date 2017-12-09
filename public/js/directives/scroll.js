@@ -1,17 +1,17 @@
 /**
- *@name: scroll.js
- *@description: Scroll event that modifies the way header and content-wrapper
- *Behaves. Important to observe the tags on index.html and its built there.
- *Excellent alternative, code less, build more.
+ * @name: scroll.js
+ * @description: Scroll event that modifies the way header and content-wrapper
+ * Behaves. Important to observe the tags on index.html.
+ * Excellent alternative, code less, build more.
  */
 
-app.directive('scrollHeader', function($window){
-  return function(scope, element, attrs){
-    angular.element($window).bind('scroll', function(){
-      if(this.pageYOffset >= 100){
+app.directive("scrollHeader", function($window) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      if (this.pageYOffset >= 100) {
         scope.headAnimate = true;
         console.log("Scrolled bellow header.");
-      }else{
+      } else {
         scope.headAnimate = false;
         console.log("Header is viewed.");
       }
@@ -20,14 +20,13 @@ app.directive('scrollHeader', function($window){
   };
 });
 
-
-app.directive('scrollNav', function($window){
-  return function(scope, element, attrs){
-    angular.element($window).bind('scroll', function(){
-      if(this.pageYOffset >= 220){
+app.directive("scrollNav", function($window) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      if (this.pageYOffset >= 220) {
         scope.navAnimate = true;
         console.log("Scrolled bellow Nav");
-      }else{
+      } else {
         scope.navAnimate = false;
         console.log("Nav is viewed");
       }
@@ -36,14 +35,13 @@ app.directive('scrollNav', function($window){
   };
 });
 
-
-app.directive('scrollTable', function($window){
-  return function(scope, element, attrs){
-    angular.element($window).bind('scroll', function(){
-      if(this.pageYOffset >= 907){
+app.directive("scrollTable", function($window) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      if (this.pageYOffset >= 907) {
         scope.mathTable = true;
         console.log("Scrolled bellow table");
-      }else{
+      } else {
         scope.mathTable = false;
         console.log("Math is viewed");
       }
