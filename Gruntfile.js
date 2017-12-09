@@ -167,6 +167,7 @@ module.exports = (grunt) => {
           '<%= path %>/js/*.js', 
           '<%= path %>/js/app/*.js', 
           'routes',
+          'models',
           'middleware', 
           'server.js',
           'app.js'
@@ -308,6 +309,7 @@ module.exports = (grunt) => {
 
   grunt.registerTask('default', ['eslint']);
   grunt.registerTask('dev', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
+  grunt.registerTask('cleanup', ['clean','copy', 'eslint']);
   grunt.registerTask('production', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass']);
   grunt.registerTask('dev-deploy', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
   grunt.registerTask('production-deploy', ['clean', 'eslint', 'htmlbuild', 'copy', 'uglify', 'cssmin', 'sass', 'sshexec']);
