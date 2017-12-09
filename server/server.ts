@@ -26,6 +26,7 @@ export class Server {
 
   private configureRoutes(app: express.Express) {
     app.get("/user", userRouter);
+    app.get("/users", userRouter);
   }
 
   /**
