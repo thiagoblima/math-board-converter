@@ -1,7 +1,7 @@
 /**
- *@name: messagesSection.js
- *@description: Responsable for error messages which come out the Mathtable
- *application. It's parsed as vm from the controller to view-model.
+ * @name: messagesSection.js
+ * @description: messages component messages-section
+ * Binding data to its scope object.
  */
 
 
