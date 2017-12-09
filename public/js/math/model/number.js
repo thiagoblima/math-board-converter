@@ -1,7 +1,6 @@
-/*
- * @number.js
- *
- * @description: Model Class
+/**
+ * @author: <thiagolimasp@live.com> Thiago Lima
+ * @description: Model constructor
  *
  * Math main class which has been built to provide
  * a quicker and refined use of Math's Java Script library.
@@ -10,14 +9,17 @@
  * all the instances of objects access and parsing data via JSON.
  */
 
-
-
-/**
- * @author: thiagolimasp@live.com (Thiago Lima)
- */
-
-var TestMath = function (exponential, fixed, precision, string, valueint, ceil, floor, round, abs){
-
+var TestMath = function(
+  exponential,
+  fixed,
+  precision,
+  string,
+  valueint,
+  ceil,
+  floor,
+  round,
+  abs
+) {
   this.exponential = exponential;
   this.fixed = fixed;
   this.precision = precision;
@@ -28,181 +30,131 @@ var TestMath = function (exponential, fixed, precision, string, valueint, ceil, 
   this.round = round;
   this.abs = abs;
 
-
-  this.getExponential = function(){
-
+  this.getExponential = function() {
     return this.exponential;
-
   };
 
-  this.setExponential = function(exponential){
-
+  this.setExponential = function(exponential) {
     this.exponential = parseInt(exponential);
-
   };
 
-
-  this.getFixed = function(){
-
+  this.getFixed = function() {
     return this.fixed;
-
   };
 
-  this.setFixed = function(fixed){
-
+  this.setFixed = function(fixed) {
     this.fixed = parseInt(fixed);
-
   };
-
 
   this.getPrecision = function() {
-
     return this.precision;
-
   };
 
-  this.setPrecision = function(precision){
-
+  this.setPrecision = function(precision) {
     this.precision = parseInt(precision);
-
   };
 
-
-  this.getString = function(){
-
+  this.getString = function() {
     return this.string;
-
   };
 
-  this.setString = function(string){
-
+  this.setString = function(string) {
     this.string = string;
-
   };
 
-
-  this.getValueInt = function(){
-
+  this.getValueInt = function() {
     return this.valueint.valueOf();
-
   };
 
-  this.setValueInt = function(valueint){
-
+  this.setValueInt = function(valueint) {
     this.valueint = valueint;
-
   };
 
-
-  this.getCeil = function(){
-
+  this.getCeil = function() {
     return this.ceil;
-
   };
 
-  this.setCeil = function(ceil){
-
+  this.setCeil = function(ceil) {
     this.ceil = Math.ceil(ceil);
-
   };
 
-
-  this.getFloor = function(){
-
-     return this.floor;
-
+  this.getFloor = function() {
+    return this.floor;
   };
 
-  this.setFloor = function(floor){
-
+  this.setFloor = function(floor) {
     this.floor = Math.floor(floor);
-
   };
 
-
-  this.getRound = function(){
-
+  this.getRound = function() {
     return this.round;
-
   };
 
-  this.setRound = function(round){
-
+  this.setRound = function(round) {
     this.round = Math.round(round);
-
   };
 
-
-
-  this.getAbs = function(){
-
+  this.getAbs = function() {
     return this.abs;
-
   };
 
-  this.setAbs = function(abs){
-
+  this.setAbs = function(abs) {
     this.abs = Math.abs(abs);
-
   };
-
-
 };
 
 /**
  * @description: fetching data iteration
- *
- *Setting values and pushing the getInstances into the array,
- *JSON stringify data and iterators runs the collection out.
+ * Setting values and pushing the getInstances into the array,
+ * JSON stringify data and iterators runs the collection out.
  */
 
- var test = new TestMath(),
-     prefixes = ["Result"],
-     mathCollection = [];
+var test = new TestMath(),
+  prefixes = ["Result"],
+  mathCollection = [];
 
-     test.setExponential(10);
-     test.setPrecision(10.6635);
-     test.setFixed(10);
-     test.setString(10);
-     test.setValueInt(10);
-     test.setCeil(11.6);
-     test.setFloor(11.6);
-     test.setRound(15.8);
-     test.setAbs(47);
+test.setExponential(10);
+test.setPrecision(10.6635);
+test.setFixed(10);
+test.setString(10);
+test.setValueInt(10);
+test.setCeil(11.6);
+test.setFloor(11.6);
+test.setRound(15.8);
+test.setAbs(47);
 
-  mathCollection.push(JSON.stringify([{
-
-      'Exponential': test.getExponential().toExponential(),
-         'Floating': test.getFixed().toFixed(2),
-        'Precision': test.getPrecision().toPrecision(),
-           'String': test.getString().toString(),
-            'Value': test.getValueInt().valueOf(),
-             'Ceil': test.getCeil(),
-            'floor': test.getFloor(),
-            'Round': test.getRound(),
-         'Absolute': test.getAbs()
-      }]
-     )
-   );
+mathCollection.push(
+  JSON.stringify([
+    {
+      Exponential: test.getExponential().toExponential(),
+      Floating: test.getFixed().toFixed(2),
+      Precision: test.getPrecision().toPrecision(),
+      String: test.getString().toString(),
+      Value: test.getValueInt().valueOf(),
+      Ceil: test.getCeil(),
+      floor: test.getFloor(),
+      Round: test.getRound(),
+      Absolute: test.getAbs()
+    }
+  ])
+);
 
 /**
- *@description: iteration on mathCollection
- *
- *Just give you three options by default,
- *Select on the view page an iterator.
+ * @description: iteration on mathCollection
+ * Just give you three options by default,
+ * Select on the view page an iterator.
  */
 
-
-mathCollection.forEach(function(element, index){
+mathCollection.forEach(function(element, index) {
   console.log(index + ": " + element);
 });
 
-for(var i = 0; i < mathCollection.length; i++){
-  for(var x = 0; x < prefixes.length; x++ ){
-     console.log(prefixes[x] + " " + i + ": " + mathCollection[i]);
+for (var i = 0; i < mathCollection.length; i++) {
+  for (var x = 0; x < prefixes.length; x++) {
+    console.log(prefixes[x] + " " + i + ": " + mathCollection[i]);
   }
 }
 
-for (var w in mathCollection){
+for (var w in mathCollection) {
   console.log(w + ": " + mathCollection[w]);
 }
