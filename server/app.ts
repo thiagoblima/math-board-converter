@@ -5,6 +5,7 @@
  */
 
 import * as express from "express";
+import * as mongoose from "mongoose";
 import { Server } from './server';
 
 
@@ -21,8 +22,11 @@ const port = 3412;
 const server = new Server(express(), port);
 
 /**
+ * @description: connect database and run
  * @method: { run } 
  */
+
+mongoose.connect('mongodb://localhost/math', {useMongoClient: true});
 
 server.run();
 console.info(`listening on ${port}`);
