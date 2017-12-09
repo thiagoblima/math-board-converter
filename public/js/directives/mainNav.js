@@ -1,14 +1,14 @@
 /**
- *@name: mainNav.js
- *@description: AngularJS directive with the purpose of setting a better
- *HTML5 organization, having a proper HTML5 template parsing data
+ * @name: mainNav.js
+ * @description: mainNav set component main-nav
+ * Binding data to its scope object.
  */
 
-app.directive('mainNav', function(){
-   return{
-     restrict: 'EA',
-     templateUrl:'js/directives/views/mainNav.html',
-     controllerAs:"vm",
-     bindToController: true
-   };
+app.directive("mainNav", function() {
+  return {
+    restrict: "EA",
+    templateUrl: "js/directives/views/mainNav.html",
+    controllerAs: "vm",
+    bindToController: true
+  };
 });
