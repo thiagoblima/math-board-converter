@@ -10,7 +10,7 @@
     "client-prod": "grunt production && node app",
     "client-watch": "grunt watch",
     "server-watch": "npx tsc --watch",
-    "server-compile": "npx tsc --listEmittedFiles && node app",
+    "server-compile": "grunt dev && npx tsc --listEmittedFiles && node app",
     "server-stack": "grunt production && npx tsc --removeComments --listEmittedFiles && node app"
   },
   "repository": {
@@ -31,9 +31,12 @@
   "homepage": "https://github.com/thiagolimaa/java-script-data-types#readme",
   "dependencies": {
     "express": "*",
-    "mongodb": "*"
+    "mongodb": "*",
+    "mongoose": "*",
+    "bcrypt": "*"
   },
   "devDependencies": {
+    "@types/bcrypt": "^1.0.0",
     "@types/express": "^4.0.39",
     "@types/mongodb": "^2.2.16",
     "@types/mongoose": "^4.7.28",
