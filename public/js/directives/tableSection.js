@@ -1,7 +1,7 @@
 /**
- *@name: headSection.js
- *@description: AngularJS directive set to hold the table-section as template
- *being parsed data through the scope as data.
+ * @name: headSection.js
+ * @description: table set component table-section
+ * Binding data to its scope object.
  */
 
 app.directive("tableSection", function(){
