@@ -9,5 +9,7 @@ public/libs
 build
 
 ## Back-End Build
+/middleware
+/routes
 app.js
 server.js
