@@ -8,7 +8,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import User from "../models/userModel";
-import Promise = require("mpromise");
 
 const userRouter = express.Router();
 
