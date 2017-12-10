@@ -5,8 +5,8 @@
  */
 
 import * as express from "express";
-import * as mongoose from "mongoose";
-import { Server } from './server';
+import mongoose = require('mongoose');
+import { Server } from './server'; 
 
 
 /**
@@ -26,6 +26,7 @@ const server = new Server(express(), port);
  * @method: { run } 
  */
 
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/math', {useMongoClient: true});
 
 server.run();
