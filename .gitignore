@@ -10,6 +10,7 @@ build
 
 ## Back-End Build
 /middleware
+/config
 /models
 /routes
 app.js
