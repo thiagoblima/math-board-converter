@@ -4,6 +4,7 @@
  * @description: Main server entrance. 
  */
 
+import { MongoDB } from "./config/database"
 import * as express from "express";
 import mongoose = require('mongoose');
 import { Server } from './server'; 
@@ -26,8 +27,10 @@ const server = new Server(express(), port);
  * @method: { run } 
  */
 
+const mongodb = new MongoDB();
+
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/math', {useMongoClient: true});
+mongoose.connect(mongodb.getDatabase(), {useMongoClient: true});
 
 server.run();
 console.info(`listening on ${port}`);
