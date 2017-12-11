@@ -26,18 +26,14 @@ userRouter.get("/user", (req: express.Request, res: express.Response) => {
 
 userRouter.get("/users", (req: express.Request, res: express.Response) => {
   // A simple GET request method to grab user in the database
-  User.find((err, user) => {
-    if (err) throw err;
+  const promise: any = User.find({});
 
-    if (!user) {
-      return res.status(401).send({
-        success: false,
-        msg: "Authentication failed. User not found."
-      });
-    } else {
-      res.status(200).json(user);
-    }
-  });
+  promise.then(user => res.status(200).json(user)).catch(err =>
+    res.status(401).send({
+      success: false,
+      msg: "Authentication failed. User not found."
+    })
+  );
 });
 
 userRouter.post("/signup", (req: express.Request, res: express.Response) => {
