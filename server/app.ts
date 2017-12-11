@@ -4,7 +4,7 @@
  * @description: Main server entrance. 
  */
 
-import { MongoDB } from "./config/database"
+import { MongoDB } from "./config/database";
 import * as express from "express";
 import mongoose = require('mongoose');
 import { Server } from './server'; 
