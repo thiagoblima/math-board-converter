@@ -15,7 +15,7 @@ userRouter.use(bodyParser.urlencoded({ extended: false }));
 userRouter.use(bodyParser.json());
 
 userRouter.get("/user", (req: express.Request, res: express.Response) => {
-  let seedData = {
+  let seedData: {} = {
     id: 1,
     firstName: "thiago",
     lastName: "lima"
@@ -37,10 +37,39 @@ userRouter.get("/users", (req: express.Request, res: express.Response) => {
   );
 });
 
+userRouter.get("/user/:id", (req: express.Request, res: express.Response) => {
+  // A simple GET request method to grab user in the database byId
+  const promise: Promise<{}> = User.findById(req.params.id, {});
+
+  promise.then(user => res.status(200).json(user)).catch(err =>
+    res.status(401).send({
+      success: false,
+      msg: "Authentication failed. User not found.",
+      error: err
+    })
+  );
+});
+
+userRouter.delete(
+  "/user/:id",
+  (req: express.Request, res: express.Response) => {
+    // A simple GET request method to delete user in the database byId
+    const promise: Promise<{}> = User.findByIdAndRemove(req.params.id, {});
+
+    promise.then(user => res.status(200).json(user)).catch(err =>
+      res.status(401).send({
+        success: false,
+        msg: "Authentication failed. User not found.",
+        error: err
+      })
+    );
+  }
+);
+
 userRouter.post("/signup", (req: express.Request, res: express.Response) => {
   if (!req.body.username || !req.body.password) {
     res
-      .status(400)
+      .status(422)
       .json({ success: false, msg: "Please fill out the complete form." });
   } else {
     let newUser: any = new User({
@@ -54,7 +83,7 @@ userRouter.post("/signup", (req: express.Request, res: express.Response) => {
       path: req.body.path
     });
 
-    const promise: any = newUser.save();
+    const promise: Promise<{}> = newUser.save();
 
     // save the user
     promise
@@ -65,10 +94,34 @@ userRouter.post("/signup", (req: express.Request, res: express.Response) => {
       )
       .catch(err =>
         res
-          .status(401)
+          .status(422)
           .json({ success: false, msg: "The user already exists.", err })
       );
   }
+});
+
+userRouter.put("/user/:id", (req: express.Request, res: express.Response) => {
+  // find user by id and update it
+  const promise: Promise<{}> = User.findByIdAndUpdate(req.params.id, {
+    _id: req.params.id,
+    file: req.body.file,
+    email: req.body.email,
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    age: req.body.age
+  });
+
+  promise
+    .then(user =>
+      res
+        .status(200)
+        .json({ success: true, msg: "Successful updated the user.", user })
+    )
+    .catch(err =>
+      res
+        .status(422)
+        .json({ success: false, msg: "Error on updating the user.", err })
+    );
 });
 
 // add more route handlers here
