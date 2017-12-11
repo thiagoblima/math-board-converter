@@ -28,6 +28,9 @@ export class Server {
   private configureRoutes(app: express.Express) {
     app.get("/user", userRouter);
     app.get("/users", userRouter);
+    app.get("/user/:id", userRouter);
+    app.put('/user/:id', userRouter);
+    app.delete("/user/:id", userRouter);
     app.post("/signup", userRouter);
   }
 
