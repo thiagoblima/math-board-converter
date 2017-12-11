@@ -10,6 +10,7 @@
 import * as express from "express";
 import userRouter from "./routes/userRouter";
 import requestLogger from "./middleware/requestLogger";
+
 export class Server {
   /**
    * @param app - { express application }
