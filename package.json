@@ -44,7 +44,7 @@
     "@types/mongodb": "^2.2.16",
     "@types/mongoose": "^4.7.28",
     "@types/node": "^8.0.57",
-    "grunt": "^0.4.5",
+    "grunt": "1.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
