@@ -11,7 +11,7 @@ export class MongoDB {
   private secret: string;
   constructor() {
     this.db = "mongodb://localhost/math";
-    this.secret = 'myjwtsecretkey';
+    this.secret = "myjwtsecretkey";
   }
 
   public getDatabase() {
@@ -19,6 +19,6 @@ export class MongoDB {
   }
 
   public getSecret() {
-      return this.secret;
+    return this.secret;
   }
 }
