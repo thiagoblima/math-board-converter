@@ -168,6 +168,7 @@ module.exports = (grunt) => {
           '<%= path %>/js/app/*.js', 
           'routes',
           'models',
+          'config',
           'middleware', 
           'server.js',
           'app.js'
