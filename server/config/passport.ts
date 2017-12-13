@@ -6,7 +6,7 @@
  * @module: App { server }
  */
 
-import User from "../models/userModel";
+import User from "../models/user";
 import { MongoDB } from "../config/database";
 
 const JwtStrategy = require("passport-jwt").Strategy;
