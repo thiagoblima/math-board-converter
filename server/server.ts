@@ -10,6 +10,7 @@
 import * as express from "express";
 import userRouter from "./routes/userRouter";
 import requestLogger from "./middleware/requestLogger";
+import * as bodyParser from 'body-parser';
 
 export class Server {
   /**
@@ -32,6 +33,7 @@ export class Server {
     app.put('/user/:id', userRouter);
     app.delete("/user/:id", userRouter);
     app.post("/signup", userRouter);
+    app.post("/authenticate", userRouter);
   }
 
   /**
