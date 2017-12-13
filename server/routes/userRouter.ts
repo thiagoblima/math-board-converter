@@ -7,66 +7,146 @@
 
 import * as express from "express";
 import * as bodyParser from "body-parser";
+import * as jwt from "jwt-simple";
+import { MongoDB } from "../config/database";
+import { Passport } from "../config/passport";
+import UserSchema from "../models/userModel";
 import User from "../models/userModel";
+import passport = require("passport");
+import * as mongoose from "mongoose";
 
+const pass = new Passport();
 const userRouter = express.Router();
 
-userRouter.use(bodyParser.urlencoded({ extended: false }));
+userRouter.use(bodyParser.urlencoded({ extended: true }));
 userRouter.use(bodyParser.json());
+userRouter.use(passport.initialize());
+pass.run(passport);
 
-userRouter.get("/user", (req: express.Request, res: express.Response) => {
-  let seedData: {} = {
-    id: 1,
-    firstName: "thiago",
-    lastName: "lima"
-  };
+/**
+ * @function: getToken()
+ * @param: headers
+ * @prop: authorization
+ * @description: getting headers for JWT token
+ */
 
-  res.send(seedData);
-});
+const getToken = headers => {
+  if (headers && headers.authorization) {
+    let parted = headers.authorization.split(" ");
+    if (parted.length === 2) {
+      return parted[1];
+    } else {
+      return null;
+    }
+  } else {
+    return null;
+  }
+};
 
-userRouter.get("/users", (req: express.Request, res: express.Response) => {
-  // A simple GET request method to grab user in the database
-  const promise: Promise<{}> = User.find({});
+// route to authenticate a user (POST /api/authenticate)
+userRouter.post(
+  "/authenticate",
+  (req: express.Request, res: express.Response) => {
+    const mongodb = new MongoDB();
+    const queryDocument: Object = { username: req.body.username };
+    const promise: Promise<{}> = User.findOne(queryDocument);
+    promise
+      .then(user => {
+        if (!user) {
+          res.status(401).json({
+            success: false,
+            msg: "Authentication failed. User not found."
+          });
+        } else {
+          user["comparePassword"](req.body.password, (err, isMatch) => {
+            if (isMatch && !err) {
+              let token = jwt.encode(user, mongodb.getSecret());
+              res.status(200).json({ success: true, token: "JWT " + token });
+            } else {
+              res.status(401).send({
+                success: false,
+                msg: "Authentication failed. Wrong password."
+              });
+            }
+          });
+        }
+      })
+      .catch(err => res.status(422).json(err));
+  }
+);
 
-  promise.then(user => res.status(200).json(user)).catch(err =>
-    res.status(401).send({
-      success: false,
-      msg: "Authentication failed. User not found.",
-      error: err
-    })
-  );
-});
+userRouter.get(
+  "/users",
+  passport.authenticate("jwt", { session: false }),
+  (req: express.Request, res: express.Response) => {
+    // A simple GET request method to grab user in the database
+    const mongodb = new MongoDB();
+    const token = getToken(req.headers);
+    if (token) {
+      let decoded = jwt.decode(token, mongodb.getSecret());
+      const promise: Promise<{}> = User.find({});
 
-userRouter.get("/user/:id", (req: express.Request, res: express.Response) => {
-  // A simple GET request method to grab user in the database byId
-  const promise: Promise<{}> = User.findById(req.params.id, {});
+      promise.then(user => res.status(200).json(user)).catch(err =>
+        res.status(401).send({
+          success: false,
+          msg: "Authentication failed. User not found.",
+          error: err
+        })
+      );
+    } else {
+      res.status(401).send({ success: false, msg: "No token provided." });
+    }
+  }
+);
 
-  promise.then(user => res.status(200).json(user)).catch(err =>
-    res.status(401).send({
-      success: false,
-      msg: "Authentication failed. User not found.",
-      error: err
-    })
-  );
-});
+userRouter.get(
+  "/user/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req: express.Request, res: express.Response) => {
+    const mongodb = new MongoDB();
+    const token = getToken(req.headers);
+    if (token) {
+      let decoded = jwt.decode(token, mongodb.getSecret());
+      const promise: Promise<{}> = User.findById(req.params.id, {});
+
+      promise.then(user => res.status(200).json(user)).catch(err =>
+        res.status(401).send({
+          success: false,
+          msg: "Authentication failed. User not found.",
+          error: err
+        })
+      );
+    } else {
+      res.status(401).send({ success: false, msg: "No token provided." });
+    }
+  }
+);
 
 userRouter.delete(
   "/user/:id",
+  passport.authenticate("jwt", { session: false }),
   (req: express.Request, res: express.Response) => {
-    // A simple GET request method to delete user in the database byId
-    const promise: Promise<{}> = User.findByIdAndRemove(req.params.id, {});
+    const mongodb = new MongoDB();
+    const token = getToken(req.headers);
+    if (token) {
+      let decoded = jwt.decode(token, mongodb.getSecret());
+      const promise: Promise<{}> = User.findByIdAndRemove(req.params.id, {});
 
-    promise.then(user => res.status(200).json(user)).catch(err =>
-      res.status(401).send({
-        success: false,
-        msg: "Authentication failed. User not found.",
-        error: err
-      })
-    );
+      promise.then(user => res.status(200).json(user)).catch(err =>
+        res.status(401).send({
+          success: false,
+          msg: "Authentication failed. User not found.",
+          error: err
+        })
+      );
+    } else {
+      res.status(401).send({ success: false, msg: "No token provided." });
+    }
   }
 );
 
 userRouter.post("/signup", (req: express.Request, res: express.Response) => {
+  const mongodb = new MongoDB();
   if (!req.body.username || !req.body.password) {
     res
       .status(422)
@@ -100,29 +180,43 @@ userRouter.post("/signup", (req: express.Request, res: express.Response) => {
   }
 });
 
-userRouter.put("/user/:id", (req: express.Request, res: express.Response) => {
-  // find user by id and update it
-  const promise: Promise<{}> = User.findByIdAndUpdate(req.params.id, {
-    _id: req.params.id,
-    file: req.body.file,
-    email: req.body.email,
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
-    age: req.body.age
-  });
+userRouter.put(
+  "/user/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req: express.Request, res: express.Response) => {
+    const mongodb = new MongoDB();
+    const token = getToken(req.headers);
+    if (token) {
+      let decoded = jwt.decode(token, mongodb.getSecret());
+      // find user by id and update it
+      const promise: Promise<{}> = User.findByIdAndUpdate(req.params.id, {
+        _id: req.params.id,
+        file: req.body.file,
+        email: req.body.email,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        age: req.body.age
+      });
 
-  promise
-    .then(user =>
-      res
-        .status(200)
-        .json({ success: true, msg: "Successful updated the user.", user })
-    )
-    .catch(err =>
-      res
-        .status(422)
-        .json({ success: false, msg: "Error on updating the user.", err })
-    );
-});
+      promise
+        .then(user =>
+          res
+            .status(200)
+            .json({ success: true, msg: "Successful updated the user.", user })
+        )
+        .catch(err =>
+          res
+            .status(422)
+            .json({ success: false, msg: "Error on updating the user.", err })
+        );
+    } else {
+      res.status(401).send({
+        success: false,
+        msg: "No token provided."
+      });
+    }
+  }
+);
 
 // add more route handlers here
 // e.g. userRouter.post('/', (req,res,next) => {/*...*/})
