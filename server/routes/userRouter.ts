@@ -10,10 +10,8 @@ import * as bodyParser from "body-parser";
 import * as jwt from "jwt-simple";
 import { MongoDB } from "../config/database";
 import { Passport } from "../config/passport";
-import UserSchema from "../models/userModel";
-import User from "../models/userModel";
+import User from "../models/user";
 import passport = require("passport");
-import * as mongoose from "mongoose";
 
 const pass = new Passport();
 const userRouter = express.Router();
