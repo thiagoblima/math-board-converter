@@ -1,7 +1,7 @@
 /**
- * @author: Thiago Lima
+ * @module     : User
+ * @author     : <thiagolimasp@live.com> Thiago Lima
  * @description: user's model object.
- * @module: App { server }
  */
 
 import * as mongoose from "mongoose";
@@ -82,50 +82,3 @@ UserSchema.methods.comparePassword = function (passw, cb) {
 };
 
 export default mongoose.model('User', UserSchema);
-
-
-class Map<T> {
-    private items: { [key: string]: T };
-
-    public constructor() {
-        this.items = Object.create(null);
-    }
-
-    public set(key: string, value: T): void {
-        this.items[key] = value;
-    }
-
-    public get(key: string): T {
-        return this.items[key];
-    }
-
-    public remove(key: string): T {
-        let value = this.get(key);
-        delete this.items[key];
-        return value;
-    }
-}
-
-const object = new Map();
-object.set('username', 'admin');
-
-console.log('Testing Object Class: ', object);
-// Testing Object Class:  Map { items: { username: 'admin' } }
-
-interface Images {
-    main: string;
-    [key:string]: string;
-}
-
-const image = new Map();
-image.set('height', '29');
-image.set('main', './assets/');
-image.set('width', '33');
-
-function getMainImageUrl(image: Images): string {
-    return image.main + image.width;
-}
-
-console.log(getMainImageUrl({main:'_id', age:'55'}));
-console.log(image);
-
