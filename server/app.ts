@@ -1,6 +1,6 @@
 /**
- * @name: app.ts
- * @author: <thiagolimasp@live.com> Thiago Lima
+ * @name       : app.ts
+ * @author     : <thiagolimasp@live.com> Thiago Lima
  * @description: Main server entrance. 
  */
 
@@ -11,9 +11,7 @@ import { Server } from './server';
 
 
 /**
- * @see: store port value in a
- * variable for following the 
- * Server @constructor design.
+ * Initing a server at port
  * @param: app { express() }
  * @param: port { Number } 
  */
@@ -23,8 +21,8 @@ const port = 3412;
 const server = new Server(express(), port);
 
 /**
+ * @method     : { server.run() } 
  * @description: connect database and run
- * @method: { run } 
  */
 
 const mongodb = new MongoDB();
