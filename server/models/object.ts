@@ -1,53 +1,51 @@
 /**
- * @author: Thiago Lima
+ * @module     : Object
+ * @author     : <thiagolimasp@live.com> Thiago Lima
  * @description: map's model object.
- * @module: App { helper }
  */
 
-export class Map<T> {
-    private items: { [key: string]: T };
+interface ObjectModel<T> {
+  main: string;
+  [key: string]: string;
+}
 
-    public constructor() {
-        this.items = Object.create(null);
-    }
+class Map<T> {
+  private items: { [key: string]: T };
 
-    public set(key: string, value: T): void {
-        this.items[key] = value;
-    }
+  public constructor() {
+    this.items = Object.create(null);
+  }
 
-    public get(key: string): T {
-        return this.items[key];
-    }
+  public set(key: string, value: T): void {
+    this.items[key] = value;
+  }
 
-    public remove(key: string): T {
-        let value = this.get(key);
-        delete this.items[key];
-        return value;
-    }
+  public get(key: string): T {
+    return this.items[key];
+  }
+
+  public remove(key: string): T {
+    let value = this.get(key);
+    delete this.items[key];
+    return value;
+  }
+
+  public objectRun(items: ObjectModel<String>): string {
+    return items.main + items.command;
+  }
 }
 
 // initializing and testing the helpers
 const object = new Map();
-object.set('username', 'admin');
-
-console.log('Testing Object Class: ', object);
-// Testing Object Class:  Map { items: { username: 'admin' } }
-
-//applying an interface to it
-interface Images<T> {
-    main: string;
-    [key:string]: string;
-}
+object.set("username", "admin");
+object.set("checked", true);
 
 const image = new Map();
-image.set('height', '29');
-image.set('main', './assets/');
-image.set('width', '33');
+image.set("height", "29");
+image.set("main", "./assets/");
+image.set("width", 39);
 
-//a return method
-function getMainImageUrl(image: Images<String>): string {
-    return image.main + image.width;
-}
-
-console.log(getMainImageUrl({main:'_id', age:'55'}));
+// logging out
+console.log(object); // Testing Object Class:  Map { items: { username: 'admin' } }
 console.log(image);
+console.log(image.objectRun({ main: "grunt ", ["command"]: "clean" }));
