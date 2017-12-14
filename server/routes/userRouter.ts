@@ -1,8 +1,7 @@
 /**
- * @name: userRouter
- * @author: <thiagolimasp@live.com> Thiago Lima
- * @description: User REST API, all the user endpoints
- * should be here, then called on main server.
+ * @name       : userRouter
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @description: User REST API, all user auth endpoints.
  */
 
 import * as express from "express";
@@ -22,9 +21,9 @@ userRouter.use(passport.initialize());
 pass.run(passport);
 
 /**
- * @function: getToken()
- * @param: headers
- * @prop: authorization
+ * @prop       : authorization
+ * @param      : headers
+ * @method     : getToken()
  * @description: getting headers for JWT token
  */
 
@@ -41,7 +40,12 @@ const getToken = headers => {
   }
 };
 
-// route to authenticate a user (POST /api/authenticate)
+/**
+ * Authenticate and retrieves a JWT access token
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
+
 userRouter.post(
   "/authenticate",
   (req: express.Request, res: express.Response) => {
@@ -73,6 +77,12 @@ userRouter.post(
   }
 );
 
+/**
+ * GET and retrieves users, token required
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
+
 userRouter.get(
   "/users",
   passport.authenticate("jwt", { session: false }),
@@ -97,6 +107,12 @@ userRouter.get(
   }
 );
 
+/**
+ * GET and retrieves a user, token required
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
+
 userRouter.get(
   "/user/:id",
   passport.authenticate("jwt", { session: false }),
@@ -120,6 +136,12 @@ userRouter.get(
   }
 );
 
+/**
+ * DELETE a specific user, token required
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
+
 userRouter.delete(
   "/user/:id",
   passport.authenticate("jwt", { session: false }),
@@ -142,6 +164,12 @@ userRouter.delete(
     }
   }
 );
+
+/**
+ * POST a new user, no auth required
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
 
 userRouter.post("/signup", (req: express.Request, res: express.Response) => {
   const mongodb = new MongoDB();
@@ -177,6 +205,12 @@ userRouter.post("/signup", (req: express.Request, res: express.Response) => {
       );
   }
 });
+
+/**
+ * PUT a specific user, token required
+ * @param {Object} req HTTP request object.
+ * @param {Object} res HTTP response object.
+ */
 
 userRouter.put(
   "/user/:id",
