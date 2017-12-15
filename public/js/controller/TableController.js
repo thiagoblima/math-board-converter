@@ -5,16 +5,11 @@
  * settings and enchancement model view architecture.
  */
 
+// load up controller(s)
 app.controller("TableController", TableController);
 app.controller("MessagesController", MessagesController);
 
-/**
- * @name       : Dependency Injection
- * @description: This is where you just import the
- * dependencies to the $scope, never forget it, otherwise
- * app won't work correctly and may cause a break on the components.
- */
-
+// dependency injection
 TableController.$inject = ["$scope"];
 MessagesController.$inject = ["$scope"];
 
