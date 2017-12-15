@@ -1,24 +1,22 @@
 /**
- * @author: <thiagolimasp@live.com> Thiago Lima
- * @name: InfoController 
- * @description: storing information for head section
- * General Controllers object, they're separated
- * into sections to get easier and more readable.
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @name       : InfoController
+ * @description: Head section objects are set here.
  */
 
 /**
- * @name: app
- * @description: Controllers import, all of them should
- * be imported underneath.
+ * @name       : app
+ * @description: Controller importing.
  */
 
 app.controller("HeadInfoController", HeadInfoController);
 
 /**
- * @name: Dependency Injection
+ * @name       : Dependency Injection
  * @description: This is where you just import the
- * dependencies to the $scope, never forget it, otherwise
- * app won't work correctly and may cause a break on the components.
+ * dependencies to the $scope, never forget it,
+ * otherwise app won't work correctly and may cause
+ * a break on the components.
  */
 
 HeadInfoController.$inject = ["$scope"];
