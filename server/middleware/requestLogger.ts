@@ -1,6 +1,6 @@
 /**
- * @name: requestLogger
- * @author: <thiagolimasp@live.com> Thiago Lima
+ * @name       : requestLogger
+ * @author     : <thiagolimasp@live.com> Thiago Lima
  * @description: Middleware responsible for logging
  * REST API requests.
  */
