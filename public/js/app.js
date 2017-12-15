@@ -1,1 +1,1 @@
-var app = angular.module("MathApp", ['ngAnimate', 'ngSanitize', 'ngMessages', 'ui.mask']);
+angular.module("app", ['ngAnimate', 'ngSanitize', 'ngMessages', 'ui.mask']);
