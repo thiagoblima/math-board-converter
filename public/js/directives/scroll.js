@@ -5,7 +5,7 @@
  * Excellent alternative, code less, build more.
  */
 
-app.directive("scrollHeader", function($window) {
+angular.module('app').directive("scrollHeader", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
       if (this.pageYOffset >= 100) {
@@ -20,7 +20,7 @@ app.directive("scrollHeader", function($window) {
   };
 });
 
-app.directive("scrollNav", function($window) {
+angular.module('app').directive("scrollNav", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
       if (this.pageYOffset >= 220) {
@@ -35,7 +35,7 @@ app.directive("scrollNav", function($window) {
   };
 });
 
-app.directive("scrollTable", function($window) {
+angular.module('app').directive("scrollTable", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
       if (this.pageYOffset >= 907) {
