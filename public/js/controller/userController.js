@@ -4,20 +4,10 @@
  * @description: User section objects are set here.
  */
 
-/**
- * @name       : app
- * @description: Controller importing.
- */
-
+ // Load up controller
 app.controller("UserController", UserController);
 
-/**
- * @name       : Dependency Injection
- * @description: This is where you just import the
- * dependencies to the $scope, never forget it, otherwise
- * app won't work correctly and may cause a break on the components.
- */
-
+// dependency injection
 UserController.$inject = ["UserService", "$scope"];
 
 function UserController(UserService) {
