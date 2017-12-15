@@ -4,7 +4,7 @@
  * Binding data to its scope object.
  */
 
-app.directive("mainNav", function() {
+angular.module('app').directive("mainNav", function() {
   return {
     restrict: "EA",
     templateUrl: "js/directives/views/mainNav.html",
