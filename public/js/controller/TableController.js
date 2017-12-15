@@ -1,6 +1,6 @@
 /**
- * @author: <thiagolimasp@live.com> Thiago Lima
- * @name Table Controller
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @name       : Table Controller
  * @description: Responsable for scope object table data,
  * settings and enchancement model view architecture.
  */
@@ -9,7 +9,7 @@ app.controller("TableController", TableController);
 app.controller("MessagesController", MessagesController);
 
 /**
- * @name: Dependency Injection
+ * @name       : Dependency Injection
  * @description: This is where you just import the
  * dependencies to the $scope, never forget it, otherwise
  * app won't work correctly and may cause a break on the components.
