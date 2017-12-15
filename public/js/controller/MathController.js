@@ -5,32 +5,21 @@
  * into sections to get easier and more readable.
  */
 
-/**
- * @name       : app
- * @description: Controllers import, all of them should
- * be imported underneath.
- */
-
+// load up controller(s)
 app.controller("HeadController", HeadController);
 app.controller("NavController", NavController);
 app.controller("IntroController", IntroController);
 app.controller("TableController", TableController);
 app.controller("GuideController", GuideController);
 
-/**
- * @name       : Dependency Injection
- * @description: This is where you just import the
- * dependencies to the $scope, never forget it, otherwise
- * app won't work correctly and may cause a break on the components.
- */
-
+// dependency injection
 HeadController.$inject = ["$scope"];
 NavController.$inject = ["$scope"];
 IntroController.$inject = ["$scope"];
 TableController.$inject = ["$scope"];
 GuideController.$inject = ["$scope"];
 
-function HeadController($Scope) {
+function HeadController() {
   var vm = this;
 
   vm.header = [
