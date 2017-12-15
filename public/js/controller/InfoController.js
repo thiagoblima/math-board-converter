@@ -4,21 +4,10 @@
  * @description: Head section objects are set here.
  */
 
-/**
- * @name       : app
- * @description: Controller importing.
- */
-
+// load up controller(s)
 app.controller("HeadInfoController", HeadInfoController);
 
-/**
- * @name       : Dependency Injection
- * @description: This is where you just import the
- * dependencies to the $scope, never forget it,
- * otherwise app won't work correctly and may cause
- * a break on the components.
- */
-
+// dependency injection
 HeadInfoController.$inject = ["$scope"];
 
 function HeadInfoController() {
