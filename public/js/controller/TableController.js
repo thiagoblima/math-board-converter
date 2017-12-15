@@ -5,9 +5,8 @@
  * settings and enchancement model view architecture.
  */
 
-// load up controller(s)
-app.controller("TableController", TableController);
-app.controller("MessagesController", MessagesController);
+angular.module('app').controller("TableController", TableController);
+angular.module('app').controller("MessagesController", MessagesController);
 
 // dependency injection
 TableController.$inject = ["$scope"];
