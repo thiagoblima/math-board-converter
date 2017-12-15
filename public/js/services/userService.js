@@ -4,8 +4,7 @@
  * @description: User services are set here.
  */
 
-// load up the service(s)
-app.service("UserService", UserService);
+angular.module('app').service("UserService", UserService);
 
 function UserService() {
   var uid = 1;
