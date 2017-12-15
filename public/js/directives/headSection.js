@@ -4,7 +4,7 @@
  * Binding data to its scope object.
  */
 
-app.directive("headSection", function() {
+angular.module('app').directive("headSection", function() {
   return {
     restrict: "EA",
     scope: {
