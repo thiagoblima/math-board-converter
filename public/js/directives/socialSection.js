@@ -4,7 +4,7 @@
  * Binding data to its scope object.
  */
 
-app.directive("socialSection", function() {
+angular.module('app').directive("socialSection", function() {
   return {
     restrict: "E",
     scope: {},
