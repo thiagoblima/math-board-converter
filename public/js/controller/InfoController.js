@@ -5,7 +5,8 @@
  */
 
 // load up controller(s)
-app.controller("HeadInfoController", HeadInfoController);
+angular.module('app')
+.controller("HeadInfoController", HeadInfoController);
 
 // dependency injection
 HeadInfoController.$inject = ["$scope"];
