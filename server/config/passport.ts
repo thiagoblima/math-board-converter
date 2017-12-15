@@ -1,9 +1,10 @@
 /**
- * @class: Passport
- * @author: Thiago Lima <thiagolimasp@live.com>
+ * @class      : Passport
+ * @author     : <thiagolimasp@live.com> Thiago Lima 
+ * @module     : App { server }
  * @description: The passport-jwt strategy file.
- * @see: user model and database file are imported here.
- * @module: App { server }
+ * @see        : user model and database file are imported here.
+ * 
  */
 
 import User from "../models/user";
