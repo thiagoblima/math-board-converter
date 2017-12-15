@@ -1,12 +1,12 @@
 /**
- * @author: <thiagolimasp@live.com> Thiago Lima
- * @name: MathController
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @name       : MathController
  * @description: General Controller, they're separated
  * into sections to get easier and more readable.
  */
 
 /**
- * @name: app
+ * @name       : app
  * @description: Controllers import, all of them should
  * be imported underneath.
  */
@@ -18,7 +18,7 @@ app.controller("TableController", TableController);
 app.controller("GuideController", GuideController);
 
 /**
- * @name: Dependency Injection
+ * @name       : Dependency Injection
  * @description: This is where you just import the
  * dependencies to the $scope, never forget it, otherwise
  * app won't work correctly and may cause a break on the components.
