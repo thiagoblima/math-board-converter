@@ -5,7 +5,7 @@
  */
 
  // Load up controller
-app.controller("UserController", UserController);
+ angular.module('app').controller("UserController", UserController);
 
 // dependency injection
 UserController.$inject = ["UserService", "$scope"];
