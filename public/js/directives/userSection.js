@@ -4,7 +4,7 @@
  * Binding data to its scope object.
  */
 
-app.directive("userSection", function(){
+angular.module('app').directive("userSection", function(){
     return{
       restrict: "EA",
       templateUrl: 'js/directives/views/userSection.html',
