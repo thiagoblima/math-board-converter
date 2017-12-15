@@ -1,9 +1,10 @@
 /**
- * @class: MongoDB
- * @author: Thiago Lima <thiagolimasp@live.com>
+ * @class      : MongoDB
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @module     : App { server }
  * @description: This class receives instances of objects
  * for database and JWT secret.
- * @module: App { server }
+ * 
  */
 
 export class MongoDB {
@@ -14,11 +15,11 @@ export class MongoDB {
     this.secret = "myjwtsecretkey";
   }
 
-  public getDatabase() {
+  public getDatabase(): string {
     return this.db;
   }
 
-  public getSecret() {
+  public getSecret(): string {
     return this.secret;
   }
 }
