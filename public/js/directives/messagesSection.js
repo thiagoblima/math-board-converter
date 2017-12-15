@@ -5,7 +5,7 @@
  */
 
 
-app.directive('messagesSection', function(){
+angular.module('app').directive('messagesSection', function(){
    return{
       restrict:"AE",
       templateUrl:'js/directives/views/messagesSection.html',
