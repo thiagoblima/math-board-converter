@@ -4,7 +4,7 @@
  * that's into header-section.
  */
 
-app.filter("searchFilter", function() {
+angular.module('app').filter("searchFilter", function() {
   return function(text, length, end) {
     if (text) {
       if (isNaN(length)) length = 0;
