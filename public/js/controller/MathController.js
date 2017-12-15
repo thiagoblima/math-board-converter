@@ -6,11 +6,11 @@
  */
 
 // load up controller(s)
-app.controller("HeadController", HeadController);
-app.controller("NavController", NavController);
-app.controller("IntroController", IntroController);
-app.controller("TableController", TableController);
-app.controller("GuideController", GuideController);
+angular.module("app").controller("HeadController", HeadController);
+angular.module("app").controller("NavController", NavController);
+angular.module("app").controller("IntroController", IntroController);
+angular.module("app").controller("TableController", TableController);
+angular.module("app").controller("GuideController", GuideController);
 
 // dependency injection
 HeadController.$inject = ["$scope"];
