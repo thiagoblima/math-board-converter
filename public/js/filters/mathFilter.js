@@ -8,7 +8,7 @@
  * @name: exponentialFilter
  */
 
-app.filter("exponentialFilter", function() {
+angular.module('app').filter("exponentialFilter", function() {
   return function(input) {
     if (parseInt(input)) {
       if (input === undefined) input = "";
@@ -22,7 +22,7 @@ app.filter("exponentialFilter", function() {
  * @name: fixedFilter
  */
 
-app.filter("fixedFilter", function() {
+angular.module('app').filter("fixedFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -36,7 +36,7 @@ app.filter("fixedFilter", function() {
  * @name: precisionFilter
  */
 
-app.filter("precisionFilter", function() {
+angular.module('app').filter("precisionFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -50,7 +50,7 @@ app.filter("precisionFilter", function() {
  * @name: stringFilter
  */
 
-app.filter("stringFilter", function() {
+angular.module('app').filter("stringFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -64,7 +64,7 @@ app.filter("stringFilter", function() {
  * @name: ceilFilter
  */
 
-app.filter("ceilFilter", function() {
+angular.module('app').filter("ceilFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -78,7 +78,7 @@ app.filter("ceilFilter", function() {
  * @name: floorFilter
  */
 
-app.filter("floorFilter", function() {
+angular.module('app').filter("floorFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -92,7 +92,7 @@ app.filter("floorFilter", function() {
  * @name: roundFilter
  */
 
-app.filter("roundFilter", function() {
+angular.module('app').filter("roundFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
@@ -106,7 +106,7 @@ app.filter("roundFilter", function() {
  * @name: absoluteFilter
  */
 
-app.filter("absoluteFilter", function() {
+angular.module('app').filter("absoluteFilter", function() {
   return function(input) {
     if (input) {
       if (input === undefined) input = "";
