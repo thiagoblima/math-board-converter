@@ -176,7 +176,7 @@ body {
   */
 
       section#guide {
-        @include guide-section(550px, 50px, 65px, 90px);
+        @include guide-section(auto, 50px, 65px, 90px);
         article {
           @include guide-head-wrap(transparent);
           h1 {
@@ -207,6 +207,7 @@ body {
         @include math-table(50px, 50px);
         article {
           @include guide-head-wrap(transparent);
+          margin-top: 80px;
           .well {
             margin-top: 100px !important;
           }
