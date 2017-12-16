@@ -6,11 +6,11 @@
  */
 
 angular.module('app').controller("TableController", TableController);
-angular.module('app').controller("MessagesController", MessagesController);
+angular.module('app').controller("TableMessagesController", TableMessagesController);
 
 // dependency injection
 TableController.$inject = ["$scope"];
-MessagesController.$inject = ["$scope"];
+TableMessagesController.$inject = ["$scope"];
 
 function TableController() {
   var vm = this;
@@ -47,7 +47,7 @@ function TableController() {
   };
 }
 
-function MessagesController() {
+function TableMessagesController() {
   var vm = this;
 
   vm.messages = {
