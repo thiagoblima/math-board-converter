@@ -220,6 +220,8 @@ body {
             input.btn.btn-primary {
               background-color: $header-color;
               border: none;
+            }:focus{
+              border: none; 
             }
           }
           thead {
