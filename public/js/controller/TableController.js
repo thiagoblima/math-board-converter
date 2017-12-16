@@ -35,7 +35,7 @@ function TableController() {
     },
 
     title: [
-      { name: "Esponential" },
+      { name: "Exponential" },
       { name: "Fixed" },
       { name: "Precision" },
       { name: "String" },
