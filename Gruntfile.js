@@ -96,7 +96,7 @@ module.exports = (grunt) => {
       '<%= srcpath %>/js/directives/scroll.js',
       '<%= srcpath %>/js/directives/guideSection.js',
       '<%= srcpath %>/js/directives/tableSection.js',
-      '<%= srcpath %>/js/directives/messagesSection.js',
+      '<%= srcpath %>/js/directives/tableMessages.js',
       '<%= srcpath %>/js/directives/userSection.js',
       '<%= srcpath %>/js/services/userService.js',
       '<%= srcpath %>/js/filters/searchFilter.js',
@@ -146,7 +146,7 @@ module.exports = (grunt) => {
       '<%= srcpath %>/js/directives/views/mainNav.html',
       '<%= srcpath %>/js/directives/views/guideSection.html',
       '<%= srcpath %>/js/directives/views/tableSection.html',
-      '<%= srcpath %>/js/directives/views/messagesSection.html',
+      '<%= srcpath %>/js/directives/views/tableMessages.html',
       '<%= srcpath %>/js/directives/views/userSection.html'
       
 
