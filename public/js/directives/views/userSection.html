@@ -1,18 +1,18 @@
 <section id="user" ng-controller="UserController as vm">
-    <article class="class="col-md-12>
-     <h1>Learn also Angular 1.x Services and Bindings</h1>
+    <article class="class=" col-md-12>
+        <h1>Learn also Angular 1.x Services and Bindings</h1>
         <form class="well">
             <label>Name</label>
-            <input type="text" name="name" ng-model="vm.newuser.name" />
+            <input type="text" name="name" ng-model="vm.newuser.name" class="form-control" />
             <label>Email</label>
-            <input type="text" name="email" ng-model="vm.newuser.email" />
+            <input type="text" name="email" ng-model="vm.newuser.email" class="form-control" />
             <label>Phone</label>
-            <input type="text" name="phone" ng-model="vm.newuser.phone" />
+            <input type="text" name="phone" ng-model="vm.newuser.phone" class="form-control" />
             <br/>
             <input type="hidden" ng-model="newuser.id" />
             <input type="button" value="Save" ng-click="vm.saveUser()" class="btn btn-primary" />
         </form>
-        <table class="table table-striped table-bordered">
+        <table class="table table-responsive table-bordered">
             <thead>
                 <tr>
                     <th>Name</th>
