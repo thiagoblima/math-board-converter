@@ -1,5 +1,5 @@
 /**
- * @name: guideSection.js
+ * @name       : guideSection.js
  * @description: directive component guide-section 
  * Binding data to its scope object.
  */
