@@ -72,7 +72,7 @@ body {
           article {
             @include intro-splash($table-color);
             p {
-              @include paragraph-three-collumn($dark-color, 2em, 2.4vmax, $intro-font-josefin, center);
+              @include paragraph-three-collumn($dark-color, 1.4em, 2.4vmax, $intro-font-josefin, center);
             }
           }
         }
@@ -176,7 +176,7 @@ body {
   */
 
       section#guide {
-        @include guide-section(600px, 50px, 65px, 90px);
+        @include guide-section(550px, 50px, 65px, 90px);
         article {
           @include guide-head-wrap(transparent);
           h1 {
@@ -213,10 +213,41 @@ body {
           h1 {
             @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
           }
+          form {
+            background-color: $table-color;
+            border: 1px solid white;
+
+            input.btn.btn-primary {
+              background-color: $header-color;
+              border: none;
+            }
+          }
+          thead {
+            background-color: $table-color;
+          }
+          tbody {
+            tr {
+              @include math-table-tbody-tr($light-color, 1.3em, $font-josefin, center, 600ms ease-in);
+              td {
+                a{
+                  color: white !important;
+                }
+                form {
+                  div.ng-active {
+                    @include math-table-ng-active(
+              $light-color !important, 0.4em, rgb(224, 81, 81),  
+                500ms cubic-bezier(0.52, 0.87, 0, 1.32)
+             );
+                  }
+                }
+              }
+            }
+          }
+          button {
+            background-color: $btn-color;
+          }
         }
       }
-
-
     }
   }
 }
