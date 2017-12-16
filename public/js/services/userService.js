@@ -4,7 +4,7 @@
  * @description: User services are set here.
  */
 
-angular.module('app').service("UserService", UserService);
+angular.module("app").service("UserService", UserService);
 
 function UserService() {
   var uid = 1;
@@ -19,15 +19,19 @@ function UserService() {
   ];
 
   this.save = function(user) {
-    if (user.id == null) {
-      user.id = uid++;
-      users.push(user);
-    } else {
-      //for existing contact, find this contact using id
-      //and update it.
-      for (i in users) {
-        if (users[i].id == user.id) {
-          users[i] = user;
+    if (!user) {
+      console.log('User is not defined!');
+    }else{
+      if (user.id == null) {
+        user.id = uid++;
+        users.push(user);
+      } else {
+        //for existing contact, find this contact using id
+        //and update it.
+        for (i in users) {
+          if (users[i].id == user.id) {
+            users[i] = user;
+          }
         }
       }
     }
