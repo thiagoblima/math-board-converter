@@ -1,5 +1,5 @@
 /**
- * @name: scroll.js
+ * @name       : scroll.js
  * @description: Scroll event that modifies the way header and content-wrapper
  * Behaves. Important to observe the tags on index.html.
  * Excellent alternative, code less, build more.
