@@ -1,5 +1,5 @@
 /**
- * @name: messagesSection.js
+ * @name       : messagesSection.js
  * @description: messages component messages-section
  * Binding data to its scope object.
  */
