@@ -1,5 +1,5 @@
 /**
- * @name: introSection.js
+ * @name       : introSection.js
  * @description: intro set component intro-section
  * Binding data to its scope object.
  */
