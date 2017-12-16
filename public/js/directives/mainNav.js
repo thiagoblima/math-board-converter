@@ -1,5 +1,5 @@
 /**
- * @name: mainNav.js
+ * @name       : mainNav.js
  * @description: mainNav set component main-nav
  * Binding data to its scope object.
  */
