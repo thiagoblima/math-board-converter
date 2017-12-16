@@ -1,5 +1,5 @@
 /**
- * @name: headSection.js
+ * @name       : headSection.js
  * @description: head set component head-section
  * Binding data to its scope object.
  */
