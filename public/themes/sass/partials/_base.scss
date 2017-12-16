@@ -4,239 +4,239 @@
  *such as: buttons, transitions, colors or somehing like this...
  */
 
+body {
+  background-color: $layer-color;
 
-body{
-  background-color:$layer-color;
+  main {
+    #container-wrapper {
+      @include container-wrapper(100%, 0, hidden, 1000vh);
 
-main{
-#container-wrapper{
-   @include container-wrapper(100%, 0, hidden, 1000vh);
-
-
-
-/**
+      /**
   *@name: head-section
   *@description: Animated header code. It binds scroll event on Angularjs
   */
 
+      header {
+        @include head-splash($header-color, $text-color);
+        @include text-splash($head-text-shadow);
+        @include head-settings(250px, 5000);
 
-
-header{
-   @include head-splash($header-color, $text-color);
-   @include text-splash($head-text-shadow);
-   @include head-settings(250px, 5000);
-
-hgroup{
-  @include hgroup-settings(left);
- }
-section{
-  @include header-search-settings(right, 40px);
-  p{
-    @include search-paragraph-settings(50px, 16px, 70px, none, 8px);
-  }
-  form{
-    button{
-      @include search-button(34px, none, transparent, none);
+        hgroup {
+          @include hgroup-settings(left);
+        }
+        section {
+          @include header-search-settings(right, 40px);
+          p {
+            @include search-paragraph-settings(50px, 16px, 70px, none, 8px);
+          }
+          form {
+            button {
+              @include search-button(34px, none, transparent, none);
+            }
+            i {
+              @include search-button(34px, none, transparent, none);
+            }
+            input.form-control.search {
+              @include search-bar-settings(left, 250px, 500ms ease-in, 70px, 10px);
+            }
+          }
+        }
       }
-      i{
-        @include search-button(34px, none, transparent, none);
-      }
-      input.form-control.search{
-        @include search-bar-settings(left, 250px, 500ms ease-in, 70px, 10px);
-      }
-    }
-  }
-}
 
-
-
-/**
+      /**
   *@name: nav-section
   *@description: Animated main menu which gets fixed when scrolled above header.
   */
 
-
-
-nav{
-  ul{
-    li{
-     a{
-       transition: 500ms ease-in;
+      nav {
+        ul {
+          li {
+            a {
+              transition: 500ms ease-in;
+            }
+          }
+        }
       }
-    }
-  }
-}
 
-
-
-/**
+      /**
   *@name: intro-section
   *@description: The welcome and resume in a 3 collumn Bootstrap layout
   */
 
-
-
-section#intro-section{
-  @include intro-section(30px, 50px, relative, -100);
-  h1{ @include splash-intro($intro-font-josefin, 3vmax, center, $light-color, -20px) }
-  div{
-     article{
-        @include intro-splash($table-color);
-     p{
-        @include paragraph-three-collumn($dark-color, 2em, 2.4vmax, $intro-font-josefin, center);
+      section#intro-section {
+        @include intro-section(30px, 50px, relative, -100);
+        h1 {
+          @include splash-intro($intro-font-josefin, 3vmax, center, $light-color, -20px);
+        }
+        div {
+          article {
+            @include intro-splash($table-color);
+            p {
+              @include paragraph-three-collumn($dark-color, 2em, 2.4vmax, $intro-font-josefin, center);
+            }
+          }
+        }
       }
-    }
-  }
-}
 
-
-
-/**
+      /**
   *@name: table-settings
   *@description: table is the model/view Mathboard home app
   *We've got the model (_functions.scss) and the view class (_base.scss)
   */
 
+      .math {
+        @include math-table-position(relative, 0);
+      }
 
-
-.math{
-  @include math-table-position(relative, 0);
-}
-
-div#table{
-  @include math-table(50px, 50px);
-  h1{ @include math-table-intro($light-color, $intro-font-josefin, center); font-size:4vmax; }
-  h3.ng-binding{
-    @include math-table-h3-ng-binding($light-color, center, $intro-font-josefin, 2.8vmax); 
-  }
-  h4.ng-binding{
-    @include math-table-h4-ng-binding($light-color, center, $intro-font-josefin, 2.5vmax, 20px);
-  }
-  #math-table{
-    margin-top: 90px;
-  }
-  thead{
-    background-color: $table-color;
-  }
-  tbody{
-   tr{
-     @include math-table-tbody-tr($light-color, 1.3em, $font-josefin, center, 600ms ease-in);
-     td{
-       form{
-         div.ng-active{
-           @include math-table-ng-active(
+      div#table {
+        @include math-table(50px, 50px);
+        h1 {
+          @include math-table-intro($light-color, $intro-font-josefin, center);
+          font-size: 4vmax;
+        }
+        h3.ng-binding {
+          @include math-table-h3-ng-binding($light-color, center, $intro-font-josefin, 2.8vmax);
+        }
+        h4.ng-binding {
+          @include math-table-h4-ng-binding($light-color, center, $intro-font-josefin, 2.5vmax, 20px);
+        }
+        #math-table {
+          margin-top: 90px;
+        }
+        thead {
+          background-color: $table-color;
+        }
+        tbody {
+          tr {
+            @include math-table-tbody-tr($light-color, 1.3em, $font-josefin, center, 600ms ease-in);
+            td {
+              form {
+                div.ng-active {
+                  @include math-table-ng-active(
             $light-color !important, 0.4em, rgb(224, 81, 81),  
               500ms cubic-bezier(0.52, 0.87, 0, 1.32)
            );
-         }
-       }
-     }
-   }
-  }
-  button{
-    background-color: $btn-color;
-  }
-}
+                }
+              }
+            }
+          }
+        }
+        button {
+          background-color: $btn-color;
+        }
+      }
 
-
-
-/**
+      /**
   *@name: social-settings
   *@description: Social section structured code responsable for fixed icons:
   *profile, comments, likes
   */
 
+      aside {
+        @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
+        section {
+          span {
+            @include social-glyphicon-element($glyphicon, 2em, 26%, $light-color);
+            @include animate-social(300ms ease-out, $light-color);
+          }
+          :hover:after {
+            @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
+          }
+          :hover:nth-child(n + 1) {
+            @include animate-social(300ms ease-out, $header-color !important);
+          }
+          :hover:nth-child(n + 1):after {
+            content: "Profile";
+            @include animate-social-after($intro-font-josefin, $header-color, $light-color, 100px, 5px);
+          }
+          :hover:nth-child(n + 2) {
+            @include animate-social(300ms ease-out, $blue-comments + $override);
+          }
+          :hover:nth-child(n + 2):after {
+            content: "Comments";
+            @include animate-social-after($intro-font-josefin, $blue-comments, $light-color, 100px, 5px);
+          }
+          :hover:nth-child(n + 3) {
+            @include animate-social(300ms ease-out, $red-likes + $override);
+          }
+          :hover:nth-child(n + 3):after {
+            content: "(0)Likes";
+            @include animate-social-after($intro-font-josefin, $red-likes, $light-color, 100px, 5px);
+          }
+          h5 {
+            color: $light-color;
+          }
+        }
+      }
 
-
-aside{
-  @include footer(fixed, 0, transparent, $intro-font-josefin, center, 5%, 95%);
- section{
-   span{
-     @include social-glyphicon-element($glyphicon, 2em, 26%, $light-color);
-     @include animate-social(300ms ease-out, $light-color);
-   }:hover:after{
-     @include social-span-hover(absolute, 50px, 2rem, 200px, 40px);
-       }:hover:nth-child(n + 1){
-          @include animate-social(300ms ease-out, $header-color !important);
-       }:hover:nth-child(n + 1):after{
-             content:"Profile";
-             @include animate-social-after($intro-font-josefin, $header-color, $light-color, 100px, 5px);
-       }:hover:nth-child(n + 2){
-          @include animate-social(300ms ease-out, $blue-comments + $override);
-       }:hover:nth-child(n + 2):after{
-             content:"Comments";
-             @include animate-social-after($intro-font-josefin, $blue-comments, $light-color, 100px, 5px);
-       }:hover:nth-child(n + 3){
-          @include animate-social(300ms ease-out, $red-likes + $override);
-      }:hover:nth-child(n + 3):after{
-             content:"(0)Likes";
-             @include animate-social-after($intro-font-josefin, $red-likes, $light-color, 100px, 5px);
-       }h5{
-         color:$light-color;
-       }
-    }
-}
-
-
-
-/**
+      /**
   *@name: guide-section
   *@description: Three collumn bootstrap section bringing the user to
   *web-app main products and its introduction: carrear, reports and business.
   */
 
-
-
-section#guide{
-  @include guide-section(1000px, 50px, 65px, 90px);
-  article{
-    @include guide-head-wrap(transparent);
-  h1{
-     @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
-     }
-     section{
-        div{
-          transition:300ms ease-in;
-           @include guide-icon-wrap(100px, 25px);
-          p{
-           @include guide-icon-paragraph(center, 300ms ease-out, $light-color);
-          span{
-           @include guide-glyphicon-element($glyphicon, 5.5vmax, $light-color, 300ms ease-out);
-          }:hover{
-            @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
-          }&.heroclass{
-            @include guide-hero-class(2.2vmax, 0.7em, $intro-font-josefin);
+      section#guide {
+        @include guide-section(600px, 50px, 65px, 90px);
+        article {
+          @include guide-head-wrap(transparent);
+          h1 {
+            @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
+          }
+          section {
+            div {
+              transition: 300ms ease-in;
+              @include guide-icon-wrap(100px, 25px);
+              p {
+                @include guide-icon-paragraph(center, 300ms ease-out, $light-color);
+                span {
+                  @include guide-glyphicon-element($glyphicon, 5.5vmax, $light-color, 300ms ease-out);
+                }
+                :hover {
+                  @include guide-icon-paragraph-hover(scale(0.2), 300ms ease-out);
+                }
+                &.heroclass {
+                  @include guide-hero-class(2.2vmax, 0.7em, $intro-font-josefin);
+                }
+              }
+            }
           }
         }
       }
+
+      section#user {
+        @include math-table(50px, 50px);
+        article {
+          @include guide-head-wrap(transparent);
+          .well {
+            margin-top: 100px !important;
+          }
+          h1 {
+            @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
+          }
+        }
+      }
+
+
     }
   }
 }
 
-
-  }
- }
-}
-
-
- /**
-  *@name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
-  *@description: Content-wrapper is active up the time the headChange directive
-  *From AngularJS.
+/**
+  * @name: content-wrapper (AngularJS Directive: scroll.js / scrollHead)
+  * @description: Content-wrapper is active up the time the headChange directive
+  * From AngularJS.
   */
 
-
-.content-wrapper{
+.content-wrapper {
   @include content-wrapper(relative, 320px, 1200px, 400ms ease-out);
 }
 
- /**
+/**
   *@name: content-wrapper-nav (AngularJS Directive: scroll.js / scrollNav)
   *@description: Content-wrapper is active up the time the navChange directive
   *From AngularJS.
   */
 
-
-.content-wrapper-nav{
+.content-wrapper-nav {
   @include content-wrapper-nav(relative, 465px, 100%, 500ms ease-out);
 }
