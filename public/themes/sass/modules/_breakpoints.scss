@@ -1,174 +1,145 @@
-/*@_breakpoints.scss
- *The purpose is to separate breakpoints in order to make it
- *modular and easier to track code.
- *Just import the class and it can be called anytime
- */
-
-
-
-
- /**
-   * @breakpoint : Samsung S5
-   * @orientation: portrait
-   */
-
-
- @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait)
- {
-
 /**
-  *@name: Section Search Input (Portrait)
-  *
-  *@description: Controlling its margin-top in order to
-  *appear inside the header section.
-  *@optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
-  *
+  * @breakpoint : Samsung S5
+  * @orientation: portrait
   */
 
-   main{
-     #container-wrapper{
-       header{
-          section{
-              @include samsung-galaxy-S5-search(absolute, 7% !important, 2%);
-              form{
-                input.form-control.search{
-                  @include search-bar-breakpoint-input(150px !important);
-               }
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
+  /**
+  * @name: Section Search Input (Portrait)
+  *
+  * @description: Controlling its margin-top in order to
+  * appear inside the header section.
+  * @optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+  */
+
+  main {
+    #container-wrapper {
+      header {
+        section {
+          @include samsung-galaxy-S5-search(absolute, 7% !important, 2%);
+          form {
+            input.form-control.search {
+              @include search-bar-breakpoint-input(150px !important);
             }
-         }
+          }
+        }
       }
-      section#guide{
-       height:90vh !important;
-     }
-   }
+      section#guide {
+        height: 90vh !important;
+      }
+    }
+  }
+
+  .head {
+    header {
+      section {
+        @include samsung-galaxy-S5-offset-search(-15px !important);
+      }
+    }
+  }
+
+  .content-wrapper {
+    @include content-wrapper-breakpoint(relative, 320px);
+  }
 }
 
-    .head{
-       header{
-         section{
-           @include samsung-galaxy-S5-offset-search(-15px !important);
-         }
-       }
-     }
-
-     .content-wrapper{
-       @include content-wrapper-breakpoint(relative, 320px);
-     }
-
-}
-
-
-
- /**
+/**
    * @breakpoint : Samsung S5
    * @orientation: landscape
    */
 
-
-@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape)
-{
-
-/**
- *@name: Section Search Input Landscape
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) {
+  /**
+ * @name: Section Search Input Landscape
  *
- *@description: Controlling its margin-top in order to
- *appear inside the header section.
- *@optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+ * @description: Controlling its margin-top in order to
+ * appear inside the header section.
+ * @optional: and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
  *
  */
 
-  main{
-    #container-wrapper{
-      header{
-         section{
-             @include samsung-galaxy-S5-search(absolute, 20% !important, 2% !important);
-             form{
-               input.form-control.search{
-                 @include search-bar-breakpoint-input(150px !important);
-              }
-           }
-        }
-     }
-     section#guide{
-       height:90vh !important;
-     }
-   }
-}
-
-   .head{
-      header{
-        section{
-          @include samsung-galaxy-S5-offset-search(-30px !important);
+  main {
+    #container-wrapper {
+      header {
+        section {
+          @include samsung-galaxy-S5-search(absolute, 20% !important, 2% !important);
+          form {
+            input.form-control.search {
+              @include search-bar-breakpoint-input(150px !important);
+            }
+          }
         }
       }
+      section#guide {
+        height: 90vh !important;
+      }
     }
+  }
 
-    .content-wrapper{
-      @include content-wrapper-breakpoint(relative, 320px);
+  .head {
+    header {
+      section {
+        @include samsung-galaxy-S5-offset-search(-30px !important);
+      }
     }
+  }
 
+  .content-wrapper {
+    @include content-wrapper-breakpoint(relative, 320px);
+  }
 }
-
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-/* Styles */
-
-
+@media only screen and (min-width: 1224px) {
+  /* Styles */
 }
-
 
 /**
   * @breakpoint : Search Bar header 1
   *
   */
 
-
 /* Search Breakpoint 1 ----------- */
-@media only screen and (min-width : 1110px) and (max-width: 1224px) {
-/* Styles */
-main{
-  #container-wrapper{
-    header{
-       section{
-           form{
-             input.form-control.search{
-               @include search-bar-breakpoint-input(150px !important);
-             }
+@media only screen and (min-width: 1110px) and (max-width: 1224px) {
+  /* Styles */
+  main {
+    #container-wrapper {
+      header {
+        section {
+          form {
+            input.form-control.search {
+              @include search-bar-breakpoint-input(150px !important);
+            }
           }
-       }
+        }
+      }
+    }
+
+    .head {
+      header {
+        section {
+          @include samsung-galaxy-S5-offset-search(-50px !important);
+        }
+      }
     }
   }
-
-  .head{
-     header{
-       section{
-         @include samsung-galaxy-S5-offset-search(-50px !important);
-       }
-     }
-   }
- }
-
 }
-
 
 /**
   * @breakpoint : Search Bar header 2
   *
   */
 
-
 /* Search Breakpoint 2 ----------- */
-@media only screen and (min-width : 296px) and (max-width: 1110px) {
-
-  main{
-    #container-wrapper{
-      header{
-         section{
-           @include search-breakpoint(absolute, 18%, 2%);
-             form{
-               input.form-control.search{
-                 @include search-bar-breakpoint-input(150px !important);
+@media only screen and (min-width: 296px) and (max-width: 1110px) {
+  main {
+    #container-wrapper {
+      header {
+        section {
+          @include search-breakpoint(absolute, 18%, 2%);
+          form {
+            input.form-control.search {
+              @include search-bar-breakpoint-input(150px !important);
             }
           }
         }
@@ -176,159 +147,142 @@ main{
     }
   }
 
-  .head{
-     header{
-       section{
-         @include search-breakpoint(absolute !important, 50% !important, 2% !important);
-       }
-     }
-   }
-
+  .head {
+    header {
+      section {
+        @include search-breakpoint(absolute !important, 50% !important, 2% !important);
+      }
+    }
+  }
 }
-
 
 /**
   * @breakpoint : Search Bar header 3
   *
   */
 
-
 /* Search Breakpoint 3 ----------- */
 
-@media only screen and (max-width : 670px){
-
-  main{
-    #container-wrapper{
-      header{
-        hgroup{
+@media only screen and (max-width: 670px) {
+  main {
+    #container-wrapper {
+      header {
+        hgroup {
           @include container-wrapper-breakpoint(none !important, 300ms ease-out);
-          h2{
+          h2 {
             @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );
           }
-          h1{  @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );  }
+          h1 {
+            @include container-wrapper-hgroup-breakpoint(center, text-align 500ms ease-out );
+          }
         }
-        section{
+        section {
           @include search-section-breakpoint(0, 500ms ease-out);
-          form{
-            input.form-control.search{
+          form {
+            input.form-control.search {
               @include search-bar-breakpoint-input(256px !important);
             }
           }
         }
       }
 
-
-/**
+      /**
   * @breakpoint : Menu Breakpoint 3
   *
   */
 
+      /* Menu Breakpoint 3 ----------- */
 
-/* Menu Breakpoint 3 ----------- */
-
-
-    nav{
-      ul{
-        li{
-          @include menu-margin-breakpoint(5px);
-          a{
-            @include menu-a-breakpoint(85px, 0 4px, 500ms ease-out);
-            div.front{
-             i.fa.fa-4x{
-               @include menu-glyphicon-font-size(2.5em);
+      nav {
+        ul {
+          li {
+            @include menu-margin-breakpoint(5px);
+            a {
+              @include menu-a-breakpoint(85px, 0 4px, 500ms ease-out);
+              div.front {
+                i.fa.fa-4x {
+                  @include menu-glyphicon-font-size(2.5em);
+                }
               }
             }
           }
         }
       }
     }
-
-    }
   }
-
 }
-
 
 /**
   * @breakpoint : Search Bar header 4
   *
   */
 
-
 /* Search Breakpoint 4 ----------- */
 
-
-@media only screen and (max-width: 529px){
-
-  nav{
-    ul{
-      li{
+@media only screen and (max-width: 529px) {
+  nav {
+    ul {
+      li {
         @include menu-margin-breakpoint(5px !important);
-        a{
+        a {
           @include menu-a-breakpoint(65px !important, 0 4px !important, 500ms ease-out);
-          div.front{
-           i.fa.fa-4x{
-             @include menu-glyphicon-font-size(1.8em !important);
+          div.front {
+            i.fa.fa-4x {
+              @include menu-glyphicon-font-size(1.8em !important);
             }
           }
-          div.back{
-           span{
-             font-size:1.7rem !important;
+          div.back {
+            span {
+              font-size: 1.7rem !important;
             }
           }
         }
       }
     }
   }
-
 }
-
 
 /**
   * @breakpoint : Search Bar header 5
   *
   */
 
-
 /* Search Breakpoint 5 ----------- */
 
-
-@media only screen and (max-width: 435px){
-
-  main{
-    #container-wrapper{
-      header{
-        h1{
-         @include search-header-font-breakpoint(3.0rem, 2px 2px black);
+@media only screen and (max-width: 435px) {
+  main {
+    #container-wrapper {
+      header {
+        h1 {
+          @include search-header-font-breakpoint(3rem, 2px 2px black);
         }
-        h2{
-         @include search-header-font-breakpoint(2.1rem, 2px 2px black);
+        h2 {
+          @include search-header-font-breakpoint(2.1rem, 2px 2px black);
         }
       }
     }
   }
 
-  nav{
-    ul{
-      li{
+  nav {
+    ul {
+      li {
         @include menu-margin-breakpoint(5px !important);
-        a{
+        a {
           @include menu-a-breakpoint(55px !important, 0 4px !important, 500ms ease-out);
-          div.front{
-           i.fa.fa-4x{
-             @include menu-glyphicon-font-size(1.8em !important);
+          div.front {
+            i.fa.fa-4x {
+              @include menu-glyphicon-font-size(1.8em !important);
             }
           }
-          div.back{
-           span{
-             font-size:1.5rem !important;
+          div.back {
+            span {
+              font-size: 1.5rem !important;
             }
           }
         }
       }
     }
   }
-
 }
 
 /**
@@ -336,32 +290,29 @@ main{
   *
   */
 
-
 /* Nav Breakpoint 6 ----------- */
 
-@media only screen and (max-width: 352px){
-
-  nav{
-    ul{
-      li{
+@media only screen and (max-width: 352px) {
+  nav {
+    ul {
+      li {
         @include menu-margin-breakpoint(5px !important);
-        a{
+        a {
           @include menu-a-breakpoint(55px !important, 0 !important, 500ms ease-out);
-          div.front{
-           i.fa.fa-4x{
-             @include menu-glyphicon-font-size(1.8em !important);
+          div.front {
+            i.fa.fa-4x {
+              @include menu-glyphicon-font-size(1.8em !important);
             }
           }
-          div.back{
-           span{
-             font-size:1.2rem !important;
+          div.back {
+            span {
+              font-size: 1.2rem !important;
             }
           }
         }
       }
     }
   }
-
 }
 
 /**
@@ -371,13 +322,11 @@ main{
 
 /* Guide Section Breakpoint 6 ----------- */
 
-
 @media screen and (max-width: 768px) and (max-height: 1240px) {
-
- main{
-   #container-wrapper{
-     header{
-       @include header-breakpoint-wrapper(48px !important, 48px !important);
+  main {
+    #container-wrapper {
+      header {
+        @include header-breakpoint-wrapper(48px !important, 48px !important);
       }
     }
   }
@@ -390,64 +339,59 @@ main{
 
 /* Guide Section Breakpoint 1 ----------- */
 
-@media only screen and (max-width : 991px) and (max-height: 1240px){
-
-body{
- main{
-   #container-wrapper{
-    section#guide{
-      //height:150vh !important;
+@media only screen and (max-width: 991px) and (max-height: 1240px) {
+  body {
+    main {
+      #container-wrapper {
+        section#guide {
+          //height:150vh !important;
+        }
+      }
     }
-   } 
-  } 
- } 
+  }
 }
 
 /* Guide Section Breakpoint 2 ----------- */
 
-@media only screen and (max-width: 737px){
-
- body{
-    main{
-       #container-wrapper{
-          section#guide{
-             article{
-                section{
-                   div{
-                       p.heroclass{
-                        padding-bottom:2.5em !important;
-                      }
-                   }
+@media only screen and (max-width: 737px) {
+  body {
+    main {
+      #container-wrapper {
+        section#guide {
+          article {
+            section {
+              div {
+                p.heroclass {
+                  padding-bottom: 2.5em !important;
                 }
               }
-           }
-        }    
-     }  
+            }
+          }
+        }
+      }
+    }
   }
-
 }
 
 /* Guide Section Breakpoint 3 ----------- */
 
-@media only screen and (max-width: 462px){
-
-body{
-    main{
-       #container-wrapper{
-          section#guide{
-             article{
-                section{
-                   div{
-                      margin-top: 70px !important; 
-                      p.heroclass{
-                        padding-bottom:2em !important;
-                      }
-                   }
+@media only screen and (max-width: 462px) {
+  body {
+    main {
+      #container-wrapper {
+        section#guide {
+          article {
+            section {
+              div {
+                margin-top: 70px !important;
+                p.heroclass {
+                  padding-bottom: 2em !important;
                 }
               }
-           }
-        }    
-     }  
+            }
+          }
+        }
+      }
+    }
   }
-
 }
