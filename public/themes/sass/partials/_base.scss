@@ -217,12 +217,22 @@ body {
           form {
             background-color: $table-color;
             border: 1px solid white;
-
+            div {
+              span {
+                background-color: #e6567a;
+                padding: 8px;
+                position: absolute;
+                right: 9%;
+                color: white;
+                transition: 500ms linear;
+              }
+            }
             input.btn.btn-primary {
               background-color: $header-color;
               border: none;
-            }:focus{
-              border: none; 
+            }
+            :focus {
+              border: none;
             }
           }
           thead {
@@ -232,7 +242,7 @@ body {
             tr {
               @include math-table-tbody-tr($light-color, 1.3em, $font-josefin, center, 600ms ease-in);
               td {
-                a{
+                a {
                   color: white !important;
                 }
                 form {
