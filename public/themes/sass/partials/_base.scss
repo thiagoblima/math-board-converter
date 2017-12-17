@@ -215,21 +215,14 @@ body {
             @include guide-header-one(0, center, 3vmax, $light-color, 1px 1px 2px $dark-color, $intro-font-josefin);
           }
           form {
-            background-color: $table-color;
-            border: 1px solid white;
+            @include user-general-settings($table-color, 1px solid white);
             div {
               span {
-                background-color: #e6567a;
-                padding: 8px;
-                position: absolute;
-                right: 9%;
-                color: white;
-                transition: 500ms linear;
+                @include user-form-error-label();
               }
             }
             input.btn.btn-primary {
-              background-color: $header-color;
-              border: none;
+              @include user-general-settings($header-color, none);
             }
             :focus {
               border: none;
