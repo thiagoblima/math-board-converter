@@ -1,16 +1,27 @@
 <section id="user" ng-controller="UserController as vm">
     <article class="class=" col-md-12>
         <h1>Learn also Angular 1.x Services and Bindings</h1>
-        <form class="well">
+        <form name="userForm" class="well">
             <label>Name</label>
-            <input type="text" name="name" ng-model="vm.newuser.name" class="form-control" />
+            <input type="text" name="name" ng-pattern="vm.regex.name" ng-minlength="6" ng-maxlength="15" ng-model="vm.newuser.name" class="form-control"
+                required>
+            <div ng-messages="userForm.name.$error">
+                <user-messages></user-messages>
+            </div>
             <label>Email</label>
-            <input type="text" name="email" ng-model="vm.newuser.email" class="form-control" />
+            <input type="email" name="email" ng-pattern="vm.regex.email"
+                ng-model="vm.newuser.email" class="form-control" required>
+            <div ng-messages="userForm.email.$error">
+                <user-messages></user-messages>
+            </div>
             <label>Phone</label>
-            <input type="text" name="phone" ng-model="vm.newuser.phone" class="form-control" />
+            <input type="number" name="phone" ng-minlength="8" ng-maxlength="16" ng-model="vm.newuser.phone" class="form-control" / required>
+            <div ng-messages="userForm.phone.$error">
+                <user-messages></user-messages>
+            </div>
             <br/>
             <input type="hidden" ng-model="newuser.id" />
-            <input type="button" value="Save" ng-click="vm.saveUser()" class="btn btn-primary" />
+            <input type="button" ng-disabled="userForm.$error && userForm.$invalid" value="Save" ng-click="vm.saveUser()" class="btn btn-primary" />
         </form>
         <table class="table table-responsive table-bordered">
             <thead>
