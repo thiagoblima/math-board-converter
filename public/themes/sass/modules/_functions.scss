@@ -1,428 +1,427 @@
-/*@_functions.scss
- *All the @mixins are on this file to prevent messy codes
- *Just need to get it imported into the partials documents
- *such as: _base.scss
- */
-
 @import "shadows";
 @import "colors";
 
-
 /* _base.scss  @mixins */
 
-
-@mixin head-splash($bgcolor, $color){
-  background-color:$bgcolor;
-  color:$color;
+@mixin head-splash($bgcolor, $color) {
+  background-color: $bgcolor;
+  color: $color;
 }
 
-@mixin head-settings($height, $index){
-  height:$height;
-  z-index:$index;
+@mixin head-settings($height, $index) {
+  height: $height;
+  z-index: $index;
 }
 
-@mixin hgroup-settings($float){
-  float:$float;
+@mixin hgroup-settings($float) {
+  float: $float;
 }
 
-@mixin header-search-settings($float, $padding){
-  float:$float;
-  padding:$padding;
+@mixin header-search-settings($float, $padding) {
+  float: $float;
+  padding: $padding;
 }
 
-@mixin search-button($font-size, $border, $background-color, $text-shadow){
-  font-size:$font-size;
-  border:$border;
-  background-color:$background-color;
-  text-shadow:$text-shadow;
+@mixin search-button($font-size, $border, $background-color, $text-shadow) {
+  font-size: $font-size;
+  border: $border;
+  background-color: $background-color;
+  text-shadow: $text-shadow;
 }
 
-@mixin search-bar-settings($float, $width, $transition, $margin-left, $margin-right){
-  float:$float;
-  width:$width;
-  transition:$transition;
-  margin-left:$margin-left;
-  margin-right:$margin-right;
+@mixin search-bar-settings($float, $width, $transition, $margin-left, $margin-right) {
+  float: $float;
+  width: $width;
+  transition: $transition;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
 }
 
-@mixin search-paragraph-settings($padding-right, $font-size, $margin-left, $text-shadow, $padding){
-  padding-right:$padding-right;
-  font-size:$font-size;
-  margin-left:$margin-left;
-  text-shadow:$text-shadow;
-  padding:$padding;
+@mixin search-paragraph-settings($padding-right, $font-size, $margin-left, $text-shadow, $padding) {
+  padding-right: $padding-right;
+  font-size: $font-size;
+  margin-left: $margin-left;
+  text-shadow: $text-shadow;
+  padding: $padding;
 }
 
-@mixin header-scroll($position, $width, $height, $transition){
-  position:$position;
-  width:$width;
-  height:$height;
-  transition:$transition;
+@mixin header-scroll($position, $width, $height, $transition) {
+  position: $position;
+  width: $width;
+  height: $height;
+  transition: $transition;
 }
 
-@mixin search-scroll($transition, $margin){
-  transition:$transition;
-  margin-top:$margin;
+@mixin search-scroll($transition, $margin) {
+  transition: $transition;
+  margin-top: $margin;
 }
 
-@mixin search-button-scroll($font){
-  font-size:$font;
+@mixin search-button-scroll($font) {
+  font-size: $font;
 }
 
-@mixin header-search-input-active($opacity, $margin){
-  opacity:$opacity;
-  margin-top:$margin;
+@mixin header-search-input-active($opacity, $margin) {
+  opacity: $opacity;
+  margin-top: $margin;
 }
 
-@mixin hgroup-header-one($font-size, $transition, $margin-top){
-  font-size:$font-size;
-  transition:$transition;
-  margin-top:$margin-top;
+@mixin hgroup-header-one($font-size, $transition, $margin-top) {
+  font-size: $font-size;
+  transition: $transition;
+  margin-top: $margin-top;
 }
 
-@mixin container-wrapper($width, $padding, $overflow, $height){
-  width:$width;
-  padding:$padding;
-  overflow:$overflow;
-  height:$height;
+@mixin container-wrapper($width, $padding, $overflow, $height) {
+  width: $width;
+  padding: $padding;
+  overflow: $overflow;
+  height: $height;
 }
 
-@mixin intro-section($margin-bottom, $padding, $position, $z-index){
-  margin-bottom:$margin-bottom;
-  padding:$padding;
-  position:$position;
-  z-index:$z-index;
+@mixin intro-section($margin-bottom, $padding, $position, $z-index) {
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+  position: $position;
+  z-index: $z-index;
 }
 
-@mixin splash-intro($font-family, $font-size, $text-align, $color, $margin-top){
-  font-family:$font-family;
-  font-size:$font-size;
-  text-align:$text-align;
-  color:$color;
-  margin-top:$margin-top;
+@mixin splash-intro($font-family, $font-size, $text-align, $color, $margin-top) {
+  font-family: $font-family;
+  font-size: $font-size;
+  text-align: $text-align;
+  color: $color;
+  margin-top: $margin-top;
 }
 
-@mixin content-wrapper($position, $top, $height, $transition){
-  position:$position;
-  top:$top;
-  height:$height;
-  transition:$transition;
+@mixin content-wrapper($position, $top, $height, $transition) {
+  position: $position;
+  top: $top;
+  height: $height;
+  transition: $transition;
 }
 
-@mixin content-wrapper-nav($position, $top, $height, $transition){
-  position:$position;
-  top:$top;
-  height:$height;
-  transition:$transition;
+@mixin content-wrapper-nav($position, $top, $height, $transition) {
+  position: $position;
+  top: $top;
+  height: $height;
+  transition: $transition;
 }
 
-@mixin intro-splash($color){
-  background-color:$color;
+@mixin intro-splash($color) {
+  background-color: $color;
 }
 
-@mixin text-splash($head-text-shadow){
-  text-shadow:$head-text-shadow;
+@mixin text-splash($head-text-shadow) {
+  text-shadow: $head-text-shadow;
 }
 
-@mixin paragraph-three-collumn($paragraph-color, $padding, $font-size, $font-family, $text-align){
-  color:$paragraph-color;
-  padding:$padding;
-  font-size:$font-size;
-  font-family:$font-family;
-  text-align:$text-align;
+@mixin paragraph-three-collumn($paragraph-color, $padding, $font-size, $font-family, $text-align) {
+  color: $paragraph-color;
+  padding: $padding;
+  font-size: $font-size;
+  font-family: $font-family;
+  text-align: $text-align;
 }
 
-@mixin math-table-position($position, $z-index){
-  position:$position;
-  z-index:$z-index;
+@mixin math-table-position($position, $z-index) {
+  position: $position;
+  z-index: $z-index;
 }
 
-@mixin math-table($padding-right, $padding-left){
-  padding-right:$padding-right;
-  padding-left:$padding-left;
+@mixin math-table($padding-right, $padding-left) {
+  padding-right: $padding-right;
+  padding-left: $padding-left;
 }
 
-@mixin math-table-intro($splash-color, $intro-font-josefin, $text){
-  color:$splash-color;
-  font-family:$intro-font-josefin;
-  text-align:$text;
+@mixin math-table-intro($splash-color, $intro-font-josefin, $text) {
+  color: $splash-color;
+  font-family: $intro-font-josefin;
+  text-align: $text;
 }
 
-@mixin math-table-effect($color, $transition){
-  color:$color;
-  transition:$transition;
+@mixin math-table-effect($color, $transition) {
+  color: $color;
+  transition: $transition;
 }
 
-@mixin math-table-tbody-tr($color, $font-size, $font-family, $text-align, $transition){
-  color:$color;
-  font-size:$font-size;
-  font-family:$font-family;
-  text-align:$text-align;
-  transition:$transition;
+@mixin math-table-tbody-tr($color, $font-size, $font-family, $text-align, $transition) {
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+  text-align: $text-align;
+  transition: $transition;
 }
 
-@mixin math-table-ng-active($color, $margin-top, $background-color, $transition){
-  color:$color;
-  margin-top:$margin-top;
-  background-color:$background-color;
-  transition:$transition;
+@mixin math-table-ng-active($color, $margin-top, $background-color, $transition) {
+  color: $color;
+  margin-top: $margin-top;
+  background-color: $background-color;
+  transition: $transition;
 }
 
-@mixin math-table-h3-ng-binding($color, $text-align, $font-family, $font-size){
-  color:$color;
-  text-align:$text-align;
-  font-family:$font-family;
-  font-size:$font-size;
+@mixin math-table-h3-ng-binding($color, $text-align, $font-family, $font-size) {
+  color: $color;
+  text-align: $text-align;
+  font-family: $font-family;
+  font-size: $font-size;
 }
 
-@mixin math-table-h4-ng-binding($color, $text-align, $font-family, $font-size, $margin-top){
-  color:$color;
-  text-align:$text-align;
-  font-family:$font-family;
-  font-size:$font-size;
-  margin-top:$margin-top;
+@mixin math-table-h4-ng-binding($color, $text-align, $font-family, $font-size, $margin-top) {
+  color: $color;
+  text-align: $text-align;
+  font-family: $font-family;
+  font-size: $font-size;
+  margin-top: $margin-top;
 }
 
-@mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin){
-  position:$position;
-  bottom:$bottom;
-  background-color:$background-color;
-  font-family:$font-family;
-  text-align:$align;
-  width:$width;
-  margin-left:$margin;
-
+@mixin footer($position, $bottom, $background-color, $font-family, $align, $width, $margin) {
+  position: $position;
+  bottom: $bottom;
+  background-color: $background-color;
+  font-family: $font-family;
+  text-align: $align;
+  width: $width;
+  margin-left: $margin;
 }
 
-@mixin social-glyphicon-element($glyphicon, $font-size, $margin, $color){
-  font-family:$glyphicon;
-  font-size:$font-size;
-  margin-left:$margin;
-  color:$color;
+@mixin social-glyphicon-element($glyphicon, $font-size, $margin, $color) {
+  font-family: $glyphicon;
+  font-size: $font-size;
+  margin-left: $margin;
+  color: $color;
 }
 
-@mixin social-span-hover($position, $right, $font-size, $width, $height){
-  position:$position;
-  right:$right;
-  font-size:$font-size;
-  width:$width;
-  height:$height;
+@mixin social-span-hover($position, $right, $font-size, $width, $height) {
+  position: $position;
+  right: $right;
+  font-size: $font-size;
+  width: $width;
+  height: $height;
 }
 
-@mixin animate-social($transition, $color){
-  transition:$transition;
-  color:$color;
+@mixin animate-social($transition, $color) {
+  transition: $transition;
+  color: $color;
 }
 
-@mixin animate-social-after($font-family, $background-color, $color, $width, $padding-top){
-  font-family:$font-family;
-  background-color:$background-color;
-  color:$color;
-  width:$width;
-  padding-top:$padding-top;
+@mixin animate-social-after($font-family, $background-color, $color, $width, $padding-top) {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $color;
+  width: $width;
+  padding-top: $padding-top;
 }
 
-@mixin guide-section($height, $padding-left, $padding-right, $margin-top){
-  height:$height;
-  padding-left:$padding-left;
-  padding-right:$padding-right;
-  margin-top:$margin-top;
+@mixin guide-section($height, $padding-left, $padding-right, $margin-top) {
+  height: $height;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  margin-top: $margin-top;
 }
 
-@mixin guide-icon-wrap($margin-top, $padding-top){
-  margin-top:$margin-top;
-  padding-top:$padding-top
+@mixin guide-icon-wrap($margin-top, $padding-top) {
+  margin-top: $margin-top;
+  padding-top: $padding-top;
 }
 
-@mixin guide-icon-paragraph($text-align, $transition, $color){
-  text-align:$text-align;
-  transition:$transition;
-  color:$color;
+@mixin guide-icon-paragraph($text-align, $transition, $color) {
+  text-align: $text-align;
+  transition: $transition;
+  color: $color;
 }
 
-@mixin guide-icon-paragraph-hover($transform, $transition){
-  transform:$transform;
-  transition:$transition;
+@mixin guide-icon-paragraph-hover($transform, $transition) {
+  transform: $transform;
+  transition: $transition;
 }
 
-@mixin guide-head-wrap($background){
-  background-color:$background;
+@mixin guide-head-wrap($background) {
+  background-color: $background;
 }
 
-
-@mixin guide-header-one($padding, $text-align, $font-size, $color, $text-shadow, $font-family){
-  padding:$padding;
-  text-align:$text-align;
-  font-size:$font-size;
-  color:$color;
-  text-shadow:$text-shadow;
-  font-family:$font-family;
+@mixin guide-header-one($padding, $text-align, $font-size, $color, $text-shadow, $font-family) {
+  padding: $padding;
+  text-align: $text-align;
+  font-size: $font-size;
+  color: $color;
+  text-shadow: $text-shadow;
+  font-family: $font-family;
 }
 
-@mixin guide-glyphicon-element($font-family, $font-size, $color, $transition){
-  font-family:$font-family;
-  font-size:$font-size;
-  color:$color;
-  transition:$transition;
+@mixin guide-glyphicon-element($font-family, $font-size, $color, $transition) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+  transition: $transition;
 }
 
-@mixin guide-hero-class($font-size, $padding, $font-family){
-  font-size:$font-size;
-  padding:$padding;
-  font-family:$font-family;
+@mixin guide-hero-class($font-size, $padding, $font-family) {
+  font-size: $font-size;
+  padding: $padding;
+  font-family: $font-family;
 }
 
-@mixin guide-wrapper-class($background-color, $transition){
-  background-color:$background-color;
-  transition:$transition;
+@mixin guide-wrapper-class($background-color, $transition) {
+  background-color: $background-color;
+  transition: $transition;
 }
 
-@mixin guide-glyphicon-animate($color, $transition){
-  color:$color;
-  transition:$transition;
+@mixin guide-glyphicon-animate($color, $transition) {
+  color: $color;
+  transition: $transition;
 }
 
-@mixin guide-keyframes-paragraph($translate){
-  transform:$translate;
+@mixin guide-keyframes-paragraph($translate) {
+  transform: $translate;
 }
 
+@mixin guide-animation-prop($animation, $iteration) {
+  animation: $animation;
+  animation-iteration-count: $iteration;
+}
 
-@mixin guide-animation-prop($animation, $iteration){
-   animation:$animation;
-   animation-iteration-count:$iteration;
+/* _user.scss @mixins */
+
+@mixin user-general-settings($backgbround-color, $border) {
+  background-color: $backgbround-color;
+  border: $border;
+}
+
+@mixin user-form-error-label($background:$home-nav-color, $padding:8px, $position: absolute, $right:9%, $color: white, $transition: 500ms linear) {
+  background-color: $background;
+  padding: $padding;
+  position: $position;
+  right: $right;
+  color: $color;
+  transition: $transition;
 }
 
 /* _nav.scss @mixins */
 
-@mixin nav-layer($bg-color, $transition){
-  background-color:$bg-color;
-  transition:$transition;
+@mixin nav-layer($bg-color, $transition) {
+  background-color: $bg-color;
+  transition: $transition;
 }
 
-@mixin nav-panel($bg-color, $padding){
-  background-color:$bg-color;
-  padding:$padding;
+@mixin nav-panel($bg-color, $padding) {
+  background-color: $bg-color;
+  padding: $padding;
 }
 
-@mixin ul-nav-settings($min-width, $position, $display, $margin, $clear){
-  min-width:$min-width;
-  position:$position;
-  display:$display;
-  margin:$margin;
-  clear:$clear;
+@mixin ul-nav-settings($min-width, $position, $display, $margin, $clear) {
+  min-width: $min-width;
+  position: $position;
+  display: $display;
+  margin: $margin;
+  clear: $clear;
 }
 
-@mixin li-nav-settings($list-style, $float){
-  list-style:$list-style;
-  float:$float;
+@mixin li-nav-settings($list-style, $float) {
+  list-style: $list-style;
+  float: $float;
 }
 
-@mixin a-nav-settings($width, $height, $float, $margin){
-  width:$width;
-  height:$height;
-  float:$float;
-  margin:$margin;
+@mixin a-nav-settings($width, $height, $float, $margin) {
+  width: $width;
+  height: $height;
+  float: $float;
+  margin: $margin;
 }
 
-@mixin i-nav-settings($line-height, $color, $vertical-align){
-  line-height:$line-height;
-  color:$color;
-  vertical-align:$vertical-align;
+@mixin i-nav-settings($line-height, $color, $vertical-align) {
+  line-height: $line-height;
+  color: $color;
+  vertical-align: $vertical-align;
 }
 
-@mixin span-nav-settings($font-family, $font-size, $font-weight, $line-height, $color, $text-transform, $vertical-align){
-  font-family:$font-family;
-  font-size:$font-size;
-  font-weight:$font-weight;
-  line-height:$line-height;
-  color:$color;
-  text-transform:$text-transform;
-  vertical-align:$vertical-align;
+@mixin span-nav-settings($font-family, $font-size, $font-weight, $line-height, $color, $text-transform, $vertical-align) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  text-transform: $text-transform;
+  vertical-align: $vertical-align;
 }
 
-@mixin li-back-nav-settings($position, $top, $width, $height, $text-align, $z-index){
-  position:$position;
-  top:$top;
-  width:$width;
-  height:$height;
-  text-align:$text-align;
-  z-index:$z-index;
+@mixin li-back-nav-settings($position, $top, $width, $height, $text-align, $z-index) {
+  position: $position;
+  top: $top;
+  width: $width;
+  height: $height;
+  text-align: $text-align;
+  z-index: $z-index;
 }
 
-@mixin perspective-crossbrowser($value){
-  -webkit-perspective:$value;
-     -moz-perspective:$value;
-      -ms-perspective:$value;
-       -o-perspective:$value;
+@mixin perspective-crossbrowser($value) {
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  -ms-perspective: $value;
+  -o-perspective: $value;
 }
 
-@mixin transform-crossbrowser($rotateX, $rotateY){
-  -webkit-transform:$rotateX $rotateY;
-     -moz-transform:$rotateX $rotateY;
-      -ms-transform:$rotateX $rotateY;
-       -o-transform:$rotateX $rotateY;
-          transform:$rotateX $rotateY;
+@mixin transform-crossbrowser($rotateX, $rotateY) {
+  -webkit-transform: $rotateX $rotateY;
+  -moz-transform: $rotateX $rotateY;
+  -ms-transform: $rotateX $rotateY;
+  -o-transform: $rotateX $rotateY;
+  transform: $rotateX $rotateY;
 }
 
-@mixin transition-crossbrowser($value){
-  -webkit-transition:$value;
-     -moz-transition:$value;
-      -ms-transition:$value;
-       -o-transition:$value;
-          transition:$value;
+@mixin transition-crossbrowser($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
 }
 
-@mixin backface-crossbrowser($value){
-  -webkit-backface-visibility:$value;
-     -moz-backface-visibility:$value;
-      -ms-backface-visibility:$value;
-       -o-backface-visibility:$value;
+@mixin backface-crossbrowser($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
 }
 
-@mixin transform-style-crossbrowser($value){
-  -webkit-transform-style:$value;
-     -moz-transform-style:$value;
-      -ms-transform-style:$value;
-       -o-transform-style:$value;
-          transform-style:$value;
+@mixin transform-style-crossbrowser($value) {
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -ms-transform-style: $value;
+  -o-transform-style: $value;
+  transform-style: $value;
 }
 
-@mixin nav-scroll-active($position, $top, $width, $margin, $z-index, $color, $transition){
-  position:$position;
-  top:$top;
-  width:$width;
-  margin:$margin;
-  z-index:$z-index;
-  background-color:$color;
-  transition:$transition;
+@mixin nav-scroll-active($position, $top, $width, $margin, $z-index, $color, $transition) {
+  position: $position;
+  top: $top;
+  width: $width;
+  margin: $margin;
+  z-index: $z-index;
+  background-color: $color;
+  transition: $transition;
 }
-
-
 
 /*
  * Breakpoints: Samsung Galaxy S5
  * Matches: (min-device-width: 360px) and (max-device-height: 640px)
- *
  */
 
-@mixin samsung-galaxy-S5-search($position, $top, $right){
-  position:$position;
-  top:$top;
-  right:$right;
+@mixin samsung-galaxy-S5-search($position, $top, $right) {
+  position: $position;
+  top: $top;
+  right: $right;
 }
 
-@mixin search-breakpoint($position, $top, $right){
-  position:$position;
-  top:$top;
-  right:$right;
+@mixin search-breakpoint($position, $top, $right) {
+  position: $position;
+  top: $top;
+  right: $right;
 }
 
-
-@mixin samsung-galaxy-S5-offset-search($margin-top){
-  margin-top:$margin-top;
+@mixin samsung-galaxy-S5-offset-search($margin-top) {
+  margin-top: $margin-top;
 }
-
-
 
 /*
  * Breakpoints: Search Section
@@ -430,30 +429,28 @@
  *
  */
 
-
-@mixin container-wrapper-breakpoint($float, $transition){
-   float:$float;
-   transition:$transition;
- }
-
- @mixin content-wrapper-breakpoint($position, $top){
-   position:$position;
-   top:$top;
- }
-
-
-@mixin container-wrapper-hgroup-breakpoint($text-align, $transition){
-  text-align:$text-align;
-  transition:$transition;
+@mixin container-wrapper-breakpoint($float, $transition) {
+  float: $float;
+  transition: $transition;
 }
 
-@mixin search-section-breakpoint($opacity, $transition){
-  opacity:$opacity;
-  transition:$transition;
+@mixin content-wrapper-breakpoint($position, $top) {
+  position: $position;
+  top: $top;
 }
 
-@mixin search-bar-breakpoint-input($width){
-  width:$width;
+@mixin container-wrapper-hgroup-breakpoint($text-align, $transition) {
+  text-align: $text-align;
+  transition: $transition;
+}
+
+@mixin search-section-breakpoint($opacity, $transition) {
+  opacity: $opacity;
+  transition: $transition;
+}
+
+@mixin search-bar-breakpoint-input($width) {
+  width: $width;
 }
 
 /*
@@ -462,9 +459,9 @@
  *
  */
 
-@mixin header-breakpoint-wrapper($padding-top, $padding-bottom){
-  padding-top:$padding-top;
-  padding-bottom:$padding-bottom;
+@mixin header-breakpoint-wrapper($padding-top, $padding-bottom) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
 }
 
 /*
@@ -473,12 +470,10 @@
  *
  */
 
-@mixin search-header-font-breakpoint($font-size, $text-shadow){
-  font-size:$font-size;
-  text-shadow:$text-shadow;
+@mixin search-header-font-breakpoint($font-size, $text-shadow) {
+  font-size: $font-size;
+  text-shadow: $text-shadow;
 }
-
-
 
 /*
  * Breakpoints: Nav icons elements
@@ -486,21 +481,19 @@
  *
  */
 
-
-@mixin menu-margin-breakpoint($margin-left){
-  margin-left:$margin-left;
+@mixin menu-margin-breakpoint($margin-left) {
+  margin-left: $margin-left;
 }
 
-@mixin menu-a-breakpoint($width, $margin, $transition){
-  width:$width;
-  margin:$margin;
-  transition:$transition;
+@mixin menu-a-breakpoint($width, $margin, $transition) {
+  width: $width;
+  margin: $margin;
+  transition: $transition;
 }
 
-@mixin menu-glyphicon-font-size($font-size){
-  font-size:$font-size;
+@mixin menu-glyphicon-font-size($font-size) {
+  font-size: $font-size;
 }
-
 
 /*
  *@name: Spelcial Function 
@@ -508,6 +501,6 @@
  *
  */
 
- @mixin color-apply($color){
-   color:$color;
- }
+@mixin color-apply($color) {
+  color: $color;
+}
