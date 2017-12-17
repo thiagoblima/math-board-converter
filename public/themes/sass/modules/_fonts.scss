@@ -1,18 +1,10 @@
-/*@_fonts.scss
- *All the font's variables have to be set here fora better modularization
- *It doesn't matter which DOM part it is, the important thing is to make it.
- *Just import this class where it should be used.
- */
-
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 /*@import url(https://fonts.googleapis.com/css?family=Dancing+Script);*/
 
-
-
-$nav-font-roboto:'Roboto';
-$intro-front-dancing:'Dancing Script', cursive;
-$intro-font-josefin:'Josefin Sans', sans-serif;
-$font-josefin:'Josefin Sans';
-$glyphicon: 'Glyphicons Halflings';
+$nav-font-roboto: "Roboto";
+$intro-front-dancing: "Dancing Script", cursive;
+$intro-font-josefin: "Josefin Sans", sans-serif;
+$font-josefin: "Josefin Sans";
+$glyphicon: "Glyphicons Halflings";
