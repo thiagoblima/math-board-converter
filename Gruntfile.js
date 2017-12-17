@@ -98,6 +98,7 @@ module.exports = (grunt) => {
       '<%= srcpath %>/js/directives/tableSection.js',
       '<%= srcpath %>/js/directives/tableMessages.js',
       '<%= srcpath %>/js/directives/userSection.js',
+      '<%= srcpath %>/js/directives/userMessages.js',
       '<%= srcpath %>/js/services/userService.js',
       '<%= srcpath %>/js/filters/searchFilter.js',
       '<%= srcpath %>/js/filters/mathFilter.js',
@@ -147,7 +148,8 @@ module.exports = (grunt) => {
       '<%= srcpath %>/js/directives/views/guideSection.html',
       '<%= srcpath %>/js/directives/views/tableSection.html',
       '<%= srcpath %>/js/directives/views/tableMessages.html',
-      '<%= srcpath %>/js/directives/views/userSection.html'
+      '<%= srcpath %>/js/directives/views/userSection.html',
+      '<%= srcpath %>/js/directives/views/userMessages.html'
       
 
 
