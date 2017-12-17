@@ -12,9 +12,9 @@ function UserService() {
   var users = [
     {
       id: 0,
-      name: "Viral",
-      email: "hello@gmail.com",
-      phone: "123-2343-44"
+      name: "test",
+      email: "test@email.com",
+      phone: "123234344"
     }
   ];
 
