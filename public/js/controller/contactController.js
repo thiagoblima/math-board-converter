@@ -1,7 +1,7 @@
 /**
  * @author     : <thiagolimasp@live.com> Thiago Lima
- * @name       : UserController
- * @description: User section objects are set here.
+ * @name       : ContactController
+ * @description: Contact section objects are set here.
  */
 
 // Load up controller
@@ -11,25 +11,25 @@ angular
   .controller("ContactMessagesController", ContactMessagesController);
 
 // dependency injection
-ContactController.$inject = ["ContactService", "$scope"];
+ContactController.$inject = ["contactService", "$scope"];
 ContactMessagesController.$inject = ["$scope"];
 
-function ContactController(ContactService) {
+function ContactController(contactService) {
   var vm = this;
-  vm.contacts = ContactService.list();
+  vm.contacts = contactService.list();
 
   vm.saveContact = function() {
-    ContactService.save(vm.newcontact);
+    contactService.save(vm.newcontact);
     vm.newcontact = {};
   };
 
   vm.delete = function(id) {
-    ContactService.delete(id);
+    contactService.delete(id);
     if (vm.newcontact.id == id) vm.newcontact = {};
   };
 
   vm.edit = function(id) {
-    vm.newcontact = angular.copy(ContactService.get(id));
+    vm.newcontact = angular.copy(contactService.get(id));
   };
 
   vm.regex = {
