@@ -1,0 +1,53 @@
+<section id="contact" ng-controller="UserController as vm">
+    <article class="col-md-12">
+        <h1>Learn also Angular 1.x Services and Bindings</h1>
+        <form name="userForm" class="well">
+            <label>Name</label>
+            <input type="text" name="username" ng-minlength="5" ng-maxlength="15" ng-model="vm.user.username" class="form-control"
+                required>
+            <div ng-messages="userForm.username.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>Password</label>
+            <input type="password" name="password" ng-minlength="5" ng-maxlength="15"  ng-model="vm.user.password" class="form-control" required>
+            <div ng-messages="userForm.password.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>Email</label>
+            <input type="email" name="email" ng-minlength="12" ng-maxlength="20"  ng-model="vm.user.email" class="form-control" / required>
+            <div ng-messages="userForm.email.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>First name</label>
+            <input type="text" name="firstname" ng-minlength="5" ng-maxlength="15" ng-model="vm.user.firstname" class="form-control"
+            / required>
+            <div ng-messages="userForm.firstname.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>Last name</label>
+            <input type="text" name="lastname" ng-minlength="5" ng-maxlength="15" ng-model="vm.user.lastname" class="form-control" /
+                required>
+            <div ng-messages="userForm.lastname.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>Age</label>
+            <input type="number" name="age" ng-minlength="1" ng-maxlength="2" ng-model="vm.user.age" class="form-control" / required>
+            <div ng-messages="userForm.age.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>File</label>
+            <input type="text" name="file" ng-minlength="5" ng-maxlength="15" ng-model="vm.user.file" class="form-control" / required>
+            <div ng-messages="userForm.file.$error">
+                <user-messages></user-messages>
+            </div>
+            <label>Path</label>
+            <input type="text" name="path" ng-minlength="5" ng-maxlength="15" ng-model="vm.user.path" class="form-control" / required>
+            <div ng-messages="userForm.path.$error">
+                <user-messages></user-messages>
+            </div>
+            <br/>
+            <input type="button" ng-disabled="userForm.$error && userForm.$invalid" value="Save" ng-click="vm.addUser(vm.user)" class="btn btn-primary"
+            />
+        </form>
+    </article>
+</section>
