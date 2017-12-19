@@ -1,6 +1,6 @@
 /**
- * @name       : headSection.js
- * @description: table set component table-section
+ * @name       : tableSection.js
+ * @description: table set component <table-section>
  * Binding data to its scope object.
  */
 
