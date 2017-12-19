@@ -4,15 +4,15 @@
  * @description: Contact services are set here.
  */
 
-angular.module("app").service("ContactService", ContactService);
+angular.module("app").service("contactService", contactService);
 
-function ContactService() {
+function contactService() {
   var uid = 1;
 
   var contacts = [
     {
       id: 0,
-      name: "test",
+      name: "testuser",
       email: "test@email.com",
       phone: 123234344
     }
