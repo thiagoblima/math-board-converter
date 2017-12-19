@@ -5,7 +5,7 @@
  */
 
 (function() {
-  "use strict";
+  'use strict';
   angular.module("app").factory("userServices", userServices);
 
   userServices.$inject = ["$http"];
