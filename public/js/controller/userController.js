@@ -5,6 +5,7 @@
  */
 
 (function() {
+  'use strict';
   // Load up controller
   angular.module("app").controller("UserController", UserController);
   angular

@@ -4,33 +4,36 @@
  * @description: Head section objects are set here.
  */
 
-// load up controller(s)
-angular.module("app").controller("HeadInfoController", HeadInfoController);
+(function() {
+  'use strict';
+  // load up controller(s)
+  angular.module("app").controller("HeadInfoController", HeadInfoController);
 
-// dependency injection
-HeadInfoController.$inject = ["$scope"];
+  // dependency injection
+  HeadInfoController.$inject = ["$scope"];
 
-function HeadInfoController() {
-  var vm = this;
+  function HeadInfoController() {
+    var vm = this;
 
-  vm.title = {
-    name: "Math Board Converter"
-  };
+    vm.title = {
+      name: "Math Board Converter"
+    };
 
-  vm.meta = {
-    keyOne: {
-      type: "description",
-      value: "Math web online converter"
-    },
+    vm.meta = {
+      keyOne: {
+        type: "description",
+        value: "Math web online converter"
+      },
 
-    keyTwo: {
-      type: "keywords",
-      value: "Math, mathematics, converter, web, Java Script"
-    },
+      keyTwo: {
+        type: "keywords",
+        value: "Math, mathematics, converter, web, Java Script"
+      },
 
-    keyThree: {
-      type: "author",
-      value: "Thiago Lima"
-    }
-  };
-}
+      keyThree: {
+        type: "author",
+        value: "Thiago Lima"
+      }
+    };
+  }
+})();
