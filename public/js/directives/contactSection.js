@@ -1,14 +1,14 @@
 /**
  * @name       : contactSection.js
- * @description: table set component table-section
+ * @description: contact set component <contact-section>
  * Binding data to its scope object.
  */
 
-angular.module('app').directive("contactSection", function(){
-    return{
-      restrict: "EA",
-      templateUrl: 'js/directives/views/contactSection.html',
-      controllerAs:'vm',
-      bindToController: true
-    };
- });
+angular.module("app").directive("contactSection", function() {
+  return {
+    restrict: "EA",
+    templateUrl: "js/directives/views/contactSection.html",
+    controllerAs: "vm",
+    bindToController: true
+  };
+});
