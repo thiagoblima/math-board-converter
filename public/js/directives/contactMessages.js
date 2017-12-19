@@ -1,6 +1,6 @@
 /**
  * @name       : ContactMessagesSection.js
- * @description: messages component user-messages
+ * @description: messages component contact-messages
  * Binding data to its scope object.
  */
 
