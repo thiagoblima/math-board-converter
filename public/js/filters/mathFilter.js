@@ -1,117 +1,115 @@
 /**
- * @name: mathFilter.js
+ * @name       : mathFilter.js
  * @description: filters created to perform Math core
  * library to convert table values.
  */
 
-/**
- * @name: exponentialFilter
- */
+(function() {
+  angular.module("app").filter("exponentialFilter", function() {
+    return function(input) {
+      if (parseInt(input)) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert any number";
+        return JSON.stringify([{ result: input.toExponential() }]);
+      }
+    };
+  });
 
-angular.module('app').filter("exponentialFilter", function() {
-  return function(input) {
-    if (parseInt(input)) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert any number";
-      return JSON.stringify([{ result: input.toExponential() }]);
-    }
-  };
-});
+  /**
+   * @name: fixedFilter
+   */
 
-/**
- * @name: fixedFilter
- */
+  angular.module("app").filter("fixedFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert any number";
+        return JSON.stringify([{ result: input.toFixed(2) }]);
+      }
+    };
+  });
 
-angular.module('app').filter("fixedFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert any number";
-      return JSON.stringify([{ result: input.toFixed(2) }]);
-    }
-  };
-});
+  /**
+   * @name: precisionFilter
+   */
 
-/**
- * @name: precisionFilter
- */
+  angular.module("app").filter("precisionFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert any number";
+        return JSON.stringify([{ result: input.toPrecision() }]);
+      }
+    };
+  });
 
-angular.module('app').filter("precisionFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert any number";
-      return JSON.stringify([{ result: input.toPrecision() }]);
-    }
-  };
-});
+  /**
+   * @name: stringFilter
+   */
 
-/**
- * @name: stringFilter
- */
+  angular.module("app").filter("stringFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert any number";
+        return JSON.stringify([{ result: input.toString() }]);
+      }
+    };
+  });
 
-angular.module('app').filter("stringFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert any number";
-      return JSON.stringify([{ result: input.toString() }]);
-    }
-  };
-});
+  /**
+   * @name: ceilFilter
+   */
 
-/**
- * @name: ceilFilter
- */
+  angular.module("app").filter("ceilFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert a float number";
+        return JSON.stringify([{ result: Math.ceil(input) }]);
+      }
+    };
+  });
 
-angular.module('app').filter("ceilFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert a float number";
-      return JSON.stringify([{ result: Math.ceil(input) }]);
-    }
-  };
-});
+  /**
+   * @name: floorFilter
+   */
 
-/**
- * @name: floorFilter
- */
+  angular.module("app").filter("floorFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert a float number";
+        return JSON.stringify([{ result: Math.floor(input) }]);
+      }
+    };
+  });
 
-angular.module('app').filter("floorFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert a float number";
-      return JSON.stringify([{ result: Math.floor(input) }]);
-    }
-  };
-});
+  /**
+   * @name: roundFilter
+   */
 
-/**
- * @name: roundFilter
- */
+  angular.module("app").filter("roundFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "Insert a float number";
+        return JSON.stringify([{ result: Math.round(input) }]);
+      }
+    };
+  });
 
-angular.module('app').filter("roundFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "Insert a float number";
-      return JSON.stringify([{ result: Math.round(input) }]);
-    }
-  };
-});
+  /**
+   * @name: absoluteFilter
+   */
 
-/**
- * @name: absoluteFilter
- */
-
-angular.module('app').filter("absoluteFilter", function() {
-  return function(input) {
-    if (input) {
-      if (input === undefined) input = "";
-      if (isNaN(input)) input = "This must be a number";
-      return JSON.stringify([{ result: Math.abs(input) }]);
-    }
-  };
-});
+  angular.module("app").filter("absoluteFilter", function() {
+    return function(input) {
+      if (input) {
+        if (input === undefined) input = "";
+        if (isNaN(input)) input = "This must be a number";
+        return JSON.stringify([{ result: Math.abs(input) }]);
+      }
+    };
+  });
+})();
