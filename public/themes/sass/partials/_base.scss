@@ -203,7 +203,7 @@ body {
         }
       }
 
-      section#contact {
+      section.form-basic {
         @include math-table(50px, 50px);
         article {
           @include guide-head-wrap(transparent);
