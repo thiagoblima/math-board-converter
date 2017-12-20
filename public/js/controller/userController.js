@@ -5,7 +5,7 @@
  */
 
 (function() {
-  'use strict';
+  "use strict";
   // Load up controller
   angular.module("app").controller("UserController", UserController);
   angular
@@ -17,6 +17,8 @@
 
   function UserController(userServices) {
     var vm = this;
+    vm.user = {};
+    vm.user.path = "../../assets/";
 
     vm.addUser = function(user) {
       userServices
@@ -25,6 +27,15 @@
           console.log("User successfully saved!", data);
         })
         .catch("Error while saving the user!");
+    };
+
+    vm.regex = {
+      username: "^[a-zA-Z0-9]*$",
+      password: "^[a-zA-Z0-9]*$",
+      email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      firstname: "^[a-zA-Z]*$",
+      lastname: "^[a-zA-Z]*$",
+      age: "^[0-9]*$"
     };
   }
 
