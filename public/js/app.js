@@ -1,4 +1,4 @@
-angular.module("app", ["ngAnimate","ngSanitize", "ngRoute", "ngMessages", "ui.mask"])
+angular.module("app", ["ngRoute","ngAnimate","ngSanitize", "ngMessages", "ui.mask"])
   .config([
     "$routeProvider",
     function($routeProvider) {
@@ -24,7 +24,7 @@ angular.module("app", ["ngAnimate","ngSanitize", "ngRoute", "ngMessages", "ui.ma
         })*/
         .otherwise({
           redirectTo: "/error",
-          templateUrl: "routeError.html"
+          templateUrl: "./views/errorRoute.html"
         });
     }
   ]);
