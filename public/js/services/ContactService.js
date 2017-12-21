@@ -30,7 +30,7 @@
         } else {
           //for existing contact, find this contact using id
           //and update it.
-          for (i in contacts) {
+          for (var i in contacts) {
             if (contacts[i].id == contact.id) {
               contacts[i] = contact;
             }
@@ -40,7 +40,7 @@
     };
 
     this.get = function(id) {
-      for (i in contacts) {
+      for (var i in contacts) {
         if (contacts[i].id == id) {
           return contacts[i];
         }
@@ -48,7 +48,7 @@
     };
 
     this.delete = function(id) {
-      for (i in contacts) {
+      for (var i in contacts) {
         if (contacts[i].id == id) {
           contacts.splice(i, 1);
         }
