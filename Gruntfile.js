@@ -124,6 +124,12 @@ module.exports = grunt => {
       "<%= srcpath %>/index.html"
     ],
     htmlviews: [
+      /**
+       * @description: Here goes the AngularJS Directives (HTML)
+       * @see        : They're basicly distributed on public/views
+       * Hopefully any change for the next updates.
+       */
+
       "<%= srcpath %>/views/welcome.html",
       "<%= srcpath %>/views/errorRoute.html"
     ],
