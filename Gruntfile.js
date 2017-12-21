@@ -34,6 +34,7 @@ module.exports = grunt => {
     hash: cacheHash,
     srcpath: "public",
     homecomponent: "build/js/directives/home/views/",
+    includescomponent: "build/js/directives/includes/views/",
     directivesjs: "build/js/app",
     webfontpath: "<%= srcpath %>/node_modules/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
@@ -85,11 +86,10 @@ module.exports = grunt => {
        * Hopefully any change for the next updates
        */
 
-      "<%= srcpath %>/js/directives/home/headSection.js",
+      "<%= srcpath %>/js/directives/includes/headSection.js",
+      "<%= srcpath %>/js/directives/includes/mainNav.js",
+      "<%= srcpath %>/js/directives/includes/socialsection.js",
       "<%= srcpath %>/js/directives/home/introSection.js",
-      "<%= srcpath %>/js/directives/home/mainNav.js",
-      "<%= srcpath %>/js/directives/home/socialsection.js",
-      "<%= srcpath %>/js/directives/scroll.js",
       "<%= srcpath %>/js/directives/home/guideSection.js",
       "<%= srcpath %>/js/directives/home/tableSection.js",
       "<%= srcpath %>/js/directives/home/tableMessages.js",
@@ -97,6 +97,7 @@ module.exports = grunt => {
       "<%= srcpath %>/js/directives/home/userMessages.js",
       "<%= srcpath %>/js/directives/home/contactSection.js",
       "<%= srcpath %>/js/directives/home/contactMessages.js",
+      "<%= srcpath %>/js/directives/scroll.js",
       "<%= srcpath %>/js/services/ContactService.js",
       "<%= srcpath %>/js/services/UserService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
@@ -130,14 +131,11 @@ module.exports = grunt => {
       /**
        * @description: Here goes the AngularJS Directives (HTML)
        * @see        : They're basicly distributed on
-       * public/js/directives/ Hopefully any change for
+       * public/js/directives/home Hopefully any change for
        * the next updates.
        */
 
-      "<%= srcpath %>/js/directives/home/views/headSection.html",
       "<%= srcpath %>/js/directives/home/views/introSection.html",
-      "<%= srcpath %>/js/directives/home/views/socialSection.html",
-      "<%= srcpath %>/js/directives/home/views/mainNav.html",
       "<%= srcpath %>/js/directives/home/views/guideSection.html",
       "<%= srcpath %>/js/directives/home/views/tableSection.html",
       "<%= srcpath %>/js/directives/home/views/tableMessages.html",
@@ -145,6 +143,19 @@ module.exports = grunt => {
       "<%= srcpath %>/js/directives/home/views/userSection.html",
       "<%= srcpath %>/js/directives/home/views/contactMessages.html",
       "<%= srcpath %>/js/directives/home/views/userMessages.html"
+    ],
+
+    includesdirectives: [
+      /**
+       * @description: Here goes the AngularJS Directives (HTML)
+       * @see        : They're basicly distributed on
+       * public/js/directives/includes Hopefully any change for
+       * the next updates.
+       */
+
+      "<%= srcpath %>/js/directives/includes/views/mainNav.html",
+      "<%= srcpath %>/js/directives/includes/views/headSection.html",
+      "<%= srcpath %>/js/directives/includes/views/socialSection.html"
     ],
 
     webfonts: [
@@ -183,7 +194,11 @@ module.exports = grunt => {
         src: "<%= htmlviews %>",
         dest: "<%= path %>/views/"
       },
-      homecomponents: {
+      includescomponent: {
+        src: "<%= includesdirectives %>",
+        dest: "<%= includescomponent %>"
+      },
+      homecomponent: {
         src: "<%= homedirectives %>",
         dest: "<%= homecomponent %>"
       }
