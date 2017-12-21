@@ -33,7 +33,7 @@ module.exports = grunt => {
 
     hash: cacheHash,
     srcpath: "public",
-    directivespath: "build/js/directives/views",
+    homecomponent: "build/js/directives/home/views/",
     directivesjs: "build/js/app",
     webfontpath: "<%= srcpath %>/node_modules/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
@@ -85,23 +85,22 @@ module.exports = grunt => {
        * Hopefully any change for the next updates
        */
 
-      "<%= srcpath %>/js/directives/headSection.js",
-      "<%= srcpath %>/js/directives/introSection.js",
-      "<%= srcpath %>/js/directives/mainNav.js",
-      "<%= srcpath %>/js/directives/socialsection.js",
+      "<%= srcpath %>/js/directives/home/headSection.js",
+      "<%= srcpath %>/js/directives/home/introSection.js",
+      "<%= srcpath %>/js/directives/home/mainNav.js",
+      "<%= srcpath %>/js/directives/home/socialsection.js",
       "<%= srcpath %>/js/directives/scroll.js",
-      "<%= srcpath %>/js/directives/guideSection.js",
-      "<%= srcpath %>/js/directives/tableSection.js",
-      "<%= srcpath %>/js/directives/tableMessages.js",
-      "<%= srcpath %>/js/directives/userSection.js",
-      "<%= srcpath %>/js/directives/userMessages.js",
-      "<%= srcpath %>/js/directives/contactSection.js",
-      "<%= srcpath %>/js/directives/contactMessages.js",
+      "<%= srcpath %>/js/directives/home/guideSection.js",
+      "<%= srcpath %>/js/directives/home/tableSection.js",
+      "<%= srcpath %>/js/directives/home/tableMessages.js",
+      "<%= srcpath %>/js/directives/home/userSection.js",
+      "<%= srcpath %>/js/directives/home/userMessages.js",
+      "<%= srcpath %>/js/directives/home/contactSection.js",
+      "<%= srcpath %>/js/directives/home/contactMessages.js",
       "<%= srcpath %>/js/services/ContactService.js",
       "<%= srcpath %>/js/services/UserService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
-      "<%= srcpath %>/js/filters/mathFilter.js",
-      "<%= srcpath %>/js/filters/animation.js"
+      "<%= srcpath %>/js/filters/mathFilter.js"
     ],
 
     mathjsfiles: [
@@ -123,8 +122,11 @@ module.exports = grunt => {
 
       "<%= srcpath %>/index.html"
     ],
-    htmlviews: ["<%= srcpath %>/views/welcome.html"],
-    directivespages: [
+    htmlviews: [
+      "<%= srcpath %>/views/welcome.html",
+      "<%= srcpath %>/views/errorRoute.html"
+    ],
+    homedirectives: [
       /**
        * @description: Here goes the AngularJS Directives (HTML)
        * @see        : They're basicly distributed on
@@ -132,17 +134,17 @@ module.exports = grunt => {
        * the next updates.
        */
 
-      "<%= srcpath %>/js/directives/views/headSection.html",
-      "<%= srcpath %>/js/directives/views/introSection.html",
-      "<%= srcpath %>/js/directives/views/socialSection.html",
-      "<%= srcpath %>/js/directives/views/mainNav.html",
-      "<%= srcpath %>/js/directives/views/guideSection.html",
-      "<%= srcpath %>/js/directives/views/tableSection.html",
-      "<%= srcpath %>/js/directives/views/tableMessages.html",
-      "<%= srcpath %>/js/directives/views/contactSection.html",
-      "<%= srcpath %>/js/directives/views/userSection.html",
-      "<%= srcpath %>/js/directives/views/contactMessages.html",
-      "<%= srcpath %>/js/directives/views/userMessages.html"
+      "<%= srcpath %>/js/directives/home/views/headSection.html",
+      "<%= srcpath %>/js/directives/home/views/introSection.html",
+      "<%= srcpath %>/js/directives/home/views/socialSection.html",
+      "<%= srcpath %>/js/directives/home/views/mainNav.html",
+      "<%= srcpath %>/js/directives/home/views/guideSection.html",
+      "<%= srcpath %>/js/directives/home/views/tableSection.html",
+      "<%= srcpath %>/js/directives/home/views/tableMessages.html",
+      "<%= srcpath %>/js/directives/home/views/contactSection.html",
+      "<%= srcpath %>/js/directives/home/views/userSection.html",
+      "<%= srcpath %>/js/directives/home/views/contactMessages.html",
+      "<%= srcpath %>/js/directives/home/views/userMessages.html"
     ],
 
     webfonts: [
@@ -177,13 +179,13 @@ module.exports = grunt => {
         src: "<%= htmlpages %>",
         dest: "<%= path %>"
       },
-      angularjs: {
-        src: "<%= directivespages %>",
-        dest: "<%= directivespath %>"
-      },
       views: {
         src: "<%= htmlviews %>",
         dest: "<%= path %>/views/"
+      },
+      homecomponents: {
+        src: "<%= homedirectives %>",
+        dest: "<%= homecomponent %>"
       }
     },
 
@@ -287,7 +289,7 @@ module.exports = grunt => {
         }
       },
       html: {
-        files: ["<%= htmlpages %>", "<%= directivespages %>"],
+        files: ["<%= htmlpages %>", "<%= homedirectives %>"],
         tasks: ["uglify", "htmlbuild"],
         opstions: {
           livereload: true
