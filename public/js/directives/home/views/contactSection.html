@@ -1,0 +1,49 @@
+<section class="form-basic" ng-controller="ContactController as vm">
+    <article class="col-md-12">
+        <h1>Learn also Angular 1.x Services and Bindings</h1>
+        <form name="contactForm" class="well">
+            <label>Name</label>
+            <input type="text" name="name" ng-pattern="vm.regex.name" ng-minlength="6" ng-maxlength="15" ng-model="vm.newcontact.name" class="form-control"
+                required>
+            <div ng-messages="contactForm.name.$error">
+                <contact-messages></contact-messages>
+            </div>
+            <label>Email</label>
+            <input type="email" name="email" ng-pattern="vm.regex.email"
+                ng-model="vm.newcontact.email" class="form-control" required>
+            <div ng-messages="contactForm.email.$error">
+                <contact-messages></contact-messages>
+            </div>
+            <label>Phone</label>
+            <input type="number" name="phone" ng-minlength="8" ng-maxlength="16" ng-model="vm.newcontact.phone" class="form-control" / required>
+            <div ng-messages="contactForm.phone.$error">
+                <contact-messages></contact-messages>
+            </div>
+            <br/>
+            <input type="hidden" ng-model="newcontact.id" />
+            <input type="button" ng-disabled="contactForm.$error && contactForm.$invalid" value="Save" ng-click="vm.saveContact()" class="btn btn-primary" />
+        </form>
+        <table class="table table-responsive table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in vm.contacts">
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>
+                        <a href="javascript:void(0)" ng-click="vm.edit(contact.id)">edit</a> |
+                        <a href="javascript:void(0)" ng-click="vm.delete(contact.id)">delete</a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
