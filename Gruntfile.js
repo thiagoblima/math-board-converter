@@ -87,8 +87,9 @@ module.exports = grunt => {
        */
 
       "<%= srcpath %>/js/directives/includes/headSection.js",
-      "<%= srcpath %>/js/directives/includes/mainNav.js",
       "<%= srcpath %>/js/directives/includes/socialsection.js",
+      "<%= srcpath %>/js/directives/includes/mainNav.js",
+      "<%= srcpath %>/js/directives/includes/scroll.js",
       "<%= srcpath %>/js/directives/home/introSection.js",
       "<%= srcpath %>/js/directives/home/guideSection.js",
       "<%= srcpath %>/js/directives/home/tableSection.js",
@@ -97,7 +98,6 @@ module.exports = grunt => {
       "<%= srcpath %>/js/directives/home/userMessages.js",
       "<%= srcpath %>/js/directives/home/contactSection.js",
       "<%= srcpath %>/js/directives/home/contactMessages.js",
-      "<%= srcpath %>/js/directives/scroll.js",
       "<%= srcpath %>/js/services/ContactService.js",
       "<%= srcpath %>/js/services/UserService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
