@@ -6,9 +6,9 @@
 @import "modules/breakpoints";
 @import "modules/colors";
 
-@import "includes/errorRoute.scss";
+@import "includes/errorRoute";
+@import "includes/base";
 
-@import "home/base";
 @import "home/header";
 @import "home/nav";
 @import "home/table";
