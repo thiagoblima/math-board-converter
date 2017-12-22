@@ -306,7 +306,7 @@ module.exports = grunt => {
           "<%= srcpath %>/themes/stylesheets/**/*.css",
           "<%= srcpath %>/themes/sass/**/*.scss"
         ],
-        tasks: ["htmlbuild","cssmin", "sass"],
+        tasks: ["eslint", "uglify", "htmlbuild","cssmin", "sass"],
         options: {
           livereload: true
         }
