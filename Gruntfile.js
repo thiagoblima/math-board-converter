@@ -86,6 +86,7 @@ module.exports = grunt => {
        * Hopefully any change for the next updates
        */
 
+      "<%= srcpath %>/js/directives/includes/errorRouteSection.js",
       "<%= srcpath %>/js/directives/includes/headSection.js",
       "<%= srcpath %>/js/directives/includes/socialsection.js",
       "<%= srcpath %>/js/directives/includes/mainNav.js",
@@ -161,7 +162,8 @@ module.exports = grunt => {
 
       "<%= srcpath %>/js/directives/includes/views/mainNav.html",
       "<%= srcpath %>/js/directives/includes/views/headSection.html",
-      "<%= srcpath %>/js/directives/includes/views/socialSection.html"
+      "<%= srcpath %>/js/directives/includes/views/socialSection.html",
+      "<%= srcpath %>/js/directives/includes/views/errorRouteSection.html"
     ],
 
     webfonts: [
@@ -200,11 +202,11 @@ module.exports = grunt => {
         src: "<%= htmlviews %>",
         dest: "<%= path %>/views/"
       },
-      includescomponent: {
+      includesComponent: {
         src: "<%= includesdirectives %>",
         dest: "<%= includescomponent %>"
       },
-      homecomponent: {
+      homeComponent: {
         src: "<%= homedirectives %>",
         dest: "<%= homecomponent %>"
       }
@@ -304,14 +306,14 @@ module.exports = grunt => {
           "<%= srcpath %>/themes/stylesheets/**/*.css",
           "<%= srcpath %>/themes/sass/**/*.scss"
         ],
-        tasks: ["cssmin", "sass"],
+        tasks: ["htmlbuild","cssmin", "sass"],
         options: {
           livereload: true
         }
       },
       html: {
-        files: ["<%= htmlpages %>", "<%= homedirectives %>"],
-        tasks: ["uglify", "htmlbuild"],
+        files: ["<%= htmlpages %>", "<%= homedirectives %>", "<%= includesdirectives %>"],
+        tasks: ["eslint", "uglify", "htmlbuild"],
         opstions: {
           livereload: true
         }
