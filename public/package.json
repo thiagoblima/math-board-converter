@@ -27,6 +27,7 @@
     "angular-sanitize": "1.6.7",
     "angular-ui-mask": "1.6.7",
     "bootstrap": "*",
+    "gsap": "^1.20.3",
     "jquery": "*"
   }
 }
