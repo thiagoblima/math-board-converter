@@ -1,16 +1,14 @@
-<header class="jumbotron">
-  <hgroup ng-controller="HeadController as vm">
-    <div ng-repeat="key in vm.header">
-      <h1 ng-bind="key.settings.title"></h1>
-      <h2 ng-bind="key.settings.subtitle"></h2>
-    </div>
+<header class="jumbotron" ng-controller="HeadController as vm">
+  <hgroup  ng-init="vm.animationHead()" ng-repeat="key in vm.header">
+    <h1 class="head-animate-one" ng-bind="key.settings.title"></h1>
+    <h2 class="head-animate-two" ng-bind="key.settings.subtitle"></h2>
   </hgroup>
   <section>
-    <form id="search-form" name="search" action="/products" method="get">
-      <button type="search" ng-show="showMe" class="fa fa-search" aria-hidden="true"></button>
-      <input type="search" ng-show="showMe" ng-model="search" class="form-control search" placeholder="Search a Math Info..." />
-      <i ng-click="searchOpen()" ng-class="{deactive:showMe}" class="fa fa-search" aria-hidden="true"></i>
+    <form id="search-form" ng-init="vm.animationHead()" name="search" action="/products" method="get">
+      <button type="search" ng-show="vm.showMe" class="fa fa-search" aria-hidden="true"></button>
+      <input type="search" ng-show="vm.showMe" ng-model="vm.search" class="form-control search" placeholder="Search a Math Info..." />
+      <i ng-click="vm.searchOpen()" ng-class="{deactive:vm.showMe}" class="fa fa-search head-animate-search" aria-hidden="true"></i>
     </form>
-    <p ng-show="showMe">{{ search | searchFilter:20 }}</p>
+    <p ng-show="vm.showMe">{{ vm.search | searchFilter:20 }}</p>
   </section>
 </header>
