@@ -6,7 +6,7 @@
  */
 
 (function() {
-  'use strict';
+  "use strict";
   // load up controller(s)
   angular.module("app").controller("HeadController", HeadController);
   angular.module("app").controller("NavController", NavController);
@@ -22,6 +22,38 @@
   function HeadController() {
     var vm = this;
 
+    vm.animationHead = function() {
+      var animations = {
+        target: {
+          headOne: document.body.getElementsByClassName("head-animate-one")[0],
+          headTwo: document.body.getElementsByClassName("head-animate-two")[0],
+          search: document.body.getElementsByClassName("head-animate-search")[0]
+        },
+        settings: {
+          headOne: {
+            opacity: 1,
+            delay: 0.4,
+            scale: 1,
+            ease: Bounce
+          },
+          headTwo: {
+            opacity: 0,
+            delay: 1.3,
+            x: -100
+          },
+          search: {
+            opacity: 0,
+            delay: 1.3,
+            rotation: 360,
+            y: -100
+          }
+        }
+      };
+      TweenMax.to(animations.target.headOne, 1, animations.settings.headOne);
+      TweenMax.from(animations.target.headTwo, 1, animations.settings.headTwo);
+      TweenMax.from(animations.target.search, 1, animations.settings.search);
+    };
+
     vm.header = [
       {
         settings: {
@@ -30,6 +62,14 @@
         }
       }
     ];
+
+    vm.search = "Search a Math Info...";
+
+    vm.showMe = false;
+
+    vm.searchOpen = function() {
+      vm.showMe = !vm.showMe;
+    };
   }
 
   function NavController() {
