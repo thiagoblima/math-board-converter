@@ -76,6 +76,7 @@ module.exports = grunt => {
       "<%= srcpath %>/node_modules/angular-messages/angular-messages.min.js",
       "<%= srcpath %>/node_modules/angular-ui-mask/dist/mask.min.js",
       "<%= srcpath %>/node_modules/jquery/dist/jquery.min.js",
+      "<%= srcpath %>/node_modules/gsap/src/minified/TweenMax.min.js",
       "<%= srcpath %>/node_modules/bootstrap/dist/js/bootstrap.min.js"
     ],
 
