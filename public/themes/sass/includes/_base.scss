@@ -23,6 +23,9 @@ body {
 
         hgroup {
           @include hgroup-settings(left);
+          h1{
+            opacity:0;
+          }
         }
         section {
           @include header-search-settings(right, 40px);
