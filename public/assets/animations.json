@@ -1,0 +1,28 @@
+{
+  "settings": {
+    "header": {
+      "opacity": 1,
+      "delay": 0.4,
+      "scale": 1
+    },
+    "headOne": {
+      "opacity": 1,
+      "delay": 1,
+      "scale": 1,
+      "ease": "Bounce"
+    },
+    "headTwo": {
+      "opacity": 0,
+      "delay": 1.7,
+      "x": -100,
+      "ease": "Bounce.easeOut"
+    },
+    "search": {
+      "opacity": 0,
+      "delay": 1.7,
+      "rotation": 360,
+      "y": -100,
+      "ease": "Bounce.easeOut"
+    }
+  }
+}
