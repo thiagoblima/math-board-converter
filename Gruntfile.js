@@ -33,6 +33,8 @@ module.exports = grunt => {
 
     hash: cacheHash,
     srcpath: "public",
+    srcassets: "public/assets",
+    assetspath: "<%= path %>/assets",
     homecomponent: "build/js/directives/home/views/",
     includescomponent: "build/js/directives/includes/views/",
     directivesjs: "build/js/app",
@@ -102,6 +104,7 @@ module.exports = grunt => {
       "<%= srcpath %>/js/directives/home/contactMessages.js",
       "<%= srcpath %>/js/services/ContactService.js",
       "<%= srcpath %>/js/services/UserService.js",
+      "<%= srcpath %>/js/services/AnimationService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
       "<%= srcpath %>/js/filters/mathFilter.js"
     ],
@@ -177,6 +180,16 @@ module.exports = grunt => {
       "<%= webfontpath %>/*"
     ],
 
+    assets: [
+      /**
+       * @description: Here goes the front-end general assets directory
+       * @see        : They're basicly distributed on public/assets
+       * Hopefully any change for the next updates
+       */
+
+      "<%= srcassets %>/*"
+    ],
+
     clean: {
       build: {
         src: [
@@ -195,6 +208,10 @@ module.exports = grunt => {
     },
 
     htmlbuild: {
+      assets: {
+        src: "<%= assets %>",
+        dest: "<%= assetspath %>"
+      },
       html: {
         src: "<%= htmlpages %>",
         dest: "<%= path %>"
@@ -307,13 +324,17 @@ module.exports = grunt => {
           "<%= srcpath %>/themes/stylesheets/**/*.css",
           "<%= srcpath %>/themes/sass/**/*.scss"
         ],
-        tasks: ["eslint", "uglify", "htmlbuild","cssmin", "sass"],
+        tasks: ["eslint", "uglify", "htmlbuild", "cssmin", "sass"],
         options: {
           livereload: true
         }
       },
       html: {
-        files: ["<%= htmlpages %>", "<%= homedirectives %>", "<%= includesdirectives %>"],
+        files: [
+          "<%= htmlpages %>",
+          "<%= homedirectives %>",
+          "<%= includesdirectives %>"
+        ],
         tasks: ["eslint", "uglify", "htmlbuild"],
         opstions: {
           livereload: true
