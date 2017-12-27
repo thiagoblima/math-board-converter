@@ -14,54 +14,31 @@
   angular.module("app").controller("GuideController", GuideController);
 
   // dependency injection
-  HeadController.$inject = ["$scope"];
+  HeadController.$inject = ["animationService", "$scope"];
   NavController.$inject = ["$scope"];
   IntroController.$inject = ["$scope"];
   GuideController.$inject = ["$scope"];
 
-  function HeadController() {
+  function HeadController(animationService) {
     var vm = this;
 
     vm.animationHead = function() {
-      var animations = {
-        target: {
-          header: document.body.getElementsByTagName("header")[0],
-          headOne: document.body.getElementsByClassName("head-animate-one")[0],
-          headTwo: document.body.getElementsByClassName("head-animate-two")[0],
-          search: document.body.getElementsByClassName("head-animate-search")[0]
-        },
-        settings: {
-          header: {
-            opacity: 1,
-            delay: 0.4,
-            scale: 1
-          },
-          headOne: {
-            opacity: 1,
-            delay: 1,
-            scale: 1,
-            ease: Bounce
-          },
-          headTwo: {
-            opacity: 0,
-            delay: 1.7,
-            x: -100,
-            ease:Bounce.easeOut
-          },
-          search: {
-            opacity: 0,
-            delay: 1.7,
-            rotation: 360,
-            y: -100,
-            ease:Bounce.easeOut
-          }
-        }
-      };
-      TweenMax.to(animations.target.header, 1, animations.settings.header);
-      TweenMax.to(animations.target.headOne, 1, animations.settings.headOne);
-      TweenMax.from(animations.target.headTwo, 1, animations.settings.headTwo);
-      TweenMax.from(animations.target.search, 1, animations.settings.search);
-      
+      var promise = animationService.getAnimations();
+      promise.then(function(data) {
+        var store = data;
+
+        var target = {
+          header: document.body.querySelector("header"),
+          headOne: document.body.querySelector(".head-animate-one"),
+          headTwo: document.body.querySelector(".head-animate-two"),
+          search: document.body.querySelector(".head-animate-search")
+        };
+
+        TweenMax.to(target.header, 1, store.data.settings.header);
+        TweenMax.to(target.headOne, 1, store.data.settings.headOne);
+        TweenMax.from(target.headTwo, 1, store.data.settings.headTwo);
+        TweenMax.from(target.search, 1, store.data.settings.search);
+      });
     };
 
     vm.header = [
