@@ -1,7 +1,7 @@
 <nav class="row" ng-controller="NavController as vm">
  <ul class="panel">
      <li ng-class="key.color" ng-repeat="key in vm.nav.settings"> 
-         <a href="#">
+         <a href="{{key.href}}">
              <div ng-class="key.front">
                  <i ng-class="key.icon"></i>
              </div>
