@@ -22,10 +22,23 @@
   function HeadController(animationService) {
     var vm = this;
 
+    vm.copy = function(o) {
+      var copy = Object.create(Object.getPrototypeOf(o));
+      var propNames = Object.getOwnPropertyNames(o);
+
+      propNames.forEach(function(name) {
+        var desc = Object.getOwnPropertyDescriptor(o, name);
+        Object.defineProperty(copy, name, desc);
+      });
+
+      return copy;
+    };
+
     vm.animationHead = function() {
       var promise = animationService.getAnimations();
       promise.then(function(data) {
         var store = data;
+        var headObject = vm.copy(store.data.settings[0].headAnimations);
 
         var target = {
           header: document.body.querySelector("header"),
@@ -34,10 +47,10 @@
           search: document.body.querySelector(".head-animate-search")
         };
 
-        TweenMax.to(target.header, 1, store.data.settings.header);
-        TweenMax.to(target.headOne, 1, store.data.settings.headOne);
-        TweenMax.from(target.headTwo, 1, store.data.settings.headTwo);
-        TweenMax.from(target.search, 1, store.data.settings.search);
+        TweenMax.to(target.header, 1, headObject.header);
+        TweenMax.to(target.headOne, 1, headObject.headOne);
+        TweenMax.from(target.headTwo, 1, headObject.headTwo);
+        TweenMax.from(target.search, 1, headObject.search);
       });
     };
 
