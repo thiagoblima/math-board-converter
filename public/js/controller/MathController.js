@@ -79,6 +79,7 @@
       settings: [
         {
           name: "home",
+          href: "/#!/",
           color: "color-1",
           front: "front",
           back: "back",
@@ -86,6 +87,7 @@
         },
         {
           name: "blog",
+          href: "/#!/blog",
           color: "color-2",
           front: "front",
           back: "back",
@@ -93,6 +95,7 @@
         },
         {
           name: "photos",
+          href: "/#!/photos",
           color: "color-3",
           front: "front",
           back: "back",
@@ -100,6 +103,7 @@
         },
         {
           name: "about",
+          href: "/#!/about",
           color: "color-4",
           front: "front",
           back: "back",
@@ -107,6 +111,7 @@
         },
         {
           name: "contact",
+          href: "/#!/contact",
           color: "color-5",
           front: "front",
           back: "back",
