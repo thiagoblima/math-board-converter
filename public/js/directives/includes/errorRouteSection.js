@@ -4,12 +4,11 @@
  * Binding data to its scope object.
  */
 
-angular.module('app').directive("errorRoute", function() {
-    return {
-      restrict: "EA",
-      templateUrl: "js/directives/includes/views/errorRouteSection.html",
-      controllerAs: "vm",
-      bindToController: true
-    };
-  });
-  
+angular.module("app").directive("errorRoute", () => {
+  return {
+    restrict: "EA",
+    templateUrl: "js/directives/includes/views/errorRouteSection.html",
+    controllerAs: "vm",
+    bindToController: true
+  };
+});
