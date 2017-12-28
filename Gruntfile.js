@@ -252,12 +252,32 @@ module.exports = grunt => {
         config: ".eslintrc.json"
       }
     },
+    concat: {
+      options: {
+        sourceMap: true,
+        sourceMapStyle: "link"
+      },
+      js: {
+        src: ["<%= angularjsfiles %>"],
+        dest: "<%= srcpath %>/compiled-js/concat/script.js"
+      }
+    },
+    babel: {
+      dist: {
+        options: {
+          sourceMap: true,
+          inputSourceMap: grunt.file.readJSON("public/compiled-js/concat/script.js.map")
+        },
+        src: ["<%= srcpath %>/compiled-js/concat/script.js"],
+        dest: "<%= srcpath %>/compiled-js/build/compiled.js"
+      }
+    },
 
     uglify: {
       options: {
         banner:
           '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n',
-        compress: false,
+        compress: true,
         beautify: false,
         mangle: false
       },
@@ -265,7 +285,7 @@ module.exports = grunt => {
         files: {
           "<%= path %>/js/devbuild.<%= hash %>.min.js": ["<%= jsfiles %>"],
           "<%= directivesjs %>/angularjs.<%= hash %>.min.js": [
-            "<%= angularjsfiles %>"
+            "<%= srcpath %>/compiled-js/build/compiled.js"
           ]
         }
       }
@@ -351,7 +371,9 @@ module.exports = grunt => {
   });
 
   grunt.loadNpmTasks("grunt-contrib-copy");
+  grunt.loadNpmTasks("grunt-babel");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-html-build");
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
@@ -359,10 +381,12 @@ module.exports = grunt => {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-ssh");
 
-  grunt.registerTask("default", ["eslint"]);
+  grunt.registerTask("default", ["eslint", "concat", "babel"]);
   grunt.registerTask("dev", [
     "clean",
     "eslint",
+    "concat", 
+    "babel",
     "htmlbuild",
     "copy",
     "uglify",
@@ -373,6 +397,8 @@ module.exports = grunt => {
   grunt.registerTask("production", [
     "clean",
     "eslint",
+    "concat", 
+    "babel",
     "htmlbuild",
     "copy",
     "uglify",
@@ -382,6 +408,8 @@ module.exports = grunt => {
   grunt.registerTask("dev-deploy", [
     "clean",
     "eslint",
+    "concat", 
+    "babel",
     "htmlbuild",
     "copy",
     "uglify",
@@ -392,6 +420,8 @@ module.exports = grunt => {
   grunt.registerTask("production-deploy", [
     "clean",
     "eslint",
+    "concat", 
+    "babel",
     "htmlbuild",
     "copy",
     "uglify",
