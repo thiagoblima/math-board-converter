@@ -1,6 +1,6 @@
-<nav class="row" ng-controller="NavController as vm">
+<nav class="row" ng-controller="NavController as vm" ng-init="vm.animationNav()">
  <ul class="panel">
-     <li ng-class="key.color" ng-repeat="key in vm.nav.settings"> 
+     <li ng-class="key.color" class="{{key.class}}" ng-repeat="key in vm.nav.settings"> 
          <a href="{{key.href}}">
              <div ng-class="key.front">
                  <i ng-class="key.icon"></i>
