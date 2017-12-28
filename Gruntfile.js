@@ -341,7 +341,7 @@ module.exports = grunt => {
         }
       },
       scripts: {
-        files: "<%= srcpath %>/js/**/*.js",
+        files: ["<%= srcpath %>/js/**/*.js", "<%= srcpath %>/**/*.json"],
         tasks: ["eslint", "uglify", "htmlbuild"],
         options: {
           livereload: true
