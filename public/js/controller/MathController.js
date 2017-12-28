@@ -36,22 +36,24 @@
 
     vm.animationHead = function() {
       var promise = animationService.getAnimations();
-      promise.then(function(data) {
-        var store = data;
-        var headObject = vm.copy(store.data.settings[0].headAnimations);
+      promise
+        .then(function(data) {
+          var store = data;
+          var headObject = vm.copy(store.data.settings[0].headAnimations);
 
-        var target = {
-          header: document.body.querySelector("header"),
-          headOne: document.body.querySelector(".head-animate-one"),
-          headTwo: document.body.querySelector(".head-animate-two"),
-          search: document.body.querySelector(".head-animate-search")
-        };
+          var target = {
+            header: document.body.querySelector("header"),
+            headOne: document.body.querySelector(".head-animate-one"),
+            headTwo: document.body.querySelector(".head-animate-two"),
+            search: document.body.querySelector(".head-animate-search")
+          };
 
-        TweenMax.to(target.header, 1, headObject.header);
-        TweenMax.to(target.headOne, 1, headObject.headOne);
-        TweenMax.from(target.headTwo, 1, headObject.headTwo);
-        TweenMax.from(target.search, 1, headObject.search);
-      });
+          TweenMax.to(target.header, 1, headObject.header);
+          TweenMax.to(target.headOne, 1, headObject.headOne);
+          TweenMax.from(target.headTwo, 1, headObject.headTwo);
+          TweenMax.from(target.search, 1, headObject.search);
+        })
+        .catch("An error ocurred on loading animations!");
     };
 
     vm.header = [
