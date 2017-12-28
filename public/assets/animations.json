@@ -27,6 +27,43 @@
           "ease": "Bounce.easeOut"
         }
       }
+    },
+    {
+      "navAnimations": {
+        "home": {
+          "opacity": 1,
+          "delay": 0.4,
+          "marginLeft": "0px",
+          "marginTop": "0",
+          "rotation": 360
+        },
+        "blog": {
+          "opacity": 1,
+          "delay": 0.6,
+          "marginLeft": "0",
+          "marginTop": "0",
+          "rotation": 360
+        },
+        "photos": {
+          "opacity": 1,
+          "delay": 0.8,
+          "marginTop": "0",
+          "rotation": 360
+        },
+        "about": {
+          "opacity": 1,
+          "delay": 1,
+          "marginTop": "0",
+          "rotation": 360
+        },
+        "contact": {
+          "opacity": 1,
+          "delay": 1.2,
+          "marginTop": "0",
+          "rotation": 360,
+          "ease": "Bounce.easeOut"
+        }
+      }
     }
   ]
 }
