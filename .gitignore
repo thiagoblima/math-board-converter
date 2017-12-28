@@ -6,7 +6,7 @@ public/libs
 .sass-cache
 
 ## Front-End Build
-build
+/build
 
 ## Back-End Build
 /middleware
@@ -15,3 +15,10 @@ build
 /routes
 app.js
 server.js
+
+## Babel and Concat Process
+
+public/compiled-js/concat/*.js
+public/compiled-js/concat/*.map 
+public/compiled-js/build/*.js
+public/compiled-js/build/*.map
