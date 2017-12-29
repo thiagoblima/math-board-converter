@@ -54,12 +54,6 @@ module.exports = grunt => {
        */
 
       "<%= vendorjs %>",
-      "<%= srcpath %>/js/app.js",
-      "<%= srcpath %>/js/controller/MathController.js",
-      "<%= srcpath %>/js/controller/TableController.js",
-      "<%= srcpath %>/js/controller/InfoController.js",
-      "<%= srcpath %>/js/controller/ContactController.js",
-      "<%= srcpath %>/js/controller/UserController.js",
       "<%= mathjsfiles %>"
     ],
 
@@ -88,7 +82,12 @@ module.exports = grunt => {
        * @see        : They're basicly distributed on public/js/directives/
        * Hopefully any change for the next updates
        */
-
+      "<%= srcpath %>/js/app.js",
+      "<%= srcpath %>/js/controller/MathController.js",
+      "<%= srcpath %>/js/controller/TableController.js",
+      "<%= srcpath %>/js/controller/InfoController.js",
+      "<%= srcpath %>/js/controller/ContactController.js",
+      "<%= srcpath %>/js/controller/UserController.js",
       "<%= srcpath %>/js/directives/includes/errorRouteSection.js",
       "<%= srcpath %>/js/directives/includes/headSection.js",
       "<%= srcpath %>/js/directives/includes/socialsection.js",
@@ -107,6 +106,7 @@ module.exports = grunt => {
       "<%= srcpath %>/js/services/AnimationService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
       "<%= srcpath %>/js/filters/mathFilter.js"
+      
     ],
 
     mathjsfiles: [
@@ -243,6 +243,12 @@ module.exports = grunt => {
         flatten: true,
         src: "<%= webfonts %>",
         dest: "<%= webfontbuild %>"
+      },
+      cssmap:{
+        expand: true,
+        flatten: true,
+        src: "<%= srcpath %>/compiled-css/main.css.map",
+        dest: "<%= path %>/css/"
       }
     },
 
@@ -294,7 +300,7 @@ module.exports = grunt => {
     sass: {
       build: {
         files: {
-          "<%= path %>/css/main.css": "<%= srcpath %>/themes/sass/screen.scss"
+          "<%= srcpath %>/compiled-css/main.css": "<%= srcpath %>/themes/sass/screen.scss"
         }
       }
     },
@@ -306,7 +312,7 @@ module.exports = grunt => {
       },
       build: {
         files: {
-          //'<%= path %>/css/screen.min.css': '<%= srcpath %>/themes/stylesheets/screen.css',
+          '<%= path %>/css/main.min.css': '<%= srcpath %>/compiled-css/main.css',
           "<%= path %>/css/vendor.min.css":
             "<%= srcpath %>/node_modules/bootstrap/dist/css/bootstrap.min.css"
         }
@@ -388,10 +394,11 @@ module.exports = grunt => {
     "concat", 
     "babel",
     "htmlbuild",
-    "copy",
     "uglify",
+    "sass",
     "cssmin",
-    "sass"
+    "copy"
+    
   ]);
   grunt.registerTask("cleanup", ["clean", "copy", "eslint"]);
   grunt.registerTask("production", [
@@ -400,10 +407,10 @@ module.exports = grunt => {
     "concat", 
     "babel",
     "htmlbuild",
-    "copy",
     "uglify",
+    "sass",
     "cssmin",
-    "sass"
+    "copy",
   ]);
   grunt.registerTask("dev-deploy", [
     "clean",
@@ -411,10 +418,10 @@ module.exports = grunt => {
     "concat", 
     "babel",
     "htmlbuild",
-    "copy",
     "uglify",
-    "cssmin",
     "sass",
+    "cssmin",
+    "copy",
     "sshexec"
   ]);
   grunt.registerTask("production-deploy", [
@@ -423,10 +430,10 @@ module.exports = grunt => {
     "concat", 
     "babel",
     "htmlbuild",
-    "copy",
     "uglify",
-    "cssmin",
     "sass",
+    "cssmin",
+    "copy",
     "sshexec"
   ]);
 };
