@@ -106,7 +106,6 @@ module.exports = grunt => {
       "<%= srcpath %>/js/services/AnimationService.js",
       "<%= srcpath %>/js/filters/searchFilter.js",
       "<%= srcpath %>/js/filters/mathFilter.js"
-      
     ],
 
     mathjsfiles: [
@@ -244,7 +243,7 @@ module.exports = grunt => {
         src: "<%= webfonts %>",
         dest: "<%= webfontbuild %>"
       },
-      cssmap:{
+      cssmap: {
         expand: true,
         flatten: true,
         src: "<%= srcpath %>/compiled-css/main.css.map",
@@ -272,7 +271,9 @@ module.exports = grunt => {
       dist: {
         options: {
           sourceMap: true,
-          inputSourceMap: grunt.file.readJSON("public/compiled-js/concat/script.js.map")
+          inputSourceMap: grunt.file.readJSON(
+            "public/compiled-js/concat/script.js.map"
+          )
         },
         src: ["<%= srcpath %>/compiled-js/concat/script.js"],
         dest: "<%= srcpath %>/compiled-js/build/compiled.js"
@@ -300,7 +301,8 @@ module.exports = grunt => {
     sass: {
       build: {
         files: {
-          "<%= srcpath %>/compiled-css/main.css": "<%= srcpath %>/themes/sass/screen.scss"
+          "<%= srcpath %>/compiled-css/main.css":
+            "<%= srcpath %>/themes/sass/screen.scss"
         }
       }
     },
@@ -312,7 +314,8 @@ module.exports = grunt => {
       },
       build: {
         files: {
-          '<%= path %>/css/main.min.css': '<%= srcpath %>/compiled-css/main.css',
+          "<%= path %>/css/main.min.css":
+            "<%= srcpath %>/compiled-css/main.css",
           "<%= path %>/css/vendor.min.css":
             "<%= srcpath %>/node_modules/bootstrap/dist/css/bootstrap.min.css"
         }
@@ -350,7 +353,17 @@ module.exports = grunt => {
           "<%= srcpath %>/themes/stylesheets/**/*.css",
           "<%= srcpath %>/themes/sass/**/*.scss"
         ],
-        tasks: ["eslint", "uglify", "htmlbuild", "cssmin", "sass"],
+        tasks: [
+          "clean",
+          "eslint",
+          "concat",
+          "babel",
+          "htmlbuild",
+          "uglify",
+          "sass",
+          "cssmin",
+          "copy"
+        ],
         options: {
           livereload: true
         }
@@ -361,14 +374,14 @@ module.exports = grunt => {
           "<%= homedirectives %>",
           "<%= includesdirectives %>"
         ],
-        tasks: ["eslint", "uglify", "htmlbuild"],
+        tasks: ["eslint","concat", "babel", "uglify", "htmlbuild"],
         opstions: {
           livereload: true
         }
       },
       scripts: {
         files: ["<%= srcpath %>/js/**/*.js", "<%= srcpath %>/**/*.json"],
-        tasks: ["eslint", "uglify", "htmlbuild"],
+        tasks: ["eslint","concat", "babel", "uglify", "htmlbuild"],
         options: {
           livereload: true
         }
@@ -391,31 +404,30 @@ module.exports = grunt => {
   grunt.registerTask("dev", [
     "clean",
     "eslint",
-    "concat", 
+    "concat",
     "babel",
     "htmlbuild",
     "uglify",
     "sass",
     "cssmin",
     "copy"
-    
   ]);
   grunt.registerTask("cleanup", ["clean", "copy", "eslint"]);
   grunt.registerTask("production", [
     "clean",
     "eslint",
-    "concat", 
+    "concat",
     "babel",
     "htmlbuild",
     "uglify",
     "sass",
     "cssmin",
-    "copy",
+    "copy"
   ]);
   grunt.registerTask("dev-deploy", [
     "clean",
     "eslint",
-    "concat", 
+    "concat",
     "babel",
     "htmlbuild",
     "uglify",
@@ -427,7 +439,7 @@ module.exports = grunt => {
   grunt.registerTask("production-deploy", [
     "clean",
     "eslint",
-    "concat", 
+    "concat",
     "babel",
     "htmlbuild",
     "uglify",
