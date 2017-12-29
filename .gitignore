@@ -22,3 +22,9 @@ public/compiled-js/concat/*.js
 public/compiled-js/concat/*.map 
 public/compiled-js/build/*.js
 public/compiled-js/build/*.map
+
+
+## SASS To CSS
+
+public/compiled-css/*.css
+public/compiled-css/*.map 
