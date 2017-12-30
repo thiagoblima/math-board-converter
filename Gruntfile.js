@@ -21,6 +21,18 @@ module.exports = grunt => {
     return "load-grunt-tasks";
   }
 
+  const externalModules = [
+    "./public/node_modules/angular/angular.min.js",
+    "./public/node_modules/angular-route/angular-route.min.js",
+    "./public/node_modules/angular-sanitize/angular-sanitize.min.js",
+    "./public/node_modules/angular-animate/angular-animate.min.js",
+    "./public/node_modules/angular-messages/angular-messages.min.js",
+    "./public/node_modules/angular-ui-mask/dist/mask.min.js",
+    "./public/node_modules/jquery/dist/jquery.min.js",
+    "./public/node_modules/gsap/src/minified/TweenMax.min.js",
+    "./public/node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ];
+
   require(loader())(grunt);
 
   grunt.initConfig({
@@ -32,6 +44,7 @@ module.exports = grunt => {
      */
 
     hash: cacheHash,
+    absolutepath: "./public",
     srcpath: "public",
     srcassets: "public/assets",
     assetspath: "<%= path %>/assets",
@@ -83,6 +96,7 @@ module.exports = grunt => {
        * Hopefully any change for the next updates
        */
       "<%= srcpath %>/js/app.js",
+      "<%= srcpath %>/js/router.js",
       "<%= srcpath %>/js/controller/MathController.js",
       "<%= srcpath %>/js/controller/TableController.js",
       "<%= srcpath %>/js/controller/InfoController.js",
@@ -264,7 +278,32 @@ module.exports = grunt => {
       },
       js: {
         src: ["<%= angularjsfiles %>"],
-        dest: "<%= srcpath %>/compiled-js/concat/script.js"
+        dest: "<%= srcpath %>/compiled-js/bundle/script.js"
+      }
+    },
+    browserify: {
+      /*vendor: {
+        src: [],
+        dest: "build/js/vendor.<%= hash %>.min.js",
+        options: {
+          debug: true,
+          alias: externalModules.map(function(module) {
+            return module + ":";
+            external: null;
+          })
+        }
+      },*/
+      dev: {
+        options: {
+          transform: ["babelify"],
+          debug: true,
+          external: externalModules
+        },
+        files: {
+          "<%= srcpath %>/compiled-js/bundle/script.js": [
+            "<%= angularjsfiles %>"
+          ]
+        }
       }
     },
     babel: {
@@ -272,10 +311,10 @@ module.exports = grunt => {
         options: {
           sourceMap: true,
           inputSourceMap: grunt.file.readJSON(
-            "public/compiled-js/concat/script.js.map"
+            "public/compiled-js/bundle/script.js.map"
           )
         },
-        src: ["<%= srcpath %>/compiled-js/concat/script.js"],
+        src: ["<%= srcpath %>/compiled-js/bundle/script.js"],
         dest: "<%= srcpath %>/compiled-js/build/compiled.js"
       }
     },
@@ -356,7 +395,7 @@ module.exports = grunt => {
         tasks: [
           "clean",
           "eslint",
-          "concat",
+          "browserify",
           "babel",
           "htmlbuild",
           "uglify",
@@ -374,14 +413,14 @@ module.exports = grunt => {
           "<%= homedirectives %>",
           "<%= includesdirectives %>"
         ],
-        tasks: ["eslint","concat", "babel", "uglify", "htmlbuild"],
+        tasks: ["eslint", "browserify", "babel", "uglify", "htmlbuild"],
         opstions: {
           livereload: true
         }
       },
       scripts: {
         files: ["<%= srcpath %>/js/**/*.js", "<%= srcpath %>/**/*.json"],
-        tasks: ["eslint","concat", "babel", "uglify", "htmlbuild"],
+        tasks: ["eslint", "browserify", "babel", "uglify", "htmlbuild"],
         options: {
           livereload: true
         }
@@ -391,6 +430,7 @@ module.exports = grunt => {
 
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-babel");
+  grunt.loadNpmTasks("grunt-browserify");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-concat");
   grunt.loadNpmTasks("grunt-html-build");
@@ -400,11 +440,11 @@ module.exports = grunt => {
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-ssh");
 
-  grunt.registerTask("default", ["eslint", "concat", "babel"]);
+  grunt.registerTask("default", ["eslint", "browserify", "babel"]);
   grunt.registerTask("dev", [
     "clean",
     "eslint",
-    "concat",
+    "browserify",
     "babel",
     "htmlbuild",
     "uglify",
@@ -416,7 +456,7 @@ module.exports = grunt => {
   grunt.registerTask("production", [
     "clean",
     "eslint",
-    "concat",
+    "browserify",
     "babel",
     "htmlbuild",
     "uglify",
@@ -427,7 +467,7 @@ module.exports = grunt => {
   grunt.registerTask("dev-deploy", [
     "clean",
     "eslint",
-    "concat",
+    "browserify",
     "babel",
     "htmlbuild",
     "uglify",
@@ -439,7 +479,7 @@ module.exports = grunt => {
   grunt.registerTask("production-deploy", [
     "clean",
     "eslint",
-    "concat",
+    "browserify",
     "babel",
     "htmlbuild",
     "uglify",
