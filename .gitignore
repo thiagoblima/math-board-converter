@@ -13,13 +13,13 @@ public/libs
 /config
 /models
 /routes
-app.js
+/app.js
 server.js
 
 ## Babel and Concat Process
 
-public/compiled-js/concat/*.js
-public/compiled-js/concat/*.map 
+public/compiled-js/bundle/*.js
+public/compiled-js/bundle/*.map 
 public/compiled-js/build/*.js
 public/compiled-js/build/*.map
 
