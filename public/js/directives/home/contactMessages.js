@@ -1,15 +1,19 @@
 /**
  * @name       : ContactMessagesSection.js
- * @description: messages component contact-messages
+ * @description: contact messages component contact-messages
  * Binding data to its scope object.
  */
 
-
-angular.module('app').directive('contactMessages', function(){
-    return{
-       restrict:"AE",
-       templateUrl:'js/directives/home/views/contactMessages.html',
-       controllerAs:"vm",
-       bindToController: true
+ export default class contactMessages {
+  constructor() {
+    this.directive = {
+      restrict: "AE",
+      templateUrl: "js/directives/home/views/contactMessages.html",
+      controllerAs: "vm",
+      bindToController: true
     };
- });
+  }
+  ngInit() {
+    return this.directive;
+  }
+}
