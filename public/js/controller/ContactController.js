@@ -10,11 +10,7 @@ export class ContactController {
   constructor(contactService) {
     this.contactService = contactService;
     this.contacts = this.contactService.list();
-    this.regex = {
-      name: /^[a-z]*$/,
-      email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      phone: /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$/g
-    };
+    this.regex = this.regex();
   }
   saveContact() {
     this.contactService.save(this.newcontact);
@@ -27,6 +23,13 @@ export class ContactController {
 
   edit(id) {
     this.newcontact = angular.copy(this.contactService.getId(id));
+  }
+  regex() {
+    return {
+      name: /^[a-z]*$/,
+      email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      phone: /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$/g
+    };
   }
 }
 
