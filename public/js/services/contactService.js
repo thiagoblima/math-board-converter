@@ -3,15 +3,9 @@
  * @author     : <thiagolimasp@live.com> Thiago Lima
  * @description: Contact services are set here.
  */
-
-(function() {
-  'use strict';
-  angular.module("app").service("contactService", contactService);
-
-  function contactService() {
-    var uid = 1;
-
-    var contacts = [
+export class contactService {
+  constructor() {
+    this.contacts = [
       {
         id: 0,
         name: "testuser",
@@ -19,44 +13,47 @@
         phone: 123234344
       }
     ];
+    this.uid = 1;
+  }
 
-    this.save = function(contact) {
-      if (!contact) {
-        console.log("User is not defined!");
+  save(contact) {
+    if (!contact) {
+      console.log("User is not defined!");
+    } else {
+      if (contact.id == null) {
+        contact.id = this.uid++;
+        this.contacts.push(contact);
       } else {
-        if (contact.id == null) {
-          contact.id = uid++;
-          contacts.push(contact);
-        } else {
-          //for existing contact, find this contact using id
-          //and update it.
-          for (var i in contacts) {
-            if (contacts[i].id == contact.id) {
-              contacts[i] = contact;
-            }
+        //for existing contact, find this contact using id
+        //and update it.
+        for (var i in this.contacts) {
+          if (this.contacts[i].id == contact.id) {
+            this.contacts[i] = contact;
           }
         }
       }
-    };
-
-    this.get = function(id) {
-      for (var i in contacts) {
-        if (contacts[i].id == id) {
-          return contacts[i];
-        }
-      }
-    };
-
-    this.delete = function(id) {
-      for (var i in contacts) {
-        if (contacts[i].id == id) {
-          contacts.splice(i, 1);
-        }
-      }
-    };
-
-    this.list = function() {
-      return contacts;
-    };
+    }
   }
-})();
+
+  getId(id) {
+    for (let i in this.contacts) {
+      if (this.contacts[i].id == id) {
+        return this.contacts[i];
+      }
+    }
+  }
+
+  delete(id) {
+    for (let i in this.contacts) {
+      if (this.contacts[i].id == id) {
+        this.contacts.splice(i, 1);
+      }
+    }
+  }
+
+  list() {
+    return this.contacts;
+  }
+}
+
+angular.module("app").service("contactService", contactService);
