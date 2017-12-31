@@ -4,47 +4,35 @@
  * @description: Contact section objects are set here.
  */
 
-(function() {
-  'use strict';
-  // Load up controller
-  angular.module("app").controller("ContactController", ContactController);
-  angular
-    .module("app")
-    .controller("ContactMessagesController", ContactMessagesController);
+import contactService from "../services/contactService";
 
-  // dependency injection
-  ContactController.$inject = ["contactService", "$scope"];
-  ContactMessagesController.$inject = ["$scope"];
-
-  function ContactController(contactService) {
-    var vm = this;
-    vm.contacts = contactService.list();
-
-    vm.saveContact = function() {
-      contactService.save(vm.newcontact);
-      vm.newcontact = {};
-    };
-
-    vm.delete = function(id) {
-      contactService.delete(id);
-      if (vm.newcontact.id == id) vm.newcontact = {};
-    };
-
-    vm.edit = function(id) {
-      vm.newcontact = angular.copy(contactService.get(id));
-    };
-
-    vm.regex = {
-      name: "^[a-zA-Z]*$",
+export class ContactController {
+  constructor(contactService) {
+    this.contactService = contactService;
+    this.contacts = this.contactService.list();
+    this.regex = {
+      name: /^[a-z]*$/,
       email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      phone: "/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$/g"
+      phone: /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-s./0-9]*$/g
     };
   }
+  saveContact() {
+    this.contactService.save(this.newcontact);
+    this.newcontact = {};
+  }
 
-  function ContactMessagesController() {
-    var vm = this;
+  delete(id) {
+    this.contactService.delete(id);
+  }
 
-    vm.messages = {
+  edit(id) {
+    this.newcontact = angular.copy(this.contactService.getId(id));
+  }
+}
+
+export class ContactMessagesController {
+  constructor() {
+    this.messages = {
       settings: [
         { name: "required", message: "Can't leave this field empty" },
         { name: "pattern", message: "Wrong pattern" },
@@ -53,4 +41,10 @@
       ]
     };
   }
-})();
+}
+
+// Load up controllers
+angular
+  .module("app")
+  .controller("ContactController", ContactController)
+  .controller("ContactMessagesController", ContactMessagesController);
