@@ -5,34 +5,25 @@
  * settings and enchancement model view architecture.
  */
 
-(function() {
-  angular.module("app").controller("TableController", TableController);
-  angular
-    .module("app")
-    .controller("TableMessagesController", TableMessagesController);
+export class TableController {
+  constructor() {
+    this.textFun = this.textFun();
+    this.clearExponential = this.clearExponential();
+    this.table = this.table();
+  }
 
-  // dependency injection
-  TableController.$inject = ["$scope"];
-  TableMessagesController.$inject = ["$scope"];
+  textFun() {
+    this.val = "-";
+    return this.val.replace(/-/i, "Java Script type methods");
+  }
 
-  function TableController() {
-    var vm = this;
+  clearExponential() {
+    this.val = "-";
+    return this.val.replace(/-/i, "Have Fun!");
+  }
 
-    vm.textFun = textFun();
-    vm.clearExponential = clearExponential();
-    vm.table = table;
-
-    function textFun() {
-      vm.val = "-";
-      return vm.val.replace(/-/i, "Java Script type methods");
-    }
-
-    function clearExponential() {
-      vm.value = "-";
-      return vm.value.replace(/-/i, "Have Fun!");
-    }
-
-    vm.table = {
+  table() {
+    return {
       intro: {
         text: "Number Testing Tool"
       },
@@ -49,11 +40,15 @@
       ]
     };
   }
+}
 
-  function TableMessagesController() {
-    var vm = this;
+export class TableMessagesController {
+  constructor() {
+    this.messages = this.messages();
+  }
 
-    vm.messages = {
+  messages() {
+    return {
       settings: [
         { name: "required", message: "Enter a number" },
         { name: "pattern", message: "Wrong pattern" },
@@ -62,4 +57,9 @@
       ]
     };
   }
-})();
+}
+
+angular
+  .module("app")
+  .controller("TableController", TableController)
+  .controller("TableMessagesController", TableMessagesController);
