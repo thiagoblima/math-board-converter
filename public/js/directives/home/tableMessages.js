@@ -1,15 +1,20 @@
 /**
  * @name       : TableMessagesSection.js
- * @description: messages component table-messages
+ * @description: table messages component <table-messages>
  * Binding data to its scope object.
  */
 
-
-angular.module('app').directive('tableMessages', function(){
-   return{
-      restrict:"AE",
-      templateUrl:'js/directives/home/views/tableMessages.html',
-      controllerAs:"vm",
+export default class tableMessages {
+  constructor() {
+    this.directive = {
+      restrict: "AE",
+      templateUrl: "js/directives/home/views/tableMessages.html",
+      controllerAs: "vm",
       bindToController: true
-   };
-});
+    };
+  }
+
+  ngInit() {
+    return this.directive;
+  }
+}
