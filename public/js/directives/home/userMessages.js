@@ -4,12 +4,16 @@
  * Binding data to its scope object.
  */
 
-
-angular.module('app').directive('userMessages', function(){
-    return{
-       restrict:"AE",
-       templateUrl:'js/directives/home/views/userMessages.html',
-       controllerAs:"vm",
-       bindToController: true
+export default class userMessages {
+  constructor() {
+    this.directive = {
+      restrict: "AE",
+      templateUrl: "js/directives/home/views/userMessages.html",
+      controllerAs: "vm",
+      bindToController: true
     };
- });
+  }
+  ngInit() {
+    return this.directive;
+  }
+}
