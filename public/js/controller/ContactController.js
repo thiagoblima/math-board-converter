@@ -35,7 +35,11 @@ export class ContactController {
 
 export class ContactMessagesController {
   constructor() {
-    this.messages = {
+    this.messages = this.getMessages();
+  }
+
+  getMessages() {
+    return {
       settings: [
         { name: "required", message: "Can't leave this field empty" },
         { name: "pattern", message: "Wrong pattern" },
