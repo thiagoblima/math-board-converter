@@ -1,25 +1,21 @@
 /**
  * @author     : <thiagolimasp@live.com> Thiago Lima
- * @name       : InfoController
+ * @name       : HeadInfoController
  * @description: Head section objects are set here.
  */
 
-(function() {
-  'use strict';
-  // load up controller(s)
-  angular.module("app").controller("HeadInfoController", HeadInfoController);
+export class HeadInfoController {
+  constructor() {
+    this.title = this.getTitle();
+    this.meta = this.getMeta();
+  }
 
-  // dependency injection
-  HeadInfoController.$inject = ["$scope"];
+  getTitle() {
+    return { name: "Math Board Converter" };
+  }
 
-  function HeadInfoController() {
-    var vm = this;
-
-    vm.title = {
-      name: "Math Board Converter"
-    };
-
-    vm.meta = {
+  getMeta() {
+    return {
       keyOne: {
         type: "description",
         value: "Math web online converter"
@@ -36,4 +32,7 @@
       }
     };
   }
-})();
+}
+
+// load up controller(s)
+angular.module("app").controller("HeadInfoController", HeadInfoController);
