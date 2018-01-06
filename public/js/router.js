@@ -1,5 +1,5 @@
 export default function routerConfig($provide, $routeProvider) {
-  $provide.factory("$routeProvider", function() {
+  $provide.factory("$routeProvider", () => {
     return $routeProvider;
   });
 
