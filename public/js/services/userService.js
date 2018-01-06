@@ -4,31 +4,30 @@
  * @description: User services are set here.
  */
 
-(function() {
-  'use strict';
-  angular.module("app").factory("userServices", userServices);
+export default class userServices {
+  constructor($http) {
+    this.$http = $http;
+    this.postUser = this._postUser;
+  }
 
-  userServices.$inject = ["$http"];
+  _postUser(user) {
+    return this.$http
+      .post("/api/signup", user)
+      .then(this.postUserComplete)
+      .catch(this.postUserError);
+  }
 
-  function userServices($http) {
+  static postUserComplete(response) {
+    return response.data.user;
+  }
 
-    var _postUser = function(user) {
-      return $http
-        .post("/api/signup", user)
-        .then(postUserComplete)
-        .catch(postUserError);
-    };
+  static postUserError(err) {
+    return console.info("An error occured!", err.data);
+  }
 
-    function postUserComplete(response) {
-      return response.data.user;
-    }
-
-    function postUserError() {
-      return console.info("An error occured!");
-    }
-
+  ngInit() {
     return {
-      postUser: _postUser
+      postUser: this.postUser
     };
   }
-})();
+}
