@@ -13,6 +13,7 @@ import contactSection from "./directives/home/contactSection";
 import contactMessages from "./directives/home/contactMessages";
 import userSection from "./directives/home/userSection";
 import userMessages from "./directives/home/userMessages";
+import userServices from "./services/userService";
 
 angular
   .module("app", [
@@ -22,7 +23,9 @@ angular
     "ngMessages",
     "ui.mask"
   ])
+
   .config(routerConfig)
+  .factory("userServices", ["$http", $http => new userServices($http)])
   .directive("introSection", () => new introSection().ngInit())
   .directive("tableSection", () => new tableSection().ngInit())
   .directive("tableMessages", () => new tableMessages().ngInit())
@@ -31,3 +34,4 @@ angular
   .directive("contactMessages", () => new contactMessages().ngInit())
   .directive("userSection", () => new userSection().ngInit())
   .directive("userMessages", () => new userMessages().ngInit());
+  
