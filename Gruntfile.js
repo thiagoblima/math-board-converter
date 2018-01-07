@@ -48,9 +48,9 @@ module.exports = grunt => {
     srcpath: "public",
     srcassets: "public/assets",
     assetspath: "<%= path %>/assets",
-    homecomponent: "build/js/directives/home/views/",
-    includescomponent: "build/js/directives/includes/views/",
-    directivesjs: "build/js/app",
+    homecomponent: "build/components/directives/welcome/views/",
+    includescomponent: "build/components/directives/includes/views/",
+    directivesjs: "build/js",
     webfontpath: "<%= srcpath %>/node_modules/bootstrap/fonts",
     mathpath: "<%= srcpath %>/build/js/math",
     path: "build",
@@ -66,8 +66,7 @@ module.exports = grunt => {
        * /public/js/ Hopefully any change for the next updates
        */
 
-      "<%= vendorjs %>",
-      "<%= mathjsfiles %>"
+      "<%= vendorjs %>"
     ],
 
     vendorjs: [
@@ -95,31 +94,35 @@ module.exports = grunt => {
        * @see        : They're basicly distributed on public/js/directives/
        * Hopefully any change for the next updates
        */
-      "<%= srcpath %>/js/app.js",
-      "<%= srcpath %>/js/router.js",
-      "<%= srcpath %>/js/controller/MathController.js",
-      "<%= srcpath %>/js/controller/TableController.js",
-      "<%= srcpath %>/js/controller/InfoController.js",
-      "<%= srcpath %>/js/controller/ContactController.js",
-      "<%= srcpath %>/js/controller/UserController.js",
-      "<%= srcpath %>/js/directives/includes/errorRouteSection.js",
-      "<%= srcpath %>/js/directives/includes/headSection.js",
-      "<%= srcpath %>/js/directives/includes/socialsection.js",
-      "<%= srcpath %>/js/directives/includes/mainNav.js",
-      "<%= srcpath %>/js/directives/includes/scroll.js",
-      "<%= srcpath %>/js/directives/home/introSection.js",
-      "<%= srcpath %>/js/directives/home/guideSection.js",
-      "<%= srcpath %>/js/directives/home/tableSection.js",
-      "<%= srcpath %>/js/directives/home/tableMessages.js",
-      "<%= srcpath %>/js/directives/home/userSection.js",
-      "<%= srcpath %>/js/directives/home/userMessages.js",
-      "<%= srcpath %>/js/directives/home/contactSection.js",
-      "<%= srcpath %>/js/directives/home/contactMessages.js",
-      "<%= srcpath %>/js/services/ContactService.js",
-      "<%= srcpath %>/js/services/UserService.js",
-      "<%= srcpath %>/js/services/AnimationService.js",
-      "<%= srcpath %>/js/filters/searchFilter.js",
-      "<%= srcpath %>/js/filters/mathFilter.js"
+      "<%= srcpath %>/app/app.js",
+      "<%= srcpath %>/app/router.js",
+      //welcome component controllers
+      "<%= srcpath %>/app/components/welcome/controller/MathController.js",
+      "<%= srcpath %>/app/components/welcome/controller/TableController.js",
+      "<%= srcpath %>/app/components/welcome/controller/InfoController.js",
+      "<%= srcpath %>/app/components/welcome/controller/ContactController.js",
+      "<%= srcpath %>/app/components/welcome/controller/UserController.js",
+      //includes components
+      "<%= srcpath %>/app/components/includes/errorRouteSection.js",
+      "<%= srcpath %>/app/components/includes/headSection.js",
+      "<%= srcpath %>/app/components/includes/socialsection.js",
+      "<%= srcpath %>/app/components/includes/mainNav.js",
+      "<%= srcpath %>/app/components/includes/scroll.js",
+      // welcome components
+      "<%= srcpath %>/app/components/welcome/introSection.js",
+      "<%= srcpath %>/app/components/welcome/guideSection.js",
+      "<%= srcpath %>/app/components/welcome/tableSection.js",
+      "<%= srcpath %>/app/components/welcome/tableMessages.js",
+      "<%= srcpath %>/app/components/welcome/userSection.js",
+      "<%= srcpath %>/app/components/welcome/userMessages.js",
+      "<%= srcpath %>/app/components/welcome/contactSection.js",
+      "<%= srcpath %>/app/components/welcome/contactMessages.js",
+      // services
+      "<%= srcpath %>/app/services/ContactService.js",
+      "<%= srcpath %>/app/services/UserService.js",
+      "<%= srcpath %>/app/services/AnimationService.js",
+      "<%= srcpath %>/app/filters/searchFilter.js",
+      "<%= srcpath %>/app/filters/mathFilter.js"
     ],
 
     mathjsfiles: [
@@ -159,14 +162,14 @@ module.exports = grunt => {
        * the next updates.
        */
 
-      "<%= srcpath %>/js/directives/home/views/introSection.html",
-      "<%= srcpath %>/js/directives/home/views/guideSection.html",
-      "<%= srcpath %>/js/directives/home/views/tableSection.html",
-      "<%= srcpath %>/js/directives/home/views/tableMessages.html",
-      "<%= srcpath %>/js/directives/home/views/contactSection.html",
-      "<%= srcpath %>/js/directives/home/views/userSection.html",
-      "<%= srcpath %>/js/directives/home/views/contactMessages.html",
-      "<%= srcpath %>/js/directives/home/views/userMessages.html"
+      "<%= srcpath %>/app/components/welcome/directives/views/introSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/guideSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/tableSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/tableMessages.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/contactSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/userSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/contactMessages.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/userMessages.html"
     ],
 
     includesdirectives: [
@@ -177,10 +180,10 @@ module.exports = grunt => {
        * the next updates.
        */
 
-      "<%= srcpath %>/js/directives/includes/views/mainNav.html",
-      "<%= srcpath %>/js/directives/includes/views/headSection.html",
-      "<%= srcpath %>/js/directives/includes/views/socialSection.html",
-      "<%= srcpath %>/js/directives/includes/views/errorRouteSection.html"
+      "<%= srcpath %>/app/components/includes/directives/views/mainNav.html",
+      "<%= srcpath %>/app/components/includes/directives/views/headSection.html",
+      "<%= srcpath %>/app/components/includes/directives/views/socialSection.html",
+      "<%= srcpath %>/app/components/includes/directives/views/errorRouteSection.html"
     ],
 
     webfonts: [
@@ -266,7 +269,7 @@ module.exports = grunt => {
     },
 
     eslint: {
-      target: ["public/js/**/*.js"],
+      target: ["public/app/**/*.js"],
       options: {
         config: ".eslintrc.json"
       }
@@ -329,8 +332,8 @@ module.exports = grunt => {
       },
       build: {
         files: {
-          "<%= path %>/js/devbuild.<%= hash %>.min.js": ["<%= jsfiles %>"],
-          "<%= directivesjs %>/angularjs.<%= hash %>.min.js": [
+          "<%= path %>/js/vendor.<%= hash %>.min.js": ["<%= jsfiles %>"],
+          "<%= path %>/js/bundle.<%= hash %>.min.js": [
             "<%= srcpath %>/compiled-js/build/compiled.js"
           ]
         }
