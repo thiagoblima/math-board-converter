@@ -1,0 +1,10 @@
+<section id="intro-section" class="row" ng-controller="IntroController as vm">
+  <div class="col-md-12">
+    <h1 ng-bind-html="vm.intro.header.title"></h1>
+    <div ng-repeat="key in vm.intro.paragraphs">
+     <article ng-class="key.class">
+       <p ng-bind-html="key.description" class="paragraph-three-collumn"></p>
+     </article>
+    </div>
+  </div>
+</section>
