@@ -97,11 +97,11 @@ module.exports = grunt => {
       "<%= srcpath %>/app/app.js",
       "<%= srcpath %>/app/router.js",
       //welcome component controllers
-      "<%= srcpath %>/app/components/welcome/controller/MathController.js",
-      "<%= srcpath %>/app/components/welcome/controller/TableController.js",
-      "<%= srcpath %>/app/components/welcome/controller/InfoController.js",
-      "<%= srcpath %>/app/components/welcome/controller/ContactController.js",
-      "<%= srcpath %>/app/components/welcome/controller/UserController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/MathController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/TableController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/InfoController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/ContactController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/UserController.js",
       //includes components
       "<%= srcpath %>/app/components/includes/errorRouteSection.js",
       "<%= srcpath %>/app/components/includes/headSection.js",
