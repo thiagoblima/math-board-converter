@@ -136,7 +136,7 @@
     #container-wrapper {
       header {
         section {
-          @include search-breakpoint(absolute, 18%, 2%);
+          @include search-breakpoint(absolute, 3.5%, 2%);
           form {
             input.form-control.search {
               @include search-bar-breakpoint-input(150px !important);
