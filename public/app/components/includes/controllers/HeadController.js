@@ -10,7 +10,7 @@ export default class HeadController {
   constructor(animationService) {
     this.animationService = animationService;
     this.animationHead = this.animationHead;
-    this.header = this.header;
+    this.header = this.header();
     this.searchOpen = this.searchOpen;
     this.search = "Search a Math Info...";
     this.showMe = false;
@@ -39,7 +39,9 @@ export default class HeadController {
     promise
       .then(data => {
         const store = data;
-        const headObject = HeadController.copy(store.data.settings[0].headAnimations);
+        const headObject = HeadController.copy(
+          store.data.settings[0].headAnimations
+        );
 
         const target = {
           header: document.body.querySelector("header"),
