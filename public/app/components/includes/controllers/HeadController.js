@@ -1,12 +1,20 @@
-(function() {
-  "use strict";
-  // load up controller(s)
-  angular.module("app").controller("HeadController", HeadController);
-  angular.module("app").controller("NavController", NavController);
+/**
+ * @author     : <thiagolimasp@live.com> Thiago Lima
+ * @name       : UserController
+ * @description: User section objects are set here.
+ */
 
-  // dependency injection
-  HeadController.$inject = ["animationService", "$scope"];
-  NavController.$inject = ["animationService", "$scope"];
+import animationService from "../../../services/animationService";
+
+export default class HeadController {
+  constructor(animationService) {
+    this.animationService = animationService;
+    this.animationHead = this.animationHead;
+    this.header = this.header;
+    this.searchOpen = this.searchOpen;
+    this.search = "Search a Math Info...";
+    this.showMe = false;
+  }
 
   /**
    * @prop    : Object.defineProperty(copy, name, desc);
@@ -15,43 +23,41 @@
    * @function: copy
    */
 
-  function copy(o) {
-    var copy = Object.create(Object.getPrototypeOf(o));
-    var propNames = Object.getOwnPropertyNames(o);
+  static copy(o) {
+    const copy = Object.create(Object.getPrototypeOf(o));
+    const propNames = Object.getOwnPropertyNames(o);
 
-    propNames.forEach(function(name) {
-      var desc = Object.getOwnPropertyDescriptor(o, name);
+    propNames.forEach(name => {
+      let desc = Object.getOwnPropertyDescriptor(o, name);
       Object.defineProperty(copy, name, desc);
     });
     return copy;
   }
 
-  function HeadController(animationService) {
-    var vm = this;
+  animationHead() {
+    let promise = this.animationService.getAnimations();
+    promise
+      .then(data => {
+        const store = data;
+        const headObject = HeadController.copy(store.data.settings[0].headAnimations);
 
-    vm.animationHead = function() {
-      var promise = animationService.getAnimations();
-      promise
-        .then(function(data) {
-          var store = data;
-          var headObject = copy(store.data.settings[0].headAnimations);
+        const target = {
+          header: document.body.querySelector("header"),
+          headOne: document.body.querySelector(".head-animate-one"),
+          headTwo: document.body.querySelector(".head-animate-two"),
+          search: document.body.querySelector(".head-animate-search")
+        };
 
-          var target = {
-            header: document.body.querySelector("header"),
-            headOne: document.body.querySelector(".head-animate-one"),
-            headTwo: document.body.querySelector(".head-animate-two"),
-            search: document.body.querySelector(".head-animate-search")
-          };
+        TweenMax.to(target.header, 1, headObject.header);
+        TweenMax.to(target.headOne, 1, headObject.headOne);
+        TweenMax.from(target.headTwo, 1, headObject.headTwo);
+        TweenMax.from(target.search, 1, headObject.search);
+      })
+      .catch("An error ocurred on loading animations!");
+  }
 
-          TweenMax.to(target.header, 1, headObject.header);
-          TweenMax.to(target.headOne, 1, headObject.headOne);
-          TweenMax.from(target.headTwo, 1, headObject.headTwo);
-          TweenMax.from(target.search, 1, headObject.search);
-        })
-        .catch("An error ocurred on loading animations!");
-    };
-
-    vm.header = [
+  header() {
+    return [
       {
         settings: {
           title: "Math Board Converter",
@@ -59,91 +65,12 @@
         }
       }
     ];
-
-    vm.search = "Search a Math Info...";
-
-    vm.showMe = false;
-
-    vm.searchOpen = function() {
-      vm.showMe = !vm.showMe;
-    };
   }
 
-  function NavController(animationService) {
-    var vm = this;
-
-    vm.animationNav = function() {
-      var promise = animationService.getAnimations();
-      promise
-        .then(function(data) {
-          var store = data;
-          var navObject = copy(store.data.settings[1].navAnimations);
-
-          var target = {
-            home: document.body.querySelector(".animate-box-home"),
-            blog: document.body.querySelector(".animate-box-blog"),
-            photos: document.body.querySelector(".animate-box-photos"),
-            about: document.body.querySelector(".animate-box-about"),
-            contact: document.body.querySelector(".animate-box-contact")
-          };
-
-          TweenMax.to(target.home, 1, navObject.home);
-          TweenMax.to(target.blog, 1, navObject.blog);
-          TweenMax.to(target.photos, 1, navObject.photos);
-          TweenMax.to(target.about, 1, navObject.about);
-          TweenMax.to(target.contact, 1, navObject.contact);
-        })
-        .catch("An error ocurred on loading animations!");
-    };
-
-    vm.nav = {
-      settings: [
-        {
-          name: "home",
-          href: "/#!/",
-          color: "color-1",
-          front: "front",
-          back: "back",
-          icon: "fa fa-home fa-4x",
-          class: "animate-box-home"
-        },
-        {
-          name: "blog",
-          href: "/#!/blog",
-          color: "color-2",
-          front: "front",
-          back: "back",
-          icon: "fa fa-align-left fa-4x",
-          class: "animate-box-blog"
-        },
-        {
-          name: "photos",
-          href: "/#!/photos",
-          color: "color-3",
-          front: "front",
-          back: "back",
-          icon: "fa fa-camera-retro fa-4x",
-          class: "animate-box-photos"
-        },
-        {
-          name: "about",
-          href: "/#!/about",
-          color: "color-4",
-          front: "front",
-          back: "back",
-          icon: "fa fa-user fa-4x",
-          class: "animate-box-about"
-        },
-        {
-          name: "contact",
-          href: "/#!/contact",
-          color: "color-5",
-          front: "front",
-          back: "back",
-          icon: "fa fa-comments fa-4x",
-          class: "animate-box-contact"
-        }
-      ]
-    };
+  searchOpen() {
+    this.showMe = !this.showMe;
   }
-})();
+}
+
+// load up controller(s)
+angular.module("app").controller("HeadController", HeadController);
