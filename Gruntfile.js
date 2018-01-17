@@ -424,7 +424,7 @@ module.exports = grunt => {
         }
       },
       scripts: {
-        files: ["<%= srcpath %>/js/**/*.js", "<%= srcpath %>/**/*.json"],
+        files: ["<%= srcpath %>/app/**/*.js", "<%= srcpath %>/**/*.json"],
         tasks: ["eslint", "browserify", "babel", "uglify", "htmlbuild"],
         options: {
           livereload: true
