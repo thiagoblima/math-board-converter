@@ -419,7 +419,7 @@ module.exports = grunt => {
           "<%= includesdirectives %>"
         ],
         tasks: ["eslint", "browserify", "babel", "uglify", "htmlbuild"],
-        opstions: {
+        options: {
           livereload: true
         }
       },
