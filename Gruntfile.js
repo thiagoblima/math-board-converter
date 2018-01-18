@@ -99,9 +99,9 @@ module.exports = grunt => {
       //welcome component controllers
       "<%= srcpath %>/app/components/welcome/controllers/MathController.js",
       "<%= srcpath %>/app/components/welcome/controllers/TableController.js",
-      "<%= srcpath %>/app/components/welcome/controllers/InfoController.js",
       "<%= srcpath %>/app/components/welcome/controllers/ContactController.js",
       "<%= srcpath %>/app/components/welcome/controllers/UserController.js",
+      "<%= srcpath %>/app/components/includes/controllers/InfoController.js",
       "<%= srcpath %>/app/components/includes/controllers/HeadController.js",
       "<%= srcpath %>/app/components/includes/controllers/NavController.js",
       //includes components
@@ -123,6 +123,7 @@ module.exports = grunt => {
       "<%= srcpath %>/app/services/ContactService.js",
       "<%= srcpath %>/app/services/UserService.js",
       "<%= srcpath %>/app/services/AnimationService.js",
+      // filters
       "<%= srcpath %>/app/filters/searchFilter.js",
       "<%= srcpath %>/app/filters/mathFilter.js"
     ],
