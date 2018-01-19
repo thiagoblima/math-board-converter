@@ -39,6 +39,6 @@ export class Server {
 
   public run() {
     this.app.listen(this.port);
-    this.app.use(express.static(__dirname + "/build"));
+    this.app.use(express.static(__dirname + "/dist"));
   }
 }
