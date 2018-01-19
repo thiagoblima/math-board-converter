@@ -1,0 +1,66 @@
+[
+  {
+    "vendor": [
+      "./public/node_modules/angular/angular.min.js",
+      "./public/node_modules/angular-route/angular-route.min.js",
+      "./public/node_modules/angular-sanitize/angular-sanitize.min.js",
+      "./public/node_modules/angular-animate/angular-animate.min.js",
+      "./public/node_modules/angular-messages/angular-messages.min.js",
+      "./public/node_modules/angular-ui-mask/dist/mask.min.js",
+      "./public/node_modules/jquery/dist/jquery.min.js",
+      "./public/node_modules/gsap/src/minified/TweenMax.min.js",
+      "./public/node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ],
+    "entry": ["<%= srcpath %>/index.html"],
+    "views": [
+      "<%= srcpath %>/views/welcome.html",
+      "<%= srcpath %>/views/errorRoute.html"
+    ],
+    "bundlejs": [
+      "<%= srcpath %>/app/app.js",
+      "<%= srcpath %>/app/router.js",
+      "<%= srcpath %>/app/components/welcome/controllers/MathController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/TableController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/ContactController.js",
+      "<%= srcpath %>/app/components/welcome/controllers/UserController.js",
+      "<%= srcpath %>/app/components/includes/controllers/InfoController.js",
+      "<%= srcpath %>/app/components/includes/controllers/HeadController.js",
+      "<%= srcpath %>/app/components/includes/controllers/NavController.js",
+      "<%= srcpath %>/app/components/includes/directives/errorRouteSection.js",
+      "<%= srcpath %>/app/components/includes/directives/headSection.js",
+      "<%= srcpath %>/app/components/includes/directives/socialsection.js",
+      "<%= srcpath %>/app/components/includes/directives/mainNav.js",
+      "<%= srcpath %>/app/components/includes/directives/scroll.js",
+      "<%= srcpath %>/app/components/welcome/directives/introSection.js",
+      "<%= srcpath %>/app/components/welcome/directives/guideSection.js",
+      "<%= srcpath %>/app/components/welcome/directives/tableSection.js",
+      "<%= srcpath %>/app/components/welcome/diretives/tableMessages.js",
+      "<%= srcpath %>/app/components/welcome/directives/userSection.js",
+      "<%= srcpath %>/app/components/welcome/directives/userMessages.js",
+      "<%= srcpath %>/app/components/welcome/directives/contactSection.js",
+      "<%= srcpath %>/app/components/welcome/directives/contactMessages.js",
+      "<%= srcpath %>/app/services/ContactService.js",
+      "<%= srcpath %>/app/services/UserService.js",
+      "<%= srcpath %>/app/services/AnimationService.js",
+      "<%= srcpath %>/app/filters/searchFilter.js",
+      "<%= srcpath %>/app/filters/mathFilter.js"
+    ],
+    "includes": [
+      "<%= srcpath %>/app/components/includes/directives/views/mainNav.html",
+      "<%= srcpath %>/app/components/includes/directives/views/headSection.html",
+      "<%= srcpath %>/app/components/includes/directives/views/socialSection.html",
+      "<%= srcpath %>/app/components/includes/directives/views/errorRouteSection.html"
+    ],
+    "welcome": [
+      "<%= srcpath %>/app/components/welcome/directives/views/introSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/guideSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/tableSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/tableMessages.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/contactSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/userSection.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/contactMessages.html",
+      "<%= srcpath %>/app/components/welcome/directives/views/userMessages.html"
+    ],
+    "webfonts": ["<%= webfontpath %>/*"]
+  }
+]
