@@ -2,11 +2,11 @@
 node_modules
 public/libs
 
-## SASS Cacache
+## SASS cache
 .sass-cache
 
 ## Front-End Build
-/build
+/dist
 
 ## Back-End Build
 /middleware
