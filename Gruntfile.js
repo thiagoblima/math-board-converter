@@ -21,19 +21,9 @@ module.exports = grunt => {
     return "load-grunt-tasks";
   }
 
-  const externalModules = [
-    "./public/node_modules/angular/angular.min.js",
-    "./public/node_modules/angular-route/angular-route.min.js",
-    "./public/node_modules/angular-sanitize/angular-sanitize.min.js",
-    "./public/node_modules/angular-animate/angular-animate.min.js",
-    "./public/node_modules/angular-messages/angular-messages.min.js",
-    "./public/node_modules/angular-ui-mask/dist/mask.min.js",
-    "./public/node_modules/jquery/dist/jquery.min.js",
-    "./public/node_modules/gsap/src/minified/TweenMax.min.js",
-    "./public/node_modules/bootstrap/dist/js/bootstrap.min.js"
-  ];
-
   require(loader())(grunt);
+
+  const externalModules = grunt.file.readJSON("build/build.json")[0].vendor;
 
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
@@ -44,16 +34,14 @@ module.exports = grunt => {
      */
 
     hash: cacheHash,
-    absolutepath: "./public",
     srcpath: "public",
-    srcassets: "public/assets",
+    path: "dist",
+    srcassets: "<%= srcpath %>/assets",
     assetspath: "<%= path %>/assets",
-    homecomponent: "build/components/directives/welcome/views/",
-    includescomponent: "build/components/directives/includes/views/",
-    directivesjs: "build/js",
+    homecomponent: "<%= path %>/components/directives/welcome/views/",
+    includescomponent: "<%= path %>/components/directives/includes/views/",
+    directivesjs: "<%= path %>/js",
     webfontpath: "<%= srcpath %>/node_modules/bootstrap/fonts",
-    mathpath: "<%= srcpath %>/build/js/math",
-    path: "build",
     cssbuild: "css",
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/app",
@@ -61,143 +49,72 @@ module.exports = grunt => {
 
     jsfiles: [
       /**
-       * @description: Here goes the author Angular.js scripts
+       * @description: Here goes the vendor's scripts
        * @see        : All of them are based on the root:
-       * /public/js/ Hopefully any change for the next updates
+       * /public/app/node_modules Hopefully any change for the next updates
        */
 
       "<%= vendorjs %>"
     ],
 
-    vendorjs: [
-      /**
-       * @description: Here goes the vendor's scripts
-       * @see        : All of them are based on the
-       * root: /public/node_modules/ Hopefully any change
-       * for the next updates.
-       */
+    /**
+     * @description: Here goes the vendor's scripts
+     * @see        : All of them are based on the
+     * root: /public/node_modules/ Hopefully any change
+     * for the next updates.
+     */
 
-      "<%= srcpath %>/node_modules/angular/angular.min.js",
-      "<%= srcpath %>/node_modules/angular-route/angular-route.min.js",
-      "<%= srcpath %>/node_modules/angular-sanitize/angular-sanitize.min.js",
-      "<%= srcpath %>/node_modules/angular-animate/angular-animate.min.js",
-      "<%= srcpath %>/node_modules/angular-messages/angular-messages.min.js",
-      "<%= srcpath %>/node_modules/angular-ui-mask/dist/mask.min.js",
-      "<%= srcpath %>/node_modules/jquery/dist/jquery.min.js",
-      "<%= srcpath %>/node_modules/gsap/src/minified/TweenMax.min.js",
-      "<%= srcpath %>/node_modules/bootstrap/dist/js/bootstrap.min.js"
-    ],
+    vendorjs: grunt.file.readJSON("build/build.json")[0].vendor,
 
-    angularjsfiles: [
-      /**
-       * @description: Here goes the AngularJS Directives
-       * @see        : They're basicly distributed on public/js/directives/
-       * Hopefully any change for the next updates
-       */
-      "<%= srcpath %>/app/app.js",
-      "<%= srcpath %>/app/router.js",
-      //welcome component controllers
-      "<%= srcpath %>/app/components/welcome/controllers/MathController.js",
-      "<%= srcpath %>/app/components/welcome/controllers/TableController.js",
-      "<%= srcpath %>/app/components/welcome/controllers/ContactController.js",
-      "<%= srcpath %>/app/components/welcome/controllers/UserController.js",
-      "<%= srcpath %>/app/components/includes/controllers/InfoController.js",
-      "<%= srcpath %>/app/components/includes/controllers/HeadController.js",
-      "<%= srcpath %>/app/components/includes/controllers/NavController.js",
-      //includes components
-      "<%= srcpath %>/app/components/includes/directives/errorRouteSection.js",
-      "<%= srcpath %>/app/components/includes/directives/headSection.js",
-      "<%= srcpath %>/app/components/includes/directives/socialsection.js",
-      "<%= srcpath %>/app/components/includes/directives/mainNav.js",
-      "<%= srcpath %>/app/components/includes/directives/scroll.js",
-      // welcome components
-      "<%= srcpath %>/app/components/welcome/directives/introSection.js",
-      "<%= srcpath %>/app/components/welcome/directives/guideSection.js",
-      "<%= srcpath %>/app/components/welcome/directives/tableSection.js",
-      "<%= srcpath %>/app/components/welcome/diretives/tableMessages.js",
-      "<%= srcpath %>/app/components/welcome/directives/userSection.js",
-      "<%= srcpath %>/app/components/welcome/directives/userMessages.js",
-      "<%= srcpath %>/app/components/welcome/directives/contactSection.js",
-      "<%= srcpath %>/app/components/welcome/directives/contactMessages.js",
-      // services
-      "<%= srcpath %>/app/services/ContactService.js",
-      "<%= srcpath %>/app/services/UserService.js",
-      "<%= srcpath %>/app/services/AnimationService.js",
-      // filters
-      "<%= srcpath %>/app/filters/searchFilter.js",
-      "<%= srcpath %>/app/filters/mathFilter.js"
-    ],
+    /**
+     * @description: Here goes the AngularJS Directives and Controllers
+     * @see        : They're basicly distributed on public/app/components/
+     * Hopefully any change for the next updates
+     */
 
-    mathjsfiles: [
-      /**
-       * @description: Here goes the Math app Java Script
-       * @see        : They're basicly distributed on public/js/math/
-       * Hopefully any change for the next updates
-       */
-      /*'<%= srcpath %>/js/math/model/number.js',
-      '<%= srcpath %>/js/math/view/number_view.js'*/
-    ],
+    angularjsfiles: grunt.file.readJSON("build/build.json")[0].bundlejs,
 
-    htmlpages: [
-      /**
-       * @description: Here goes the html pages
-       * @see         : All of them are based on the root: /public/
-       * Hopefully any change for the next updates
-       */
+    /**
+     * @description: Here main entry front-end file
+     * @see         : All of them are based on the root: /public/
+     * Hopefully any change for the next updates
+     */
 
-      "<%= srcpath %>/index.html"
-    ],
-    htmlviews: [
-      /**
-       * @description: Here goes the AngularJS Directives (HTML)
-       * @see        : They're basicly distributed on public/views
-       * Hopefully any change for the next updates.
-       */
+    htmlpages: grunt.file.readJSON("build/build.json")[0].entry,
 
-      "<%= srcpath %>/views/welcome.html",
-      "<%= srcpath %>/views/errorRoute.html"
-    ],
-    homedirectives: [
-      /**
-       * @description: Here goes the AngularJS Directives (HTML)
-       * @see        : They're basicly distributed on
-       * public/js/directives/home Hopefully any change for
-       * the next updates.
-       */
+    /**
+     * @description: Here goes the AngularJS Directives (HTML)
+     * @see        : They're basicly distributed on public/views
+     * Hopefully any change for the next updates.
+     */
 
-      "<%= srcpath %>/app/components/welcome/directives/views/introSection.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/guideSection.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/tableSection.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/tableMessages.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/contactSection.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/userSection.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/contactMessages.html",
-      "<%= srcpath %>/app/components/welcome/directives/views/userMessages.html"
-    ],
+    htmlviews: grunt.file.readJSON("build/build.json")[0].views,
 
-    includesdirectives: [
-      /**
-       * @description: Here goes the AngularJS Directives (HTML)
-       * @see        : They're basicly distributed on
-       * public/js/directives/includes Hopefully any change for
-       * the next updates.
-       */
+    /**
+     * @description: Here goes the AngularJS Directives (HTML)
+     * @see        : They're basicly distributed on
+     * public/app/components/welcome/directives
+     * Hopefully any change for the next updates.
+     */
 
-      "<%= srcpath %>/app/components/includes/directives/views/mainNav.html",
-      "<%= srcpath %>/app/components/includes/directives/views/headSection.html",
-      "<%= srcpath %>/app/components/includes/directives/views/socialSection.html",
-      "<%= srcpath %>/app/components/includes/directives/views/errorRouteSection.html"
-    ],
+    homedirectives: grunt.file.readJSON("build/build.json")[0].welcome,
 
-    webfonts: [
-      /**
-       * @description: Here goes the WebFonts and Icons (bootstrap)
-       * @see        : They're basicly distributed on public/node_modules/bootstrap/fonts
-       * Hopefully any change for the next updates
-       */
+    /**
+     * @description: Here goes the AngularJS Directives (HTML)
+     * @see        : They're basicly distributed on
+     * public/app/components/includes/directives
+     * Hopefully any change for the next updates.
+     */
 
-      "<%= webfontpath %>/*"
-    ],
+    includesdirectives: grunt.file.readJSON("build/build.json")[0].includes,
+
+    /**
+     * @description: Here goes the WebFonts and Icons (bootstrap)
+     * @see        : They're basicly distributed on public/node_modules/bootstrap/fonts
+     * Hopefully any change for the next updates
+     */
+
+    webfonts: grunt.file.readJSON("build/build.json")[0].webfonts,
 
     assets: [
       /**
@@ -215,7 +132,7 @@ module.exports = grunt => {
           "<%= path %>/js/*.js",
           "<%= path %>/js/app/*.js",
           ".sass-cache",
-          "build",
+          "dist",
           "routes",
           "models",
           "config",
@@ -250,13 +167,6 @@ module.exports = grunt => {
     },
 
     copy: {
-      /*angularjs: {
-        expand: true,
-        flatten: true,
-        filter: 'isFile',
-        src: '<%= directivespages %>',
-        dest: '<%= directivespath %>'
-      },*/
       webfonts: {
         expand: true,
         flatten: true,
