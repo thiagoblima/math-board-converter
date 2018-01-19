@@ -16,7 +16,7 @@
     "server:prod": "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
-    "start": "node app.js"
+    "start": "npm run init:project && node app.js"
   },
   "repository": {
     "type": "git",
