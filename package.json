@@ -17,22 +17,18 @@
     "server:watch": "npx tsc --watch",
     "server:test": "npx tsc --listEmittedFiles && node app",
     "server:dev": "grunt dev && npx tsc --listEmittedFiles && node app",
-    "server:prod": "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
+    "server:prod":
+      "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
-    "postinstall": "npm run start:dev",
+    "postinstall": "gem install sass && npm run start:dev",
     "start": "npm run libs:reinstall"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thiagolimaa/java-script-data-types.git"
   },
-  "keywords": [
-    "Math",
-    "Education",
-    "Java",
-    "Script"
-  ],
+  "keywords": ["Math", "Education", "Java", "Script"],
   "author": "Thiago Lima",
   "license": "ISC",
   "bugs": {
@@ -89,5 +85,4 @@
     "load-grunt-tasks": "^3.5.2",
     "typescript": "^2.6.2"
   }
- 
 }
