@@ -41,7 +41,7 @@ module.exports = grunt => {
     homecomponent: "<%= path %>/components/directives/welcome/views/",
     includescomponent: "<%= path %>/components/directives/includes/views/",
     directivesjs: "<%= path %>/js",
-    webfontpath: "<%= srcpath %>/node_modules/bootstrap/fonts",
+    webfontpath: "node_modules/bootstrap/fonts",
     cssbuild: "css",
     jsbuild: "js",
     directivesbuild: "<%= jsbuild %>/app",
@@ -272,7 +272,7 @@ module.exports = grunt => {
           "<%= path %>/css/main.min.css":
             "<%= srcpath %>/compiled-css/main.css",
           "<%= path %>/css/vendor.min.css":
-            "<%= srcpath %>/node_modules/bootstrap/dist/css/bootstrap.min.css"
+            "./node_modules/bootstrap/dist/css/bootstrap.min.css"
         }
       }
     },

@@ -1,15 +1,15 @@
 [
   {
     "vendor": [
-      "./public/node_modules/angular/angular.min.js",
-      "./public/node_modules/angular-route/angular-route.min.js",
-      "./public/node_modules/angular-sanitize/angular-sanitize.min.js",
-      "./public/node_modules/angular-animate/angular-animate.min.js",
-      "./public/node_modules/angular-messages/angular-messages.min.js",
-      "./public/node_modules/angular-ui-mask/dist/mask.min.js",
-      "./public/node_modules/jquery/dist/jquery.min.js",
-      "./public/node_modules/gsap/src/minified/TweenMax.min.js",
-      "./public/node_modules/bootstrap/dist/js/bootstrap.min.js"
+      "./node_modules/angular/angular.min.js",
+      "./node_modules/angular-route/angular-route.min.js",
+      "./node_modules/angular-sanitize/angular-sanitize.min.js",
+      "./node_modules/angular-animate/angular-animate.min.js",
+      "./node_modules/angular-messages/angular-messages.min.js",
+      "./node_modules/angular-ui-mask/dist/mask.min.js",
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./node_modules/gsap/src/minified/TweenMax.min.js",
+      "./node_modules/bootstrap/dist/js/bootstrap.min.js"
     ],
     "entry": ["<%= srcpath %>/index.html"],
     "views": [

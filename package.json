@@ -7,8 +7,8 @@
     "node": "8.9.1"
   },
   "scripts": {
-    "init:project": "npm install && cd public && npm install",
-    "libs:reinstall": "rm -rf node_modules && cd public && rm -rf node_modules && cd ../ && npm run init:project",
+    "init:project": "npm install",
+    "libs:reinstall": "rm -rf node_modules && npm run init:project",
     "client:linter": "grunt",
     "client:dev": "grunt dev && node app",
     "client:prod": "grunt production && node app",
@@ -20,7 +20,7 @@
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
     "postinstall": "npm run start:dev",
-    "start": "npm run init:project && cd .."
+    "start": "npm run libs:reinstall"
   },
   "repository": {
     "type": "git",
@@ -47,7 +47,16 @@
     "mongoose": "*",
     "jwt-simple": "*",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "angular": "1.6.7",
+    "angular-animate": "1.6.7",
+    "angular-messages": "1.6.7",
+    "angular-route": "1.6.7",
+    "angular-sanitize": "1.6.7",
+    "angular-ui-mask": "1.6.7",
+    "bootstrap": "3.3.7",
+    "gsap": "^1.20.3",
+    "jquery": "*"
   },
   "devDependencies": {
     "@types/bcrypt": "^1.0.0",
