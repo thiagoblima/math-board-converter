@@ -4,7 +4,8 @@
   "description": "Math Tests, Nodejs, Education",
   "main": "app.js",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.9.1",
+    "npm": "5.6.0"
   },
   "scripts": {
     "init:project": "npm install",
