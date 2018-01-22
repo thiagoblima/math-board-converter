@@ -19,7 +19,7 @@
     "server:prod": "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
-    "postinstall": "npm grunt && npm run start:dev",
+    "postinstall": "npm install grunt && npm run start:dev",
     "start": "npm run libs:reinstall"
   },
   "repository": {
