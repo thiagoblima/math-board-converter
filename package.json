@@ -7,7 +7,7 @@
     "node": "8.9.1"
   },
   "scripts": {
-    "init:project": "npm install",
+    "init:project": "npm install && npm install grunt-cli",
     "libs:reinstall": "rm -rf node_modules && npm run init:project",
     "client:linter": "grunt",
     "client:dev": "grunt dev && node app",
