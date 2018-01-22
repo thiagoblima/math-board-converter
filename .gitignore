@@ -21,7 +21,7 @@ server.js
 public/compiled-js/bundle/*.js
 public/compiled-js/bundle/*.map 
 public/compiled-js/build/*.js
-public/compiled-js/build/*.map
+## public/compiled-js/build/*.map
 
 
 ## SASS To CSS
