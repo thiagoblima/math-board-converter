@@ -21,7 +21,7 @@
       "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
-    "postinstall": "gem install sass && npm run start:dev",
+    "postinstall": "npm run start:dev",
     "start": "npm run libs:reinstall"
   },
   "repository": {
