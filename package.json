@@ -7,7 +7,7 @@
     "node": "8.9.1"
   },
   "scripts": {
-    "init:project": "npm install && npm install grunt-cli",
+    "init:project": "npm install",
     "libs:reinstall": "rm -rf node_modules && npm run init:project",
     "client:linter": "grunt",
     "client:dev": "grunt dev && node app",
@@ -19,7 +19,7 @@
     "server:prod": "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
-    "postinstall": "npm run start:dev",
+    "postinstall": "npm install grunt-cli && npm run start:dev",
     "start": "npm run libs:reinstall"
   },
   "repository": {
