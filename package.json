@@ -3,6 +3,9 @@
   "version": "1.2.0",
   "description": "Math Tests, Nodejs, Education",
   "main": "app.js",
+  "engines": {
+    "node": "8.9.1"
+  },
   "scripts": {
     "init:project": "npm install && cd public && npm install",
     "libs:reinstall": "rm -rf node_modules && cd public && rm -rf node_modules && cd ../ && npm run init:project",
@@ -17,7 +20,7 @@
     "start:dev": "npm run server:dev",
     "start:prod": "npm run server:prod",
     "postinstall": "npm run start:dev",
-    "start": "npm run init:project"
+    "start": "npm run init:project && cd .."
   },
   "repository": {
     "type": "git",
