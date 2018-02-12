@@ -16,7 +16,7 @@
     "client:watch": "grunt watch",
     "server:watch": "npx tsc --watch",
     "server:test": "npx tsc --listEmittedFiles && node app",
-    "server:dev": "grunt dev && npx tsc --listEmittedFiles && node app",
+    "server:dev": "grunt dev && npx tsc --listEmittedFiles",
     "server:prod":
       "grunt production && npx tsc --removeComments --listEmittedFiles && node app",
     "start:dev": "npm run server:dev",
