@@ -28,7 +28,8 @@ const server = new Server(express(), port);
 const mongodb = new MongoDB();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(mongodb.getDatabase(), {useMongoClient: true});
+const promise = mongoose.connect(mongodb.getDatabase(), { useMongoClient: true });
+promise.then().catch(err => err);
 
 server.run();
 console.info(`listening on ${port}`);

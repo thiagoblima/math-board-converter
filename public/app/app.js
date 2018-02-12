@@ -25,6 +25,12 @@ angular
   ])
 
   .config(routerConfig)
+  .config([
+    "$qProvider",
+    $qProvider => {
+      $qProvider.errorOnUnhandledRejections(false);
+    }
+  ])
   .factory("userServices", ["$http", $http => new userServices($http)])
   .directive("introSection", () => new introSection().ngInit())
   .directive("tableSection", () => new tableSection().ngInit())
@@ -34,4 +40,3 @@ angular
   .directive("contactMessages", () => new contactMessages().ngInit())
   .directive("userSection", () => new userSection().ngInit())
   .directive("userMessages", () => new userMessages().ngInit());
-  
